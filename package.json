@@ -1,0 +1,22 @@
+{
+  "name": "vanilla-app-template",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build --base=/Flowers/",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "glob": "^8.1.0",
+    "vite": "^5.2.13"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.19",
+    "modern-normalize": "^2.0.0",
+    "sass": "^1.77.4",
+    "vite-plugin-full-reload": "^1.1.0",
+    "vite-plugin-html-inject": "^1.1.2"
+  }
+}

@@ -1,0 +1,47 @@
+.mob-menu {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100vw;
+  min-height: 100dvh;
+  z-index: 5;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%),
+    url(../assets/img/hero/hero-bg-mob-menu.jpg), no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  pointer-events: none;
+  opacity: 0;
+  filter: contrast(135%);
+  transition: opacity 350ms linear;
+
+  @media (min-width: 768px) {
+    display: none;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &_visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.mob-menu__container {
+  margin-top: 130px;
+  height: calc(100dvh - 150px);
+  overflow-y: auto;
+}
+
+.mob-menu__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.mob-menu__list-link {
+  font-family: var(--secondary-font);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 140%;
+  opacity: 0.7;
+}
