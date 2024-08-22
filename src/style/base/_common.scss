@@ -41,34 +41,29 @@ p {
 }
 
 .to-freeze {
-  @media (max-width: 767px) {
-    overflow: hidden;
-  }
+  overflow: hidden;
 }
 
 body {
-  position: relative;
   font-family: var(--primary-font);
   font-size: 20px;
   line-height: 140%;
 }
 
-main {
-  overflow-x: hidden;
-}
+// -----------------
 
-@media (min-width: 1440px) {
-  ::-webkit-scrollbar {
-    width: 20px;
-  }
+// @media (min-width: 1440px) {
+//   ::-webkit-scrollbar {
+//     width: 20px;
+//   }
 
-  ::-webkit-scrollbar-track {
-    background: var(--black-background-color);
-  }
+//   ::-webkit-scrollbar-track {
+//     background: var(--black-background-color);
+//   }
 
-  ::-webkit-scrollbar-thumb {
-    background: var(--2, linear-gradient(#21fbff 0%, #fd40ff 100%));
-    border: 2px solid #18041ef5;
-    border-radius: 4px;
-  }
-}
+//   ::-webkit-scrollbar-thumb {
+//     background: var(--2, linear-gradient(#21fbff 0%, #fd40ff 100%));
+//     border: 2px solid #18041ef5;
+//     border-radius: 4px;
+//   }
+// }
