@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "start": "vite",
-    "build": "vite build --base=/Flowers/",
-    "preview": "vite preview"
+    "build": "vite build --base=/Flowers/ --emptyOutDir",
+    "preview": "vite preview",
+    "deploy": "npm run build && git add . && git commit -m 'auto commit' && git push origin main"
   },
   "devDependencies": {
     "glob": "^8.1.0",
