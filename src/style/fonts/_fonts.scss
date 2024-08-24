@@ -3,23 +3,19 @@
   src: url('../fonts/AcmeRegular.woff2') format('woff2'),
     url('../fonts/AcmeRegular.ttf') format('truetype');
 }
-// @font-face {
-//   font-family: 'AguafinaScript';
-//   src: url(../fonts/AguafinaScript-Regular.ttf);
-// }
-// @font-face {
-//   font-family: 'Actor';
-//   src: url('../fonts/Actor-Regular.woff2') format('woff2'),
-//     url('../fonts/Actor-Regular.ttf') format('truetype');
-// }
-// @font-face {
-//   font-family: 'HeliosBlackC';
-//   src: url(../fonts/HeliosBlackC.woff);
-// }
-// @font-face {
-//   font-family: 'Gilroy';
-//   src: url(../fonts/Gilroy-Regular.woff);
-// }
+@font-face {
+  font-family: 'AguafinaScript';
+  src: url('../fonts/AguafinaScript-Regular.ttf');
+}
+@font-face {
+  font-family: 'Actor';
+  src: url('../fonts/Actor-Regular.ttf');
+}
+@font-face {
+  font-family: 'Aclonica';
+  src: url('../fonts/Aclonica-Regular.ttf');
+}
+
 @font-face {
   font-family: 'PTSans';
   src: url('../../fonts/PTSans-Bold.woff2') format('woff2'),
