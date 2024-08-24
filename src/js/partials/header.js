@@ -1,6 +1,10 @@
 export function header() {
   const titleBox = document.querySelectorAll('.js-dropdown-title-box');
   const dropdownLists = document.querySelectorAll('.js-list-dropdown');
+  const searchCategoryTitleBox = document.querySelector('.js-search-category-title-box');
+  const searchCategoryList = document.querySelector('.js-search-category-list');
+
+  // -----------------------------
 
   let currentTargetEl = null;
 
@@ -38,5 +42,14 @@ export function header() {
     [...titleBox].forEach(el => {
       el.nextElementSibling.classList.remove('header__list-dropdown_active');
     });
+  }
+
+  // --searchCategory-----
+
+  searchCategoryTitleBox.addEventListener('click', toggleSearchCategoryList);
+
+  function toggleSearchCategoryList(e) {
+    searchCategoryList.classList.toggle('search-category__list_active');
+    e.currentTarget.firstElementChild.classList.toggle('search-category__arrow-icon_active');
   }
 }
