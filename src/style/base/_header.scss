@@ -151,6 +151,7 @@
   // ----wrapper-bottom----
 
   &__wrapper-bottom {
+    padding: 26px 0;
   }
 
   &__container_bottom {
@@ -277,4 +278,15 @@
 .nav-bottom-box__top {
   @include flex-align-row;
   column-gap: 21px;
+}
+
+.nav-bottom-box {
+  &__bottom {
+    margin-top: 47px;
+  }
+
+  &__list {
+    @include flex-align-row;
+    column-gap: 18px;
+  }
 }
