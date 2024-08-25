@@ -28,6 +28,12 @@
     &-link {
       @include flex-align-row;
       column-gap: 11px;
+
+      transition: all 250ms linear;
+
+      &:hover {
+        color: var(--gray-base-color);
+      }
     }
   }
 
@@ -75,6 +81,7 @@
     flex-direction: column;
     row-gap: 8px;
     transition: all 200ms linear;
+    z-index: 2;
 
     &.header__list-dropdown_active {
       visibility: visible;
@@ -130,11 +137,18 @@
       @include flex-align-row;
       column-gap: 10px;
       color: var(--white-base-color);
-
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
       line-height: 112%;
+
+      & > p {
+        transition: all 250ms linear;
+
+        &:hover {
+          color: var(--gray-base-color);
+        }
+      }
     }
 
     &::before {
@@ -142,7 +156,7 @@
       position: absolute;
       width: 1px;
       height: 100%;
-      background-color: #956d84;
+      background-color: var(--gray-base-color);
       top: 0;
       left: 62px;
     }
@@ -156,10 +170,12 @@
 
   &__container_bottom {
     @include flex-align-row;
+    // justify-content: space-between;
   }
 
   &__logo {
     margin-right: 112px;
+
     &-img {
       width: 129px;
       height: 115px;
@@ -190,7 +206,7 @@
       position: absolute;
       width: 100%;
       border: 1px solid #956;
-      border-radius: 3px;
+      border-radius: 0px 0px 5px 5px;
       display: flex;
       flex-direction: column;
       row-gap: 12px;
@@ -200,6 +216,8 @@
       visibility: hidden;
       pointer-events: none;
       opacity: 0;
+      z-index: 1;
+      background-color: var(--white-base-color);
 
       &_active {
         visibility: visible;
@@ -264,12 +282,23 @@
     font-size: 14px;
     line-height: 128%;
     outline: none;
+    background-color: transparent;
 
     &::placeholder {
       color: var(--gray-base-secondary-color);
       font-style: normal;
       line-height: 128;
     }
+  }
+
+  &__search-btn {
+    background-color: transparent;
+  }
+
+  // contacts-box
+
+  &__contacts-box {
+    margin-left: auto;
   }
 }
 
@@ -287,6 +316,61 @@
 
   &__list {
     @include flex-align-row;
+    justify-content: space-between;
     column-gap: 18px;
+
+    &-link {
+      color: var(--dark-base-color);
+      line-height: 112%;
+    }
+  }
+}
+
+// nav-bottom-box__bottom
+
+.categories {
+  &__title-box {
+    @include flex-align-row;
+    column-gap: 10px;
+    cursor: pointer;
+  }
+
+  &__title {
+    color: var(--gray-base-color);
+    line-height: 112%;
+  }
+
+  &__title-arrow-icon {
+    width: 10px;
+    height: 5px;
+    transform: translateY(2px);
+  }
+}
+
+// --information
+
+.information {
+  &__title-box {
+    @include flex-align-row;
+    column-gap: 10px;
+    color: var(--dark-base-color);
+    cursor: pointer;
+  }
+}
+
+// header__contacts-box--
+
+.social-media {
+  &__list {
+    @include flex-align-row;
+    column-gap: 12px;
+  }
+  &__list-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #956d84;
+    padding: 6px;
+    border-radius: 50%;
   }
 }

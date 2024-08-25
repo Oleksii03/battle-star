@@ -50,6 +50,15 @@ export function header() {
 
   function toggleSearchCategoryList(e) {
     searchCategoryList.classList.toggle('search-category__list_active');
-    e.currentTarget.firstElementChild.classList.toggle('search-category__arrow-icon_active');
+    searchCategoryTitleBox.firstElementChild.classList.toggle('search-category__arrow-icon_active');
+  }
+
+  searchCategoryList.addEventListener('click', onSetCategory);
+
+  function onSetCategory(e) {
+    if (e.target.tagName !== 'LI') return;
+
+    searchCategoryTitleBox.lastElementChild.textContent = e.target.textContent;
+    toggleSearchCategoryList();
   }
 }
