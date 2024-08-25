@@ -299,6 +299,61 @@
 
   &__contacts-box {
     margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    &-tel {
+      color: var(--dark-base-color);
+      text-align: center;
+      font-family: 'Acme' sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 112%;
+    }
+  }
+}
+
+// box-favorite
+
+.box-favorite {
+  &__list {
+    @include flex-align-row;
+    column-gap: 17px;
+  }
+
+  &__list-item-box {
+    position: relative;
+  }
+
+  &__amount {
+    position: absolute;
+    top: -5px;
+    left: 21px;
+    color: #fff;
+    font-family: 'PTSans' serif;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5;
+    text-transform: uppercase;
+    background-color: #956d84;
+    padding: 2px 6px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__list-item-sum {
+    color: var(--gray-base-secondary-color);
+    text-align: center;
+    font-family: 'Acme' sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 62%;
   }
 }
 
