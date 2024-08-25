@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "vite",
-    "build": "vite build --base=/Flowers/ --emptyOutDir",
+    "build": "vite build --base=/Flowers/",
     "preview": "vite preview",
     "deploy": "git add . && git commit -m 'auto commit' && git push origin main"
   },
