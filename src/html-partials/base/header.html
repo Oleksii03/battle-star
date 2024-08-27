@@ -1,7 +1,7 @@
 <header class="header">
   <div class="header__wrapper-top">
     <div class="header__container_top container">
-      <nav class="nav-top">
+      <nav class="header__nav-top">
         <ul class="header__list-top">
           <li class="header__item-top">
             <p class="header__item-top-title">Валюта</p>
@@ -133,6 +133,12 @@
 
   <div class="header__wrapper-bottom">
     <div class="header__container_bottom container">
+      <button class="header__burger-btn burger-btn js-burger-btn">
+        <div class="burger-btn__line burger-btn__line_top"></div>
+        <div class="burger-btn__line burger-btn__line_middle"></div>
+        <div class="burger-btn__line burger-btn__line_bottom"></div>
+      </button>
+
       <div class="header__logo">
         <a href="#">
           <img
@@ -335,6 +341,15 @@
                 </svg>
                 <span class="box-favorite__amount">0</span>
               </a>
+            </li>
+
+            <li class="box-favorite__list-item box-favorite__list-item_search">
+              <svg
+                width="33"
+                height="29"
+                class="header__icon-favorite">
+                <use xlink:href="#icon-search"></use>
+              </svg>
             </li>
 
             <li class="box-favorite__list-item">
