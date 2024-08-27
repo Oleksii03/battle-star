@@ -1,13 +1,13 @@
 .header {
   &__wrapper-top {
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding-top: 12px;
+    padding-bottom: 13px;
     background-color: var(--dark-background-color);
     color: var(--white-base-color);
 
     @media (min-width: 1440px) {
-      padding-top: 16px;
-      padding-bottom: 16px;
+      padding-top: 15px;
+      padding-bottom: 17px;
     }
   }
 
@@ -23,7 +23,7 @@
     justify-content: space-between;
 
     @media (min-width: 1439px) {
-      column-gap: 63px;
+      column-gap: 65px;
     }
   }
 
@@ -47,7 +47,7 @@
           content: '';
           position: absolute;
           top: 0;
-          right: -13px;
+          right: -12px;
           height: 100%;
           width: 1px;
           background-color: var(--956D84, #956d84);
@@ -79,11 +79,14 @@
     &-link {
       @include flex-align-row;
       column-gap: 11px;
-
       transition: all 250ms linear;
 
-      &:hover {
-        color: var(--gray-base-color);
+      @media (min-width: 1440px) {
+        column-gap: 20px;
+
+        &:hover {
+          color: var(--gray-base-color);
+        }
       }
     }
   }
@@ -154,10 +157,10 @@
     width: 16px;
     height: 16px;
 
-    @media (min-width: 768px) {
-      width: 22px;
-      height: 22px;
-    }
+    // @media (min-width: 768px) {
+    //   width: 22px;
+    //   height: 22px;
+    // }
 
     &_wrapper {
       position: relative;
@@ -194,6 +197,7 @@
 
     @media (min-width: 1440px) {
       display: flex;
+      transform: translateX(-10px);
     }
 
     & > button {
@@ -239,6 +243,10 @@
   &__container_bottom {
     @include flex-align-row;
     justify-content: space-between;
+
+    @media (min-width: 1440px) {
+      justify-content: flex-start;
+    }
   }
 
   &__logo {
@@ -246,6 +254,7 @@
 
     @media (min-width: 1440px) {
       margin-left: 0px;
+      margin-right: 112px;
     }
 
     &-img {
@@ -375,10 +384,13 @@
   // contacts-box
 
   &__contacts-box {
-    // margin-left: auto;
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 22px;
+
+    @media (min-width: 1440px) {
+      margin-left: auto;
+    }
 
     &-tel {
       color: var(--dark-base-color);
@@ -412,7 +424,7 @@
 .box-favorite {
   &__list {
     @include flex-align-row;
-    column-gap: 20px;
+    column-gap: 18px;
 
     @media (min-width: 1440px) {
       column-gap: 17px;
@@ -461,7 +473,7 @@
 
     @media (min-width: 1440px) {
       top: -5px;
-      left: 21px;
+      left: 27px;
       padding: 2px 6px;
     }
   }
@@ -482,6 +494,7 @@
 
   @media (min-width: 1440px) {
     display: block;
+    padding-top: 21px;
   }
 
   &__bottom {
@@ -544,7 +557,7 @@
 .social-media {
   &__list {
     @include flex-align-row;
-    column-gap: 12px;
+    justify-content: space-between;
     display: none;
 
     @media (min-width: 1440px) {
