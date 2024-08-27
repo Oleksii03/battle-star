@@ -8,12 +8,14 @@
   max-width: 425px;
   margin-right: auto;
   transition: all 250ms linear;
-
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-
   background-color: var(--white-base-color);
+
+  // visibility: hidden;
+  opacity: 0;
+  transform: translateX(-100%);
+  // pointer-events: none;
+
+  //
 
   &__container {
     padding: 0px 20px;
@@ -41,9 +43,10 @@
   }
 
   &--visible {
-    visibility: visible;
+    // visibility: visible;
     opacity: 1;
-    pointer-events: auto;
+    transform: translateX(0);
+    // pointer-events: auto;
   }
 
   // contacts--
