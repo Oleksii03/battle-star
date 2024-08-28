@@ -15,17 +15,27 @@ export function mobMenu() {
   const categoriesBtnClose = document.querySelector('.js-menu-categories-btn-close');
   const menuCategories = document.querySelector('.js-menu-categories');
 
+  const categoriesMenuTitleBoxes = document.querySelectorAll('.js-categories-list-title-box');
+  const categoriesMenuList = document.querySelector('.js-menu-categories-list');
+
+  const categoriesSubLists = document.querySelectorAll('.js-categories-sub-list');
+
   console.log(categoriesBtnClose);
   // --------/--ref---------------------------
 
   // -----------toogleMenu-------------------
   openMenuBtn.addEventListener('click', toogleMenu);
   closeMenuBtn.addEventListener('click', toogleMenu);
-  backdrop.addEventListener('click', toogleMenu);
+  backdrop.addEventListener('click', onClose);
 
   function toogleMenu(e) {
     mobMenu.classList.toggle('mob-menu--visible');
     backdrop.classList.toggle('backdrop--visible');
+  }
+
+  function onClose(e) {
+    toogleMenu();
+    menuCategories.classList.remove('menu-categories--visible');
   }
 
   // -----------toogleMenuCategories-----------------
@@ -70,5 +80,43 @@ export function mobMenu() {
 
     informationSubList.style.maxHeight = 0;
     menuInformationItem.classList.remove('nav-list-item__title-wrapper_active');
+  }
+
+  // --------categoriesMenu-------
+  categoriesMenuList.addEventListener('click', toggleCategoriesMenuList);
+
+  function toggleCategoriesMenuList(e) {
+    const { target } = e;
+    let targetEl = target.closest('.js-categories-list-title-box');
+
+    if (!targetEl) return;
+
+    if (!targetEl.classList.contains('menu-categories__list-title-box_active')) {
+      [...categoriesMenuTitleBoxes].forEach(titleBox => {
+        titleBox.nextElementSibling.style.maxHeight = 0;
+        titleBox.classList.remove('menu-categories__list-title-box_active');
+      });
+
+      targetEl.nextElementSibling.style.maxHeight = targetEl.nextElementSibling.scrollHeight + 'px';
+
+      targetEl.classList.add('menu-categories__list-title-box_active');
+      return;
+    }
+
+    targetEl.nextElementSibling.style.maxHeight = 0;
+    targetEl.classList.remove('menu-categories__list-title-box_active');
+  }
+
+  // ---categoriesSubLists-----
+
+  categoriesSubLists.forEach(subList => {
+    subList.addEventListener('click', toggleCategoriesSubList);
+  });
+
+  function toggleCategoriesSubList(e) {
+    const { target } = e;
+
+    if (target.tagName !== 'LI') return;
+    target.classList.toggle('menu-categories__sub-list-item_active');
   }
 }

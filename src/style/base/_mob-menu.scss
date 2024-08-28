@@ -3,26 +3,18 @@
   top: 0;
   left: 0;
   z-index: 100;
-
   width: 100vw;
   height: 100vh;
   max-width: 425px;
   margin-right: auto;
   transition: all 250ms linear;
   background-color: var(--white-base-color);
-
-  // visibility: hidden;
-  // opacity: 0;
-  // transform: translateX(-100%);
-  // pointer-events: none;
-
-  //
+  transform: translateX(-100%);
 
   &__container {
-    padding: 0px 20px;
+    padding: 20px;
     overflow: auto;
     height: calc(100vh - 100px);
-    padding-top: 20px;
   }
 
   &__header {
@@ -44,10 +36,7 @@
   }
 
   &--visible {
-    // visibility: visible;
-    // opacity: 1;
     transform: translateX(0);
-    // pointer-events: auto;
   }
 
   // contacts--
@@ -260,5 +249,60 @@
     visibility: visible;
     opacity: 1;
     pointer-events: auto;
+  }
+
+  // ---menu-categories-list--
+
+  &__list {
+    &-item {
+      border-bottom: 1px solid #00000028;
+    }
+
+    &-title {
+      color: var(--gray-base-color);
+      line-height: 112%;
+    }
+
+    &-title-box {
+      @include flex-align-row;
+      justify-content: space-between;
+      padding: 23px 0px;
+
+      & > svg {
+        transition: all 250ms linear;
+      }
+
+      &_active {
+        & > svg {
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+
+  // ----sub-list---
+
+  &__sub-list {
+    transition: all 250ms linear;
+    overflow: hidden;
+    max-height: 0px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+
+    &-item {
+      line-height: 112%;
+      padding: 10px 43px;
+
+      &_active {
+        background-color: var(--gray-base-color);
+        color: var(--white-base-color);
+      }
+
+      &:last-child {
+        margin-bottom: 16px;
+      }
+    }
   }
 }
