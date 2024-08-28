@@ -3,6 +3,7 @@
   top: 0;
   left: 0;
   z-index: 100;
+
   width: 100vw;
   height: 100vh;
   max-width: 425px;
@@ -233,5 +234,31 @@
   &__list-item-sub-title {
     color: var(--gray-base-color);
     line-height: 112%;
+  }
+}
+
+// --menu-categories----
+
+.menu-categories {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 101;
+
+  width: 100vw;
+  height: 100vh;
+  max-width: 425px;
+  margin-right: auto;
+  transition: all 250ms linear;
+  background-color: var(--white-base-color);
+
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+
+  &--visible {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
   }
 }

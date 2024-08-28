@@ -11,9 +11,14 @@ export function mobMenu() {
   const menuInformationItem = document.querySelector('.js-information-item');
   const informationSubList = document.querySelector('.js-information-sub-list');
 
-  console.log(informationSubList);
+  const categoriesItem = document.querySelector('.js-categories-item');
+  const categoriesBtnClose = document.querySelector('.js-menu-categories-btn-close');
+  const menuCategories = document.querySelector('.js-menu-categories');
+
+  console.log(categoriesBtnClose);
   // --------/--ref---------------------------
 
+  // -----------toogleMenu-------------------
   openMenuBtn.addEventListener('click', toogleMenu);
   closeMenuBtn.addEventListener('click', toogleMenu);
   backdrop.addEventListener('click', toogleMenu);
@@ -23,8 +28,15 @@ export function mobMenu() {
     backdrop.classList.toggle('backdrop--visible');
   }
 
-  // ------------------------------
+  // -----------toogleMenuCategories-----------------
+  categoriesItem.addEventListener('click', toggleCategoriesList);
+  categoriesBtnClose.addEventListener('click', toggleCategoriesList);
 
+  function toggleCategoriesList(e) {
+    menuCategories.classList.toggle('menu-categories--visible');
+  }
+
+  // -----------toggleCitySelectionList-----------------
   chooseCity.addEventListener('click', toggleCitySelectionList);
 
   function toggleCitySelectionList(e) {
@@ -38,8 +50,7 @@ export function mobMenu() {
     chooseCity.classList.remove('user-panel__city-selection-title_active');
   }
 
-  // -------------------------------
-
+  // ------------ChooseCity-------------------
   citySelectionList.addEventListener('click', onChooseCity);
 
   function onChooseCity(e) {
@@ -47,8 +58,7 @@ export function mobMenu() {
     toggleCitySelectionList();
   }
 
-  // --------menujsInformationItem---
-
+  // --------menuInformationItem---
   menuInformationItem.addEventListener('click', toggleInformationSubList);
 
   function toggleInformationSubList(e) {
