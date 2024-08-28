@@ -24,11 +24,45 @@
         >Подзвонити
         <img
           class="mob-menu__contacts-btn-img"
-          src="../../assets/img/base/mob-menu/btn-to-call.png"
+          src="./assets/img/base/mob-menu/btn-to-call.png"
           alt="" />
       </a>
     </div>
 
-    <ul class="mob-menu"></ul>
+    <ul class="mob-menu__user-panel user-panel__list">
+      <li class="user-panel__list-item">
+        <p class="user-panel__list-item-title js-active-city">Київ</p>
+
+        <div class="user-panel__city-selection-wrapper">
+          <p class="user-panel__city-selection-title js-choose-city">Вибрати місто</p>
+
+          <ul class="user-panel__city-selection-list js-city-selection-list">
+            <li class="user-panel__city-selection-list-item">Київ</li>
+            <li class="user-panel__city-selection-list-item">Львів</li>
+            <li class="user-panel__city-selection-list-item">Харків</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="user-panel__list-item">
+        <p class="user-panel__list-item-title">Закладки</p>
+
+        <div class="user-panel__list-item-favorite-wrapp">
+          <svg
+            width="25"
+            height="22">
+            <use xlink:href="#icon-favorite"></use>
+          </svg>
+
+          <span class="user-panel__list-item-favorite-count">0</span>
+        </div>
+      </li>
+
+      <li class="user-panel__list-item">
+        <p class="user-panel__list-item-title">Особистий кабінет</p>
+
+        <p class="user-panel__list-item-sub-title">Увійти</p>
+      </li>
+    </ul>
   </div>
 </div>

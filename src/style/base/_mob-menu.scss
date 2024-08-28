@@ -11,8 +11,8 @@
   background-color: var(--white-base-color);
 
   // visibility: hidden;
-  opacity: 0;
-  transform: translateX(-100%);
+  // opacity: 0;
+  // transform: translateX(-100%);
   // pointer-events: none;
 
   //
@@ -44,7 +44,7 @@
 
   &--visible {
     // visibility: visible;
-    opacity: 1;
+    // opacity: 1;
     transform: translateX(0);
     // pointer-events: auto;
   }
@@ -59,13 +59,12 @@
     &-link {
       color: var(--dark-base-color);
       text-align: center;
-      font-family: 'Acme';
+      font-family: 'Acme' sans-serif;
       line-height: 112%;
     }
 
     &-btn {
       overflow: hidden;
-
       position: relative;
       @include flex-align-row;
       justify-content: center;
@@ -88,5 +87,86 @@
         right: 0;
       }
     }
+  }
+}
+
+// --user-panel---
+
+.user-panel {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 37px;
+
+    &-item {
+      @include flex-align-row;
+      justify-content: space-between;
+
+      &-title {
+        line-height: 112%;
+      }
+    }
+  }
+
+  &__city-selection-title {
+    color: var(--gray-base-color);
+    line-height: 112%;
+
+    &_active {
+      color: var(--dark-base-color);
+    }
+  }
+
+  &__city-selection-wrapper {
+    position: relative;
+  }
+
+  &__city-selection-list {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 30px;
+    display: grid;
+    row-gap: 10px;
+    border-radius: 5px;
+    background-color: var(--white-base-color);
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 250ms linear;
+    z-index: 2;
+
+    &-item {
+      background-color: var(--gray-base-color);
+      padding: 8px 16px;
+      border-radius: 5px;
+      color: var(--white-base-color);
+    }
+  }
+
+  // --list-item-favorite-wrapp---
+
+  &__list-item-favorite-wrapp {
+    position: relative;
+    transform: translateX(-11px);
+  }
+
+  &__list-item-favorite-count {
+    position: absolute;
+    top: -6px;
+    right: -11px;
+    color: #414141;
+    font-family: 'PTSans' sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    background-color: #956d84c6;
+    border-radius: 50%;
+  }
+
+  &__list-item-sub-title {
+    color: var(--gray-base-color);
+    line-height: 112%;
   }
 }
