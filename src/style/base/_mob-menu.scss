@@ -100,6 +100,34 @@
       display: block;
       color: inherit;
       line-height: 112%;
+
+      &_phone {
+        display: flex;
+        align-items: center;
+        column-gap: 14px;
+        color: var(--gray-base-color);
+      }
+    }
+  }
+}
+
+// nav-list--
+
+.nav-list {
+  &__sub-list {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 0;
+    transition: all 250ms linear;
+
+    &-item {
+      border-bottom: 1px solid #00000028;
+      padding: 10px 0px;
+    }
+
+    &-link {
+      color: var(--gray-base-color);
     }
   }
 }
@@ -110,6 +138,19 @@
   &__title-wrapper {
     @include flex-align-row;
     justify-content: space-between;
+    transition: all 250ms linear;
+
+    & > svg {
+      transition: all 250ms linear;
+    }
+
+    &_active {
+      margin-bottom: 20px;
+
+      & > svg {
+        transform: rotate(90deg);
+      }
+    }
   }
 }
 

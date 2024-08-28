@@ -8,6 +8,12 @@ export function mobMenu() {
   const citySelectionList = document.querySelector('.js-city-selection-list');
   const activeCity = document.querySelector('.js-active-city');
 
+  const menuInformationItem = document.querySelector('.js-information-item');
+  const informationSubList = document.querySelector('.js-information-sub-list');
+
+  console.log(informationSubList);
+  // --------/--ref---------------------------
+
   openMenuBtn.addEventListener('click', toogleMenu);
   closeMenuBtn.addEventListener('click', toogleMenu);
   backdrop.addEventListener('click', toogleMenu);
@@ -39,5 +45,20 @@ export function mobMenu() {
   function onChooseCity(e) {
     activeCity.textContent = e.target.textContent;
     toggleCitySelectionList();
+  }
+
+  // --------menujsInformationItem---
+
+  menuInformationItem.addEventListener('click', toggleInformationSubList);
+
+  function toggleInformationSubList(e) {
+    if (!menuInformationItem.classList.contains('nav-list-item__title-wrapper_active')) {
+      informationSubList.style.maxHeight = informationSubList.scrollHeight + 'px';
+      menuInformationItem.classList.add('nav-list-item__title-wrapper_active');
+      return;
+    }
+
+    informationSubList.style.maxHeight = 0;
+    menuInformationItem.classList.remove('nav-list-item__title-wrapper_active');
   }
 }
