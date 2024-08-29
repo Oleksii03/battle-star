@@ -7,10 +7,10 @@ Swiper.use([Pagination, Autoplay]);
 
 export function initSwiper() {
   new Swiper('.mainHeroSwiper', {
-    // autoplay: {
-    //   delay: 2000,
-    //   disableOnInteraction: true,
-    // },
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: true,
+    },
     pagination: {
       el: '.swiper-pagination',
     },
