@@ -1,8 +1,8 @@
 .main-hero {
-  height: 50vh;
+  height: 100vh;
 }
 
-// ----swiper------
+// =======swiper=======
 
 .swiper {
   width: 100%;
@@ -46,4 +46,32 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.main-hero__swiper {
+  &-img-wrapper {
+    position: relative;
+  }
+
+  &-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(42, 39, 39, 0.212);
+  }
+
+  &-slide-text {
+    padding-left: 40px;
+    padding-top: 21px;
+    padding-right: 23px;
+    font-family: 'Actor', sans-serif;
+    font-size: 20px;
+    line-height: 125%;
+
+    & > span {
+      color: var(--white-base-color);
+    }
+  }
 }

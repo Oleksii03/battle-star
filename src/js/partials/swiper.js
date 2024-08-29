@@ -1,15 +1,19 @@
 import Swiper from 'swiper';
 import 'swiper/swiper-bundle.css';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css/pagination';
 
-Swiper.use([Pagination]);
+Swiper.use([Pagination, Autoplay]);
 
 export function initSwiper() {
-  const swiper = new Swiper('.mySwiper', {
+  new Swiper('.mainHeroSwiper', {
+    // autoplay: {
+    //   delay: 2000,
+    //   disableOnInteraction: true,
+    // },
     pagination: {
       el: '.swiper-pagination',
-      clickable: true,
     },
+    speed: 600,
   });
 }
