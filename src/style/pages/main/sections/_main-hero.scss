@@ -1,8 +1,91 @@
 .main-hero {
   height: 100vh;
+  padding-top: 12px;
+
+  @media (min-width: 500px) {
+    padding-top: 32px;
+  }
+  @media (min-width: 768px) {
+    padding-top: 40px;
+  }
+  @media (min-width: 768px) {
+    padding-top: 25px;
+  }
+
+  &__layout-gallery {
+    display: none;
+
+    @media (min-width: 500px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+      }
+      @media (min-width: 1440px) {
+        gap: 30px 26px;
+      }
+
+      &-img-wrapper {
+        position: relative;
+      }
+
+      &-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(42, 39, 39, 0.212);
+      }
+
+      &-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        // aspect-ratio: 15 / 14;
+      }
+
+      &-item {
+        &:first-child {
+          grid-column: 1 / 3;
+          grid-row: 1 / 2;
+
+          @media (min-width: 768px) {
+            grid-column: 1 / 3;
+            grid-row: 1 / 3;
+          }
+        }
+
+        &-text {
+          font-size: 36px;
+          line-height: 138%;
+          padding: 23px;
+          max-width: 420px;
+
+          & > span {
+            color: var(--white-base-color);
+          }
+
+          @media (min-width: 768px) and (max-width: 1024px) {
+            font-size: 26px;
+            padding: 5px;
+          }
+        }
+      }
+    }
+  }
 }
 
 // =======swiper=======
+
+.main-hero__swiper-wrapper {
+  @media (min-width: 500px) {
+    display: none;
+  }
+}
 
 .swiper {
   width: 100%;
@@ -20,6 +103,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  aspect-ratio: 15 / 14;
 }
 
 // --pagination------
@@ -48,6 +132,8 @@
   transform: translate(-50%, -50%);
 }
 
+// -------------
+
 .main-hero__swiper {
   &-img-wrapper {
     position: relative;
@@ -64,11 +150,12 @@
 
   &-slide-text {
     padding-left: 40px;
-    padding-top: 21px;
+    padding-top: 38px;
     padding-right: 23px;
     font-family: 'Actor', sans-serif;
     font-size: 20px;
     line-height: 125%;
+    max-width: 288px;
 
     & > span {
       color: var(--white-base-color);
