@@ -31,6 +31,7 @@ export function mobMenu() {
   function toogleMenu(e) {
     mobMenu.classList.toggle('mob-menu--visible');
     backdrop.classList.toggle('backdrop--visible');
+    document.body.classList.toggle('to-freeze');
   }
 
   function onClose(e) {
