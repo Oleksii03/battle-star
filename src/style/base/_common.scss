@@ -43,8 +43,49 @@ p {
 }
 
 body {
+  overflow-x: hidden;
   font-family: var(--primary-font);
   color: var(--dark-base-color);
+  // background-color: var(--white-base-color);
+
+  @media (min-width: 1920px) {
+    background-image: url(../../../assets/img/base/body/body-bg.webp);
+
+    background-position: 0 660px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -920px;
+      left: 0;
+      width: 300px;
+      height: 912px;
+      overflow: hidden;
+      rotate: 90deg;
+      transform-origin: left bottom;
+      background-image: url(../../../assets/img/base/body/bg-body-branch-flower-left.webp);
+      background-size: contain;
+      z-index: 10000;
+      background-repeat: no-repeat;
+      background-position: 0px 640px;
+      animation: branch-flower-left 6s infinite ease-in-out;
+      pointer-events: none;
+
+      @keyframes branch-flower-left {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(5deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }
 }
 
 // -----------------
