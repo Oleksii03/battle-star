@@ -161,12 +161,12 @@
 // ====main-hero__statistics======
 
 .main-hero__statistics {
-  margin-top: 27px;
+  margin-top: 30px;
 
   &-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 8px;
+    column-gap: clamp(0.5rem, -0.036rem + 2.68vw, 1.25rem);
   }
 
   &-icon {
@@ -176,7 +176,7 @@
 
     &-wrapper {
       border: 2px solid #956d84;
-      border-radius: 50%;
+      border-radius: clamp(3.125rem, 8.681rem + -27.78vw, 0rem);
       aspect-ratio: 1 / 1;
       display: flex;
       justify-content: center;
@@ -185,11 +185,13 @@
   }
 
   &-text {
-    margin-top: 20px;
+    margin-top: 16px;
+
     &-title {
       text-align: center;
       font-size: clamp(0.625rem, 0.178rem + 2.24vw, 1.25rem);
       line-height: 150%;
+      color: var(--dark-base-color);
     }
   }
 }
