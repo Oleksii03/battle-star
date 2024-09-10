@@ -1,5 +1,5 @@
 .main-hero {
-  height: 100vh;
+  height: 200vh;
   padding-top: 12px;
 
   @media (min-width: 500px) {
@@ -84,6 +84,140 @@
       }
     }
   }
+
+  // ====main-hero__statistics======
+
+  // statistics-mob--
+
+  &__statistics {
+    margin-top: 30px;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: clamp(0.5rem, -0.036rem + 2.68vw, 1.25rem);
+    }
+
+    &-icon {
+      fill: #956d84;
+      width: clamp(2.875rem, 0.459rem + 12.08vw, 6.25rem);
+      height: clamp(2.875rem, 0.459rem + 12.08vw, 6.25rem);
+
+      &-wrapper {
+        border: 2px solid #956d84;
+        border-radius: clamp(3.125rem, 8.681rem + -27.78vw, 0rem);
+        aspect-ratio: 1 / 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: 768px) {
+          border-radius: 0px;
+        }
+      }
+    }
+
+    &-text {
+      margin-top: 16px;
+
+      &-title {
+        text-align: center;
+        font-size: clamp(0.625rem, 0.178rem + 2.24vw, 1.25rem);
+        line-height: 150%;
+        color: var(--dark-base-color);
+      }
+    }
+  }
+
+  // statistics-desc--
+
+  &__statistics-desctop {
+    margin-top: 44px;
+
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 20px;
+    }
+
+    &-item {
+      overflow: hidden;
+      position: relative;
+      border: 1px solid var(--gray-base-color);
+
+      &:not(:first-child, :last-child) {
+        background-color: var(--gray-base-color);
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+        }
+
+        &::before {
+          top: 27px;
+          left: 0;
+          background-image: url(../../../assets/img/pages/main/sections/hero/statistics/desctop/branch-left.webp);
+          background-repeat: no-repeat;
+          rotate: 120deg;
+          translate: -150px;
+        }
+
+        &::after {
+          top: -174px;
+          left: 0;
+          background-image: url(../../../assets/img/pages/main/sections/hero/statistics/desctop/branch-right.png);
+          background-repeat: no-repeat;
+          rotate: 267deg;
+          translate: 116px;
+        }
+      }
+
+      background-repeat: no-repeat;
+      height: 219px;
+
+      &:first-child {
+        background-image: url(../../../assets/img/pages/main/sections/hero/statistics/desctop/item-bg-left.webp);
+        background-size: cover;
+
+        &::before {
+          position: absolute;
+          content: '';
+          bottom: 0;
+          left: 42%;
+          width: 100%;
+          height: 100%;
+
+          background-image: url(../../../assets/img/pages/main/sections/hero/statistics/desctop/branch-left.webp);
+          background-repeat: no-repeat;
+        }
+      }
+
+      &:last-child {
+        background-image: url(../../../assets/img/pages/main/sections/hero/statistics/desctop/item-bg-right.webp);
+        background-size: cover;
+        background-position: 100% 0%;
+
+        &::before {
+          position: absolute;
+          content: '';
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+
+          background-image: url(../../../assets/img/pages/main/sections/hero/statistics/desctop/branch-right.webp);
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
 }
 
 // =======swiper=======
@@ -154,44 +288,6 @@
 
     & > span {
       color: var(--white-base-color);
-    }
-  }
-}
-
-// ====main-hero__statistics======
-
-.main-hero__statistics {
-  margin-top: 30px;
-
-  &-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: clamp(0.5rem, -0.036rem + 2.68vw, 1.25rem);
-  }
-
-  &-icon {
-    fill: #956d84;
-    width: clamp(2.875rem, 0.459rem + 12.08vw, 6.25rem);
-    height: clamp(2.875rem, 0.459rem + 12.08vw, 6.25rem);
-
-    &-wrapper {
-      border: 2px solid #956d84;
-      border-radius: clamp(3.125rem, 8.681rem + -27.78vw, 0rem);
-      aspect-ratio: 1 / 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-
-  &-text {
-    margin-top: 16px;
-
-    &-title {
-      text-align: center;
-      font-size: clamp(0.625rem, 0.178rem + 2.24vw, 1.25rem);
-      line-height: 150%;
-      color: var(--dark-base-color);
     }
   }
 }
