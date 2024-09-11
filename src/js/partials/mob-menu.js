@@ -20,7 +20,6 @@ export function mobMenu() {
 
   const categoriesSubLists = document.querySelectorAll('.js-categories-sub-list');
 
-  console.log(categoriesBtnClose);
   // --------/--ref---------------------------
 
   // -----------toogleMenu-------------------
