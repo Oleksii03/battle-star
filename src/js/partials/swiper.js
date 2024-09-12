@@ -8,7 +8,7 @@ Swiper.use([Pagination, Autoplay, Grid]);
 
 export function stockSwiper() {
   return new Swiper('.stock-swiper', {
-    slidesPerView: 2,
+    slidesPerView: 'auto',
     // grid: {
     //   rows: 2,
     // },

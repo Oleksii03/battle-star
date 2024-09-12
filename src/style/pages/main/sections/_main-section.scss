@@ -1,5 +1,5 @@
 .main {
-  // height: 200vh;
+  height: 100vh;
 
   &__title {
     text-align: center;
@@ -25,10 +25,9 @@
   text-align: center;
   font-size: 18px;
   background: #c31313;
-  width: 140px;
+  width: clamp(8.75rem, 6.25rem + 12.5vw, 21.25rem);
   height: 276px;
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-column: 9px;
 }
