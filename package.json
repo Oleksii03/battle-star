@@ -7,10 +7,14 @@
     "start": "vite",
     "build": "vite build --base=/Flowers/ --emptyOutDir",
     "preview": "vite preview",
-    "deploy": "git add . && git commit -m 'auto commit' && git push origin main"
+    "deploy": "git add . && git commit -m 'auto commit' && git push origin main",
+    "convert-webp": "node convert-to-webp.js"
   },
   "devDependencies": {
     "glob": "^8.1.0",
+    "imagemin": "^9.0.0",
+    "imagemin-cli": "^8.0.0",
+    "imagemin-webp": "^8.0.0",
     "vite": "^5.2.13"
   },
   "dependencies": {
