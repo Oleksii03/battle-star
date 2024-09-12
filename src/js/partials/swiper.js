@@ -9,9 +9,9 @@ Swiper.use([Pagination, Autoplay, Grid, Navigation]);
 export function stockSwiper() {
   return new Swiper('.stock-swiper', {
     slidesPerView: 'auto',
-    grid: {
-      rows: 2,
-    },
+    // grid: {
+    //   rows: 2,
+    // },
     spaceBetween: 9,
     pagination: {
       el: '.swiper-pagination',
