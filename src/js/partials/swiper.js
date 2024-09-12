@@ -1,17 +1,17 @@
 import Swiper from 'swiper';
 import 'swiper/swiper-bundle.css';
-import { Pagination, Autoplay, Grid } from 'swiper/modules';
+import { Pagination, Autoplay, Grid, Navigation } from 'swiper/modules';
 import 'swiper/css/pagination';
 import 'swiper/css/grid';
 
-Swiper.use([Pagination, Autoplay, Grid]);
+Swiper.use([Pagination, Autoplay, Grid, Navigation]);
 
 export function stockSwiper() {
   return new Swiper('.stock-swiper', {
     slidesPerView: 'auto',
-    // grid: {
-    //   rows: 2,
-    // },
+    grid: {
+      rows: 2,
+    },
     spaceBetween: 9,
     pagination: {
       el: '.swiper-pagination',
