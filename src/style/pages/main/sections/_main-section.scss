@@ -7,6 +7,10 @@
     font-weight: 400;
     line-height: 75%;
     margin-bottom: 51px;
+
+    @media (min-width: 1440px) {
+      margin-bottom: 68px;
+    }
   }
 }
 
@@ -21,11 +25,16 @@
     background: #fbf9fa;
     padding: 17px 11px 4px;
 
+    @media (min-width: 1440px) {
+      padding: 17px 33px 13px;
+    }
+
     &-img {
       aspect-ratio: 1 / 1;
       object-fit: cover;
       object-position: center;
       margin: 0 auto;
+      pointer-events: none;
     }
 
     &-logo {
@@ -43,6 +52,14 @@
       font-size: 10px;
       font-weight: 600;
       line-height: 180%;
+
+      @media (min-width: 1440px) {
+        font-size: 16px;
+        width: 56px;
+        height: 56px;
+        bottom: 27px;
+        right: 12px;
+      }
     }
 
     &-discount {
@@ -61,6 +78,14 @@
       font-size: 10px;
       font-weight: 400;
       line-height: 180%;
+
+      @media (min-width: 1440px) {
+        width: 56px;
+        height: 56px;
+        left: 20px;
+        border: 2px dashed #e72222;
+        font-size: 16px;
+      }
     }
 
     &-favorite {
@@ -68,14 +93,21 @@
       content: '';
       top: 11px;
       right: 6px;
-      width: 13.605px;
-      height: 11.768px;
+      width: 14px;
+      height: 12px;
       fill: #fbfbfb00;
       stroke: #956d84;
       stroke-width: 2;
 
       &_active {
         fill: #956d84;
+      }
+
+      @media (min-width: 1440px) {
+        width: 38px;
+        height: 30px;
+        top: 32px;
+        right: 21px;
       }
     }
   }
@@ -85,12 +117,21 @@
   &__content-bottom {
     padding: 3px 5px 10px;
 
+    @media (min-width: 1440px) {
+      padding: 18px 25px 10px;
+    }
+
     &-rating-list {
       @include flex-align-row;
-      align-items: center;
+      // align-items: center;
       // column-gap: 1px;
       transition: all 250ms linear;
       margin-bottom: 5px;
+
+      @media (min-width: 1440px) {
+        margin-bottom: 20px;
+        // align-items: baseline;
+      }
 
       & > li {
         @include flex-align-row;
@@ -109,6 +150,11 @@
         height: 9px;
         width: 6px;
 
+        @media (min-width: 1440px) {
+          width: 15px;
+          height: 12px;
+        }
+
         &:hover {
           fill: #f8e582;
           stroke: #f8e582;
@@ -123,6 +169,16 @@
       margin-bottom: 13px;
       white-space: nowrap;
 
+      @media (min-width: 1440px) {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        white-space: wrap;
+        width: 120px;
+        margin-bottom: 0px;
+      }
+
       & > span {
         font-weight: 700;
       }
@@ -134,6 +190,11 @@
         flex-direction: column;
         align-items: center;
         margin-bottom: 8px;
+
+        @media (min-width: 1440px) {
+          flex-direction: row;
+          justify-content: space-between;
+        }
       }
 
       &-old {
@@ -143,6 +204,13 @@
         line-height: 150%;
         text-align: center;
         text-decoration: line-through;
+
+        @media (min-width: 1440px) {
+          font-size: 18px;
+          line-height: 100%;
+          text-decoration-line: strikethrough;
+          margin-bottom: 5px;
+        }
 
         & > span {
           font-weight: 600;
@@ -154,6 +222,11 @@
         font-size: 14px;
         font-weight: 400;
         line-height: 128%;
+
+        @media (min-width: 1440px) {
+          font-size: 18px;
+          line-height: 100%;
+        }
       }
     }
 
@@ -214,7 +287,7 @@
 .stock-swiper .swiper-wrapper {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .stock-swiper .swiper-slide {

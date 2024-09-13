@@ -52,7 +52,7 @@ export function stockSwiper() {
   });
 
   function updateSpaceBetween() {
-    if (window.innerWidth >= 1920) {
+    if (window.innerWidth >= 1440) {
       swiperStock.params.spaceBetween = 20;
     } else {
       swiperStock.params.spaceBetween = 9;
