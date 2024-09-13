@@ -23,10 +23,10 @@
   &__content-top {
     position: relative;
     background: #fbf9fa;
-    padding: 17px 11px 4px;
+    padding: 19px 14px 4px;
 
     @media (min-width: 1440px) {
-      padding: 17px 33px 13px;
+      padding: 24px 35px 13px;
     }
 
     &-img {
@@ -108,6 +108,7 @@
         height: 30px;
         top: 32px;
         right: 21px;
+        cursor: pointer;
       }
     }
   }
@@ -115,10 +116,10 @@
   // --content-bottom----
 
   &__content-bottom {
-    padding: 3px 5px 10px;
+    padding: 6px 6px 10px;
 
     @media (min-width: 1440px) {
-      padding: 18px 25px 10px;
+      padding: 14px 25px 10px;
     }
 
     &-rating-list {
@@ -126,7 +127,7 @@
       // align-items: center;
       // column-gap: 1px;
       transition: all 250ms linear;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
 
       @media (min-width: 1440px) {
         margin-bottom: 20px;
@@ -150,7 +151,7 @@
         height: 9px;
         width: 6px;
 
-        @media (min-width: 1440px) {
+        @media (min-width: 768px) {
           width: 15px;
           height: 12px;
         }
