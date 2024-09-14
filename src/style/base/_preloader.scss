@@ -1,6 +1,6 @@
 .preloader {
   overflow: hidden;
-  background-color: #000000f8;
+  background-color: #000000fc;
   position: fixed;
   inset: 0;
   z-index: 10000;
@@ -10,7 +10,7 @@
 
     top: 50%;
     left: 50%;
-    transform: translate(-45%, -50%);
+    transform: translate(-40%, -50%);
     width: 320px;
     height: auto;
     aspect-ratio: 7 / 9;
@@ -33,7 +33,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-57%, -126%);
+    transform: translate(-42%, -126%);
     width: 100px;
     height: auto;
     aspect-ratio: 1 / 1;
@@ -43,7 +43,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(22%, -60%);
+    transform: translate(40%, -60%);
     width: 100px;
     height: auto;
     aspect-ratio: 1 / 1;
@@ -53,7 +53,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-6%, 6%);
+    transform: translate(10%, 6%);
     width: 91px;
     height: auto;
     aspect-ratio: 1 / 1;
@@ -63,7 +63,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-140%, -87%);
+    transform: translate(-123%, -87%);
     width: 93px;
     height: auto;
     aspect-ratio: 1 / 1;
@@ -73,7 +73,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-170%, -0%);
+    transform: translate(-151%, -1%);
     width: 80px;
     height: auto;
     aspect-ratio: 1 / 1;
