@@ -5,9 +5,17 @@
   inset: 0;
   z-index: 10000;
 
+  .img__branch-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+  }
+
   &__img-branch {
     position: absolute;
-
     top: 50%;
     left: 50%;
     transform: translate(-40%, -50%);
@@ -17,16 +25,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+    opacity: 0;
 
-  .img__branch-wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    // margin: 0 auto;
-    width: 100%;
-    height: 100%;
+    animation-name: branch;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 500ms;
+    animation-fill-mode: forwards;
+
+    @keyframes branch {
+      to {
+        opacity: 1;
+      }
+    }
   }
 
   &__img-flower-top {
@@ -37,6 +48,19 @@
     width: 100px;
     height: auto;
     aspect-ratio: 1 / 1;
+    opacity: 0;
+
+    animation-name: flower-top;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+
+    @keyframes flower-top {
+      to {
+        opacity: 1;
+      }
+    }
   }
 
   &__img-right-top {
@@ -47,6 +71,19 @@
     width: 100px;
     height: auto;
     aspect-ratio: 1 / 1;
+    opacity: 0;
+
+    animation-name: flower-right-top;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3.5s;
+    animation-fill-mode: forwards;
+
+    @keyframes flower-right-top {
+      to {
+        opacity: 1;
+      }
+    }
   }
 
   &__img-right-bottom {
@@ -57,6 +94,19 @@
     width: 91px;
     height: auto;
     aspect-ratio: 1 / 1;
+    opacity: 0;
+
+    animation-name: flower-right-bottom;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+
+    @keyframes flower-right-bottom {
+      to {
+        opacity: 1;
+      }
+    }
   }
 
   &__img-left-top {
@@ -67,6 +117,19 @@
     width: 93px;
     height: auto;
     aspect-ratio: 1 / 1;
+    opacity: 0;
+
+    animation-name: flower-left-top;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 4.5s;
+    animation-fill-mode: forwards;
+
+    @keyframes flower-left-top {
+      to {
+        opacity: 1;
+      }
+    }
   }
 
   &__img-left-bottom {
@@ -77,6 +140,19 @@
     width: 80px;
     height: auto;
     aspect-ratio: 1 / 1;
+    opacity: 0;
+
+    animation-name: flower-left-bottom;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+
+    @keyframes flower-left-bottom {
+      to {
+        opacity: 1;
+      }
+    }
   }
 
   // display: none;
