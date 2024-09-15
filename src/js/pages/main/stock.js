@@ -5,7 +5,6 @@ import { cardsMarkup } from './cards-markup';
 
 export function stockCard() {
   const firebaseConfig = {
-    // https://firebase.google.com/docs/web/setup#available-libraries
     apiKey: 'AIzaSyCeoo8r7oEqKQs1O_YxVO2RAd8WWV3HWso',
     authDomain: 'flowers-4b1a5.firebaseapp.com',
     projectId: 'flowers-4b1a5',

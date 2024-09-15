@@ -4,6 +4,14 @@
   position: fixed;
   inset: 0;
   z-index: 10000;
+  opacity: 1;
+
+  &_hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 500ms linear;
+  }
 
   .img__branch-wrapper {
     position: absolute;
@@ -76,7 +84,7 @@
     animation-name: flower-right-top;
     animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
-    animation-delay: 2s;
+    animation-delay: 2.5s;
     animation-fill-mode: forwards;
 
     @keyframes flower-right-top {
@@ -145,7 +153,7 @@
     animation-name: flower-left-bottom;
     animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
-    animation-delay: 2s;
+    animation-delay: 2.5s;
     animation-fill-mode: forwards;
 
     @keyframes flower-left-bottom {
