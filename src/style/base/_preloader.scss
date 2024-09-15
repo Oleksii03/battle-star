@@ -29,7 +29,7 @@
 
     animation-name: branch;
     animation-duration: 1s;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
     animation-delay: 500ms;
     animation-fill-mode: forwards;
 
@@ -74,9 +74,9 @@
     opacity: 0;
 
     animation-name: flower-right-top;
-    animation-duration: 1s;
+    animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
-    animation-delay: 3.5s;
+    animation-delay: 2s;
     animation-fill-mode: forwards;
 
     @keyframes flower-right-top {
@@ -122,7 +122,7 @@
     animation-name: flower-left-top;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
-    animation-delay: 4.5s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
 
     @keyframes flower-left-top {
@@ -143,9 +143,9 @@
     opacity: 0;
 
     animation-name: flower-left-bottom;
-    animation-duration: 1s;
+    animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
-    animation-delay: 2.5s;
+    animation-delay: 2s;
     animation-fill-mode: forwards;
 
     @keyframes flower-left-bottom {
