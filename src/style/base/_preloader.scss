@@ -4,16 +4,28 @@
   inset: 0;
   z-index: 20000;
 
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: all 400ms linear;
-
   &_visible {
     visibility: visible;
     opacity: 1;
     pointer-events: auto;
     background-color: #050505f7;
+  }
+
+  &_hidden {
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 350ms linear;
+
+    animation-name: preloader;
+    animation-duration: 350ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+
+    @keyframes preloader {
+      to {
+        opacity: 0;
+      }
+    }
   }
 
   .img__branch-wrapper {

@@ -1,6 +1,5 @@
 export function preloader() {
   const preloader = document.querySelector('.js-preloader');
-  // const preloaderWrapper = document.querySelector('.js-preloader-wrapper');
 
   isVisit();
 
@@ -10,7 +9,7 @@ export function preloader() {
       return;
     }
 
-    preloader.classList.remove('preloader_visible');
+    preloader.classList.add('preloader_hidden');
     document.body.classList.remove('to-freeze');
   }
 
@@ -19,7 +18,7 @@ export function preloader() {
     document.body.classList.add('to-freeze');
 
     setTimeout(() => {
-      preloader.classList.remove('preloader_visible');
+      preloader.classList.add('preloader_hidden');
       document.body.classList.remove('to-freeze');
 
       localStorage.setItem('is-visit', 'true');
