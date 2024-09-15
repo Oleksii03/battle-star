@@ -5,11 +5,12 @@ import { stockCard } from './pages/main/stock';
 import { stockSwiper } from './partials/swiper';
 import { preloader } from './partials/preloader';
 
+preloader();
+
 document.addEventListener('DOMContentLoaded', () => {
   header();
   mobMenu();
   initSwiper();
   stockCard();
   stockSwiper();
-  preloader();
 });
