@@ -1,40 +1,45 @@
-import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
 
 import { cardsMarkup } from './cards-markup';
 
-export function stockCard() {
-  const firebaseConfig = {
-    apiKey: 'AIzaSyCeoo8r7oEqKQs1O_YxVO2RAd8WWV3HWso',
-    authDomain: 'flowers-4b1a5.firebaseapp.com',
-    projectId: 'flowers-4b1a5',
-    storageBucket: 'flowers-4b1a5.appspot.com',
-    messagingSenderId: '719757325067',
-    appId: '1:719757325067:web:6e609ba7f0d37bdd23e80e',
-  };
+export function createCard(app) {
+  const stockBox = document.querySelector('.js-main-swiper-stock');
 
-  const app = initializeApp(firebaseConfig);
+  const arrTitles = ['Stock'];
+  const arrContainers = [stockBox];
+
   const db = getFirestore(app);
 
-  async function getAllDocuments() {
+  async function getAllDocuments(title = '', container = '') {
     try {
-      const querySnapshot = await getDocs(collection(db, 'Stock'));
+      const querySnapshot = await getDocs(collection(db, title));
+
       const stockArray = [];
 
       querySnapshot.forEach(doc => {
         stockArray.push({ id: doc.id, ...doc.data() });
       });
 
-      return stockArray;
+      // return stockArray;
+      cardsMarkup(stockArray, container);
     } catch (error) {
       console.error('Error getting documents:', error);
       return [];
     }
   }
 
-  getAllDocuments()
-    .then(doc => cardsMarkup(doc))
-    .catch(error => {
-      console.error('Error in getAllDocuments:', error);
-    });
+  for (let i = 0; i < arrTitles.length; i++) {
+    const title = arrTitles[i];
+    const container = arrContainers[i];
+
+    getAllDocuments(title, container);
+  }
+
+  // getAllDocuments(arrTitle, arrContainer);
+
+  // getAllDocuments()
+  //   .then(doc => cardsMarkup(doc))
+  //   .catch(error => {
+  //     console.error('Error in getAllDocuments:', error);
+  //   });
 }

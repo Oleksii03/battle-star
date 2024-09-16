@@ -1,4 +1,3 @@
-export function cardsMarkup(markupArray) {
-  console.log(markupArray);
+export function cardsMarkup(markupArray, container) {
   return ``;
 }
