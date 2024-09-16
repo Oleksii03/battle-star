@@ -5,7 +5,7 @@ import { cardsMarkup } from './cards-markup';
 export function createCard(app) {
   const stockBox = document.querySelector('.js-main-swiper-stock');
 
-  const arrTitles = ['Stock'];
+  const collectionTitles = ['Stock'];
   const arrContainers = [stockBox];
 
   const db = getFirestore(app);
@@ -28,8 +28,8 @@ export function createCard(app) {
     }
   }
 
-  for (let i = 0; i < arrTitles.length; i++) {
-    const title = arrTitles[i];
+  for (let i = 0; i < collectionTitles.length; i++) {
+    const title = collectionTitles[i];
     const container = arrContainers[i];
 
     getAllDocuments(title, container);

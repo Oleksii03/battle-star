@@ -31,10 +31,12 @@
 
     &-img {
       aspect-ratio: 1 / 1;
-      object-fit: cover;
+      object-fit: contain;
       object-position: center;
       margin: 0 auto;
       pointer-events: none;
+
+      height: auto;
     }
 
     &-logo {
@@ -118,20 +120,21 @@
   &__content-bottom {
     padding: 6px 6px 10px;
 
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+
     @media (min-width: 1440px) {
       padding: 14px 25px 19px;
     }
 
     &-rating-list {
       @include flex-align-row;
-      // align-items: center;
-      // column-gap: 1px;
       transition: all 250ms linear;
       margin-bottom: 6px;
 
       @media (min-width: 1440px) {
         margin-bottom: 20px;
-        // align-items: baseline;
       }
 
       & > li {
@@ -168,7 +171,12 @@
       font-weight: 500;
       line-height: 150%;
       margin-bottom: 13px;
-      white-space: nowrap;
+
+      @media (max-width: 767px) {
+        text-align: center;
+      }
+
+      // white-space: nowrap;
 
       @media (min-width: 1440px) {
         font-size: 18px;
@@ -348,15 +356,7 @@
 }
 
 .stock-swiper .swiper-slide {
-  // border: 1px solid #000;
-  // text-align: center;
-  // font-size: 18px;
-  // background: #c31313;
   width: clamp(8.75rem, 6.25rem + 12.5vw, 21.25rem);
-
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
 }
 
 .stock-swiper .swiper-pagination-bullet {
