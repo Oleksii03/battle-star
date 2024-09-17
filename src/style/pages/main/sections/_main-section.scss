@@ -12,6 +12,10 @@
       margin-bottom: 68px;
     }
   }
+
+  &__stock-swiper-wrapper {
+    position: relative;
+  }
 }
 
 .slide-stock {
@@ -344,6 +348,7 @@
 }
 
 .swiper .stock-swiper {
+  position: relative;
   width: 100%;
   height: 100%;
   margin-bottom: 50px;
@@ -367,4 +372,16 @@
 }
 .stock-swiper .swiper-pagination-bullet-active::after {
   border: 1px solid var(--gray-base-color);
+}
+
+//
+
+.stock__swiper-btns {
+  border: 1px solid #000;
+  display: inline-flex;
+  column-gap: 27px;
+  position: absolute;
+  z-index: 20;
+  top: -30px;
+  right: 0;
 }

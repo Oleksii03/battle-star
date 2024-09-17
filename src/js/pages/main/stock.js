@@ -20,7 +20,6 @@ export function createCard(app) {
         stockArray.push({ id: doc.id, ...doc.data() });
       });
 
-      // return stockArray;
       cardsMarkup(stockArray, container);
     } catch (error) {
       console.error('Error getting documents:', error);
