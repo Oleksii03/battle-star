@@ -1,6 +1,4 @@
 .main {
-  // height: 100vh;
-
   &__title {
     text-align: center;
     font-size: clamp(1.5rem, 1.2rem + 1.5vw, 3rem);
@@ -15,6 +13,12 @@
 
   &__stock-swiper-wrapper {
     position: relative;
+    margin-bottom: clamp(3.625rem, 2.763rem + 4.31vw, 7.938rem);
+  }
+
+  &__seasonal-swiper-wrapper {
+    position: relative;
+    margin-bottom: clamp(3.625rem, 2.763rem + 4.31vw, 7.938rem);
   }
 }
 
@@ -347,6 +351,7 @@
   }
 }
 
+//  слайдер-акції--
 .swiper .stock-swiper {
   position: relative;
   width: 100%;
@@ -364,6 +369,11 @@
   width: clamp(8.75rem, 6.25rem + 12.5vw, 21.25rem);
 }
 
+.stock-swiper .swiper-pagination {
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
 .stock-swiper .swiper-pagination-bullet {
   background: var(--gray-base-color) !important;
 }
@@ -377,11 +387,83 @@
 //
 
 .stock__swiper-btns {
-  border: 1px solid #000;
-  display: inline-flex;
-  column-gap: 27px;
-  position: absolute;
-  z-index: 20;
-  top: -30px;
-  right: 0;
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: inline-flex;
+    column-gap: 35px;
+    position: absolute;
+    z-index: 20;
+    top: -60px;
+    right: 0;
+
+    & svg {
+      fill: var(--gray-base-color);
+      width: 14px;
+      height: 30px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    top: -90px;
+  }
+}
+//--/-слайдер-акції--
+
+//  слайдер-сезонні--
+.swiper .seasona-swiper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 50px;
+}
+
+.seasona-swiper .swiper-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+.seasona-swiper .swiper-slide {
+  width: clamp(8.75rem, 6.25rem + 12.5vw, 21.25rem);
+}
+
+.seasona-swiper .swiper-pagination {
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+.seasona-swiper .swiper-pagination-bullet {
+  background: var(--gray-base-color) !important;
+}
+.seasona-swiper .swiper-pagination-bullet-active {
+  background: var(--gray-base-color) !important;
+}
+.seasona-swiper .swiper-pagination-bullet-active::after {
+  border: 1px solid var(--gray-base-color);
+}
+
+//
+
+.seasonal__swiper-btns {
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: inline-flex;
+    column-gap: 35px;
+    position: absolute;
+    z-index: 20;
+    top: -60px;
+    right: 0;
+
+    & svg {
+      fill: var(--gray-base-color);
+      width: 14px;
+      height: 30px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    top: -90px;
+  }
 }

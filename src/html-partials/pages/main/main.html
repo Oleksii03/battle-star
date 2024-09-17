@@ -1,12 +1,26 @@
 <section class="main">
   <div class="main__container container">
+    <!-- Акції -->
     <h2 class="main__title">Акції</h2>
 
+    <!-- слайдер -->
     <div class="main__stock-swiper-wrapper">
       <!-- btns -->
       <div class="stock__swiper-btns">
-        <div class="stock__swiper-button-prev">-</div>
-        <div class="stock__swiper-button-next">+</div>
+        <div class="stock__swiper-button-prev">
+          <svg
+            width="12"
+            height="21">
+            <use xlink:href="#icon-slider-btn-prev"></use>
+          </svg>
+        </div>
+        <div class="stock__swiper-button-next">
+          <svg
+            width="12"
+            height="21">
+            <use xlink:href="#icon-slider-btn-next"></use>
+          </svg>
+        </div>
       </div>
       <div class="swiper stock-swiper">
         <!-- slide-wrapper -->
@@ -15,5 +29,38 @@
         <div class="swiper-pagination"></div>
       </div>
     </div>
+    <!--/ слайдер -->
+    <!--/ Акції -->
+
+    <!-- Сезонні -->
+    <h2 class="main__title">Сезонні</h2>
+    <!-- слайдер -->
+    <div class="main__seasonal-swiper-wrapper">
+      <!-- btns -->
+      <div class="seasonal__swiper-btns">
+        <div class="seasona__swiper-button-prev">
+          <svg
+            width="12"
+            height="21">
+            <use xlink:href="#icon-slider-btn-prev"></use>
+          </svg>
+        </div>
+        <div class="seasona__swiper-button-next">
+          <svg
+            width="12"
+            height="21">
+            <use xlink:href="#icon-slider-btn-next"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="swiper seasona-swiper">
+        <!-- slide-wrapper -->
+        <div class="swiper-wrapper js-main-swiper-seasonal"></div>
+        <!-- pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <!--/ слайдер -->
+    <!--/ Сезонні -->
   </div>
 </section>

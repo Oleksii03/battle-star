@@ -75,11 +75,13 @@ export function cardsMarkup(markupArray, container) {
 
                 <div class="slide-stock__content-bottom-price-box">
                   <h5 class="slide-stock__content-bottom-title" title="${title}">
-                    <span></span> ${title.length >= 20 ? title.slice(0, 18) + '...' : title}
+                    <span></span> ${title.length >= 20 ? title.slice(0, 15) + '...' : title}
                   </h5>
 
                   <div class="slide-stock__content-bottom-price">
-                    <div class="slide-stock__content-bottom-price-old"><span>${price}</span> грн</div>
+
+                  ${discount ? `<div class="slide-stock__content-bottom-price-old"><span>${price}</span> грн</div>` : ''}
+                    
                     <div class="slide-stock__content-bottom-price-new">${price * (1 - discount / 100).toFixed(1)} грн</div>
                   </div>
                 </div>
