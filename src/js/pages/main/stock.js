@@ -1,13 +1,14 @@
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
-
 import { cardsMarkup } from './cards-markup';
 
 export function createCard(app) {
   const stockBox = document.querySelector('.js-main-swiper-stock');
   const seasonalBox = document.querySelector('.js-main-swiper-seasonal');
-
-  const collectionName = ['Stock', 'Seasonal'];
-  const arrContainers = [stockBox, seasonalBox];
+  const presentBox = document.querySelector('.js-main-swiper-present');
+  // ----refs------------
+  const collectionName = ['Stock', 'Seasonal', 'Present'];
+  const arrContainers = [stockBox, seasonalBox, presentBox];
+  // ---arrs-------------
 
   const db = getFirestore(app);
 
@@ -34,12 +35,4 @@ export function createCard(app) {
 
     getAllDocuments(title, container);
   }
-
-  // getAllDocuments(arrTitle, arrContainer);
-
-  // getAllDocuments()
-  //   .then(doc => cardsMarkup(doc))
-  //   .catch(error => {
-  //     console.error('Error in getAllDocuments:', error);
-  //   });
 }

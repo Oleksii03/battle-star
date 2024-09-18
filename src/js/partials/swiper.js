@@ -64,6 +64,28 @@ export function seasonalSwiper() {
   window.addEventListener('resize', () => updateSwiperParams(swiperSeasonal));
 }
 
+// swiper-Present--------------------------------
+export function presentSwiper() {
+  const swiperPresent = new Swiper('.present-swiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 9,
+    grid: {
+      rows: 2,
+      fill: 'row',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    navigation: {
+      nextEl: '.present__swiper-button-next',
+      prevEl: '.present__swiper-button-prev',
+    },
+  });
+
+  updateSwiperParams(swiperPresent);
+  window.addEventListener('resize', () => updateSwiperParams(swiperPresent));
+}
+
 // --update---Swiper---Params-----------------------
 
 function updateSwiperParams(swiper) {
