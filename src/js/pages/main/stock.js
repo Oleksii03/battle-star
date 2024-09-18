@@ -6,7 +6,7 @@ export function createCard(app) {
   const stockBox = document.querySelector('.js-main-swiper-stock');
   const seasonalBox = document.querySelector('.js-main-swiper-seasonal');
 
-  const collectionName = ['Stock', 'Stock'];
+  const collectionName = ['Stock', 'Seasonal'];
   const arrContainers = [stockBox, seasonalBox];
 
   const db = getFirestore(app);

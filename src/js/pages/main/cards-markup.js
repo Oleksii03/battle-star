@@ -1,7 +1,7 @@
 export function cardsMarkup(markupArray, container) {
   // console.log(2800 * (1 - 19 / 100));
 
-  const markup = markupArray.map(({ discount, price, img: { png, webp }, rating, title, type }) => {
+  const markup = markupArray.map(({ discount, price, img: { png, webp }, title }) => {
     return `
           <div class="swiper-slide">
             <div class="main__slide-stock slide-stock">
@@ -13,8 +13,8 @@ export function cardsMarkup(markupArray, container) {
                   <use xlink:href="#icon-heart"></use>
                 </svg>
 
-                <div class="slide-stock__content-top-discount">-${discount}%</div>
-
+                ${discount ? `<div class="slide-stock__content-top-discount">-${discount}%</div>` : ''}
+             
                   <picture>
                     <source srcset="${webp}, type="image/webp" />
                     <img 

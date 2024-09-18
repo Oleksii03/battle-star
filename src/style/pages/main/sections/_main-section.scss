@@ -128,10 +128,6 @@
   &__content-bottom {
     padding: 6px 6px 10px;
 
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
-
     @media (min-width: 1440px) {
       padding: 14px 25px 19px;
     }
@@ -179,6 +175,7 @@
       font-weight: 500;
       line-height: 150%;
       margin-bottom: 13px;
+      cursor: pointer;
 
       @media (max-width: 767px) {
         text-align: center;
@@ -390,6 +387,7 @@
   display: none;
 
   @media (min-width: 1024px) {
+    cursor: pointer;
     display: inline-flex;
     column-gap: 35px;
     position: absolute;
@@ -426,6 +424,8 @@
 
 .seasona-swiper .swiper-slide {
   width: clamp(8.75rem, 6.25rem + 12.5vw, 21.25rem);
+  display: flex;
+  flex-direction: column;
 }
 
 .seasona-swiper .swiper-pagination {
@@ -449,6 +449,7 @@
   display: none;
 
   @media (min-width: 1024px) {
+    cursor: pointer;
     display: inline-flex;
     column-gap: 35px;
     position: absolute;
