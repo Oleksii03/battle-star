@@ -17,7 +17,9 @@ export function cardsMarkup(markupArray, container) {
              
                   <picture>
                     <source srcset="${webp}, type="image/webp" />
+
                     <img 
+                     loading="lazy"
                      width="450"
                      height="450"
                      class="slide-stock__content-top-img"

@@ -86,16 +86,32 @@ export function presentSwiper() {
   window.addEventListener('resize', () => updateSwiperParams(swiperPresent));
 }
 
+// swiper-Forum--------------------------------------
+export function forumSwiper() {
+  return new Swiper('.forum-swiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 18,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: true,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    speed: 600,
+  });
+}
+
 // --update---Swiper---Params-----------------------
 
 function updateSwiperParams(swiper) {
   if (window.innerWidth <= 425) {
     swiper.params.slidesPerView = 2;
+    swiper.params.spaceBetween = 9;
   } else if (window.innerWidth >= 1024) {
     swiper.params.spaceBetween = 20;
     swiper.params.slidesPerView = 4;
   } else {
-    swiper.params.spaceBetween = 9;
     swiper.params.slidesPerView = 'auto';
   }
   swiper.update();
