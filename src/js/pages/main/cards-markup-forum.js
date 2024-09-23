@@ -10,7 +10,7 @@ export function cardsMarkupForum(arr) {
                   <div class="main__slide-forum-img-overlay"></div>
                   <picture class="main__slide-forum-picture">
                     <source
-                      srcset=${webp ? `${webp}` : 'https://firebasestorage.googleapis.com/v0/b/flowers-4b1a5.appspot.com/o/pages%2F404%2Fplaceholder-404.png?alt=media&token=69e0e0b2-fd05-421a-a13e-ce96a894acc6'}
+                      srcset=${webp ? `${webp}` : 'https://firebasestorage.googleapis.com/v0/b/flowers-4b1a5.appspot.com/o/pages%2F404%2Fplaceholder-404.webp?alt=media&token=89f10487-08e7-491f-8448-5998d2423abc'}
                       type="image/webp" />
 
                     <img

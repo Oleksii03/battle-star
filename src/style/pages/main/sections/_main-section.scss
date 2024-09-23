@@ -89,7 +89,11 @@
       height: auto;
       object-fit: cover;
       object-position: center;
-      // aspect-ratio: 2/1;
+      aspect-ratio: 50/41;
+
+      @media (min-width: 1440px) {
+        aspect-ratio: 53 / 44;
+      }
 
       &-wrapper {
         position: relative;
