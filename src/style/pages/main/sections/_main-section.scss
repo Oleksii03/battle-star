@@ -12,6 +12,9 @@
 
     &-forum {
       margin-bottom: clamp(4.063rem, 3.75rem + 1.56vw, 5.625rem);
+      @media (min-width: 1920px) {
+        margin-bottom: 78px;
+      }
     }
   }
 
@@ -19,7 +22,8 @@
   &__seasonal-swiper-wrapper,
   &__present-swiper-wrapper {
     position: relative;
-    margin-bottom: clamp(3.625rem, 2.763rem + 4.31vw, 7.938rem);
+    // margin-bottom: clamp(3.625rem, 2.763rem + 4.31vw, 7.938rem);
+    margin-bottom: 131px;
   }
 
   //--slide-forum---
@@ -57,6 +61,10 @@
     &-text {
       color: var(--white-base-color);
       padding: 7px clamp(0.688rem, 0.65rem + 0.19vw, 0.875rem) 9px;
+
+      @media (min-width: 1920px) {
+        padding: 26px 17px 30px;
+      }
     }
 
     &-title {
@@ -64,6 +72,11 @@
       font-weight: 400;
       line-height: 128%;
       margin-bottom: 5px;
+
+      @media (min-width: 1920px) {
+        line-height: 104%;
+        margin-bottom: 25px;
+      }
     }
 
     &-description {
@@ -111,8 +124,9 @@
       @include flex-align-row;
       justify-content: center;
       color: var(--gray-base-color);
-      font-size: 10px;
-      font-weight: 600;
+      font-family: 'AguafinaScript';
+      font-size: 12px;
+      font-weight: 400;
       line-height: 180%;
 
       @media (min-width: 1440px) {
@@ -137,6 +151,7 @@
       border: 1px dashed #e72222;
       border-radius: 50%;
       color: #000;
+      font-family: 'Acme';
       font-size: 10px;
       font-weight: 400;
       line-height: 180%;
@@ -240,7 +255,7 @@
         font-style: normal;
         font-weight: 400;
         line-height: 100%;
-        white-space: wrap;
+        // white-space: wrap;
         width: 120px;
         margin-bottom: 0px;
       }
@@ -546,6 +561,7 @@
     display: none;
   }
 }
+
 .present-swiper .swiper-pagination-bullet {
   background: var(--gray-base-color) !important;
 }
@@ -584,12 +600,16 @@
 
 // ------forum-swiper---------
 
+.forum-swiper .swiper-wrapper {
+  margin-bottom: 40px;
+}
+
 .forum-swiper .swiper-slide {
   max-width: 460px !important;
 }
 
 .forum-swiper .swiper-pagination {
-  @media (min-width: 1024px) {
+  @media (min-width: 1440px) {
     display: none;
   }
 }

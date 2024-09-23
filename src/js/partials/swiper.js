@@ -90,11 +90,7 @@ export function presentSwiper() {
 export function forumSwiper() {
   return new Swiper('.forum-swiper', {
     slidesPerView: 'auto',
-    spaceBetween: 18,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: true,
-    },
+    spaceBetween: 20,
     pagination: {
       el: '.swiper-pagination',
     },
