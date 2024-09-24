@@ -5,36 +5,33 @@
   z-index: 100;
 
   &__wrapper-top {
-    padding-top: 12px;
-    padding-bottom: 13px;
+    // padding-top: 12px;
+    // padding-bottom: 13px;
     background-color: var(--dark-background-color);
     color: var(--white-base-color);
     transition: all 500ms linear;
+    max-height: 50px;
 
     animation: is-hidden auto linear;
     animation-timeline: scroll();
 
     @keyframes is-hidden {
-      20%,
+      15%,
       100% {
-        padding: 0;
-
         max-height: 0;
       }
-    }
-
-    // overflow: hidden;
-
-    @media (min-width: 1440px) {
-      padding-top: 15px;
-      padding-bottom: 17px;
     }
   }
 
   &__container_top {
+    padding-top: 12px;
+    padding-bottom: 13px;
+
     @media (min-width: 1440px) {
       @include flex-align-row;
       justify-content: space-between;
+      padding-top: 15px;
+      padding-bottom: 17px;
     }
   }
 
