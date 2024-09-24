@@ -15,14 +15,15 @@ export function cardsMarkup(markupArray, container) {
                 ${discount ? `<div class="slide-stock__content-top-discount">-${discount}%</div>` : ''}
              
                   <picture>
-                    <source srcset="${webp}, type="image/webp" />
+                    <source 
+                      srcset="${webp ? `${webp}` : 'https://firebasestorage.googleapis.com/v0/b/flowers-4b1a5.appspot.com/o/pages%2F404%2Fplaceholder-small-404.webp?alt=media&token=76b2ee6e-35c7-4f93-855a-01e009d82bea'}, type="image/webp" />
 
                     <img 
                      loading="lazy"
                      width="450"
                      height="450"
                      class="slide-stock__content-top-img"
-                     src="${png}" alt="${title}" />
+                     src="${png ? `${png}` : 'https://firebasestorage.googleapis.com/v0/b/flowers-4b1a5.appspot.com/o/pages%2F404%2Fplaceholder-small-404.png?alt=media&token=f6fac92f-15df-4da5-a695-b57533957121'}" alt="${title}" />
                   </picture>
 
                 <div class="slide-stock__content-top-logo">TOP</div>
