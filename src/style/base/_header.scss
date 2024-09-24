@@ -317,7 +317,7 @@
     animation-timeline: scroll();
 
     @keyframes grow-progress {
-      0% {
+      20% {
         transform: scaleY(1);
       }
       100% {
