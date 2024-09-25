@@ -1,27 +1,27 @@
-// export function createAccordionFaq() {
-//   const accordionList = document.querySelector('.js-list-faq');
-//   const contentList = document.querySelectorAll('.js-title-content');
+export function createAccordionFaq() {
+  class Accordion {
+    constructor() {
+      this.tabs = document.querySelectorAll('.accordion');
+      this.addActive();
+    }
+    addActive() {
+      this.tabs.forEach(tab => {
+        tab.addEventListener('click', event => {
+          if (event.target.classList.contains('accordion__title')) {
+            tab.classList.toggle('accordion_active');
+            this.removeActive(event);
+          }
+        });
+      });
+    }
+    removeActive(event) {
+      this.tabs.forEach(tab => {
+        if (!tab.contains(event.target)) {
+          tab.classList.remove('accordion_active');
+        }
+      });
+    }
+  }
 
-//   accordionList.addEventListener('click', onToggleAccordion);
-//   function onToggleAccordion(e) {
-//     const targetEl = e.target.closest('.js-title-content');
-
-//     if (!targetEl) return;
-
-//     let content = targetEl.nextElementSibling;
-//     targetEl.classList.toggle('list-faq__title-content_active');
-
-//     if (targetEl.classList.contains('list-faq__title-content_active')) {
-//       contentList.forEach(el => {
-//         el.classList.remove('list-faq__title-content_active');
-//         el.nextElementSibling.style.maxHeight = 0;
-//       });
-
-//       content.style.maxHeight = content.scrollHeight + 'px';
-//       targetEl.classList.add('list-faq__title-content_active');
-//       return;
-//     }
-
-//     content.style.maxHeight = 0;
-//   }
-// }
+  const accordion = new Accordion();
+}
