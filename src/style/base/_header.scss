@@ -5,8 +5,6 @@
   z-index: 100;
 
   &__wrapper-top {
-    // padding-top: 12px;
-    // padding-bottom: 13px;
     background-color: var(--dark-background-color);
     color: var(--white-base-color);
     transition: all 500ms linear;
@@ -275,7 +273,7 @@
 
   &__logo-wrapper {
     position: relative;
-    margin-left: 35px;
+    margin-left: 40px;
     width: 83px;
     height: 58px;
 

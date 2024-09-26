@@ -12,6 +12,7 @@ import { preloader } from './partials/preloader';
 import { firebaseConfig } from './partials/firebaseConfig';
 import { forumSlider } from './pages/main/forum-slider';
 import { createAccordionFaq } from './partials/accordion';
+import { addToBasket } from './pages/main/add-to-basket';
 
 document.addEventListener('DOMContentLoaded', () => {
   let app = firebaseConfig();
@@ -26,4 +27,5 @@ document.addEventListener('DOMContentLoaded', () => {
   forumSwiper();
   forumSlider(app);
   createAccordionFaq();
+  addToBasket();
 });
