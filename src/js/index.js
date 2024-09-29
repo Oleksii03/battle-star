@@ -7,12 +7,12 @@ import {
   presentSwiper,
   forumSwiper,
 } from './partials/swiper';
-import { createCard } from './pages/main/stock';
+import { createCard } from './pages/main/get-сards-data';
 import { preloader } from './partials/preloader';
 import { firebaseConfig } from './partials/firebaseConfig';
 import { forumSlider } from './pages/main/forum-slider';
 import { createAccordionFaq } from './partials/accordion';
-import { addToBasket } from './pages/main/add-to-basket';
+import { addToLocalStorage } from './pages/main/add-to-basket';
 
 document.addEventListener('DOMContentLoaded', () => {
   let app = firebaseConfig();
@@ -27,5 +27,5 @@ document.addEventListener('DOMContentLoaded', () => {
   forumSwiper();
   forumSlider(app);
   createAccordionFaq();
-  addToBasket();
+  addToLocalStorage();
 });

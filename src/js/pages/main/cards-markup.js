@@ -7,8 +7,8 @@ export function cardsMarkup(markupArray, container) {
               <div class="slide-stock__content-top">
                 <svg
                   class="slide-stock__content-top-favorite js-favorite"
-                  width="13"
-                  height="13">
+                  width="33"
+                  height="28">
                   <use xlink:href="#icon-heart"></use>
                 </svg>
 
@@ -23,7 +23,8 @@ export function cardsMarkup(markupArray, container) {
                      width="450"
                      height="450"
                      class="slide-stock__content-top-img js-main-swiper-slide-img"
-                     src=${png ? `${png}` : 'https://firebasestorage.googleapis.com/v0/b/flowers-4b1a5.appspot.com/o/pages%2F404%2Fplaceholder-small-404.png?alt=media&token=f6fac92f-15df-4da5-a695-b57533957121'} alt="${title}" />
+                     src=${png ? `${png}` : 'https://firebasestorage.googleapis.com/v0/b/flowers-4b1a5.appspot.com/o/pages%2F404%2Fplaceholder-small-404.png?alt=media&token=f6fac92f-15df-4da5-a695-b57533957121'} alt="${title}"
+                     data-src="${webp}" />
                   </picture>
 
                 <div class="slide-stock__content-top-logo">TOP</div>
@@ -85,7 +86,8 @@ export function cardsMarkup(markupArray, container) {
                     ${discount ? `<div class="slide-stock__content-bottom-price-old js-main-swiper-slide-price-old"><span>${price}</span> грн</div>` : ''}
                     
                     <div class="slide-stock__content-bottom-price-new   
-                      js-main-swiper-slide-price-new">
+                      js-main-swiper-slide-price-new" 
+                      data-discount="${discount}">
                       ${price * (1 - discount / 100).toFixed(1)} грн
                     </div>
                   </div>

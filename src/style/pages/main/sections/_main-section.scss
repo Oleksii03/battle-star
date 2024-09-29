@@ -221,11 +221,13 @@
       content: '';
       top: 11px;
       right: 6px;
-      width: 14px;
-      height: 12px;
+      width: clamp(0.875rem, 0.575rem + 1.5vw, 2.375rem);
+      height: clamp(0.75rem, 0.525rem + 1.13vw, 1.875rem);
       fill: #fbfbfb00;
       stroke: #956d84;
       stroke-width: 2;
+      cursor: pointer;
+      z-index: 2;
 
       &_active {
         fill: #956d84;
