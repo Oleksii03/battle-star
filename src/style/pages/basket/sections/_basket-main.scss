@@ -1,6 +1,77 @@
 .basket-main {
-  padding-top: 30px;
+  padding-top: clamp(1.188rem, 0.67rem + 2.59vw, 3rem);
   padding-bottom: 30px;
+
+  @media (min-width: 1920px) {
+    padding-top: 83px;
+  }
+
+  &__continue-shopping {
+    display: flex;
+    align-items: center;
+    margin-bottom: 37px;
+
+    &-list {
+      display: none;
+
+      @media (min-width: 1920px) {
+        display: flex;
+        align-items: center;
+        margin-left: 171px;
+
+        & > li {
+          color: var(--Gray-4, #bdbdbd);
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 112%;
+        }
+      }
+    }
+
+    &-item {
+      &:nth-child(1) {
+        &:not(:last-child) {
+          margin-right: 210px;
+        }
+      }
+      &:nth-child(2) {
+        &:not(:last-child) {
+          margin-right: 124px;
+        }
+      }
+      &:nth-child(3) {
+        &:not(:last-child) {
+          margin-right: 99px;
+        }
+      }
+    }
+
+    @media (min-width: 1920px) {
+      margin-bottom: 15px;
+    }
+
+    &-link {
+      color: var(--Gray-4, #bdbdbd);
+      font-size: clamp(0.875rem, 0.839rem + 0.18vw, 1rem);
+      font-weight: 400;
+      line-height: 128%;
+      text-decoration: underline;
+
+      display: flex;
+
+      align-items: flex-end;
+      column-gap: 5px;
+      margin-left: auto;
+    }
+
+    &-icon {
+      width: 12px;
+      height: 12px;
+      fill: none;
+      stroke-width: 1.5;
+      stroke: #bdbdbd;
+    }
+  }
 
   &__content {
     display: grid;
@@ -10,16 +81,23 @@
     @media (min-width: 976px) {
       grid-template-columns: 1fr calc(30% - 5px);
     }
+
+    @media (min-width: 1920px) {
+      grid-template-columns: 1fr calc(30% - 15px);
+    }
   }
 
   &__title {
     text-align: center;
     font-size: clamp(1.5rem, 1.071rem + 2.14vw, 3rem);
-    font-style: normal;
     font-weight: 400;
     line-height: 104%;
 
-    margin-bottom: 42px;
+    margin-bottom: 40px;
+
+    @media (min-width: 1920px) {
+      margin-bottom: 82px;
+    }
   }
 
   // -card-list--
@@ -30,8 +108,12 @@
 
     &-item {
       border: 1px solid #956d847f;
-      padding: 9px clamp(1rem, 0.75rem + 1.25vw, 1.875rem) 17px;
+      padding: 9px clamp(1rem, 0.75rem + 1.25vw, 1.875rem) 19px;
       @include flex-align-row;
+
+      @media (min-width: 1920px) {
+        padding: 24px 26px 26px 20px;
+      }
     }
 
     &-picture {
@@ -60,6 +142,10 @@
 
       @media (min-width: 1024px) {
         column-gap: clamp(3.125rem, -1.881rem + 7.82vw, 7.5rem);
+      }
+
+      @media (min-width: 1920px) {
+        column-gap: 126px;
       }
     }
 
@@ -111,6 +197,11 @@
         @media (min-width: 520px) {
           margin-top: 0;
         }
+
+        @media (min-width: 1920px) {
+          column-gap: 17px;
+          padding: 11px 15px;
+        }
       }
 
       font-family: 'Aguafina Script';
@@ -141,9 +232,18 @@
   &__order {
     border: 1px solid #956d8477;
     padding: 0px 2px 24px;
+    width: 100%;
+
+    @media (min-width: 1920px) {
+      padding-bottom: 32px;
+    }
 
     &-container {
       padding: 27px 18px 44px;
+
+      @media (min-width: 1920px) {
+        padding: 53px 35px 61px 73px;
+      }
     }
 
     &-title {
@@ -152,6 +252,10 @@
       font-weight: 400;
       line-height: 75%;
       margin-bottom: clamp(1.875rem, 1.375rem + 2.5vw, 4.375rem);
+
+      @media (min-width: 1920px) {
+        margin-bottom: 64px;
+      }
     }
 
     &-list {
@@ -159,6 +263,10 @@
       flex-direction: column;
       row-gap: clamp(1.563rem, 1.475rem + 0.44vw, 2rem);
       margin-bottom: clamp(2.75rem, 2.55rem + 1vw, 3.75rem);
+
+      @media (min-width: 1920px) {
+        margin-bottom: 52px;
+      }
     }
 
     &-item {
@@ -214,6 +322,11 @@
       font-weight: 400;
       line-height: 112%;
 
+      @media (min-width: 1920px) {
+        width: auto;
+        padding: 22px 25px;
+      }
+
       &::before {
         content: '';
         position: absolute;
@@ -225,6 +338,14 @@
         background-repeat: no-repeat;
         background-size: contain;
         transition: all 0.3s ease;
+        pointer-events: none;
+
+        @media (min-width: 1920px) {
+          top: -4px;
+          right: -21px;
+          width: 83px;
+          height: 112px;
+        }
       }
 
       @media (min-width: 1024px) {
@@ -249,7 +370,12 @@
     flex-direction: row-reverse;
   }
 
+  @media (min-width: 1920px) {
+    gap: 58px;
+  }
+
   &__icon {
+    cursor: pointer;
     &-box {
       @include flex-align-row;
       column-gap: clamp(0.375rem, 0.238rem + 0.69vw, 1.063rem);
