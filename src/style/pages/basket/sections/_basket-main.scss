@@ -2,6 +2,16 @@
   padding-top: 30px;
   padding-bottom: 30px;
 
+  &__content {
+    display: grid;
+    align-items: start;
+    gap: clamp(0.313rem, 0.025rem + 1.44vw, 1.75rem);
+
+    @media (min-width: 976px) {
+      grid-template-columns: 1fr calc(30% - 5px);
+    }
+  }
+
   &__title {
     text-align: center;
     font-size: clamp(1.5rem, 1.071rem + 2.14vw, 3rem);
@@ -48,15 +58,15 @@
         justify-content: space-between;
       }
 
-      @media (min-width: 700px) {
-        column-gap: clamp(2.188rem, 0.134rem + 10.27vw, 9.375rem);
+      @media (min-width: 1024px) {
+        column-gap: clamp(3.125rem, -1.881rem + 7.82vw, 7.5rem);
       }
     }
 
     &-price-piece {
       display: none;
 
-      @media (min-width: 700px) {
+      @media (min-width: 1024px) {
         @include flex-align-column;
         row-gap: 6px;
         font-family: 'Acme';
@@ -123,6 +133,104 @@
         stroke: #bdbdbd;
         width: 10px;
         height: 10px;
+      }
+    }
+  }
+
+  // ---main-order
+  &__order {
+    border: 1px solid #956d8477;
+    padding: 0px 2px 24px;
+
+    &-container {
+      padding: 27px 18px 44px;
+    }
+
+    &-title {
+      color: var(--gray-base-color);
+      font-size: clamp(1.5rem, 1.35rem + 0.75vw, 2.25rem);
+      font-weight: 400;
+      line-height: 75%;
+      margin-bottom: clamp(1.875rem, 1.375rem + 2.5vw, 4.375rem);
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      row-gap: clamp(1.563rem, 1.475rem + 0.44vw, 2rem);
+      margin-bottom: clamp(2.75rem, 2.55rem + 1vw, 3.75rem);
+    }
+
+    &-item {
+      @include flex-align-row;
+      justify-content: space-between;
+
+      &-title {
+        color: var(--Gray-4, #bdbdbd);
+        font-size: clamp(0.875rem, 0.85rem + 0.13vw, 1rem);
+        font-weight: 400;
+        line-height: 128%;
+      }
+
+      &-price {
+        font-family: Acme;
+        font-size: clamp(0.875rem, 0.85rem + 0.13vw, 1rem);
+        font-weight: 400;
+        line-height: 128%;
+      }
+    }
+
+    &-total {
+      @include flex-align-row;
+      justify-content: space-between;
+
+      &-title {
+        font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+        font-weight: 400;
+        line-height: 112%;
+      }
+
+      &-price {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 75%;
+      }
+    }
+
+    &-btn {
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 300px;
+      background-color: #956d84;
+      color: var(--white-base-color);
+      padding: 15px 20px;
+      border-radius: 7px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 112%;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -9px;
+        right: -9px;
+        width: 68px;
+        height: 112px;
+        background-image: url(../../../../assets/img/pages/main/sections/hero/statistics/desctop/branch-right.webp);
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: all 0.3s ease;
+      }
+
+      @media (min-width: 1024px) {
+        &:hover::before {
+          filter: brightness(200%) drop-shadow(0 0 0px rgb(123, 255, 0));
+        }
       }
     }
   }
