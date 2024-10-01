@@ -1,6 +1,5 @@
 import { getCardData } from '../../utils/mixins';
 import { updateLocalStorageCounter } from '../../utils/update-local-storage-counter';
-
 import { KEY_BASKET, KEY_FAVORITE } from '../../utils/constants';
 
 let basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
