@@ -374,6 +374,10 @@
     gap: 58px;
   }
 
+  &__price {
+    white-space: nowrap;
+  }
+
   &__icon {
     cursor: pointer;
     &-box {
@@ -394,5 +398,26 @@
       stroke-width: 2px;
       stroke: #956d84;
     }
+  }
+}
+
+// list-item__empty-basket---
+
+.list-item__empty-basket {
+  &-title {
+    color: var(--gray-base-color);
+    font-size: clamp(1.125rem, 1rem + 0.63vw, 1.75rem);
+    font-weight: 400;
+    line-height: 110%;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  &-img {
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 10/9;
   }
 }

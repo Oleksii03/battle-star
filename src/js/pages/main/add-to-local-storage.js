@@ -1,14 +1,14 @@
 import { getCardData } from '../../utils/mixins';
+import { updateLocalStorageCounter } from '../../utils/update-local-storage-counter';
+
+import { KEY_BASKET, KEY_FAVORITE } from '../../utils/constants';
+
+let basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
 
 export function addToLocalStorage() {
   const mainContainer = document.querySelector('.js-main-container');
-  const countOfFavorite = document.querySelectorAll('.js-favorite-amount');
-  const countOfBasket = document.querySelectorAll('.js-basket-amount');
   // ---/-refs-------
 
-  const KEY_BASKET = 'basket';
-  const KEY_FAVORITE = 'favorite';
-  const basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
   let favoriteArr = JSON.parse(localStorage.getItem(KEY_FAVORITE)) ?? [];
 
   // ----handlers-------
@@ -33,7 +33,8 @@ export function addToLocalStorage() {
 
     basketArr.push(cardData);
     localStorage.setItem(KEY_BASKET, JSON.stringify(basketArr));
-    updateCounter(KEY_BASKET, countOfBasket);
+
+    updateLocalStorageCounter();
   }
 
   // ---add-product-to-favorite-------
@@ -47,30 +48,19 @@ export function addToLocalStorage() {
       favoriteArr.push(cardData);
       localStorage.setItem(KEY_FAVORITE, JSON.stringify(favoriteArr));
 
-      updateCounter(KEY_FAVORITE, countOfFavorite);
+      updateLocalStorageCounter();
     } else {
       targetEl.classList.remove('slide-stock__content-top-favorite_active');
       const targetElId = targetEl.closest('.js-main-swiper-slide').dataset.id;
       favoriteArr = favoriteArr.filter(({ id }) => id !== targetElId);
       localStorage.setItem(KEY_FAVORITE, JSON.stringify(favoriteArr));
 
-      updateCounter(KEY_FAVORITE, countOfFavorite);
+      updateLocalStorageCounter();
     }
   }
 
   // ---update-selected-counter-------
-  function updateCounter(key, elements) {
-    const amount = JSON.parse(localStorage.getItem(key))
-      ? JSON.parse(localStorage.getItem(key)).length
-      : 0;
-
-    [...elements].forEach(el => {
-      console.log((el.textContent = amount));
-    });
-  }
-
-  updateCounter(KEY_FAVORITE, countOfFavorite);
-  updateCounter(KEY_BASKET, countOfBasket);
+  updateLocalStorageCounter();
 
   // ---set-favorite-status-------
   addEventListener('load', () => {
@@ -87,3 +77,9 @@ export function addToLocalStorage() {
     });
   });
 }
+
+window.addEventListener('storage', () => {
+  basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
+  updateLocalStorageCounter();
+  addToLocalStorage();
+});

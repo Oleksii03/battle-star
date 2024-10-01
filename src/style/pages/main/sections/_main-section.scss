@@ -430,6 +430,7 @@
           background-repeat: no-repeat;
           background-size: 100%;
           z-index: 1;
+          transition: all 0.3s ease;
 
           @media (min-width: 1440px) {
             top: -34px;
@@ -437,6 +438,12 @@
             width: 82px;
             height: 113px;
             transform: rotate(75deg);
+          }
+        }
+
+        @media (min-width: 1440px) {
+          &:hover::before {
+            filter: brightness(150%) drop-shadow(0 0 0px rgb(255, 0, 0));
           }
         }
 
