@@ -22,7 +22,7 @@ function getCardData(target) {
         : 'https://firebasestorage.googleapis.com/v0/b/flowers-4b1a5.appspot.com/o/pages%2F404%2Fplaceholder-small-404.webp?alt=media&token=76b2ee6e-35c7-4f93-855a-01e009d82bea',
     },
     price: parseInt(price),
-    oldPrice: parseInt(oldPrice),
+    oldPrice: parseInt(oldPrice) ? parseInt(oldPrice) : parseInt(price),
     discount: Number(discount),
   };
 }

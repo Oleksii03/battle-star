@@ -1,6 +1,7 @@
 import { KEY_BASKET } from '../../utils/constants';
 import { markupCardsSuccess, markupCardsError } from './markup-cards-basket';
 import { updateLocalStorageCounter } from '../../utils/update-local-storage-counter';
+import { calculateOrde } from './order-handler';
 
 export function getLocalStorageData() {
   const cardList = document.querySelector('.js-basket-card-list');
@@ -8,7 +9,8 @@ export function getLocalStorageData() {
   // ---refs--
   let basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
 
-  console.log(basketArr);
+  calculateOrde(basketArr);
+
   // ---createMarkup---
   function createMarkup(arrData) {
     if (arrData.length) {
@@ -41,13 +43,14 @@ export function getLocalStorageData() {
     const targetCard = target.closest('.basket-main__list-item');
     let amountEl = targetCard.querySelector('.js-basket-amount');
     let currentPriceEl = targetCard.querySelector('.js-current-price');
+
+    const cardId = targetCard.dataset.id;
+
+    console.log(cardId);
     // ---refs--
     let quantity = +amountEl.textContent;
 
     const currentPrice = +currentPriceEl.dataset.price;
-
-    console.log(quantity);
-    console.log(currentPrice);
 
     if (quantity >= 10) return;
 
@@ -84,6 +87,7 @@ export function getLocalStorageData() {
     localStorage.setItem(KEY_BASKET, JSON.stringify(basketArr));
 
     updateLocalStorageCounter();
+    calculateOrde(basketArr);
 
     if (!basketArr.length) {
       cardList.innerHTML = markupCardsError();
@@ -95,5 +99,6 @@ export function getLocalStorageData() {
     basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
     updateLocalStorageCounter();
     createMarkup(basketArr);
+    calculateOrde(basketArr);
   });
 }
