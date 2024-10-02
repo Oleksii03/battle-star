@@ -33,7 +33,7 @@ export function markupCardsSuccess(arrData) {
             </div>
 
             <div class="basket-main__list-amount-box">
-              <button class="basket-main__list-btn">
+              <button class="basket-main__list-btn js-basket-btn-decrement">
                 <svg
                   class="basket-main__list-btn-icon"
                   width="9"
@@ -41,8 +41,8 @@ export function markupCardsSuccess(arrData) {
                   <use xlink:href="#small-arrow-left"></use>
                 </svg>
               </button>
-              <span class="basket-main__list-amount">1</span>
-              <button class="basket-main__list-btn">
+              <span class="basket-main__list-amount js-basket-amount">1</span>
+              <button class="basket-main__list-btn js-basket-btn-increment">
                 <svg
                   class="basket-main__list-btn-icon"
                   width="9"
@@ -68,7 +68,10 @@ export function markupCardsSuccess(arrData) {
                 <use xlink:href="#icon-heart"></use>
               </svg>
             </div>
-            <p class="list-price__price">${price} <span>₴</span></p>
+            <p class="list-price__price js-current-price" 
+            data-price="${price}">
+            ${price}<span> ₴</span>
+            </p>
           </div>
         </li>`;
   });

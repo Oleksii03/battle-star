@@ -2,12 +2,11 @@ import { getCardData } from '../../utils/mixins';
 import { updateLocalStorageCounter } from '../../utils/update-local-storage-counter';
 import { KEY_BASKET, KEY_FAVORITE } from '../../utils/constants';
 
-let basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
-
 export function addToLocalStorage() {
   const mainContainer = document.querySelector('.js-main-container');
   // ---/-refs-------
 
+  let basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
   let favoriteArr = JSON.parse(localStorage.getItem(KEY_FAVORITE)) ?? [];
 
   // ----handlers-------
@@ -75,10 +74,10 @@ export function addToLocalStorage() {
       });
     });
   });
-}
 
-window.addEventListener('storage', () => {
-  basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
-  updateLocalStorageCounter();
-  addToLocalStorage();
-});
+  // --updateLocalStorage--
+  window.addEventListener('storage', () => {
+    basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
+    updateLocalStorageCounter();
+  });
+}
