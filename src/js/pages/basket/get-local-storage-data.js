@@ -19,10 +19,10 @@ export function getLocalStorageData() {
   function createMarkup(arrData) {
     if (arrData.length) {
       cardList.innerHTML = markupCardsSuccess(arrData).join('');
-      titleShoppingList.style.display = 'flex';
+      // titleShoppingList.style.display = 'flex';
     } else {
       cardList.innerHTML = markupCardsError();
-      titleShoppingList.style.display = 'none';
+      // titleShoppingList.style.display = 'none';
     }
   }
   createMarkup(basketArr);
