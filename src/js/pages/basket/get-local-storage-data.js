@@ -1,15 +1,19 @@
 import { KEY_BASKET } from '../../utils/constants';
 import { markupCardsSuccess, markupCardsError } from './markup-cards-basket';
 import { updateLocalStorageCounter } from '../../utils/update-local-storage-counter';
-import { calculateOrde } from './order-handler';
+// import { calculateOrde } from './order-handler';
 
 export function getLocalStorageData() {
   const cardList = document.querySelector('.js-basket-card-list');
   const titleShoppingList = document.querySelector('.js-title-shopping-list');
+
+  const orderTotalPrice = document.querySelector('.js-order-total-price');
+  const goodsPrice = document.querySelector('.js-goods-price');
+  const discount = document.querySelector('.js-discount-price');
+
+  console.log(orderTotalPrice.textContent);
   // ---refs--
   let basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
-
-  calculateOrde(basketArr);
 
   // ---createMarkup---
   function createMarkup(arrData) {
@@ -38,15 +42,33 @@ export function getLocalStorageData() {
     }
   }
 
+  // ------calculateOrde--
+
+  function calculateOrde(arrData) {
+    let priceWithoutDiscount = 0;
+    let discountPrice = 0;
+
+    arrData.forEach(item => {
+      priceWithoutDiscount += item.oldPrice;
+      discountPrice += item.price;
+    });
+
+    orderTotalPrice.textContent = `${discountPrice} ₴`;
+    goodsPrice.textContent = `${priceWithoutDiscount} ₴`;
+    discount.textContent = `${priceWithoutDiscount - discountPrice} ₴`;
+    console.log(orderTotalPrice.textContent);
+  }
+
+  calculateOrde(basketArr);
+
+  let orderTotal = parseInt(orderTotalPrice.textContent);
+
   // ---incrementQuantity---
   function incrementQuantity(target) {
     const targetCard = target.closest('.basket-main__list-item');
     let amountEl = targetCard.querySelector('.js-basket-amount');
     let currentPriceEl = targetCard.querySelector('.js-current-price');
 
-    const cardId = targetCard.dataset.id;
-
-    console.log(cardId);
     // ---refs--
     let quantity = +amountEl.textContent;
 
@@ -56,6 +78,8 @@ export function getLocalStorageData() {
 
     amountEl.textContent = quantity += 1;
     currentPriceEl.textContent = `${currentPrice * quantity} ₴`;
+
+    orderTotalPrice.textContent = `${(orderTotal += currentPrice)} ₴`;
   }
 
   // ---decrementQuantity---
@@ -71,6 +95,8 @@ export function getLocalStorageData() {
 
     amountEl.textContent = quantity -= 1;
     currentPriceEl.textContent = `${currentPrice * quantity} ₴`;
+
+    orderTotalPrice.textContent = `${(orderTotal -= currentPrice)} ₴`;
   }
 
   // --removeTargetCard---
