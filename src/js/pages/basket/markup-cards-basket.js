@@ -29,7 +29,7 @@ export function markupCardsSuccess(arrData) {
 
             <div class="basket-main__list-price-piece">
               <p class="basket-main__list-price-piece_new">${price} <span>₴</span></p>
-              ${discount ? `<p class="basket-main__list-price-piece_old">${oldPrice} <span>₴</span></p>` : ''}
+              ${discount ? `<p class="basket-main__list-price-piece_old js-old-price" data-old-price="${oldPrice}">${oldPrice} <span>₴</span></p>` : ''}
             </div>
 
             <div class="basket-main__list-amount-box">

@@ -11,7 +11,7 @@ export function getLocalStorageData() {
   const goodsPrice = document.querySelector('.js-goods-price');
   const discount = document.querySelector('.js-discount-price');
 
-  console.log(orderTotalPrice.textContent);
+  // console.log(orderTotalPrice.textContent);
   // ---refs--
   let basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
 
@@ -56,23 +56,32 @@ export function getLocalStorageData() {
     orderTotalPrice.textContent = `${discountPrice} ₴`;
     goodsPrice.textContent = `${priceWithoutDiscount} ₴`;
     discount.textContent = `${priceWithoutDiscount - discountPrice} ₴`;
-    console.log(orderTotalPrice.textContent);
+    // console.log(orderTotalPrice.textContent);
   }
 
   calculateOrde(basketArr);
 
   let orderTotal = parseInt(orderTotalPrice.textContent);
+  let orderDiscount = parseInt(discount.textContent);
+  let priceOfGoods = parseInt(goodsPrice.textContent);
 
   // ---incrementQuantity---
   function incrementQuantity(target) {
     const targetCard = target.closest('.basket-main__list-item');
     let amountEl = targetCard.querySelector('.js-basket-amount');
     let currentPriceEl = targetCard.querySelector('.js-current-price');
+    let oldPrice = targetCard.querySelector('.js-old-price')
+      ? targetCard.querySelector('.js-old-price').dataset.oldPrice
+      : +currentPriceEl.dataset.price;
+
+    console.log(oldPrice);
 
     // ---refs--
     let quantity = +amountEl.textContent;
 
     const currentPrice = +currentPriceEl.dataset.price;
+
+    // console.log(currentPrice);
 
     if (quantity >= 10) return;
 
@@ -80,6 +89,8 @@ export function getLocalStorageData() {
     currentPriceEl.textContent = `${currentPrice * quantity} ₴`;
 
     orderTotalPrice.textContent = `${(orderTotal += currentPrice)} ₴`;
+
+    goodsPrice.textContent = `${(priceOfGoods += Number(oldPrice))} ₴`;
   }
 
   // ---decrementQuantity---
@@ -87,6 +98,9 @@ export function getLocalStorageData() {
     const targetCard = target.closest('.basket-main__list-item');
     let amountEl = targetCard.querySelector('.js-basket-amount');
     let currentPriceEl = targetCard.querySelector('.js-current-price');
+    let oldPrice = targetCard.querySelector('.js-old-price')
+      ? targetCard.querySelector('.js-old-price').dataset.oldPrice
+      : +currentPriceEl.dataset.price;
     // ---refs--
     let quantity = +amountEl.textContent;
     const currentPrice = +currentPriceEl.dataset.price;
@@ -97,6 +111,7 @@ export function getLocalStorageData() {
     currentPriceEl.textContent = `${currentPrice * quantity} ₴`;
 
     orderTotalPrice.textContent = `${(orderTotal -= currentPrice)} ₴`;
+    goodsPrice.textContent = `${(priceOfGoods -= Number(oldPrice))} ₴`;
   }
 
   // --removeTargetCard---
