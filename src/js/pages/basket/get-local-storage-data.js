@@ -62,7 +62,7 @@ export function getLocalStorageData() {
   calculateOrde(basketArr);
 
   let orderTotal = parseInt(orderTotalPrice.textContent);
-  let orderDiscount = parseInt(discount.textContent);
+  // let orderDiscount = parseInt(discount.textContent);
   let priceOfGoods = parseInt(goodsPrice.textContent);
 
   // ---incrementQuantity---
@@ -130,16 +130,20 @@ export function getLocalStorageData() {
     updateLocalStorageCounter();
     calculateOrde(basketArr);
 
+    updateStorage(basketArr);
+
     if (!basketArr.length) {
       cardList.innerHTML = markupCardsError();
       titleShoppingList.style.display = 'none';
     }
   }
 
-  window.addEventListener('storage', () => {
+  window.addEventListener('storage', updateStorage);
+
+  function updateStorage() {
     basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
     updateLocalStorageCounter();
     createMarkup(basketArr);
     calculateOrde(basketArr);
-  });
+  }
 }
