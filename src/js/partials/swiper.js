@@ -6,6 +6,8 @@ import 'swiper/css/grid';
 
 Swiper.use([Pagination, Autoplay, Grid, Navigation]);
 
+//========Page main================================
+
 // swiper-Hero--------------------------------------
 export function initSwiper() {
   return new Swiper('.mainHeroSwiper', {
@@ -96,6 +98,31 @@ export function forumSwiper() {
     },
     speed: 600,
   });
+}
+
+//========Page basket================================
+
+// basket-recommendations---------------------------
+
+export function recommendationsSwiper() {
+  const swiperRecommendations = new Swiper('.recommendations-swiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 9,
+    // grid: {
+    //   rows: 2,
+    //   fill: 'row',
+    // },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    navigation: {
+      nextEl: '.recommendations__button-next',
+      prevEl: '.recommendations__button-prev',
+    },
+  });
+
+  updateSwiperParams(swiperRecommendations);
+  window.addEventListener('resize', () => updateSwiperParams(swiperRecommendations));
 }
 
 // --update---Swiper---Params-----------------------

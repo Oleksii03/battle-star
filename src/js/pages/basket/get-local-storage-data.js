@@ -1,7 +1,6 @@
 import { KEY_BASKET } from '../../utils/constants';
 import { markupCardsSuccess, markupCardsError } from './markup-cards-basket';
 import { updateLocalStorageCounter } from '../../utils/update-local-storage-counter';
-// import { calculateOrde } from './order-handler';
 
 export function getLocalStorageData() {
   const cardList = document.querySelector('.js-basket-card-list');
@@ -119,7 +118,6 @@ export function getLocalStorageData() {
 
     if (!basketArr.length) {
       cardList.innerHTML = markupCardsError();
-      // titleShoppingList.style.display = 'none';
     }
   }
 

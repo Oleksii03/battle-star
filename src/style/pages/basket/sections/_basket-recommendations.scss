@@ -1,144 +1,18 @@
-.main {
+.basket-recommendations {
+  padding-top: 38px;
+  padding-bottom: 60px;
+
   &__title {
     text-align: center;
     font-size: clamp(1.5rem, 1.2rem + 1.5vw, 3rem);
     font-weight: 400;
     line-height: 75%;
-    margin-bottom: 51px;
 
-    @media (min-width: 1440px) {
-      margin-bottom: 68px;
-    }
-
-    &-forum {
-      margin-bottom: clamp(4.063rem, 3.75rem + 1.56vw, 5.625rem);
-      @media (min-width: 1920px) {
-        margin-bottom: 78px;
-      }
-    }
-  }
-
-  &__stock-swiper-wrapper,
-  &__seasonal-swiper-wrapper,
-  &__present-swiper-wrapper {
-    position: relative;
-    margin-bottom: clamp(3.625rem, 2.763rem + 4.31vw, 7.938rem);
-
-    @media (min-width: 1920px) {
-      margin-bottom: 131px;
-    }
-  }
-
-  //--slide-forum---
-  &__forum-swiper-wrapper {
-    position: relative;
-    margin-bottom: 121px;
-  }
-
-  &__forum-swiper-btn {
-    position: absolute;
-    top: 107%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 20;
-
-    @media (min-width: 1440px) {
-      top: -88px;
-      left: 96%;
-      width: 130px;
-    }
-
-    &-news {
-      color: var(--gray-base-color);
-      text-align: center;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 112%;
-      text-decoration-line: underline;
-      white-space: nowrap;
-
-      @media (min-width: 1440px) {
-        text-decoration-line: none;
-        display: flex;
-        align-items: flex-end;
-        column-gap: 15px;
-      }
-    }
-
-    &-icon {
-      display: none;
-
-      @media (min-width: 1440px) {
-        display: block;
-      }
-    }
-  }
-
-  &__slide-forum {
-    background-image: linear-gradient(to bottom, #ffffff00 28%, #956d84 28%);
-
-    &-picture {
-      display: block;
-
-      &-wrapper {
-        padding: 0px clamp(0.938rem, 0.825rem + 0.56vw, 1.5rem);
-      }
-    }
-
-    &-img {
-      height: auto;
-      object-fit: cover;
-      object-position: center;
-      aspect-ratio: 50/41;
-
-      @media (min-width: 1440px) {
-        aspect-ratio: 53 / 44;
-      }
-
-      &-wrapper {
-        position: relative;
-      }
-
-      &-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(211, 211, 211, 0.034);
-      }
-    }
-
-    &-text {
-      color: var(--white-base-color);
-      padding: 7px clamp(0.688rem, 0.65rem + 0.19vw, 0.875rem) 9px;
-
-      @media (min-width: 1920px) {
-        padding: 26px 17px 30px;
-      }
-    }
-
-    &-title {
-      font-size: clamp(0.875rem, 0.75rem + 0.63vw, 1.5rem);
-      font-weight: 400;
-      line-height: 128%;
-      margin-bottom: 5px;
-
-      @media (min-width: 1920px) {
-        line-height: 104%;
-        margin-bottom: 25px;
-      }
-    }
-
-    &-description {
-      font-size: clamp(0.75rem, 0.7rem + 0.25vw, 1rem);
-      font-weight: 400;
-      line-height: 125%;
-      padding-right: 10px;
-    }
+    margin-bottom: 50px;
   }
 }
 
+//
 .slide-stock {
   cursor: pointer;
   border: 1px solid #956d847a;
@@ -302,14 +176,11 @@
         text-align: center;
       }
 
-      // white-space: nowrap;
-
       @media (min-width: 1440px) {
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
         line-height: 100%;
-        // white-space: wrap;
         width: 120px;
         margin-bottom: 0px;
       }
@@ -443,7 +314,6 @@
             left: 157px;
             width: 82px;
             height: 113px;
-            // transform: rotate(75deg);
           }
         }
 
@@ -481,42 +351,42 @@
   }
 }
 
-//  слайдер-акції--
-.swiper .stock-swiper {
+//  swiper-recommendations--
+.swiper .recommendations-swiper {
   position: relative;
   width: 100%;
   height: 100%;
   margin-bottom: 50px;
 }
 
-.stock-swiper .swiper-wrapper {
+.recommendations-swiper .swiper-wrapper {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
 }
 
-.stock-swiper .swiper-slide {
+.recommendations-swiper .swiper-slide {
   width: clamp(8.75rem, 6.25rem + 12.5vw, 21.25rem);
 }
 
-.stock-swiper .swiper-pagination {
+.recommendations-swiper .swiper-pagination {
   @media (min-width: 1024px) {
     display: none;
   }
 }
-.stock-swiper .swiper-pagination-bullet {
+.recommendations-swiper .swiper-pagination-bullet {
   background: var(--gray-base-color) !important;
 }
-.stock-swiper .swiper-pagination-bullet-active {
+.recommendations-swiper .swiper-pagination-bullet-active {
   background: var(--gray-base-color) !important;
 }
-.stock-swiper .swiper-pagination-bullet-active::after {
+.recommendations-swiper .swiper-pagination-bullet-active::after {
   border: 1px solid var(--gray-base-color);
 }
 
 //
 
-.stock__swiper-btns {
+.recommendations-swiper__swiper-btns {
   display: none;
 
   @media (min-width: 1024px) {
@@ -538,154 +408,4 @@
   @media (min-width: 1440px) {
     top: -90px;
   }
-}
-//--/-слайдер-акції--
-
-//  слайдер-сезонні--
-.swiper .seasona-swiper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin-bottom: 50px;
-}
-
-.seasona-swiper .swiper-wrapper {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 40px;
-}
-
-.seasona-swiper .swiper-slide {
-  width: clamp(8.75rem, 6.25rem + 12.5vw, 21.25rem);
-  display: flex;
-  flex-direction: column;
-}
-
-.seasona-swiper .swiper-pagination {
-  @media (min-width: 1024px) {
-    display: none;
-  }
-}
-.seasona-swiper .swiper-pagination-bullet {
-  background: var(--gray-base-color) !important;
-}
-.seasona-swiper .swiper-pagination-bullet-active {
-  background: var(--gray-base-color) !important;
-}
-.seasona-swiper .swiper-pagination-bullet-active::after {
-  border: 1px solid var(--gray-base-color);
-}
-
-//
-
-.seasonal__swiper-btns {
-  display: none;
-
-  @media (min-width: 1024px) {
-    cursor: pointer;
-    display: inline-flex;
-    column-gap: 35px;
-    position: absolute;
-    z-index: 20;
-    top: -60px;
-    right: 0;
-
-    & svg {
-      fill: var(--gray-base-color);
-      width: 14px;
-      height: 30px;
-    }
-  }
-
-  @media (min-width: 1440px) {
-    top: -90px;
-  }
-}
-
-//  слайдер-подарунки--
-.swiper .present-swiper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin-bottom: 50px;
-}
-
-.present-swiper .swiper-wrapper {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 40px;
-}
-
-.present-swiper .swiper-slide {
-  width: clamp(8.75rem, 6.25rem + 12.5vw, 21.25rem);
-  display: flex;
-  flex-direction: column;
-}
-
-.present-swiper .swiper-pagination {
-  @media (min-width: 1024px) {
-    display: none;
-  }
-}
-
-.present-swiper .swiper-pagination-bullet {
-  background: var(--gray-base-color) !important;
-}
-.present-swiper .swiper-pagination-bullet-active {
-  background: var(--gray-base-color) !important;
-}
-.present-swiper .swiper-pagination-bullet-active::after {
-  border: 1px solid var(--gray-base-color);
-}
-
-//
-
-.present__swiper-btns {
-  display: none;
-
-  @media (min-width: 1024px) {
-    cursor: pointer;
-    display: inline-flex;
-    column-gap: 35px;
-    position: absolute;
-    z-index: 20;
-    top: -60px;
-    right: 0;
-
-    & svg {
-      fill: var(--gray-base-color);
-      width: 14px;
-      height: 30px;
-    }
-  }
-
-  @media (min-width: 1440px) {
-    top: -90px;
-  }
-}
-
-// ------forum-swiper---------
-
-.forum-swiper .swiper-wrapper {
-  margin-bottom: 42px;
-}
-
-.forum-swiper .swiper-slide {
-  max-width: 460px !important;
-}
-
-// .forum-swiper .swiper-pagination {
-//   @media (min-width: 1440px) {
-//     display: none;
-//   }
-// }
-
-.forum-swiper .swiper-pagination-bullet {
-  background: var(--gray-base-color) !important;
-}
-.forum-swiper .swiper-pagination-bullet-active {
-  background: var(--gray-base-color) !important;
-}
-.forum-swiper .swiper-pagination-bullet-active::after {
-  border: 1px solid var(--gray-base-color);
 }

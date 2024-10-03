@@ -27,5 +27,27 @@ function getCardData(target) {
   };
 }
 
+// ====================================================
+
+import { cardsMarkup } from '../pages/main/cards-markup';
+import { collection, getDocs } from 'firebase/firestore';
+
+async function getAllDocuments(db, title = '', container = '') {
+  try {
+    const querySnapshot = await getDocs(collection(db, title));
+
+    const stockArray = [];
+
+    querySnapshot.forEach(doc => {
+      stockArray.push({ id: doc.id, ...doc.data() });
+    });
+
+    cardsMarkup(stockArray, container);
+  } catch (error) {
+    console.error('Error getting documents:', error);
+    return [];
+  }
+}
+
 // ----exports----------
-export { getCardData };
+export { getCardData, getAllDocuments };
