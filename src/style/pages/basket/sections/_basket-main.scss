@@ -19,6 +19,12 @@
         align-items: center;
         margin-left: 171px;
 
+        &_hidden {
+          visibility: hidden;
+          pointer-events: none;
+          opacity: 0;
+        }
+
         & > li {
           color: var(--Gray-4, #bdbdbd);
           font-size: 16px;

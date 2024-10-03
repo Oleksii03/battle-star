@@ -6,12 +6,9 @@ import { updateLocalStorageCounter } from '../../utils/update-local-storage-coun
 export function getLocalStorageData() {
   const cardList = document.querySelector('.js-basket-card-list');
   const titleShoppingList = document.querySelector('.js-title-shopping-list');
-
   const orderTotalPrice = document.querySelector('.js-order-total-price');
   const goodsPrice = document.querySelector('.js-goods-price');
   const discount = document.querySelector('.js-discount-price');
-
-  // console.log(orderTotalPrice.textContent);
   // ---refs--
   let basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
 
@@ -19,10 +16,10 @@ export function getLocalStorageData() {
   function createMarkup(arrData) {
     if (arrData.length) {
       cardList.innerHTML = markupCardsSuccess(arrData).join('');
-      // titleShoppingList.style.display = 'flex';
+      titleShoppingList.classList.remove('basket-main__continue-shopping-list_hidden');
     } else {
       cardList.innerHTML = markupCardsError();
-      // titleShoppingList.style.display = 'none';
+      titleShoppingList.classList.add('basket-main__continue-shopping-list_hidden');
     }
   }
   createMarkup(basketArr);
@@ -43,7 +40,6 @@ export function getLocalStorageData() {
   }
 
   // ------calculateOrde--
-
   function calculateOrde(arrData) {
     let priceWithoutDiscount = 0;
     let discountPrice = 0;
@@ -56,14 +52,9 @@ export function getLocalStorageData() {
     orderTotalPrice.textContent = `${discountPrice} ₴`;
     goodsPrice.textContent = `${priceWithoutDiscount} ₴`;
     discount.textContent = `${priceWithoutDiscount - discountPrice} ₴`;
-    // console.log(orderTotalPrice.textContent);
   }
 
   calculateOrde(basketArr);
-
-  let orderTotal = parseInt(orderTotalPrice.textContent);
-  // let orderDiscount = parseInt(discount.textContent);
-  let priceOfGoods = parseInt(goodsPrice.textContent);
 
   // ---incrementQuantity---
   function incrementQuantity(target) {
@@ -74,23 +65,17 @@ export function getLocalStorageData() {
       ? targetCard.querySelector('.js-old-price').dataset.oldPrice
       : +currentPriceEl.dataset.price;
 
-    console.log(oldPrice);
-
     // ---refs--
     let quantity = +amountEl.textContent;
-
     const currentPrice = +currentPriceEl.dataset.price;
-
-    // console.log(currentPrice);
 
     if (quantity >= 10) return;
 
     amountEl.textContent = quantity += 1;
     currentPriceEl.textContent = `${currentPrice * quantity} ₴`;
-
-    orderTotalPrice.textContent = `${(orderTotal += currentPrice)} ₴`;
-
-    goodsPrice.textContent = `${(priceOfGoods += Number(oldPrice))} ₴`;
+    goodsPrice.textContent = `${parseInt(goodsPrice.textContent) + Number(oldPrice)} ₴`;
+    orderTotalPrice.textContent = `${parseInt(orderTotalPrice.textContent) + currentPrice} ₴`;
+    discount.textContent = `${parseInt(discount.textContent) + (Number(oldPrice) - currentPrice)} ₴`;
   }
 
   // ---decrementQuantity---
@@ -109,9 +94,9 @@ export function getLocalStorageData() {
 
     amountEl.textContent = quantity -= 1;
     currentPriceEl.textContent = `${currentPrice * quantity} ₴`;
-
-    orderTotalPrice.textContent = `${(orderTotal -= currentPrice)} ₴`;
-    goodsPrice.textContent = `${(priceOfGoods -= Number(oldPrice))} ₴`;
+    goodsPrice.textContent = `${parseInt(goodsPrice.textContent) - Number(oldPrice)} ₴`;
+    orderTotalPrice.textContent = `${parseInt(orderTotalPrice.textContent) - currentPrice} ₴`;
+    discount.textContent = `${parseInt(discount.textContent) - (Number(oldPrice) - currentPrice)} ₴`;
   }
 
   // --removeTargetCard---
@@ -130,11 +115,11 @@ export function getLocalStorageData() {
     updateLocalStorageCounter();
     calculateOrde(basketArr);
 
-    updateStorage(basketArr);
+    updateStorage();
 
     if (!basketArr.length) {
       cardList.innerHTML = markupCardsError();
-      titleShoppingList.style.display = 'none';
+      // titleShoppingList.style.display = 'none';
     }
   }
 
