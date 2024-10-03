@@ -1,6 +1,4 @@
-import { getFirestore, collection, getDocs } from 'firebase/firestore';
-// import { cardsMarkup } from './cards-markup';
-
+import { getFirestore } from 'firebase/firestore';
 import { getAllDocuments } from '../../utils/mixins';
 
 export function createCard(app) {
@@ -13,23 +11,6 @@ export function createCard(app) {
   // ---arrs-------------
 
   const db = getFirestore(app);
-
-  // async function getAllDocuments(title = '', container = '') {
-  //   try {
-  //     const querySnapshot = await getDocs(collection(db, title));
-
-  //     const stockArray = [];
-
-  //     querySnapshot.forEach(doc => {
-  //       stockArray.push({ id: doc.id, ...doc.data() });
-  //     });
-
-  //     cardsMarkup(stockArray, container);
-  //   } catch (error) {
-  //     console.error('Error getting documents:', error);
-  //     return [];
-  //   }
-  // }
 
   for (let i = 0; i < collectionName.length; i++) {
     const title = collectionName[i];
