@@ -2,7 +2,7 @@ export function cardsMarkup(markupArray, container) {
   // console.log(2800 * (1 - 19 / 100));
   const markup = markupArray.map(({ id, discount, price, img: { png, webp }, title }) => {
     return `
-          <div class="swiper-slide js-main-swiper-slide" data-id="${id}">
+          <div class="swiper-slide js-slide js-main-swiper-slide" data-id="${id}">
             <div class="main__slide-stock slide-stock">
               <div class="slide-stock__content-top">
                 <svg

@@ -30,6 +30,7 @@ export function stockSwiper() {
     grid: {
       rows: 2,
       fill: 'row',
+      alignItems: 'stretch',
     },
     pagination: {
       el: '.swiper-pagination',
@@ -108,16 +109,17 @@ export function recommendationsSwiper() {
   const swiperRecommendations = new Swiper('.recommendations-swiper', {
     slidesPerView: 'auto',
     spaceBetween: 9,
-    // grid: {
-    //   rows: 2,
-    //   fill: 'row',
-    // },
+
+    grid: {
+      alignItems: 'stretch',
+    },
+
     pagination: {
       el: '.swiper-pagination',
     },
     navigation: {
-      nextEl: '.recommendations__button-next',
-      prevEl: '.recommendations__button-prev',
+      nextEl: '.recommendations__button-prev',
+      prevEl: '.recommendations__button-next',
     },
   });
 
@@ -128,14 +130,20 @@ export function recommendationsSwiper() {
 // --update---Swiper---Params-----------------------
 
 function updateSwiperParams(swiper) {
-  if (window.innerWidth <= 425) {
+  if (window.innerWidth >= 320) {
     swiper.params.slidesPerView = 2;
     swiper.params.spaceBetween = 9;
-  } else if (window.innerWidth >= 1024) {
-    swiper.params.spaceBetween = 20;
-    swiper.params.slidesPerView = 4;
-  } else {
-    swiper.params.slidesPerView = 'auto';
   }
+
+  if (window.innerWidth >= 768) {
+    swiper.params.slidesPerView = 3;
+    swiper.params.spaceBetween = 14;
+  }
+
+  if (window.innerWidth >= 1024) {
+    swiper.params.slidesPerView = 4;
+    swiper.params.spaceBetween = 20;
+  }
+
   swiper.update();
 }
