@@ -8,17 +8,35 @@ export function getLocalStorageData() {
   const orderTotalPrice = document.querySelector('.js-order-total-price');
   const goodsPrice = document.querySelector('.js-goods-price');
   const discount = document.querySelector('.js-discount-price');
+  const btnRemoveAll = document.querySelector('.js-remove-basket-all');
+
+  console.log(btnRemoveAll);
   // ---refs--
   let basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
+
+  btnRemoveAll.addEventListener('click', e => {
+    localStorage.removeItem(KEY_BASKET);
+    basketArr = [];
+    updateLocalStorageCounter();
+    createMarkup(basketArr);
+    orderTotalPrice.textContent = '0';
+    goodsPrice.textContent = '0';
+    discount.textContent = '0';
+  });
 
   // ---createMarkup---
   function createMarkup(arrData) {
     if (arrData.length) {
       cardList.innerHTML = markupCardsSuccess(arrData).join('');
       titleShoppingList.classList.remove('basket-main__continue-shopping-list_hidden');
+      btnRemoveAll.classList.remove('basket-main__content-remove-all_hidden');
     } else {
       cardList.innerHTML = markupCardsError();
       titleShoppingList.classList.add('basket-main__continue-shopping-list_hidden');
+
+      setTimeout(() => {
+        btnRemoveAll.classList.add('basket-main__content-remove-all_hidden');
+      }, 2000);
     }
   }
   createMarkup(basketArr);
