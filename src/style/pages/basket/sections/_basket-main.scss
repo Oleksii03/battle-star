@@ -175,6 +175,7 @@
         z-index: 2;
         border-radius: 4px;
         transition: all 0.5s ease;
+        transform: rotate(0deg);
 
         @media (min-width: 1024px) {
           top: 5px;

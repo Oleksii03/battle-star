@@ -9,20 +9,8 @@ export function getLocalStorageData() {
   const goodsPrice = document.querySelector('.js-goods-price');
   const discount = document.querySelector('.js-discount-price');
   const btnRemoveAll = document.querySelector('.js-remove-basket-all');
-
-  console.log(btnRemoveAll);
   // ---refs--
   let basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
-
-  btnRemoveAll.addEventListener('click', e => {
-    localStorage.removeItem(KEY_BASKET);
-    basketArr = [];
-    updateLocalStorageCounter();
-    createMarkup(basketArr);
-    orderTotalPrice.textContent = '0';
-    goodsPrice.textContent = '0';
-    discount.textContent = '0';
-  });
 
   // ---createMarkup---
   function createMarkup(arrData) {
@@ -36,7 +24,7 @@ export function getLocalStorageData() {
 
       setTimeout(() => {
         btnRemoveAll.classList.add('basket-main__content-remove-all_hidden');
-      }, 2000);
+      }, 1500);
     }
   }
   createMarkup(basketArr);
@@ -139,6 +127,18 @@ export function getLocalStorageData() {
     }
   }
 
+  // --removeAllCards---
+  btnRemoveAll.addEventListener('click', e => {
+    localStorage.removeItem(KEY_BASKET);
+    basketArr = [];
+    updateLocalStorageCounter();
+    createMarkup(basketArr);
+    orderTotalPrice.textContent = `${0} ₴`;
+    goodsPrice.textContent = `${0} ₴`;
+    discount.textContent = `${0} ₴`;
+  });
+
+  // --updateStorage---
   window.addEventListener('storage', updateStorage);
 
   function updateStorage() {
