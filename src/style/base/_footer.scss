@@ -1,8 +1,40 @@
 .footer {
+  position: relative;
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
-  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -320px;
+    left: -235px;
+    width: 450px;
+    height: 912px;
+    overflow: hidden;
+    rotate: 14deg;
+    transform-origin: left bottom;
+
+    background-image: url(../../../assets/img/base/body/bg-body-branch-flower-left.webp);
+    background-size: contain;
+    z-index: 10000;
+    background-repeat: no-repeat;
+    animation: branch-flower-left 6s infinite ease-in-out;
+    pointer-events: none;
+
+    @keyframes branch-flower-left {
+      0% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(5deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+  }
 
   &-title {
     display: flex;
