@@ -1,6 +1,6 @@
 .basket-recommendations {
   padding-top: 38px;
-  padding-bottom: 60px;
+  padding-bottom: 48px;
 
   &__title {
     text-align: center;
@@ -8,7 +8,7 @@
     font-weight: 400;
     line-height: 75%;
 
-    margin-bottom: 50px;
+    margin-bottom: clamp(3.125rem, 2.5rem + 3.13vw, 6.25rem);
   }
 
   &__swiper-wrapper {
@@ -16,17 +16,10 @@
     margin-bottom: clamp(3.625rem, 2.763rem + 4.31vw, 7.938rem);
 
     @media (min-width: 1920px) {
-      margin-bottom: 131px;
+      margin-bottom: 0px;
     }
   }
 }
-// .main-slide .slide-stock {
-//   display: flex;
-//   flex-direction: column;
-//   height: 100%;
-//   justify-content: space-between;
-// }
-//
 
 //  swiper-recommendations--
 .swiper .recommendations-swiper {
@@ -39,7 +32,11 @@
 .recommendations-swiper .swiper-wrapper {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+
+  @media (min-width: 1920px) {
+    margin-bottom: 0px;
+  }
 }
 
 .recommendations-swiper .swiper-slide {
@@ -264,7 +261,20 @@
       font-weight: 500;
       line-height: 150%;
       margin-bottom: 13px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 100%;
+      overflow: hidden;
+      transition: all 0.3s linear;
+      max-height: 18px;
       cursor: pointer;
+
+      &:hover {
+        white-space: wrap;
+        text-overflow: initial;
+        overflow: visible;
+        max-height: 54px;
+      }
 
       @media (max-width: 767px) {
         text-align: center;

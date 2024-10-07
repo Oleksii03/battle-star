@@ -1,6 +1,6 @@
 .basket-main {
   padding-top: clamp(1.188rem, 0.67rem + 2.59vw, 3rem);
-  padding-bottom: 30px;
+  padding-bottom: clamp(1.875rem, 1.063rem + 4.06vw, 5.938rem);
 
   @media (min-width: 1920px) {
     padding-top: 30px;
@@ -82,7 +82,7 @@
       }
       &:nth-child(2) {
         &:not(:last-child) {
-          margin-right: 124px;
+          margin-right: 121px;
         }
       }
       &:nth-child(3) {
@@ -155,17 +155,22 @@
     &-item {
       border: 1px solid #956d847f;
       padding: 9px clamp(1rem, 0.75rem + 1.25vw, 1.875rem) 19px;
-      @include flex-align-row;
+      // @include flex-align-row;
+      display: grid;
+      align-items: center;
+      grid-template-columns: 16% auto 20%;
+      column-gap: 17px;
 
       @media (min-width: 1920px) {
-        padding: 24px 26px 26px 20px;
+        padding: 24px 32px 26px 20px;
+        column-gap: 0px;
       }
     }
 
     &-picture {
-      &:not(:last-child) {
-        margin-right: clamp(0.625rem, -0.038rem + 3.31vw, 3.938rem);
-      }
+      // &:not(:last-child) {
+      //   margin-right: clamp(0.625rem, -0.038rem + 3.31vw, 3.938rem);
+      // }
     }
 
     &-img {
@@ -176,23 +181,27 @@
 
     // --info--
     &-info {
-      &:not(:last-child) {
-        margin-right: 35px;
-      }
+      // &:not(:last-child) {
+      //   margin-right: 35px;
+      // }
 
       @media (min-width: 520px) {
-        @include flex-align-row;
-        column-gap: 20px;
-        justify-content: space-between;
+        // @include flex-align-row;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 28% auto 27%;
+        column-gap: 17px;
+        // column-gap: 20px;
+        // justify-content: space-between;
       }
 
-      @media (min-width: 1024px) {
-        column-gap: clamp(3.125rem, -1.881rem + 7.82vw, 7.5rem);
-      }
+      // @media (min-width: 1024px) {
+      //   column-gap: clamp(3.125rem, -1.881rem + 7.82vw, 7.5rem);
+      // }
 
-      @media (min-width: 1920px) {
-        column-gap: 126px;
-      }
+      // @media (min-width: 1920px) {
+      //   column-gap: 126px;
+      // }
     }
 
     &-price-piece {
@@ -239,8 +248,11 @@
         margin-top: 24px;
         border: 1px solid var(--gray-base-color);
         display: inline-flex;
+        align-items: center;
+        justify-content: center;
         column-gap: 22px;
         padding: 5px 6px;
+        max-width: 94px;
 
         @media (min-width: 520px) {
           margin-top: 0;
@@ -431,6 +443,10 @@
     &-box {
       @include flex-align-row;
       column-gap: clamp(0.375rem, 0.238rem + 0.69vw, 1.063rem);
+
+      @media (min-width: 1920px) {
+        column-gap: 18px;
+      }
     }
 
     &_remove {
