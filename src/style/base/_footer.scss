@@ -5,33 +5,67 @@
   line-height: 18px;
   overflow: hidden;
 
-  &::before {
-    content: '';
-    position: absolute;
-    bottom: -320px;
-    left: -235px;
-    width: 450px;
-    height: 912px;
-    overflow: hidden;
-    rotate: 14deg;
-    transform-origin: left bottom;
+  @media (min-width: 1920px) {
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -533px;
+      left: -240px;
+      width: 510px;
+      height: 912px;
+      overflow: hidden;
+      rotate: 3deg;
+      transform-origin: left;
 
-    background-image: url(../../../assets/img/base/body/bg-body-branch-flower-left.webp);
-    background-size: contain;
-    z-index: 10000;
-    background-repeat: no-repeat;
-    animation: branch-flower-left 6s infinite ease-in-out;
-    pointer-events: none;
+      background-image: url(../../../assets/img/base/body/bg-body-branch-flower-left.webp);
+      background-size: contain;
+      z-index: 10000;
+      background-repeat: no-repeat;
+      animation: branch-flower-left 6s infinite ease-in-out;
+      pointer-events: none;
 
-    @keyframes branch-flower-left {
-      0% {
-        transform: rotate(0deg);
+      @keyframes branch-flower-left {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(5deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
       }
-      50% {
-        transform: rotate(5deg);
-      }
-      100% {
-        transform: rotate(0deg);
+    }
+
+    @media (min-width: 1920px) {
+      &::after {
+        content: '';
+        position: absolute;
+        top: 97px;
+        left: 106%;
+        width: 408px;
+        height: 1008px;
+        rotate: 270deg;
+        transform-origin: left bottom;
+        background-image: url(/assets/img/base/body/bg-body-branch-flower-left.webp);
+        background-size: contain;
+        z-index: 10000;
+        background-repeat: no-repeat;
+        background-position: 0px 609px;
+        animation: branch-flower-right 5.5s infinite ease-in-out;
+        // pointer-events: none;
+
+        @keyframes branch-flower-right {
+          0% {
+            transform: rotate(0deg);
+          }
+          50% {
+            transform: rotate(5deg);
+          }
+          100% {
+            transform: rotate(0deg);
+          }
+        }
       }
     }
   }
