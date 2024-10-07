@@ -15,38 +15,6 @@
     padding-bottom: 140px;
   }
 
-  // @media (min-width: 1920px) {
-  //   &::after {
-  //     content: '';
-  //     position: absolute;
-  //     top: -450px;
-  //     left: 103%;
-  //     width: 408px;
-  //     height: 1008px;
-  //     rotate: 270deg;
-  //     transform-origin: left bottom;
-  //     background-image: url(/assets/img/base/body/bg-body-branch-flower-left.webp);
-  //     background-size: contain;
-  //     z-index: 10000;
-  //     background-repeat: no-repeat;
-  //     background-position: 0px 609px;
-  //     animation: branch-flower-right 5.5s infinite ease-in-out;
-  //     pointer-events: none;
-
-  //     @keyframes branch-flower-right {
-  //       0% {
-  //         transform: rotate(0deg);
-  //       }
-  //       50% {
-  //         transform: rotate(5deg);
-  //       }
-  //       100% {
-  //         transform: rotate(0deg);
-  //       }
-  //     }
-  //   }
-  // }
-
   &__layout-gallery {
     display: none;
 
