@@ -5,7 +5,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 95%;
-  height: 80%;
+  height: 95%;
   z-index: 1000;
   transition: all 200ms linear;
   padding-top: 62px;
@@ -54,7 +54,6 @@
 .modal-favorite-swiper .swiper-wrapper {
   display: flex;
   align-items: center;
-  padding-left: 5px;
   margin-bottom: 50px;
 }
 
@@ -75,6 +74,23 @@
     width: 14px;
     height: 30px;
     cursor: pointer;
+  }
+}
+
+.modal-favorite-swiper .swiper-btn-close {
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: block;
+    margin: 0 auto;
+    background-color: transparent;
+    color: var(--gray-base-color);
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 112%;
+    text-decoration: underline;
   }
 }
 
