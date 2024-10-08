@@ -4,8 +4,6 @@ export function header() {
   const searchCategoryTitleBox = document.querySelector('.js-search-category-title-box');
   const searchCategoryList = document.querySelector('.js-search-category-list');
 
-  // -----------------------------
-
   let currentTargetEl = null;
 
   [...titleBox].forEach(title => {

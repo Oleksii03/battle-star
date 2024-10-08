@@ -1,6 +1,7 @@
 import { KEY_BASKET } from '../../utils/constants';
 import { markupCardsSuccess, markupCardsError } from './markup-cards-basket';
 import { updateLocalStorageCounter } from '../../utils/update-local-storage-counter';
+import { calculateTotalBasket } from '../../partials/calculateTotalBasket';
 
 export function getLocalStorageData() {
   const cardList = document.querySelector('.js-basket-card-list');
@@ -9,6 +10,8 @@ export function getLocalStorageData() {
   const goodsPrice = document.querySelector('.js-goods-price');
   const discount = document.querySelector('.js-discount-price');
   const btnRemoveAll = document.querySelector('.js-remove-basket-all');
+  // const basketSum = document.querySelector('.js-basket-sum');
+
   // ---refs--
   let basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
 
@@ -58,6 +61,9 @@ export function getLocalStorageData() {
     orderTotalPrice.textContent = `${discountPrice} ₴`;
     goodsPrice.textContent = `${priceWithoutDiscount} ₴`;
     discount.textContent = `${priceWithoutDiscount - discountPrice} ₴`;
+
+    // basketSum.textContent = `₴ ${discountPrice}`;
+    // calculateTotalBasket(discountPrice);
   }
 
   calculateOrde(basketArr);
@@ -138,6 +144,7 @@ export function getLocalStorageData() {
     orderTotalPrice.textContent = `${0} ₴`;
     goodsPrice.textContent = `${0} ₴`;
     discount.textContent = `${0} ₴`;
+    calculateTotalBasket();
   });
 
   // --updateStorage---
@@ -148,5 +155,6 @@ export function getLocalStorageData() {
     updateLocalStorageCounter();
     createMarkup(basketArr);
     calculateOrde(basketArr);
+    calculateTotalBasket();
   }
 }

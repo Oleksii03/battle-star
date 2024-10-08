@@ -13,6 +13,7 @@ import { firebaseConfig } from './partials/firebaseConfig';
 import { forumSlider } from './pages/main/forum-slider';
 import { createAccordionFaq } from './partials/accordion';
 import { addToLocalStorage } from './pages/main/add-to-local-storage';
+import { calculateTotalBasket } from './partials/calculateTotalBasket';
 
 document.addEventListener('DOMContentLoaded', () => {
   let app = firebaseConfig();
@@ -28,4 +29,5 @@ document.addEventListener('DOMContentLoaded', () => {
   forumSlider(app);
   createAccordionFaq();
   addToLocalStorage();
+  calculateTotalBasket();
 });

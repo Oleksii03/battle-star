@@ -1,6 +1,7 @@
 import { getCardData } from '../../utils/mixins';
 import { updateLocalStorageCounter } from '../../utils/update-local-storage-counter';
 import { KEY_BASKET, KEY_FAVORITE } from '../../utils/constants';
+import { calculateTotalBasket } from '../../partials/calculateTotalBasket';
 
 export function addToLocalStorage() {
   const mainContainer = document.querySelector('.js-main-container');
@@ -33,6 +34,7 @@ export function addToLocalStorage() {
     localStorage.setItem(KEY_BASKET, JSON.stringify(basketArr));
 
     updateLocalStorageCounter();
+    calculateTotalBasket();
   }
 
   // ---add-product-to-favorite-------
@@ -79,5 +81,6 @@ export function addToLocalStorage() {
   window.addEventListener('storage', () => {
     basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
     updateLocalStorageCounter();
+    calculateTotalBasket();
   });
 }
