@@ -104,7 +104,6 @@ export function forumSwiper() {
 //========Page basket================================
 
 // basket-recommendations---------------------------
-
 export function recommendationsSwiper() {
   const swiperRecommendations = new Swiper('.recommendations-swiper', {
     slidesPerView: 'auto',
@@ -127,6 +126,25 @@ export function recommendationsSwiper() {
   window.addEventListener('resize', () => updateSwiperParams(swiperRecommendations));
 }
 
+// favorite---------------------------
+export function modalFavoriteSwiper() {
+  const swiperRecommendations = new Swiper('.modal-favorite-swiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 9,
+
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    navigation: {
+      nextEl: '.modal-favorite__button-prev',
+      prevEl: '.modal-favorite__button-next',
+    },
+  });
+
+  updateSwiperParams(swiperRecommendations);
+  window.addEventListener('resize', () => updateSwiperParams(swiperRecommendations));
+}
 // --update---Swiper---Params-----------------------
 
 function updateSwiperParams(swiper) {

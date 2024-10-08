@@ -27,7 +27,7 @@ function getCardData(target) {
   };
 }
 
-// ====================================================
+// ==========================================
 
 import { cardsMarkup } from '../pages/main/cards-markup';
 import { collection, getDocs } from 'firebase/firestore';

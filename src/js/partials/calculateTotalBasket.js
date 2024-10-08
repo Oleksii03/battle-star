@@ -10,6 +10,5 @@ export function calculateTotalBasket() {
     discountPrice += item.price;
   });
 
-  console.log(discountPrice);
   basketSum.textContent = `₴ ${discountPrice}`;
 }

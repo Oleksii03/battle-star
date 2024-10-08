@@ -6,6 +6,7 @@ import {
   seasonalSwiper,
   presentSwiper,
   forumSwiper,
+  modalFavoriteSwiper,
 } from './partials/swiper';
 import { createCard } from './pages/main/get-сards-data';
 import { preloader } from './partials/preloader';
@@ -14,6 +15,7 @@ import { forumSlider } from './pages/main/forum-slider';
 import { createAccordionFaq } from './partials/accordion';
 import { addToLocalStorage } from './pages/main/add-to-local-storage';
 import { calculateTotalBasket } from './partials/calculateTotalBasket';
+import { modalFavorite } from './partials/modalFavorite';
 
 document.addEventListener('DOMContentLoaded', () => {
   let app = firebaseConfig();
@@ -30,4 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
   createAccordionFaq();
   addToLocalStorage();
   calculateTotalBasket();
+  modalFavorite();
+  modalFavoriteSwiper();
 });

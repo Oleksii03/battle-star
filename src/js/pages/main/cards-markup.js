@@ -88,7 +88,7 @@ export function cardsMarkup(markupArray, container) {
                     <div class="slide-stock__content-bottom-price-new   
                       js-main-swiper-slide-price-new" 
                       data-discount="${discount}">
-                      ${price * (1 - discount / 100).toFixed(1)} грн
+                      ${price * (1 - discount / 100).toFixed(0)} грн
                     </div>
                   </div>
                 </div>
