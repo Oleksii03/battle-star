@@ -34,7 +34,6 @@
     justify-content: center;
     height: 100%;
     width: 100%;
-    padding-bottom: 50px;
   }
 
   &__title {
@@ -54,9 +53,9 @@
 
 .modal-favorite-swiper .swiper-wrapper {
   display: flex;
-  justify-content: center;
   align-items: center;
   padding-left: 5px;
+  margin-bottom: 50px;
 }
 
 .modal-favorite__swiper-btns {
@@ -77,4 +76,20 @@
     height: 30px;
     cursor: pointer;
   }
+}
+
+.modal-favorite-swiper .swiper-pagination {
+  @media (min-width: 1440px) {
+    display: none;
+  }
+}
+
+.modal-favorite-swiper .swiper-pagination-bullet {
+  background: var(--gray-base-color) !important;
+}
+.modal-favorite-swiper .swiper-pagination-bullet-active {
+  background: var(--gray-base-color) !important;
+}
+.modal-favorite-swiper .swiper-pagination-bullet-active::after {
+  border: 1px solid var(--gray-base-color);
 }
