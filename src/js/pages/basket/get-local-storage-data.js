@@ -24,7 +24,8 @@ export function getLocalStorageData() {
 
       setTimeout(() => {
         btnRemoveAll.classList.add('basket-main__content-remove-all_hidden');
-      }, 1500);
+        btnRemoveAll.classList.remove('basket-main__content-remove-all_active');
+      }, 2000);
     }
   }
   createMarkup(basketArr);
@@ -129,6 +130,7 @@ export function getLocalStorageData() {
 
   // --removeAllCards---
   btnRemoveAll.addEventListener('click', e => {
+    e.currentTarget.classList.add('basket-main__content-remove-all_active');
     localStorage.removeItem(KEY_BASKET);
     basketArr = [];
     updateLocalStorageCounter();

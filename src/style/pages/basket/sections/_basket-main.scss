@@ -175,7 +175,7 @@
         z-index: 2;
         border-radius: 4px;
         transition: all 0.5s ease;
-        transform: rotate(0deg);
+        transform-origin: bottom left;
 
         @media (min-width: 1024px) {
           top: 5px;
@@ -183,22 +183,47 @@
         }
       }
 
-      &:hover::after {
-        transform-origin: bottom left;
-        transform: rotate(-45deg);
+      &_active {
+        &::after {
+          animation-name: rotate;
+          animation-duration: 1.5s;
+          animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
 
-        animation-name: rotate;
-        animation-duration: 1s;
-        animation-delay: 1s;
-        animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
-        animation-fill-mode: forwards;
-
-        @keyframes rotate {
-          100% {
-            transform: rotate(0deg);
+          @keyframes rotate {
+            0% {
+              transform: rotate(0deg);
+            }
+            50% {
+              transform: rotate(-45deg);
+            }
+            100% {
+              transform: rotate(0deg);
+            }
           }
         }
       }
+
+      // &:hover::after {
+      //   // transform: rotate(-45deg);
+
+      //   animation-name: rotate;
+      //   animation-duration: 1.8s;
+      //   // animation-delay: 1s;
+      //   animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+      //   // animation-fill-mode: forwards;
+
+      //   @keyframes rotate {
+      //     0% {
+      //       transform: rotate(0deg);
+      //     }
+      //     50% {
+      //       transform: rotate(-45deg);
+      //     }
+      //     100% {
+      //       transform: rotate(0deg);
+      //     }
+      //   }
+      // }
 
       &_hidden {
         visibility: hidden;

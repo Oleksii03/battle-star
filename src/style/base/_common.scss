@@ -51,13 +51,13 @@ body {
     background-image: url(../../../assets/img/base/body/body-bg-img.png);
     background-position: 0 467px;
     background-repeat: repeat-y;
-    background-size: contain;
+    background-size: 100%;
 
     &::before {
       content: '';
       position: absolute;
       top: -1005px;
-      left: -620px;
+      left: -648px;
       width: 400px;
       height: 912px;
       overflow: hidden;
@@ -67,9 +67,8 @@ body {
       background-size: contain;
       z-index: 10000;
       background-repeat: no-repeat;
-      // background-position: 0px 640px;
       animation: branch-flower-left 6s infinite ease-in-out;
-      // pointer-events: none;
+      pointer-events: none;
 
       @keyframes branch-flower-left {
         0% {
@@ -87,19 +86,19 @@ body {
     // &::after {
     //   content: '';
     //   position: absolute;
-    //   top: -509px;
-    //   left: 107%;
+    //   top: -772px;
+    //   right: 0;
     //   width: 408px;
     //   height: 1008px;
-    //   rotate: 270deg;
-    //   transform-origin: left bottom;
+    //   rotate: 186deg;
+    //   transform-origin: left;
     //   background-image: url(/assets/img/base/body/bg-body-branch-flower-left.webp);
     //   background-size: contain;
     //   z-index: 10000;
     //   background-repeat: no-repeat;
-    //   background-position: 0px 609px;
+    //   // background-position: 0px 609px;
     //   animation: branch-flower-right 5.5s infinite ease-in-out;
-    //   pointer-events: none;
+    //   // pointer-events: none;
 
     //   @keyframes branch-flower-right {
     //     0% {

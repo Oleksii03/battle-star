@@ -16,7 +16,6 @@
       overflow: hidden;
       rotate: 3deg;
       transform-origin: left;
-
       background-image: url(../../../assets/img/base/body/bg-body-branch-flower-left.webp);
       background-size: contain;
       z-index: 10000;
@@ -42,7 +41,7 @@
         content: '';
         position: absolute;
         top: 97px;
-        left: 106%;
+        left: 107%;
         width: 408px;
         height: 1008px;
         rotate: 270deg;
@@ -53,7 +52,7 @@
         background-repeat: no-repeat;
         background-position: 0px 609px;
         animation: branch-flower-right 5.5s infinite ease-in-out;
-        // pointer-events: none;
+        pointer-events: none;
 
         @keyframes branch-flower-right {
           0% {
