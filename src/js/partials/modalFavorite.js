@@ -11,7 +11,7 @@ export function modalFavorite() {
   const btnClose = document.querySelector('.js-swiper-btn-close');
   const mobMenu = document.querySelector('.js-mob-menu');
   // ---refs--
-  // let cardDataFavorite = JSON.parse(localStorage.getItem(KEY_FAVORITE)) ?? [];
+
   favoriteBtns.forEach(btn => btn.addEventListener('click', openModalFavorite));
 
   function openModalFavorite(e) {
@@ -36,8 +36,7 @@ export function modalFavorite() {
     document.body.classList.remove('to-freeze');
   }
 
-  // -----------------
-
+  // -------removeTargetCard----------
   swiperContainer.addEventListener('click', removeTargetCard);
 
   function removeTargetCard({ target }) {
@@ -60,8 +59,6 @@ export function modalFavorite() {
     updateHeartStatus(targetId);
 
     if (!newFavoriteArr.length) closeModalWindow();
-
-    // window.dispatchEvent(new Event('storage'));
   }
 
   window.addEventListener('storage', event => {
@@ -70,7 +67,7 @@ export function modalFavorite() {
     }
   });
 
-  function updateHeartsOnMainPage(targetId) {
+  function updateHeartsOnMainPage() {
     let favorites = JSON.parse(localStorage.getItem(KEY_FAVORITE)) ?? [];
 
     const activeHearts = document.querySelectorAll('.slide-stock__content-top-favorite_active');
@@ -78,16 +75,6 @@ export function modalFavorite() {
     activeHearts.forEach(heart =>
       heart.classList.remove('slide-stock__content-top-favorite_active')
     );
-
-    // favorites.forEach(el => {
-    //   const currentCard = document.querySelector(`[data-id="${el.id}"]`);
-    //   try {
-    //     const activeHeart = currentCard.querySelector('.slide-stock__content-top-favorite');
-    //     activeHeart.classList.add('slide-stock__content-top-favorite_active');
-    //   } catch (error) {
-    //     console.log(error);
-    //   }
-    // });
 
     favorites.forEach(el => {
       const currentCard = document.querySelector(`[data-id="${el.id}"]`);
@@ -100,5 +87,6 @@ export function modalFavorite() {
     });
 
     cardsMarkup(favorites, swiperContainer);
+    if (!favorites.length) closeModalWindow();
   }
 }

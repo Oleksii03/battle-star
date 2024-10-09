@@ -1,9 +1,5 @@
 export function updateHeartStatus(cardId) {
-  // console.log(cardId);
-
   const currentCard = document.querySelector(`[data-id="${cardId}"]`);
-
-  // console.log(currentCard);
 
   if (!currentCard) return;
 
