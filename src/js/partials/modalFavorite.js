@@ -46,8 +46,12 @@ export function modalFavorite() {
     const targetEl = target.closest('.swiper-slide');
     const targetId = targetEl.dataset.id;
 
+    console.log(targetId);
+
     let cardDataFavorite = JSON.parse(localStorage.getItem(KEY_FAVORITE));
     let newFavoriteArr = cardDataFavorite.filter(el => el.id !== targetId);
+
+    console.log(newFavoriteArr);
 
     localStorage.setItem(KEY_FAVORITE, JSON.stringify(newFavoriteArr));
 
@@ -57,33 +61,44 @@ export function modalFavorite() {
 
     if (!newFavoriteArr.length) closeModalWindow();
 
-    window.dispatchEvent(new Event('storage'));
+    // window.dispatchEvent(new Event('storage'));
   }
 
   window.addEventListener('storage', event => {
     if (event.key === KEY_FAVORITE) {
-      // Оновлення стану всіх сердечок на сторінці
       updateHeartsOnMainPage();
     }
   });
 
-  function updateHeartsOnMainPage() {
+  function updateHeartsOnMainPage(targetId) {
     let favorites = JSON.parse(localStorage.getItem(KEY_FAVORITE)) ?? [];
 
-    console.log(favorites);
+    const activeHearts = document.querySelectorAll('.slide-stock__content-top-favorite_active');
+
+    activeHearts.forEach(heart =>
+      heart.classList.remove('slide-stock__content-top-favorite_active')
+    );
+
+    // favorites.forEach(el => {
+    //   const currentCard = document.querySelector(`[data-id="${el.id}"]`);
+    //   try {
+    //     const activeHeart = currentCard.querySelector('.slide-stock__content-top-favorite');
+    //     activeHeart.classList.add('slide-stock__content-top-favorite_active');
+    //   } catch (error) {
+    //     console.log(error);
+    //   }
+    // });
+
+    favorites.forEach(el => {
+      const currentCard = document.querySelector(`[data-id="${el.id}"]`);
+      if (currentCard) {
+        const activeHeart = currentCard.querySelector('.slide-stock__content-top-favorite');
+        if (activeHeart) {
+          activeHeart.classList.add('slide-stock__content-top-favorite_active');
+        }
+      }
+    });
 
     cardsMarkup(favorites, swiperContainer);
-
-    // const heartElements = document.querySelectorAll('.slide-stock__content-top-favorite');
-
-    // heartElements.forEach(heart => {
-    //   // const productId = heart.dataset.id;
-    //   // console.log(heart);
-    //   // if (favorites.includes(productId)) {
-    //   //   heart.classList.add('slide-stock__content-top-favorite_active');
-    //   // } else {
-    //   //   heart.classList.remove('slide-stock__content-top-favorite_active');
-    //   // }
-    // });
   }
 }

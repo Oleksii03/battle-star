@@ -19,7 +19,7 @@ export function addToLocalStorage() {
       addProductToBasket(target);
     }
 
-    if (target.classList.contains('js-favorite') || target.tagName === 'use') {
+    if (target.tagName === 'use') {
       addProductToFavorite(target);
     }
   }
@@ -43,9 +43,16 @@ export function addToLocalStorage() {
     let targetEl = target.closest('.js-favorite');
     if (!targetEl) return;
 
+    favoriteArr = JSON.parse(localStorage.getItem(KEY_FAVORITE)) ?? [];
+
     if (!targetEl.classList.contains('slide-stock__content-top-favorite_active')) {
       targetEl.classList.add('slide-stock__content-top-favorite_active');
       const cardData = getCardData(target);
+
+      const inStorage = favoriteArr.some(({ id }) => id === cardData.id);
+
+      if (inStorage) return;
+
       favoriteArr.push(cardData);
       localStorage.setItem(KEY_FAVORITE, JSON.stringify(favoriteArr));
 
