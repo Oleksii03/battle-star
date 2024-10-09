@@ -12,6 +12,7 @@ function getCardData(target) {
 
   return {
     id: currentCard.dataset.id,
+    isFavorited: true,
     title: title,
     img: {
       png: imgPng

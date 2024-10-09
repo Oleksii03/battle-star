@@ -10,9 +10,8 @@ export function getLocalStorageData() {
   const goodsPrice = document.querySelector('.js-goods-price');
   const discount = document.querySelector('.js-discount-price');
   const btnRemoveAll = document.querySelector('.js-remove-basket-all');
-  // const basketSum = document.querySelector('.js-basket-sum');
-
   // ---refs--
+
   let basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
 
   // ---createMarkup---
@@ -61,9 +60,6 @@ export function getLocalStorageData() {
     orderTotalPrice.textContent = `${discountPrice} ₴`;
     goodsPrice.textContent = `${priceWithoutDiscount} ₴`;
     discount.textContent = `${priceWithoutDiscount - discountPrice} ₴`;
-
-    // basketSum.textContent = `₴ ${discountPrice}`;
-    // calculateTotalBasket(discountPrice);
   }
 
   calculateOrde(basketArr);
@@ -150,7 +146,7 @@ export function getLocalStorageData() {
   // --updateStorage---
   window.addEventListener('storage', updateStorage);
 
-  function updateStorage() {
+  function updateStorage(event) {
     basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
     updateLocalStorageCounter();
     createMarkup(basketArr);

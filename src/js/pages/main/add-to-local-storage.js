@@ -2,6 +2,7 @@ import { getCardData } from '../../utils/mixins';
 import { updateLocalStorageCounter } from '../../utils/update-local-storage-counter';
 import { KEY_BASKET, KEY_FAVORITE } from '../../utils/constants';
 import { calculateTotalBasket } from '../../partials/calculateTotalBasket';
+// import { updateHeartStatus } from '../../partials/updateHeartStatus';
 
 export function addToLocalStorage() {
   const mainContainer = document.querySelector('.js-main-container');

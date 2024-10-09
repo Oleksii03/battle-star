@@ -1,12 +1,13 @@
 export function cardsMarkup(markupArray, container) {
   // console.log(2800 * (1 - 19 / 100));
-  const markup = markupArray.map(({ id, discount, price, img: { png, webp }, title }) => {
-    return `
+  const markup = markupArray.map(
+    ({ id, discount, price, img: { png, webp }, title, isFavorited }) => {
+      return `
           <div class="swiper-slide js-slide js-main-swiper-slide" data-id="${id}">
             <div class="main__slide-stock slide-stock">
               <div class="slide-stock__content-top">
                 <svg
-                  class="slide-stock__content-top-favorite js-favorite"
+                  class="${isFavorited ? 'slide-stock__content-top-favorite slide-stock__content-top-favorite_active' : 'slide-stock__content-top-favorite'} js-favorite"
                   width="33"
                   height="28">
                   <use xlink:href="#icon-heart"></use>
@@ -115,7 +116,8 @@ export function cardsMarkup(markupArray, container) {
               </div>
             </div>
           </div>`;
-  });
+    }
+  );
 
   container.innerHTML = markup.join('');
 }
