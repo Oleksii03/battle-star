@@ -8,7 +8,7 @@ export function modalFavorite() {
   const backdrop = document.querySelector('.js-backdrop-favotite');
   const modalWindow = document.querySelector('.js-modal-favorite');
   const swiperContainer = document.querySelector('.js-swiper-favorite');
-  const btnClose = document.querySelector('.js-swiper-btn-close');
+  const btnsClose = document.querySelectorAll('.js-swiper-btn-close');
   const mobMenu = document.querySelector('.js-mob-menu');
   // ---refs--
 
@@ -24,8 +24,8 @@ export function modalFavorite() {
     cardsMarkup(cardDataFavorite, swiperContainer);
   }
 
+  btnsClose.forEach(btnClose => btnClose.addEventListener('click', closeModalWindow));
   backdrop.addEventListener('click', closeModalWindow);
-  btnClose.addEventListener('click', closeModalWindow);
 
   function closeModalWindow(e) {
     backdrop.classList.remove('backdrop-favorite--visible');
@@ -45,12 +45,8 @@ export function modalFavorite() {
     const targetEl = target.closest('.swiper-slide');
     const targetId = targetEl.dataset.id;
 
-    console.log(targetId);
-
     let cardDataFavorite = JSON.parse(localStorage.getItem(KEY_FAVORITE));
     let newFavoriteArr = cardDataFavorite.filter(el => el.id !== targetId);
-
-    console.log(newFavoriteArr);
 
     localStorage.setItem(KEY_FAVORITE, JSON.stringify(newFavoriteArr));
 

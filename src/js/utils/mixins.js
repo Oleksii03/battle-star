@@ -50,26 +50,5 @@ async function getAllDocuments(db, title = '', container = '') {
   }
 }
 
-// ====================================================
-// function resizeSwiper() {
-//   const swiperWrapper = document.querySelector('.js-basket-recommendations-swiper');
-//   // const slides = document.querySelectorAll('.js-slide');
-//   const slides = swiperWrapper.children;
-
-//   const resizeObserver = new ResizeObserver(entries => {
-//     for (let entry of entries) {
-//       const currentHeight = +entry.contentRect.height.toFixed(0);
-
-//       [...slides].forEach(slide => {
-//         // slide.style.height = `${height}px`;
-//         console.log(currentHeight);
-//         slide.style.height = currentHeight + `px`;
-//       });
-//     }
-//   });
-
-//   resizeObserver.observe(swiperWrapper);
-// }
-
 // ----exports----------
 export { getCardData, getAllDocuments };

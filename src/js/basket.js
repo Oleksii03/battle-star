@@ -8,6 +8,7 @@ import { firebaseConfig } from './partials/firebaseConfig';
 import { createMarkupSwiperCard } from './pages/basket/create-markup-swiper';
 import { calculateTotalBasket } from './partials/calculateTotalBasket';
 import { modalFavorite } from './partials/modalFavorite';
+import { searchProduct } from './partials/searchProduct';
 
 document.addEventListener('DOMContentLoaded', () => {
   let app = firebaseConfig();
@@ -21,4 +22,5 @@ document.addEventListener('DOMContentLoaded', () => {
   calculateTotalBasket();
   modalFavorite();
   modalFavoriteSwiper();
+  searchProduct(app);
 });

@@ -16,6 +16,7 @@ import { createAccordionFaq } from './partials/accordion';
 import { addToLocalStorage } from './pages/main/add-to-local-storage';
 import { calculateTotalBasket } from './partials/calculateTotalBasket';
 import { modalFavorite } from './partials/modalFavorite';
+import { searchProduct } from './partials/searchProduct';
 
 document.addEventListener('DOMContentLoaded', () => {
   let app = firebaseConfig();
@@ -34,4 +35,5 @@ document.addEventListener('DOMContentLoaded', () => {
   calculateTotalBasket();
   modalFavorite();
   modalFavoriteSwiper();
+  searchProduct(app);
 });
