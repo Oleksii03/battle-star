@@ -2,8 +2,6 @@ import { getFirestore, collection, getDocs } from 'firebase/firestore';
 import { cardsMarkup } from '../pages/main/cards-markup';
 
 export async function searchProduct(app) {
-  console.log();
-  // --refs----
   const collectionName = ['Stock', 'Seasonal', 'Present'];
   const db = getFirestore(app);
 
