@@ -53,11 +53,14 @@ function filterProduct(allDocuments) {
       productCatalog.innerHTML = '';
       return;
     }
-    productCatalog.classList.add('main-hero__product-catalog_active');
 
     const filteredСards = allDocuments.filter(({ title }) =>
       title.toLowerCase().includes(searchQuery)
     );
+
+    if (!filteredСards.length) return;
+
+    productCatalog.classList.add('main-hero__product-catalog_active');
 
     cardsMarkup(filteredСards, productCatalog);
 
