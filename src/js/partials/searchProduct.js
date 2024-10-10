@@ -82,6 +82,8 @@ function filterProduct(allDocuments) {
 
     const selectedTitle = target.textContent.trim();
 
+    console.log(selectedTitle);
+
     const selectedСards = allDocuments.filter(
       ({ title }) => title.toLowerCase() === selectedTitle.toLowerCase()
     );
@@ -99,7 +101,7 @@ function filterProduct(allDocuments) {
   searchInput.addEventListener('blur', () => {
     setTimeout(() => {
       searchList.classList.add('header__search-input-list_hidden');
-    }, 0);
+    }, 100);
   });
 
   searchInput.addEventListener('focus', () => {
