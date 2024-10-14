@@ -1,0 +1,9 @@
+@import '../index.scss';
+
+h1 {
+  background-color: #c81313;
+
+  @include media-breakpoint-min(xxs) {
+    background-color: #0b3dbb;
+  }
+}
