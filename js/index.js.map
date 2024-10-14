@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sources":["../../src/ts/index.ts"],"sourcesContent":["function greet<T>(name: T) {\n  return `Hello, ${name}!`;\n}\n\nconsole.log(greet<string>('World'));\n"],"names":["greet","name"],"mappings":"ssBAAA,SAASA,EAASC,EAAS,CACzB,MAAO,UAAUA,CAAI,GACvB,CAEA,QAAQ,IAAID,EAAc,OAAO,CAAC"}
