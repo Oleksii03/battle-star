@@ -1,5 +1,8 @@
-@import './base/modern-normalize';
-@import './base/common';
 @import './utils/variables';
 @import './utils/mixins';
+
+@import './fonts/fonts';
+
+@import './base/modern-normalize';
+@import './base/common';
 @import './base/container';
