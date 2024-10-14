@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "vite",
-    "build": "vite build --base=/Flowers/ --emptyOutDir",
+    "build": "vite build --base=/battle-star/ --emptyOutDir",
     "preview": "vite preview",
     "deploy": "git add . && git commit -m 'auto commit' && git push origin main",
     "convert-webp": "node convert-webp.js"
@@ -15,6 +15,7 @@
     "imagemin": "^9.0.0",
     "imagemin-cli": "^8.0.0",
     "imagemin-webp": "^8.0.0",
+    "typescript": "^5.6.3",
     "vite": "^5.2.13"
   },
   "dependencies": {
@@ -23,7 +24,6 @@
     "modern-normalize": "^2.0.0",
     "prettier": "^3.3.3",
     "sass": "^1.77.4",
-    "swiper": "^11.1.11",
     "vite-plugin-full-reload": "^1.1.0",
     "vite-plugin-html-inject": "^1.1.2"
   }

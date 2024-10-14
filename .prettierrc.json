@@ -8,9 +8,8 @@
   "bracketSpacing": true,
   "arrowParens": "avoid",
   "proseWrap": "always",
-  "endOfLine": "lf",
   "vueIndentScriptAndStyle": true,
   "singleAttributePerLine": true,
   "bracketSameLine": true,
-  "htmlWhitespaceSensitivity": "css"
+  "htmlWhitespaceSensitivity": "ignore"
 }

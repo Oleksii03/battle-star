@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "strict": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "moduleResolution": "Node", // Рекомендується для сумісності з модульною системою Node
+    "isolatedModules": true, // Оптимально для роботи з Vite, особливо якщо використовуєте JSX
+    "jsx": "preserve", // Якщо використовуєте JSX (React), Vite оброблятиме його самостійно
+    "types": ["vite/client"] // Додає типи Vite для кращої інтеграції
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules"]
+}
