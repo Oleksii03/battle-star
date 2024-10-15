@@ -48,7 +48,7 @@
     </symbol>
 
     <symbol
-      id="icon-message-text"
+      id="icon-message"
       viewBox="0 0 32 32">
       <path
         d="M26.667 2.667h-21.333c-0.707 0-1.386 0.281-1.886 0.781s-0.781 1.178-0.781 1.886v24l5.333-5.333h18.667c0.707 0 1.385-0.281 1.886-0.781s0.781-1.178 0.781-1.886v-16c0-0.707-0.281-1.386-0.781-1.886s-1.178-0.781-1.886-0.781zM8 12h16v2.667h-16v-2.667zM18.667 18.667h-10.667v-2.667h10.667v2.667zM24 10.667h-16v-2.667h16z"></path>
@@ -65,7 +65,7 @@
 
     <title>main</title>
     <script type="module" crossorigin src="/battle-star/js/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/battle-star/assets/index-BtT1wq6U.css">
+    <link rel="stylesheet" crossorigin href="/battle-star/assets/index-B_9WppQK.css">
   </head>
   <body>
     <div class="main__wrapper wrapper">
@@ -74,66 +74,68 @@
 
       <div class="main-body">
         <header class="header">
-  <div class="header__container container">
-    <!-- btn-arrow-box -->
-    <div class="header__arrow-box">
-      <button class="header__arrow-btn header__arrow-btn_left">
-        <svg
-          width="38"
-          height="38"
-          class="icon-arrow-left">
-          <use xlink:href="#icon-arrow-left"></use>
-        </svg>
-      </button>
+  <div class="header__container">
+    <!-- content-left -->
+    <div class="header__content-left">
+      <!-- btn-arrow-box -->
+      <div class="header__arrow-box">
+        <button class="header__arrow-btn header__arrow-btn_left">
+          <svg
+            width="38"
+            height="38"
+            class="icon-arrow-left">
+            <use xlink:href="#icon-arrow-left"></use>
+          </svg>
+        </button>
 
-      <button class="header__arrow-btn header__arrow-btn_right">
-        <svg
-          width="38"
-          height="38"
-          class="icon-arrow-left">
-          <use xlink:href="#icon-arrow-right"></use>
-        </svg>
-      </button>
-    </div>
-    <!-- game-dropdown -->
-    <div class="header__game-dropdown">
-      <img
-        class="header__game-dropdown-img"
-        width="30"
-        height="30"
-        src="../../assets/img/base/header/header-cs-go.svg"
-        alt="Game dropdown" />
+        <button class="header__arrow-btn header__arrow-btn_right">
+          <svg
+            width="38"
+            height="38"
+            class="icon-arrow-left">
+            <use xlink:href="#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+      <!-- game-dropdown -->
+      <div class="header__game-dropdown">
+        <img
+          class="header__game-dropdown-img"
+          width="30"
+          height="30"
+          src="../../assets/img/base/header/header-cs-go.svg"
+          alt="Game dropdown" />
 
-      <ul class="header__game-dropdown-list">
-        <li class="header__game-dropdown-item game-dropdown-item">
-          <div class="game-dropdown-item__box">
-            <p class="game-dropdown-item__title">CS:GO</p>
+        <ul class="header__game-dropdown-list">
+          <li class="header__game-dropdown-item game-dropdown-item">
+            <div class="game-dropdown-item__box">
+              <p class="game-dropdown-item__title">CS:GO</p>
 
-            <svg
-              width="24"
-              height="24"
-              class="game-dropdown-item__icon">
-              <use xlink:href="#icon-arrow-down"></use>
-            </svg>
-          </div>
-          <!-- inner-list -->
-          <ul class="game-dropdown-item__inner-list js-game-dropdown-item-inner-list">
-            <li>
-              <p>p</p>
-            </li>
-            <li>
-              <p>p</p>
-            </li>
-            <li>
-              <p>p</p>
-            </li>
-          </ul>
-        </li>
-      </ul>
+              <svg
+                width="24"
+                height="24"
+                class="game-dropdown-item__icon">
+                <use xlink:href="#icon-arrow-down"></use>
+              </svg>
+            </div>
+            <!-- inner-list -->
+            <ul class="game-dropdown-item__inner-list js-game-dropdown-item-inner-list">
+              <li>
+                <p>p</p>
+              </li>
+              <li>
+                <p>p</p>
+              </li>
+              <li>
+                <p>p</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <!-- content-right -->
-
     <div class="header__content-right">
       <!-- search-box -->
       <div class="header__search-box">
@@ -166,6 +168,60 @@
           <p class="header__balance-currency">BS</p>
         </div>
       </div>
+
+      <!-- buttons -->
+      <button
+        type="button"
+        class="header__btn-message">
+        <svg
+          class="header__btn-message-icon"
+          width="24"
+          height="24">
+          <use xlink:href="#icon-message"></use>
+        </svg>
+
+        <span class="header__btn-message-count">0</span>
+      </button>
+      <button
+        type="button"
+        class="header__btn-bell">
+        <svg
+          class="header__btn-bell-icon"
+          width="24"
+          height="24">
+          <use xlink:href="#icon-bell"></use>
+        </svg>
+
+        <span class="header__btn-bell-count">0</span>
+      </button>
+
+      <!-- Sergio-Richter -->
+      <ul class="header__Sergio-list">
+        <li class="header__Sergio-item">
+          <div class="header__Sergio-item-box js-sergio-item-box">
+            <p class="header__Sergio-item-title js-sergio-active-title">Sergio Richter</p>
+
+            <svg
+              width="24"
+              height="24"
+              class="header__Sergio-item-icon">
+              <use xlink:href="#icon-arrow-down"></use>
+            </svg>
+          </div>
+
+          <ul class="header__Sergio-inner-list js-sergio-inner-list">
+            <li class="header__Sergio-inner-item">
+              <p class="header__Sergio-inner-item-text">Sergio Richter</p>
+            </li>
+            <li class="header__Sergio-inner-item">
+              <p class="header__Sergio-inner-item-text">Item 2</p>
+            </li>
+            <li class="header__Sergio-inner-item">
+              <p class="header__Sergio-inner-item-text">Item 3</p>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </div>
 </header>
