@@ -63,3 +63,8 @@ p {
 body {
   font-family: $font-primary;
 }
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+}

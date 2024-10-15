@@ -1,0 +1,30 @@
+.header {
+  background-color: $dark-bg;
+
+  &__container {
+    @include flex-align-row;
+  }
+
+  // btn-arrow-box
+  &__arrow-box {
+    @include flex-align-row;
+    column-gap: 27px;
+    margin-right: 61px;
+  }
+
+  &__arrow-btn {
+    background-color: transparent;
+
+    & > svg {
+      fill: $light-text;
+    }
+  }
+
+  // game-dropdown
+  &__game-dropdown {
+    &-img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
