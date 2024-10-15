@@ -1,5 +1,5 @@
-function greet(name: string): string {
-  return `Hello, ${name}!`;
-}
+import { header } from './components/header';
 
-console.log(greet('World'));
+document.addEventListener('DOMContentLoaded', () => {
+  header();
+});

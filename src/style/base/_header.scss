@@ -1,22 +1,29 @@
 .header {
   background-color: $dark-bg;
-  padding: 18px 28px;
+  padding: 16px 28px;
 
   &__container {
     @include flex-align-row;
+    margin-right: clamp(0rem, -6.333rem + 13.19vw, 9.5rem);
+    column-gap: 70px;
+  }
+
+  &__content-left {
+    @include flex-align-row;
+    column-gap: clamp(2.063rem, 0.938rem + 2.34vw, 3.75rem);
+    margin-right: auto;
   }
 
   &__content-right {
     @include flex-align-row;
     margin-left: auto;
-    column-gap: 30px;
+    column-gap: 33px;
   }
 
   // btn-arrow-box
   &__arrow-box {
     @include flex-align-row;
     column-gap: 27px;
-    margin-right: 61px;
   }
 
   &__arrow-btn {
@@ -46,7 +53,6 @@
 
   &__search-input {
     width: 100%;
-    height: 100%;
     padding: 10px 10px 10px 42px;
     border-radius: 4px;
     background: #1d1d21;
@@ -96,12 +102,100 @@
   &__balance-currency {
     text-decoration: line-through;
   }
+
+  &__btn-message,
+  &__btn-bell {
+    position: relative;
+    padding: 7px;
+    border-radius: 4px;
+    background: #242424;
+
+    &-icon {
+      fill: $light-text;
+    }
+
+    &-count {
+      position: absolute;
+      top: -11px;
+      right: -15px;
+      width: 25px;
+      height: 25px;
+      @include flex-align-row;
+      justify-content: center;
+      background-color: $basic-yellow;
+      border-radius: 50px;
+      color: $dark-text;
+      pointer-events: none;
+    }
+  }
+
+  // Sergio-Richter-
+  // Sergio-Richter-list
+  &__Sergio-item {
+    position: relative;
+    cursor: pointer;
+
+    &-box {
+      @include flex-align-row;
+      min-width: 151px;
+    }
+
+    &-title {
+      font-size: 20px;
+    }
+
+    &-icon {
+      width: 24px;
+      height: 24px;
+      fill: $light-text;
+    }
+  }
+  // Sergio-inner-list
+  &__Sergio-inner-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    position: absolute;
+    top: 150%;
+    left: 0;
+    width: 100%;
+    padding: 0px 0px;
+    background-color: #1d1d21;
+    z-index: 1;
+    border: 1px solid $basic-yellow;
+    transition: all 150ms linear;
+    border-radius: 4px;
+    z-index: 1;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    &_open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
+
+  &__Sergio-inner-item {
+    padding: 15px 5px 15px 10px;
+    transition: all 150ms linear;
+
+    &:hover {
+      background-color: #fac90456;
+    }
+  }
 }
 
 // --------------------------
 // game-dropdown-item
 .game-dropdown-item {
   position: relative;
+
+  &__title {
+    font-size: 20px;
+  }
 
   &__box {
     @include flex-align-row;
