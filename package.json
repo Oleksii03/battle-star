@@ -19,6 +19,8 @@
     "vite": "^5.2.13"
   },
   "dependencies": {
+    "@splidejs/splide": "^4.1.4",
+    "@splidejs/splide-extension-grid": "^0.4.1",
     "autoprefixer": "^10.4.19",
     "firebase": "^10.13.1",
     "modern-normalize": "^2.0.0",

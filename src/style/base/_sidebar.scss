@@ -16,15 +16,17 @@
     }
   }
 
-  //  navigation-list
+  //  navigation
   &__nav {
     margin-top: 27px;
+
     &-list {
       display: flex;
       flex-direction: column;
     }
 
     &-link {
+      position: relative;
       color: $gray-text;
       @include flex-align-column;
       row-gap: 3px;
@@ -47,6 +49,22 @@
         font-weight: 900;
         line-height: normal;
         transition: color 150ms linear;
+      }
+
+      &-count {
+        position: absolute;
+        top: 3px;
+        right: 14px;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fac704;
+        border-radius: 50px;
+        color: #101011;
+        // pointer-events: none;
+        line-height: normal;
       }
 
       &:hover {

@@ -1,7 +1,7 @@
 .main-stage {
   padding-top: 330px;
   padding-bottom: 330px;
-  // min-height: 100vh;
+  min-height: 100vh;
   background:
     linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #0c0c0e 65.93%),
     url(../../assets/img/pages/main/sections/main-stage/bg/main-stage.webp) lightgray -0.056px 0px no-repeat;
@@ -12,9 +12,51 @@
     font-weight: 500;
     font-size: 64px;
     text-align: center;
+    margin-bottom: 74px;
 
     & > span {
       color: $basic-yellow;
     }
   }
+}
+
+// .splide__list {
+//   height: 500px;
+// }
+
+.splide__slide {
+  overflow: hidden;
+
+  & > div {
+    width: 100%;
+    height: 100%;
+    background-color: #4ca50c;
+  }
+
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.splide__arrow {
+  position: absolute !important;
+  background-color: transparent !important;
+
+  & > svg {
+    fill: $light-text !important;
+    width: 68px !important;
+    height: 68px !important;
+  }
+
+  &[disabled] {
+    display: none !important;
+  }
+}
+.splide__arrow--next {
+  right: -60px !important;
+}
+.splide__arrow--prev {
+  left: -60px !important;
 }
