@@ -1,34 +1,46 @@
-import { closeDropDownList } from './closeOpenLists';
-
+export const sergioInnerList = document.querySelector('.js-sergio-inner-list');
+export const gameInnerList = document.querySelector('.js-game-dropdown-item-inner-list');
+// ---reusable-refs------------
 export function header() {
-  const sergioBox = document.querySelector('.js-sergio-item-box') as HTMLElement | null;
-  const sergioInnerList = document.querySelector('.js-sergio-inner-list') as HTMLElement | null;
-  const sergioActiveItem = document.querySelector('.js-sergio-active-title') as HTMLElement | null;
-  // --refs----
+  const sergioBox = document.querySelector('.js-sergio-item-box');
+  const sergioActiveItem = document.querySelector('.js-sergio-active-title');
+  const gameDropdownBox = document.querySelector('.js-game-dropdown-box');
+  const gameDropdownActiveTitle = document.querySelector('.js-game-dropdown-active-title');
+  // ----local-refs------------------
 
-  if (sergioBox) {
-    sergioBox.addEventListener('click', toggleSergioList);
-  } else {
-    console.error('Element not found');
-  }
+  // ===handlerSergioList======
+  sergioBox?.addEventListener('click', toggleSergioList);
 
   function toggleSergioList(): void {
-    if (sergioInnerList) {
-      sergioInnerList.classList.toggle('header__Sergio-inner-list_open');
-    }
+    sergioInnerList?.classList.toggle('header__Sergio-inner-list_open');
   }
 
-  if (sergioInnerList) {
-    sergioInnerList.addEventListener('click', getTextContent);
-  }
+  // ---sergioInnerList---
+  sergioInnerList?.addEventListener('click', getTextContentFromSergioList);
 
-  function getTextContent(event: Event): void {
-    const target = event.target as HTMLElement;
+  function getTextContentFromSergioList(e: Event): void {
+    const targetEL = e.target as HTMLElement;
     if (sergioActiveItem) {
-      sergioActiveItem.textContent = target.textContent;
+      sergioActiveItem.textContent = targetEL.textContent;
     }
     toggleSergioList();
   }
 
-  closeDropDownList(sergioInnerList);
+  // ===handlerGameList======
+  gameDropdownBox?.addEventListener('click', toggleGameList);
+
+  function toggleGameList(): void {
+    gameInnerList?.classList.toggle('game-dropdown-item__inner-list_open');
+  }
+
+  // gameInnerList
+  gameInnerList?.addEventListener('click', getTextContentFromGameList);
+
+  function getTextContentFromGameList(e: Event): void {
+    const targetEL = e.target as HTMLElement;
+    if (gameDropdownActiveTitle) {
+      gameDropdownActiveTitle.textContent = targetEL.textContent;
+    }
+    toggleGameList();
+  }
 }
