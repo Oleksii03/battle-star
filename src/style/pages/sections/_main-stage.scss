@@ -1,0 +1,20 @@
+.main-stage {
+  padding-top: 330px;
+  padding-bottom: 330px;
+  // min-height: 100vh;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #0c0c0e 65.93%),
+    url(../../assets/img/pages/main/sections/main-stage/bg/main-stage.webp) lightgray -0.056px 0px no-repeat;
+  background-size: cover;
+  background-position: 50% 38%;
+
+  &__title {
+    font-weight: 500;
+    font-size: 64px;
+    text-align: center;
+
+    & > span {
+      color: $basic-yellow;
+    }
+  }
+}
