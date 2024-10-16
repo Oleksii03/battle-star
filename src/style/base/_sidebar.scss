@@ -1,5 +1,6 @@
 .sidebar {
   background-color: $dark-bg;
+  // logo
   &__logo {
     display: flex;
     align-items: center;
@@ -12,6 +13,52 @@
 
     &:hover > svg {
       filter: drop-shadow(0px 0px 10px rgb(211, 99, 8));
+    }
+  }
+
+  //  navigation-list
+  &__nav {
+    margin-top: 27px;
+    &-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-link {
+      color: $gray-text;
+      @include flex-align-column;
+      row-gap: 3px;
+      padding: 10px;
+      cursor: pointer;
+      transition: background-color 150ms linear;
+
+      &-icon {
+        width: 36px;
+        height: 36px;
+        fill: $gray-text;
+        transition: fill 150ms linear;
+      }
+
+      &-text {
+        text-align: center;
+        font-family: Roboto-Black;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        transition: color 150ms linear;
+      }
+
+      &:hover {
+        background-color: $basic-yellow;
+
+        & .sidebar__nav-link-text {
+          color: $dark-text;
+        }
+        & .sidebar__nav-link-icon {
+          fill: $dark-text;
+        }
+      }
     }
   }
 }
