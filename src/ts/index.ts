@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
   header();
   closeDropDownList();
 });
+
+// ------
 import '@splidejs/splide/css';
 import Splide from '@splidejs/splide';
 
