@@ -1,6 +1,6 @@
 .main-stage {
   padding-top: 330px;
-  padding-bottom: 191px;
+  padding-bottom: 65px;
   background:
     linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #0c0c0e 65.93%),
     url(../../assets/img/pages/main/sections/main-stage/bg/main-stage.webp) lightgray -0.056px 0px no-repeat;
@@ -8,8 +8,12 @@
   background-position: 50% 38%;
 
   @include media-min-width(xl) {
+    // background:
+    //   linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #0c0c0e 40%),
+    //   url(../../assets/img/pages/main/sections/main-stage/bg/main-stage.webp) lightgray -0.056px 0px
+    //     no-repeat;
     background-size: contain;
-    background-position: 50% -18%;
+    background-position: 50% -25%;
   }
 
   &__title {
@@ -49,16 +53,17 @@
     }
 
     & .splide__arrow--next {
-      right: -60px !important;
+      right: -70px !important;
     }
     & .splide__arrow--prev {
-      left: -60px !important;
+      left: -70px !important;
     }
 
     // slide-description
     & .splide__slide-description {
+      border-top: 2px solid $basic-yellow;
       background: rgba(248, 248, 248, 0.05);
-      padding: 8px 12px 10px 17px;
+      padding: 5px 12px 10px 19px;
 
       &-title {
         font-size: 18px;
