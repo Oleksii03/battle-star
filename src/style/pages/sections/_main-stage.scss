@@ -36,6 +36,26 @@
       transition: transform 0.3s ease;
     }
 
+    & .splide__pagination {
+      position: absolute !important;
+      bottom: -45px !important;
+
+      display: flex !important;
+      gap: 51px !important;
+
+      & .splide__pagination__page {
+        width: 8px;
+        height: 8px;
+        background-color: $gray-text;
+
+        &.is-active {
+          background-color: $basic-yellow;
+          width: 13px;
+          height: 13px;
+        }
+      }
+    }
+
     // btns---
     & .splide__arrow {
       position: absolute !important;
