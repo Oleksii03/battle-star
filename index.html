@@ -14,6 +14,13 @@
   xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <symbol
+      id="icon-eye-views"
+      viewBox="0 0 32 32">
+      <path
+        d="M15.999 8.667c2.452-0.008 4.856 0.676 6.936 1.973s3.752 3.155 4.824 5.36c-2.2 4.493-6.693 7.333-11.76 7.333s-9.56-2.84-11.76-7.333c1.072-2.205 2.744-4.063 4.824-5.36s4.485-1.981 6.936-1.973zM15.999 6c-6.667 0-12.36 4.147-14.667 10 2.307 5.853 8 10 14.667 10s12.36-4.147 14.667-10c-2.307-5.853-8-10-14.667-10zM15.999 12.667c0.884 0 1.732 0.351 2.357 0.976s0.976 1.473 0.976 2.357c0 0.884-0.351 1.732-0.976 2.357s-1.473 0.976-2.357 0.976c-0.884 0-1.732-0.351-2.357-0.976s-0.976-1.473-0.976-2.357c0-0.884 0.351-1.732 0.976-2.357s1.473-0.976 2.357-0.976zM15.999 10c-3.307 0-6 2.693-6 6s2.693 6 6 6c3.307 0 6-2.693 6-6s-2.693-6-6-6z"></path>
+    </symbol>
+
+    <symbol
       id="icon-logo"
       viewBox="0 0 30 32">
       <path
@@ -131,7 +138,7 @@
     <script type="module" crossorigin src="/battle-star/js/index.js"></script>
     <link rel="modulepreload" crossorigin href="/battle-star/assets/vendor-R1r_DIDY.js">
     <link rel="stylesheet" crossorigin href="/battle-star/assets/vendor-CEzdm8Kq.css">
-    <link rel="stylesheet" crossorigin href="/battle-star/assets/index-U2anxRGr.css">
+    <link rel="stylesheet" crossorigin href="/battle-star/assets/index-CsqnS1Sa.css">
   </head>
   <body>
     <div class="main__wrapper wrapper">
@@ -401,75 +408,559 @@
 
     <!-- slider -->
     <div
-      class="splide"
-      role="group"
-      aria-label="Splide Basic HTML Example">
+      class="splide main-stage__news-slider"
+      aria-label="slider">
       <div class="splide__track">
         <ul class="splide__list">
           <li class="splide__slide">
-            <img
-              src="https://ukvapescene.com/5298-large_default/ivg-smart-5500-disposable-vape.jpg"
-              alt="#" />
+            <!-- slide-body -->
+            <div class="splide__slide-body">
+              <picture>
+                <source
+                  srcset="../../assets/img/pages/convert/main-tournaments.webp"
+                  type="image/webp" />
+                <img
+                  class="splide__slide-img"
+                  width="489"
+                  height="246"
+                  src="../../assets/img/pages/convert/main-tournaments.png"
+                  alt="#" />
+              </picture>
+
+              <!-- slide-description -->
+              <div class="splide__slide-description">
+                <h6 class="splide__slide-description-title">Головні турніри жовтня</h6>
+
+                <p class="splide__slide-description-text">
+                  FURIA презентувала помічника тренера. Відтепер tacitus...
+                </p>
+
+                <!-- slide-author -->
+                <div class="splide__slide-author slide-author">
+                  <div class="slide-author__content-left">
+                    <img
+                      width="40"
+                      height="40"
+                      class="slide-author__img"
+                      src="../../assets/img/pages/convert/user-1.png"
+                      alt="#" />
+
+                    <span class="slide-author__name">Максим Рихтер</span>
+                    <span class="slide-author__date">19 Жов, 2024</span>
+                  </div>
+
+                  <div class="slide-author__content-right">
+                    <button
+                      type="button"
+                      class="slide-author__btn-views">
+                      <svg
+                        class="slide-author__btn-views-icon"
+                        width="20"
+                        height="20">
+                        <use xlink:href="#icon-eye-views"></use>
+                      </svg>
+                    </button>
+
+                    <p class="slide-author__views-count">123</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
           <li class="splide__slide">
-            <div></div>
+            <!-- slide-body -->
+            <div class="splide__slide-body">
+              <picture>
+                <source
+                  srcset="../../assets/img/pages/convert/main-tournaments.webp"
+                  type="image/webp" />
+                <img
+                  class="splide__slide-img"
+                  width="489"
+                  height="246"
+                  src="../../assets/img/pages/convert/main-tournaments.png"
+                  alt="#" />
+              </picture>
+
+              <!-- slide-description -->
+              <div class="splide__slide-description">
+                <h6 class="splide__slide-description-title">Головні турніри жовтня</h6>
+
+                <p class="splide__slide-description-text">
+                  FURIA презентувала помічника тренера. Відтепер tacitus...
+                </p>
+
+                <!-- slide-author -->
+                <div class="splide__slide-author slide-author">
+                  <div class="slide-author__content-left">
+                    <img
+                      width="40"
+                      height="40"
+                      class="slide-author__img"
+                      src="../../assets/img/pages/convert/user-1.png"
+                      alt="#" />
+
+                    <span class="slide-author__name">Максим Рихтер</span>
+                    <span class="slide-author__date">19 Жов, 2024</span>
+                  </div>
+
+                  <div class="slide-author__content-right">
+                    <button
+                      type="button"
+                      class="slide-author__btn-views">
+                      <svg
+                        class="slide-author__btn-views-icon"
+                        width="20"
+                        height="20">
+                        <use xlink:href="#icon-eye-views"></use>
+                      </svg>
+                    </button>
+
+                    <p class="slide-author__views-count">123</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
           <li class="splide__slide">
-            <div></div>
+            <!-- slide-body -->
+            <div class="splide__slide-body">
+              <picture>
+                <source
+                  srcset="../../assets/img/pages/convert/main-tournaments.webp"
+                  type="image/webp" />
+                <img
+                  class="splide__slide-img"
+                  width="489"
+                  height="246"
+                  src="../../assets/img/pages/convert/main-tournaments.png"
+                  alt="#" />
+              </picture>
+
+              <!-- slide-description -->
+              <div class="splide__slide-description">
+                <h6 class="splide__slide-description-title">Головні турніри жовтня</h6>
+
+                <p class="splide__slide-description-text">
+                  FURIA презентувала помічника тренера. Відтепер tacitus...
+                </p>
+
+                <!-- slide-author -->
+                <div class="splide__slide-author slide-author">
+                  <div class="slide-author__content-left">
+                    <img
+                      width="40"
+                      height="40"
+                      class="slide-author__img"
+                      src="../../assets/img/pages/convert/user-1.png"
+                      alt="#" />
+
+                    <span class="slide-author__name">Максим Рихтер</span>
+                    <span class="slide-author__date">19 Жов, 2024</span>
+                  </div>
+
+                  <div class="slide-author__content-right">
+                    <button
+                      type="button"
+                      class="slide-author__btn-views">
+                      <svg
+                        class="slide-author__btn-views-icon"
+                        width="20"
+                        height="20">
+                        <use xlink:href="#icon-eye-views"></use>
+                      </svg>
+                    </button>
+
+                    <p class="slide-author__views-count">123</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
           <li class="splide__slide">
-            <div></div>
+            <!-- slide-body -->
+            <div class="splide__slide-body">
+              <picture>
+                <source
+                  srcset="../../assets/img/pages/convert/main-tournaments.webp"
+                  type="image/webp" />
+                <img
+                  class="splide__slide-img"
+                  width="489"
+                  height="246"
+                  src="../../assets/img/pages/convert/main-tournaments.png"
+                  alt="#" />
+              </picture>
+
+              <!-- slide-description -->
+              <div class="splide__slide-description">
+                <h6 class="splide__slide-description-title">Головні турніри жовтня</h6>
+
+                <p class="splide__slide-description-text">
+                  FURIA презентувала помічника тренера. Відтепер tacitus...
+                </p>
+
+                <!-- slide-author -->
+                <div class="splide__slide-author slide-author">
+                  <div class="slide-author__content-left">
+                    <img
+                      width="40"
+                      height="40"
+                      class="slide-author__img"
+                      src="../../assets/img/pages/convert/user-1.png"
+                      alt="#" />
+
+                    <span class="slide-author__name">Максим Рихтер</span>
+                    <span class="slide-author__date">19 Жов, 2024</span>
+                  </div>
+
+                  <div class="slide-author__content-right">
+                    <button
+                      type="button"
+                      class="slide-author__btn-views">
+                      <svg
+                        class="slide-author__btn-views-icon"
+                        width="20"
+                        height="20">
+                        <use xlink:href="#icon-eye-views"></use>
+                      </svg>
+                    </button>
+
+                    <p class="slide-author__views-count">123</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
           <li class="splide__slide">
-            <div></div>
+            <!-- slide-body -->
+            <div class="splide__slide-body">
+              <picture>
+                <source
+                  srcset="../../assets/img/pages/convert/main-tournaments.webp"
+                  type="image/webp" />
+                <img
+                  class="splide__slide-img"
+                  width="489"
+                  height="246"
+                  src="../../assets/img/pages/convert/main-tournaments.png"
+                  alt="#" />
+              </picture>
+
+              <!-- slide-description -->
+              <div class="splide__slide-description">
+                <h6 class="splide__slide-description-title">Головні турніри жовтня</h6>
+
+                <p class="splide__slide-description-text">
+                  FURIA презентувала помічника тренера. Відтепер tacitus...
+                </p>
+
+                <!-- slide-author -->
+                <div class="splide__slide-author slide-author">
+                  <div class="slide-author__content-left">
+                    <img
+                      width="40"
+                      height="40"
+                      class="slide-author__img"
+                      src="../../assets/img/pages/convert/user-1.png"
+                      alt="#" />
+
+                    <span class="slide-author__name">Максим Рихтер</span>
+                    <span class="slide-author__date">19 Жов, 2024</span>
+                  </div>
+
+                  <div class="slide-author__content-right">
+                    <button
+                      type="button"
+                      class="slide-author__btn-views">
+                      <svg
+                        class="slide-author__btn-views-icon"
+                        width="20"
+                        height="20">
+                        <use xlink:href="#icon-eye-views"></use>
+                      </svg>
+                    </button>
+
+                    <p class="slide-author__views-count">123</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
           <li class="splide__slide">
-            <div></div>
+            <!-- slide-body -->
+            <div class="splide__slide-body">
+              <picture>
+                <source
+                  srcset="../../assets/img/pages/convert/main-tournaments.webp"
+                  type="image/webp" />
+                <img
+                  class="splide__slide-img"
+                  width="489"
+                  height="246"
+                  src="../../assets/img/pages/convert/main-tournaments.png"
+                  alt="#" />
+              </picture>
+
+              <!-- slide-description -->
+              <div class="splide__slide-description">
+                <h6 class="splide__slide-description-title">Головні турніри жовтня</h6>
+
+                <p class="splide__slide-description-text">
+                  FURIA презентувала помічника тренера. Відтепер tacitus...
+                </p>
+
+                <!-- slide-author -->
+                <div class="splide__slide-author slide-author">
+                  <div class="slide-author__content-left">
+                    <img
+                      width="40"
+                      height="40"
+                      class="slide-author__img"
+                      src="../../assets/img/pages/convert/user-1.png"
+                      alt="#" />
+
+                    <span class="slide-author__name">Максим Рихтер</span>
+                    <span class="slide-author__date">19 Жов, 2024</span>
+                  </div>
+
+                  <div class="slide-author__content-right">
+                    <button
+                      type="button"
+                      class="slide-author__btn-views">
+                      <svg
+                        class="slide-author__btn-views-icon"
+                        width="20"
+                        height="20">
+                        <use xlink:href="#icon-eye-views"></use>
+                      </svg>
+                    </button>
+
+                    <p class="slide-author__views-count">123</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
           <li class="splide__slide">
-            <div></div>
+            <!-- slide-body -->
+            <div class="splide__slide-body">
+              <picture>
+                <source
+                  srcset="../../assets/img/pages/convert/main-tournaments.webp"
+                  type="image/webp" />
+                <img
+                  class="splide__slide-img"
+                  width="489"
+                  height="246"
+                  src="../../assets/img/pages/convert/main-tournaments.png"
+                  alt="#" />
+              </picture>
+
+              <!-- slide-description -->
+              <div class="splide__slide-description">
+                <h6 class="splide__slide-description-title">Головні турніри жовтня</h6>
+
+                <p class="splide__slide-description-text">
+                  FURIA презентувала помічника тренера. Відтепер tacitus...
+                </p>
+
+                <!-- slide-author -->
+                <div class="splide__slide-author slide-author">
+                  <div class="slide-author__content-left">
+                    <img
+                      width="40"
+                      height="40"
+                      class="slide-author__img"
+                      src="../../assets/img/pages/convert/user-1.png"
+                      alt="#" />
+
+                    <span class="slide-author__name">Максим Рихтер</span>
+                    <span class="slide-author__date">19 Жов, 2024</span>
+                  </div>
+
+                  <div class="slide-author__content-right">
+                    <button
+                      type="button"
+                      class="slide-author__btn-views">
+                      <svg
+                        class="slide-author__btn-views-icon"
+                        width="20"
+                        height="20">
+                        <use xlink:href="#icon-eye-views"></use>
+                      </svg>
+                    </button>
+
+                    <p class="slide-author__views-count">123</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
           <li class="splide__slide">
-            <div></div>
+            <!-- slide-body -->
+            <div class="splide__slide-body">
+              <picture>
+                <source
+                  srcset="../../assets/img/pages/convert/main-tournaments.webp"
+                  type="image/webp" />
+                <img
+                  class="splide__slide-img"
+                  width="489"
+                  height="246"
+                  src="../../assets/img/pages/convert/main-tournaments.png"
+                  alt="#" />
+              </picture>
+
+              <!-- slide-description -->
+              <div class="splide__slide-description">
+                <h6 class="splide__slide-description-title">Головні турніри жовтня</h6>
+
+                <p class="splide__slide-description-text">
+                  FURIA презентувала помічника тренера. Відтепер tacitus...
+                </p>
+
+                <!-- slide-author -->
+                <div class="splide__slide-author slide-author">
+                  <div class="slide-author__content-left">
+                    <img
+                      width="40"
+                      height="40"
+                      class="slide-author__img"
+                      src="../../assets/img/pages/convert/user-1.png"
+                      alt="#" />
+
+                    <span class="slide-author__name">Максим Рихтер</span>
+                    <span class="slide-author__date">19 Жов, 2024</span>
+                  </div>
+
+                  <div class="slide-author__content-right">
+                    <button
+                      type="button"
+                      class="slide-author__btn-views">
+                      <svg
+                        class="slide-author__btn-views-icon"
+                        width="20"
+                        height="20">
+                        <use xlink:href="#icon-eye-views"></use>
+                      </svg>
+                    </button>
+
+                    <p class="slide-author__views-count">123</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
           <li class="splide__slide">
-            <div></div>
+            <!-- slide-body -->
+            <div class="splide__slide-body">
+              <picture>
+                <source
+                  srcset="../../assets/img/pages/convert/main-tournaments.webp"
+                  type="image/webp" />
+                <img
+                  class="splide__slide-img"
+                  width="489"
+                  height="246"
+                  src="../../assets/img/pages/convert/main-tournaments.png"
+                  alt="#" />
+              </picture>
+
+              <!-- slide-description -->
+              <div class="splide__slide-description">
+                <h6 class="splide__slide-description-title">Головні турніри жовтня</h6>
+
+                <p class="splide__slide-description-text">
+                  FURIA презентувала помічника тренера. Відтепер tacitus...
+                </p>
+
+                <!-- slide-author -->
+                <div class="splide__slide-author slide-author">
+                  <div class="slide-author__content-left">
+                    <img
+                      width="40"
+                      height="40"
+                      class="slide-author__img"
+                      src="../../assets/img/pages/convert/user-1.png"
+                      alt="#" />
+
+                    <span class="slide-author__name">Максим Рихтер</span>
+                    <span class="slide-author__date">19 Жов, 2024</span>
+                  </div>
+
+                  <div class="slide-author__content-right">
+                    <button
+                      type="button"
+                      class="slide-author__btn-views">
+                      <svg
+                        class="slide-author__btn-views-icon"
+                        width="20"
+                        height="20">
+                        <use xlink:href="#icon-eye-views"></use>
+                      </svg>
+                    </button>
+
+                    <p class="slide-author__views-count">123</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
           <li class="splide__slide">
-            <div></div>
-          </li>
-          <li class="splide__slide">
-            <div></div>
-          </li>
-          <li class="splide__slide">
-            <div></div>
-          </li>
-          <li class="splide__slide">
-            <div></div>
-          </li>
-          <li class="splide__slide">
-            <div></div>
-          </li>
-          <li class="splide__slide">
-            <div></div>
-          </li>
-          <li class="splide__slide">
-            <div></div>
-          </li>
-          <li class="splide__slide">
-            <div></div>
-          </li>
-          <li class="splide__slide">
-            <div></div>
-          </li>
-          <li class="splide__slide">
-            <div></div>
-          </li>
-          <li class="splide__slide">
-            <div></div>
-          </li>
-          <li class="splide__slide">
-            <div></div>
+            <!-- slide-body -->
+            <div class="splide__slide-body">
+              <picture>
+                <source
+                  srcset="../../assets/img/pages/convert/main-tournaments.webp"
+                  type="image/webp" />
+                <img
+                  class="splide__slide-img"
+                  width="489"
+                  height="246"
+                  src="../../assets/img/pages/convert/main-tournaments.png"
+                  alt="#" />
+              </picture>
+
+              <!-- slide-description -->
+              <div class="splide__slide-description">
+                <h6 class="splide__slide-description-title">Головні турніри жовтня</h6>
+
+                <p class="splide__slide-description-text">
+                  FURIA презентувала помічника тренера. Відтепер tacitus...
+                </p>
+
+                <!-- slide-author -->
+                <div class="splide__slide-author slide-author">
+                  <div class="slide-author__content-left">
+                    <img
+                      width="40"
+                      height="40"
+                      class="slide-author__img"
+                      src="../../assets/img/pages/convert/user-1.png"
+                      alt="#" />
+
+                    <span class="slide-author__name">Максим Рихтер</span>
+                    <span class="slide-author__date">19 Жов, 2024</span>
+                  </div>
+
+                  <div class="slide-author__content-right">
+                    <button
+                      type="button"
+                      class="slide-author__btn-views">
+                      <svg
+                        class="slide-author__btn-views-icon"
+                        width="20"
+                        height="20">
+                        <use xlink:href="#icon-eye-views"></use>
+                      </svg>
+                    </button>
+
+                    <p class="slide-author__views-count">123</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
         </ul>
       </div>
