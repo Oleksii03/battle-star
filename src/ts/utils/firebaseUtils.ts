@@ -1,13 +1,12 @@
-import { getFirestore, collection, getDocs } from 'firebase/firestore';
+import { getFirestore, collection, getDocs, Firestore } from 'firebase/firestore';
 import { firebaseConfig } from './firebaseConfig';
 
-export async function getDatFaromFirestore(collectionName: string): Promise<any[]> {
-  let app = firebaseConfig();
-  const db = getFirestore(app);
+export async function getDataFromFirestore(collectionName: string): Promise<any[]> {
+  const app = firebaseConfig();
+  const db: Firestore = getFirestore(app);
 
   try {
     const querySnapshot = await getDocs(collection(db, collectionName));
-
     const collectionsArr: any[] = [];
 
     querySnapshot.forEach(doc => {

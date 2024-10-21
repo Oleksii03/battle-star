@@ -1,6 +1,6 @@
-import { getDatFaromFirestore } from '../../../../utils/firebaseUtils';
+import { getDataFromFirestore } from '../../../../utils/firebaseUtils';
 import { sliderMarkup } from './sliderMarkup';
 
 export function createMainStageSlider() {
-  getDatFaromFirestore('SliderBattleStarNews').then(collection => sliderMarkup(collection));
+  getDataFromFirestore('SliderBattleStarNews').then(collection => sliderMarkup(collection));
 }

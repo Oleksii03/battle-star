@@ -3,20 +3,20 @@ import { IMainSliderNews } from '../../../../types/pages/main';
 export function sliderMarkup(collection: IMainSliderNews[]): void {
   const sliderContainer = document.querySelector('.js-main-slider-news');
 
-  if (sliderContainer) {
-    const markup = collection.map(obj => {
-      const {
-        title,
-        description,
-        views,
-        date,
-        image: { png, webp },
-        author: { img, name },
-      } = obj;
+  if (!sliderContainer) return;
 
-      return `
+  const markup = collection.map(obj => {
+    const {
+      title,
+      description,
+      views,
+      date,
+      image: { png, webp },
+      author: { img, name },
+    } = obj;
+
+    return `
       <li class="splide__slide">
-
             <!-- slide-body -->
 
             <div class="splide__slide-body">
@@ -72,10 +72,7 @@ export function sliderMarkup(collection: IMainSliderNews[]): void {
               </div>
             </div>
           </li>`;
-    });
+  });
 
-    sliderContainer.innerHTML = markup.join('');
-  } else {
-    console.error('Slider container not found');
-  }
+  sliderContainer.innerHTML = markup.join('');
 }
