@@ -20,7 +20,7 @@ export function header() {
 
   function getTextContentFromSergioList(e: Event): void {
     const targetEL = e.target as HTMLElement;
-    if (sergioActiveItem) {
+    if (sergioActiveItem && targetEL) {
       sergioActiveItem.textContent = targetEL.textContent;
     }
     toggleSergioList();

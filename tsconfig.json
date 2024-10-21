@@ -9,7 +9,6 @@
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
     "moduleResolution": "Node", // Рекомендується для сумісності з модульною системою Node
-    "isolatedModules": true, // Оптимально для роботи з Vite, особливо якщо використовуєте JSX
     "types": ["vite/client"] // Додає типи Vite для кращої інтеграції
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],
