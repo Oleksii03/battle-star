@@ -1,0 +1,18 @@
+.main-leaderboard {
+  padding-top: 63px;
+  padding-bottom: 63px;
+
+  // content
+  &__content {
+    display: grid;
+    grid-template-columns: 445px 1fr;
+    column-gap: 42px;
+  }
+
+  &__leaderboard {
+    background: rgba(248, 248, 248, 0.05);
+    padding: 21px 24px 21px 51px;
+
+    height: 653px;
+  }
+}
