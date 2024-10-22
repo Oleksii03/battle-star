@@ -2,17 +2,56 @@
   padding-top: 63px;
   padding-bottom: 63px;
 
-  // content
+  // content======
   &__content {
     display: grid;
     grid-template-columns: 445px 1fr;
     column-gap: 42px;
   }
 
+  // leaderboard--
   &__leaderboard {
     background: rgba(248, 248, 248, 0.05);
     padding: 21px 24px 21px 51px;
-
     height: 653px;
+  }
+  // btns
+  &__btn-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+
+  &__btn {
+    color: rgba(248, 248, 248, 0.6);
+    text-align: center;
+    background-color: transparent;
+    font-weight: 700;
+    line-height: normal;
+    flex-basis: 50%;
+    // cursor: pointer;
+  }
+
+  &__btns-track {
+    position: relative;
+    border-radius: 4px;
+    background: rgba(196, 196, 196, 0.1);
+    height: 4px;
+  }
+
+  &__btns-thumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-radius: 4px;
+    background-color: $basic-yellow;
+    transition: left 200ms linear;
+
+    &_active {
+      left: 50%;
+    }
   }
 }
