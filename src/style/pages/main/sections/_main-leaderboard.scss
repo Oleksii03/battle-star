@@ -1,5 +1,5 @@
 .main-leaderboard {
-  padding-top: 63px;
+  padding-top: 69px;
   padding-bottom: 63px;
 
   // content======
@@ -9,12 +9,13 @@
     column-gap: 42px;
   }
 
-  // leaderboard--
+  // -------leaderboard-------
   &__leaderboard {
     background: rgba(248, 248, 248, 0.05);
-    padding: 21px 24px 21px 51px;
+    padding: 21px 28px 21px 51px;
     height: 653px;
   }
+
   // btns
   &__btn-box {
     display: flex;
@@ -30,7 +31,18 @@
     font-weight: 700;
     line-height: normal;
     flex-basis: 50%;
-    // cursor: pointer;
+    transition: left 200ms linear;
+
+    &_csgo {
+      &.csgo-active {
+        color: $basic-yellow;
+      }
+    }
+    &_dota {
+      &.dota-active {
+        color: $basic-yellow;
+      }
+    }
   }
 
   &__btns-track {
@@ -38,6 +50,7 @@
     border-radius: 4px;
     background: rgba(196, 196, 196, 0.1);
     height: 4px;
+    margin-bottom: 19px;
   }
 
   &__btns-thumb {
@@ -53,5 +66,64 @@
     &_active {
       left: 50%;
     }
+  }
+
+  // title
+  &__title {
+    color: $light-gray-text;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 17px;
+  }
+
+  // leaderboard-list-top
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 14px;
+    // counter-reset: item-counter; /* Ініціалізація лічильника */
+
+    .list-top {
+      &__item {
+        // counter-increment: item-counter; /* Збільшення лічильника */
+        @include flex-align-row;
+        column-gap: 11px;
+
+        &-num {
+          position: relative;
+          text-align: center;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: normal;
+          background: linear-gradient(180deg, #fff 0%, #ffe06b 42.71%, #d2d2d2 100%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          margin-right: 9px;
+
+          // &::before {
+          //   content: counter(item-counter); /* Виведення значення лічильника */
+          // }
+        }
+      }
+
+      &__svg {
+        width: 21px;
+        height: 14px;
+      }
+
+      &__score {
+        margin-left: auto;
+        padding-right: 28px;
+        color: $basic-yellow;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+  // -------cards-------
+
+  &__cards {
+    background: rgba(248, 248, 248, 0.05);
   }
 }
