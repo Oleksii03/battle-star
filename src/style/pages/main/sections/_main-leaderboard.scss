@@ -7,12 +7,26 @@
     display: grid;
     grid-template-columns: 445px 1fr;
     column-gap: 42px;
+
+    ::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    ::-webkit-scrollbar-track {
+      border-radius: 2px;
+      background-color: $gray-text;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: $basic-yellow;
+      border-radius: 2px;
+    }
   }
 
   // -------leaderboard-------
   &__leaderboard {
     background: rgba(248, 248, 248, 0.05);
-    padding: 21px 28px 21px 51px;
+    padding: 21px 22px 21px 54px;
     height: 653px;
   }
 
@@ -78,19 +92,20 @@
 
   // leaderboard-list-top
   &__list {
+    max-height: 533px;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     row-gap: 14px;
-    // counter-reset: item-counter; /* Ініціалізація лічильника */
+    counter-reset: item-counter; /* Ініціалізація лічильника */
 
     .list-top {
       &__item {
-        // counter-increment: item-counter; /* Збільшення лічильника */
+        counter-increment: item-counter; /* Збільшення лічильника */
         @include flex-align-row;
         column-gap: 11px;
 
         &-num {
-          position: relative;
           text-align: center;
           font-size: 18px;
           font-weight: 500;
@@ -101,9 +116,9 @@
           -webkit-text-fill-color: transparent;
           margin-right: 9px;
 
-          // &::before {
-          //   content: counter(item-counter); /* Виведення значення лічильника */
-          // }
+          &::before {
+            content: counter(item-counter); /* Виведення значення лічильника */
+          }
         }
       }
 
@@ -114,16 +129,86 @@
 
       &__score {
         margin-left: auto;
-        padding-right: 28px;
+        padding-right: 24px;
         color: $basic-yellow;
         font-weight: 400;
         line-height: normal;
       }
     }
   }
-  // -------cards-------
 
+  // -------cards-------
   &__cards {
-    background: rgba(248, 248, 248, 0.05);
+    overflow-y: auto;
+    max-height: 653px;
+    // direction: rtl;
+
+    &-list {
+      display: grid;
+      row-gap: 28px;
+      // direction: ltr;
+    }
+
+    &-item {
+      display: flex;
+      background: rgba(248, 248, 248, 0.05);
+    }
+
+    &-img {
+      width: 248px;
+      height: auto;
+      object-fit: cover;
+    }
+
+    // info
+    &-info {
+      padding: 12px 44px 14px 31px;
+    }
+
+    &-title {
+      color: $basic-yellow;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: normal;
+      margin-bottom: 10px;
+    }
+
+    &-description {
+      color: $light-gray-text;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: normal;
+      margin-bottom: 30px;
+    }
+
+    &-stats {
+      @include flex-align-row;
+      justify-content: space-between;
+
+      &-date {
+        color: $light-gray-text;
+        font-weight: 500;
+        line-height: normal;
+      }
+    }
+
+    &-stat {
+      @include flex-align-row;
+      column-gap: 25px;
+
+      &-like,
+      &-views {
+        @include flex-align-row;
+        color: $light-text;
+
+        & > svg {
+          margin-right: 3px;
+          width: 20px;
+          height: 20px;
+          fill: $light-text;
+          cursor: pointer;
+        }
+      }
+    }
   }
 }
