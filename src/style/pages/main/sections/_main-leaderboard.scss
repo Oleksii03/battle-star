@@ -141,12 +141,11 @@
   &__cards {
     overflow-y: auto;
     max-height: 653px;
-    // direction: rtl;
+    // outline: 1px solid rgba(248, 248, 248, 0.05);
 
     &-list {
       display: grid;
       row-gap: 28px;
-      // direction: ltr;
     }
 
     &-item {
