@@ -1,5 +1,6 @@
-import { TOP_LIST_CSGO, TOP_LIST_DOTA } from '../../../../utils/constants';
-import { createLeaderboardList } from './createLeaderboardListsTop';
+import { TOP_LIST_CSGO, TOP_LIST_DOTA, LEADERBOARD_CARDS } from '../../../utils/constants';
+import { createLeaderboardList } from './leaderboard/createLeaderboardListsTop';
+import { createLeaderboardCards } from './cards/createLeaderboardCards';
 
 export function mainLeaderboard(): void {
   const btnCsGo = document.querySelector('.js-leaderboard-btn-csgo');
@@ -27,4 +28,7 @@ export function mainLeaderboard(): void {
     // function create leaderboard list Dota
     createLeaderboardList(TOP_LIST_DOTA);
   }
+
+  // createLeaderboardCards---
+  createLeaderboardCards(LEADERBOARD_CARDS);
 }

@@ -4,9 +4,7 @@ import { createMarkupListCsgo } from './markups/listTopCsgo';
 import { createMarkupListDota } from './markups/listTopDota';
 
 export function createLeaderboardList(searchQuery = ' '): void {
-  const topListContainer = document.querySelector(
-    '.js-main-leaderboard-top-list'
-  ) as HTMLOListElement | null;
+  const topListContainer = document.querySelector('.js-main-leaderboard-top-list');
 
   if (!topListContainer) {
     console.error('Leaderboard container not found');
@@ -15,14 +13,14 @@ export function createLeaderboardList(searchQuery = ' '): void {
 
   if (searchQuery === TOP_LIST_CSGO) {
     getDataFromFirestore(searchQuery)
-      .then(collection => createMarkupListCsgo(collection, topListContainer))
+      .then(collection => createMarkupListCsgo(collection, topListContainer as HTMLOListElement))
       .catch(error => console.error('Error fetching CS:GO data:', error));
     return;
   }
 
   if (searchQuery === TOP_LIST_DOTA) {
     getDataFromFirestore(searchQuery)
-      .then(collection => createMarkupListDota(collection, topListContainer))
+      .then(collection => createMarkupListDota(collection, topListContainer as HTMLOListElement))
       .catch(error => console.error('Error fetching Dota data:', error));
     return;
   }

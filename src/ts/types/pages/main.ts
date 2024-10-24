@@ -1,4 +1,4 @@
-export interface IMainSliderNews {
+interface IMainSliderNews {
   author: {
     img: string;
     name: string;
@@ -14,18 +14,31 @@ export interface IMainSliderNews {
   views: number;
 }
 
-export interface IMainLeaderboardUsersTop {
+interface IMainLeaderboardUsersTop {
   avatar: {
     png: string;
     webp: string;
-    [key: string]: any;
   };
   countryFlagImg: {
     png: string;
     webp: string;
-    [key: string]: any;
   };
   id: string;
   name: string;
   score: number;
 }
+
+interface IMainLeaderboardCards {
+  date: string;
+  description: string;
+  id: string;
+  img: {
+    png: string;
+    webp: string;
+  };
+  likes: number;
+  title: string;
+  views: number;
+}
+
+export { IMainSliderNews, IMainLeaderboardUsersTop, IMainLeaderboardCards };

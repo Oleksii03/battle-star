@@ -20,6 +20,7 @@ export function sliderMarkup(collection: IMainSliderNews[]): void {
             <!-- slide-body -->
 
             <div class="splide__slide-body">
+             <a href="#">
               <picture>
                 <source
                   srcset="${webp}"
@@ -31,7 +32,7 @@ export function sliderMarkup(collection: IMainSliderNews[]): void {
                   src="${png}"
                   alt="${title}" />
               </picture>
-
+             </a>
               <!-- slide-description -->
 
               <div class="splide__slide-description">
@@ -43,13 +44,15 @@ export function sliderMarkup(collection: IMainSliderNews[]): void {
 
                 <div class="splide__slide-author slide-author">
                   <div class="slide-author__content-left">
+                   <a href="#">
                     <img
                       width="40"
                       height="40"
                       class="slide-author__img"
                       src="${img}"
                       alt="${name}" />
-
+                   </a>
+                   
                     <span class="slide-author__name">${name}</span>
                     <span class="slide-author__date">${date}</span>
                   </div>
