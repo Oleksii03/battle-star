@@ -4,7 +4,7 @@ import { Grid } from '@splidejs/splide-extension-grid';
 
 export function battleStarNewsSlider(): void {
   setTimeout(() => {
-    new Splide('.splide, main-stage__news-slider', {
+    new Splide(' .main-stage__news-slider', {
       gap: '30px',
       grid: {
         rows: 2,
@@ -21,13 +21,26 @@ export function battleStarNewsSlider(): void {
           grid: {
             cols: 2,
           },
+          pagination: true,
         },
 
         1919: {
           arrows: false,
-          pagination: true,
         },
       },
     }).mount({ Grid });
   }, 500);
+}
+
+// Major Stochholm 2021
+export function majorStochholmSlider(): void {
+  new Splide('.main-stochholm__slider', {
+    pagination: false,
+    breakpoints: {
+      1919: {
+        arrows: false,
+        pagination: true,
+      },
+    },
+  }).mount();
 }
