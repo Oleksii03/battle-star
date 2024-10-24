@@ -1,0 +1,54 @@
+.promotions-bonuses {
+  padding-top: 103px;
+  padding-bottom: 83px;
+
+  &__content {
+    position: relative;
+    border-radius: 25px;
+    background: linear-gradient(262deg, #7d70d1 0%, #134b48 100%);
+    padding: 80px 126px 128px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 40px;
+      right: 184px;
+      width: 330px;
+      height: 373px;
+      background-image: url(../../../assets/img/base/promotions-bonuses/promotions-bonuses-bg-star.png);
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 26px;
+    font-size: 28px;
+  }
+
+  &__description {
+    color: $basic-white;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: normal;
+    max-width: 680px;
+    margin-bottom: 37px;
+
+    & > span {
+      text-decoration: line-through;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    padding: 18px 61px;
+    justify-content: center;
+    align-items: center;
+    line-height: normal;
+    color: $light-text;
+    border-radius: 2px;
+    border: 2px solid $light-text;
+    background: rgba(248, 248, 248, 0.1);
+  }
+}
