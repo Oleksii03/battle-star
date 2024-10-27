@@ -14,12 +14,19 @@
     row-gap: 29px;
 
     & .list-cards {
+      &__img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
       &__bottom-content {
         @include flex-align-row;
         justify-content: space-between;
         background: rgba(248, 248, 248, 0.05);
         padding: 19px 11px 14px 17px;
         border-top: 1px solid $basic-yellow;
+        column-gap: 16px;
 
         &-teams {
           color: $light-text;
@@ -54,6 +61,98 @@
           font-style: normal;
           font-weight: 500;
           line-height: normal;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  // popular-matches
+
+  &__popular {
+    &-content {
+      background: rgba(248, 248, 248, 0.05);
+      padding: 36px 48px 15px 58px;
+    }
+
+    &-title {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: normal;
+      margin-bottom: 32px;
+    }
+
+    // list
+    &-list {
+      & .popular-list {
+        &__item {
+          display: grid;
+          grid-template-columns: 1fr 100px 1fr;
+          align-items: end;
+        }
+
+        &__team {
+          @include flex-align-row;
+          column-gap: 8px;
+
+          &-img {
+            width: 58px;
+            height: 52px;
+            flex-shrink: 0;
+          }
+
+          &-name {
+            font-weight: 500;
+            line-height: normal;
+          }
+
+          &_second {
+            flex-direction: column;
+            & > .popular-list__link {
+              margin-left: auto;
+            }
+          }
+        }
+
+        &__link {
+          @include flex-align-row;
+          column-gap: 18px;
+        }
+
+        &__points {
+          color: $gray-text;
+          font-weight: 500;
+          line-height: normal;
+        }
+
+        &__score {
+          @include flex-align-column;
+          row-gap: 8px;
+          padding-bottom: 11px;
+
+          &-time {
+            color: $light-gray-text;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: normal;
+          }
+
+          &-score {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 900;
+            line-height: normal;
+          }
+        }
+
+        &__status-title {
+          color: $basic-yellow;
+          text-align: right;
+          margin-bottom: 6px;
+          font-weight: 500;
+          line-height: normal;
+          margin-left: auto;
         }
       }
     }
