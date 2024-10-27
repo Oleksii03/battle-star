@@ -10,14 +10,52 @@
   }
 
   &__list-cards {
-    &.list-cards {
-      display: grid;
+    display: grid;
+    row-gap: 29px;
 
-      row-gap: 29px;
+    & .list-cards {
+      &__bottom-content {
+        @include flex-align-row;
+        justify-content: space-between;
+        background: rgba(248, 248, 248, 0.05);
+        padding: 19px 11px 14px 17px;
+        border-top: 1px solid $basic-yellow;
+
+        &-teams {
+          color: $light-text;
+          @include flex-align-row;
+          column-gap: 16px;
+        }
+
+        &-img {
+          width: 27px;
+          height: 21px;
+        }
+
+        &-team {
+          @include flex-align-row;
+          column-gap: 10px;
+
+          &-name {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: normal;
+          }
+
+          &-divider {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: normal;
+          }
+        }
+
+        &-round {
+          color: $gray-text;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+      }
     }
   }
-}
-
-.popular-list {
-  background-color: #fff;
 }
