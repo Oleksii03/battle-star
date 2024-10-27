@@ -41,4 +41,26 @@ interface IMainLeaderboardCards {
   views: number;
 }
 
-export { IMainSliderNews, IMainLeaderboardUsersTop, IMainLeaderboardCards };
+interface MainPopularMatchesCardsList {
+  id: string;
+  roundOf: string;
+  firstTeam: {
+    firstTeamLogo: string;
+    firstTeamTitle: string;
+  };
+  secondTeam: {
+    secondTeamLogo: string;
+    secondTeamTitle: string;
+  };
+  image: {
+    png: string;
+    webp: string;
+  };
+}
+
+export {
+  IMainSliderNews,
+  IMainLeaderboardUsersTop,
+  IMainLeaderboardCards,
+  MainPopularMatchesCardsList,
+};

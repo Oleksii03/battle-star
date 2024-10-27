@@ -1,8 +1,7 @@
 import { getFirestore, collection, getDocs, Firestore } from 'firebase/firestore';
-import { firebaseConfig } from './firebaseConfig';
+import { app } from './firebaseConfig';
 
 export async function getDataFromFirestore(collectionName: string): Promise<any[]> {
-  const app = firebaseConfig();
   const db: Firestore = getFirestore(app);
 
   try {

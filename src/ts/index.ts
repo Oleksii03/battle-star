@@ -3,6 +3,7 @@ import { closeDropDownList } from './components/closeDropDownList';
 import { createMainStageSlider } from './pages/main/main-stage/slider/createSlider';
 import { battleStarNewsSlider, majorStochholmSlider } from './components/splideSlider';
 import { mainLeaderboard } from './pages/main/main-leaderboard/mainLeaderboard';
+import { popularMatches } from './pages/main/popular-matches/popularMatches';
 
 document.addEventListener('DOMContentLoaded', () => {
   header();
@@ -11,4 +12,5 @@ document.addEventListener('DOMContentLoaded', () => {
   battleStarNewsSlider();
   mainLeaderboard();
   majorStochholmSlider();
+  popularMatches();
 });
