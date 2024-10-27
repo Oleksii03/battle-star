@@ -1,0 +1,23 @@
+.main-popular-matches {
+  padding-top: 84px;
+  padding-bottom: 208px;
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 791px;
+    align-content: start;
+    column-gap: 40px;
+  }
+
+  &__list-cards {
+    &.list-cards {
+      display: grid;
+
+      row-gap: 29px;
+    }
+  }
+}
+
+.popular-list {
+  background-color: #fff;
+}
