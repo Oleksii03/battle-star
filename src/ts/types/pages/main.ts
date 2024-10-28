@@ -58,9 +58,28 @@ interface MainPopularMatchesCardsList {
   };
 }
 
+interface MainPopularMatchesList {
+  id: string;
+  isOnline: boolean;
+  score: string;
+  time: string;
+  title: string;
+  firstTeam: {
+    firstTeamLogo: string;
+    firstTeamName: string;
+    firstTeamScore: number;
+  };
+  secondTeam: {
+    secondTeamLogo: string;
+    secondTeamName: string;
+    secondTeamScore: number;
+  };
+}
+
 export {
   IMainSliderNews,
   IMainLeaderboardUsersTop,
   IMainLeaderboardCards,
   MainPopularMatchesCardsList,
+  MainPopularMatchesList,
 };
