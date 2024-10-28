@@ -1,0 +1,1 @@
+{"version":3,"file":"sign-in.js","sources":["../../../src/ts/signIn.ts"],"sourcesContent":["import { header } from './components/header';\n\ndocument.addEventListener('DOMContentLoaded', () => {\n  header();\n});\n"],"names":["header"],"mappings":"oDAEA,SAAS,iBAAiB,mBAAoB,IAAM,CAC3CA,GACT,CAAC"}
