@@ -1,0 +1,39 @@
+.sign-in-header {
+  padding: 5px 17px;
+  background-color: $dark-text;
+
+  &__container {
+    @include flex-align-row;
+    justify-content: space-between;
+    column-gap: 20px;
+  }
+
+  &__logo {
+    width: 65px;
+    height: 69px;
+
+    &-icon {
+      fill: $basic-yellow;
+    }
+  }
+
+  &__content-left {
+    @include flex-align-row;
+    column-gap: 45px;
+  }
+
+  &__arrow-box {
+    @include flex-align-row;
+    column-gap: 27px;
+
+    & .header__arrow-btn > svg {
+      fill: $gray-text;
+    }
+  }
+
+  & .header__search-box {
+    @include media-min-width(xl) {
+      margin-right: 190px;
+    }
+  }
+}
