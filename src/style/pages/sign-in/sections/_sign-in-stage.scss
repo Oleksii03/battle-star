@@ -1,6 +1,8 @@
 .sign-in-stage {
   position: relative;
   min-height: calc(100dvh - 79px);
+  padding-top: 64px;
+  padding-bottom: 157px;
 
   &__bg-img {
     position: absolute;
@@ -11,5 +13,254 @@
     object-fit: cover;
     object-position: 50% 0%;
     pointer-events: none;
+  }
+}
+
+// form
+.sign-in {
+  &__form-box {
+    padding: 41px 101px;
+    margin-left: 33px;
+    background: rgba(248, 248, 248, 0.15);
+    backdrop-filter: blur(30px);
+    max-width: 677px;
+  }
+
+  &__form-logo {
+    margin-bottom: 58px;
+
+    &-icon {
+      width: 143px;
+      height: 153px;
+      fill: $basic-yellow;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.25));
+    }
+  }
+
+  // btns
+  &__form-btns-box {
+    @include flex-align-row;
+    justify-content: center;
+  }
+
+  &__form-btn {
+    flex-basis: 50%;
+    text-transform: uppercase;
+    color: rgba(248, 248, 248, 0.6);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: normal;
+    background-color: transparent;
+    margin-bottom: 9px;
+    transition: all 250ms linear;
+    font-family: Roboto-Bold;
+    font-weight: 700;
+  }
+
+  .active-btn {
+    color: $basic-yellow;
+  }
+
+  // track
+  &__form-btns-track {
+    position: relative;
+    border-radius: 4px;
+    height: 4px;
+    background: #3f3f45;
+    margin-bottom: 29px;
+  }
+
+  &__form-btns-tumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-radius: 4px;
+    background-color: $basic-yellow;
+    transition: all 250ms linear;
+
+    &_active {
+      left: 50%;
+    }
+  }
+
+  // form
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+
+    &-input {
+      width: 100%;
+      padding: 15px 50px 15px 20px;
+      border: 1px solid $light-gray-text;
+      background: rgba(248, 248, 248, 0.1);
+      color: $basic-yellow;
+
+      &:focus {
+        outline: 1px solid $basic-yellow;
+      }
+
+      &::placeholder {
+        color: #989898;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+
+      &-box {
+        position: relative;
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+      }
+
+      // icon-box
+      &-icon-box {
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        transform: translateY(-50%);
+        color: $light-gray-text;
+        cursor: pointer;
+      }
+
+      &-icon {
+        width: 24px;
+        height: 24px;
+        fill: $light-gray-text;
+
+        &-line {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform-origin: 0;
+          transform: rotate(34deg);
+          width: 28px;
+          height: 2px;
+          background-color: $light-gray-text;
+          margin-top: 3px;
+
+          &_hidden {
+            display: none;
+          }
+        }
+      }
+    }
+
+    // form-restore
+    &-restore {
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-top: 1px;
+      margin-bottom: 28px;
+    }
+
+    &-forgot-password-link {
+      margin-left: auto;
+      color: #6f6f6f;
+    }
+
+    &-restore-link {
+      font-size: 14px;
+      text-decoration-line: underline;
+    }
+  }
+
+  // form-btn-submit
+  &__form-btn-submit {
+    display: block;
+    margin: 0 auto;
+    padding: 12px 98px;
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 18px;
+    font-family: Roboto-Bold;
+    font-weight: 700;
+    line-height: normal;
+    background-color: transparent;
+    background-image: url(../../../assets/img/pages/sign-in/form/btn-submi-bg.webp);
+    background-repeat: no-repeat;
+    margin-bottom: 64px;
+    white-space: nowrap;
+
+    &_create {
+      margin-top: 31px;
+      margin-bottom: 85px;
+      padding: 12px 84px;
+    }
+  }
+
+  // log-in-via
+  &__log-in-via-title-box {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    column-gap: 10px;
+    margin-bottom: 25px;
+
+    &::before {
+      content: '';
+      flex-basis: 30%;
+      height: 1px;
+      background-color: $light-gray-text;
+    }
+    &::after {
+      content: '';
+      flex-basis: 30%;
+      height: 1px;
+      background-color: $light-gray-text;
+    }
+  }
+  &__log-in-via-title {
+    white-space: nowrap;
+    color: $light-gray-text;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  // list
+  &__log-in-via-list {
+    @include flex-align-row;
+    justify-content: center;
+    column-gap: 60px;
+  }
+
+  &__log-in-via-icon {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    fill: $light-gray-text;
+    cursor: pointer;
+  }
+
+  // form policy
+
+  &__policy {
+    &-text {
+      color: $light-gray-text;
+      text-align: center;
+      font-family: Roboto-Regular;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: normal;
+
+      & > a {
+        color: $light-text;
+        text-decoration: underline;
+      }
+    }
   }
 }

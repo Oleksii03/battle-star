@@ -1,5 +1,5 @@
-import { header } from './components/header';
+import { signInOrSignUpHandler } from './pages/sign-in/loginOrRegistrationHandler';
 
 document.addEventListener('DOMContentLoaded', () => {
-  header();
+  signInOrSignUpHandler();
 });
