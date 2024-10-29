@@ -1,4 +1,4 @@
-export function markup() {
+export function markup(): string {
   return `
         <div class="sign-in__form-input-box">
           <input
