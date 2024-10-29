@@ -1,3 +1,5 @@
-export function handlerRegistration(form) {
-  console.log(form);
+import { markup } from './createMarkup';
+
+export function handlerRegistration(form: HTMLFormElement) {
+  form.innerHTML = markup();
 }

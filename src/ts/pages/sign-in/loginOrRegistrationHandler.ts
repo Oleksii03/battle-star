@@ -7,8 +7,8 @@ export function signInOrSignUpHandler() {
   const tumbBtns = document.querySelector('.js-form-btns-tumb');
   const form = document.querySelector('.js-sign-in-form');
   // --local-refs---
-  console.log(signIn, signUp);
 
+  // signIn
   signIn?.addEventListener('click', handlerSignIn);
 
   function handlerSignIn() {
@@ -17,10 +17,13 @@ export function signInOrSignUpHandler() {
     tumbBtns?.classList.remove('sign-in__form-btns-tumb_active');
 
     // handlerLogin
-    handlerLogin(form);
+    if (form instanceof HTMLFormElement) {
+      handlerLogin(form);
+    }
   }
   handlerSignIn();
 
+  // signUp
   signUp?.addEventListener('click', handlersignUp);
 
   function handlersignUp() {
@@ -29,6 +32,8 @@ export function signInOrSignUpHandler() {
     tumbBtns?.classList.add('sign-in__form-btns-tumb_active');
 
     // handlerRegistration
-    handlerRegistration(form);
+    if (form instanceof HTMLFormElement) {
+      handlerRegistration(form);
+    }
   }
 }
