@@ -1,4 +1,4 @@
-import{s as w,g as L,h as $}from"../assets/header-N1GvQXYZ.js";import{i as S,g as y,a as T,c as k,S as g,G as M}from"../assets/vendor-e19STYO_.js";function j(){document.addEventListener("click",e=>{s(e),t(e)});function s(e){var r;const i=e.target.closest(".header__Sergio-inner-item"),a=e.target.closest(".header__Sergio-item-box");!(i!=null&&i.classList.contains("header__Sergio-inner-item"))&&!(a!=null&&a.classList.contains("header__Sergio-item-box"))&&((r=w)==null||r.classList.remove("header__Sergio-inner-list_open"))}function t(e){var r;const i=e.target.closest(".game-dropdown-item__inner-item"),a=e.target.closest(".js-game-dropdown-box");!(i!=null&&i.classList.contains("game-dropdown-item__inner-item"))&&!(a!=null&&a.classList.contains("js-game-dropdown-box"))&&((r=L)==null||r.classList.remove("game-dropdown-item__inner-list_open"))}}const D={apiKey:"AIzaSyAd5LeDQLc4i5UEZgy049Nmu5687cFRTFU",authDomain:"battlestar-514be.firebaseapp.com",projectId:"battlestar-514be",storageBucket:"battlestar-514be.appspot.com",messagingSenderId:"1041425711014",appId:"1:1041425711014:web:b36feae118870e4d2c5967"},O=S(D);async function m(s){const t=y(O);try{const e=await T(k(t,s)),i=[];return e.forEach(a=>{i.push({id:a.id,...a.data()})}),i}catch(e){return console.error("Error getting documents:",e),[]}}function P(s){const t=document.querySelector(".js-main-slider-news");if(!t)return;const e=s.map(i=>{const{title:a,description:o,views:r,date:n,image:{png:c,webp:l},author:{img:d,name:p}}=i;return`
+import"../assets/modulepreload-polyfill-B5Qt9EMX.js";import{i as $,g as S,a as y,c as T,S as v,G as k}from"../assets/vendor-e19STYO_.js";const d=document.querySelector(".js-sergio-inner-list"),p=document.querySelector(".js-game-dropdown-item-inner-list");function j(){const e=document.querySelector(".js-sergio-item-box"),t=document.querySelector(".js-sergio-active-title"),s=document.querySelector(".js-game-dropdown-box"),i=document.querySelector(".js-game-dropdown-active-title");e==null||e.addEventListener("click",a);function a(){d==null||d.classList.toggle("header__Sergio-inner-list_open")}d==null||d.addEventListener("click",r);function r(n){const o=n.target;t&&o&&(t.textContent=o.textContent),a()}s==null||s.addEventListener("click",c);function c(){p==null||p.classList.toggle("game-dropdown-item__inner-list_open")}p==null||p.addEventListener("click",l);function l(n){const o=n.target;i&&(i.textContent=o.textContent),c()}}function M(){document.addEventListener("click",s=>{e(s),t(s)});function e(s){const i=s.target.closest(".header__Sergio-inner-item"),a=s.target.closest(".header__Sergio-item-box");!(i!=null&&i.classList.contains("header__Sergio-inner-item"))&&!(a!=null&&a.classList.contains("header__Sergio-item-box"))&&(d==null||d.classList.remove("header__Sergio-inner-list_open"))}function t(s){const i=s.target.closest(".game-dropdown-item__inner-item"),a=s.target.closest(".js-game-dropdown-box");!(i!=null&&i.classList.contains("game-dropdown-item__inner-item"))&&!(a!=null&&a.classList.contains("js-game-dropdown-box"))&&(p==null||p.classList.remove("game-dropdown-item__inner-list_open"))}}const E={apiKey:"AIzaSyAd5LeDQLc4i5UEZgy049Nmu5687cFRTFU",authDomain:"battlestar-514be.firebaseapp.com",projectId:"battlestar-514be",storageBucket:"battlestar-514be.appspot.com",messagingSenderId:"1041425711014",appId:"1:1041425711014:web:b36feae118870e4d2c5967"},x=$(E);async function u(e){const t=S(x);try{const s=await y(T(t,e)),i=[];return s.forEach(a=>{i.push({id:a.id,...a.data()})}),i}catch(s){return console.error("Error getting documents:",s),[]}}function C(e){const t=document.querySelector(".js-main-slider-news");if(!t)return;const s=e.map(i=>{const{title:a,description:r,views:c,date:l,image:{png:n,webp:o},author:{img:m,name:_}}=i;return`
       <li class="splide__slide">
             <!-- slide-body -->
 
@@ -6,13 +6,13 @@ import{s as w,g as L,h as $}from"../assets/header-N1GvQXYZ.js";import{i as S,g a
              <a href="#">
               <picture>
                 <source
-                  srcset="${l}"
+                  srcset="${o}"
                   type="image/webp" />
                 <img
                   class="splide__slide-img"
                   width="489"
                   height="246"
-                  src="${c}"
+                  src="${n}"
                   alt="${a}" />
               </picture>
              </a>
@@ -21,7 +21,7 @@ import{s as w,g as L,h as $}from"../assets/header-N1GvQXYZ.js";import{i as S,g a
               <div class="splide__slide-description">
                 <h6 class="splide__slide-description-title">${a}</h6>
 
-                <p class="splide__slide-description-text">${o}</p>
+                <p class="splide__slide-description-text">${r}</p>
 
                 <!-- slide-author -->
 
@@ -32,12 +32,12 @@ import{s as w,g as L,h as $}from"../assets/header-N1GvQXYZ.js";import{i as S,g a
                       width="40"
                       height="40"
                       class="slide-author__img"
-                      src="${d}"
-                      alt="${p}" />
+                      src="${m}"
+                      alt="${_}" />
                    </a>
                    
-                    <span class="slide-author__name">${p}</span>
-                    <span class="slide-author__date">${n}</span>
+                    <span class="slide-author__name">${_}</span>
+                    <span class="slide-author__date">${l}</span>
                   </div>
 
                   <div class="slide-author__content-right">
@@ -52,17 +52,17 @@ import{s as w,g as L,h as $}from"../assets/header-N1GvQXYZ.js";import{i as S,g a
                       </svg>
                     </button>
 
-                    <p class="slide-author__views-count">${r}</p>
+                    <p class="slide-author__views-count">${c}</p>
                   </div>
                 </div>
               </div>
             </div>
-          </li>`});t.innerHTML=e.join("")}function A(){m("SliderBattleStarNews").then(t=>P(t))}function E(){setTimeout(()=>{new g(" .main-stage__news-slider",{gap:"30px",grid:{rows:2,cols:3,gap:{row:"30px",col:"30px"}},pagination:!1,breakpoints:{768:{grid:{cols:2},pagination:!0},1919:{arrows:!1}}}).mount({Grid:M})},500)}function I(){new g(".main-stochholm__slider",{pagination:!1,breakpoints:{1919:{arrows:!1,pagination:!0}}}).mount()}const h="mainPageListTop",b="mainPageListTopDota",x="mainPageLeaderboardCards",C="mainPagePopularMatchesCardsList",H="mainPagePopularMatches";function q(s,t){if(!s.length){t.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const e=[...s].sort((i,a)=>a.score-i.score).map(i=>{const{name:a,score:o,id:r,countryFlagImg:{webp:n},avatar:{png:c,webp:l}}=i;return`
-           <li class="list-top__item" data-id="${r}">
+          </li>`});t.innerHTML=s.join("")}function q(){u("SliderBattleStarNews").then(t=>C(t))}function A(){setTimeout(()=>{new v(" .main-stage__news-slider",{gap:"30px",grid:{rows:2,cols:3,gap:{row:"30px",col:"30px"}},pagination:!1,breakpoints:{768:{grid:{cols:2},pagination:!0},1919:{arrows:!1}}}).mount({Grid:k})},500)}function D(){new v(".main-stochholm__slider",{pagination:!1,breakpoints:{1919:{arrows:!1,pagination:!0}}}).mount()}const b="mainPageListTop",f="mainPageListTopDota",O="mainPageLeaderboardCards",P="mainPagePopularMatchesCardsList",H="mainPagePopularMatches";function z(e,t){if(!e.length){t.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const s=[...e].sort((i,a)=>a.score-i.score).map(i=>{const{name:a,score:r,id:c,countryFlagImg:{webp:l},avatar:{png:n,webp:o}}=i;return`
+           <li class="list-top__item" data-id="${c}">
             <p class="list-top__item-num"></p>
             <picture>
               <source
-                srcset="${l}"
+                srcset="${o}"
                 type="image/webp" />
 
               <img
@@ -70,7 +70,7 @@ import{s as w,g as L,h as $}from"../assets/header-N1GvQXYZ.js";import{i as S,g a
                 width="40"
                 height="40"
                 class="list-top__img"
-                src="${c}"
+                src="${n}"
                 alt="${a}" />
             </picture>
 
@@ -78,17 +78,17 @@ import{s as w,g as L,h as $}from"../assets/header-N1GvQXYZ.js";import{i as S,g a
               width="21"
               height="14"
               class="list-top__svg"
-              src="${n}"
+              src="${l}"
               alt="ua" />
 
             <p class="list-top__name">${a}</p>
-            <p class="list-top__score">${o}</p>
-          </li>`});t.innerHTML=e.join("")}function z(s,t){if(!s.length){t.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const e=[...s].sort((i,a)=>a.score-i.score).map(i=>{const{name:a,score:o,id:r,countryFlagImg:{webp:n},avatar:{png:c,webp:l}}=i;return`
-           <li class="list-top__item" data-id="${r}">
+            <p class="list-top__score">${r}</p>
+          </li>`});t.innerHTML=s.join("")}function F(e,t){if(!e.length){t.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const s=[...e].sort((i,a)=>a.score-i.score).map(i=>{const{name:a,score:r,id:c,countryFlagImg:{webp:l},avatar:{png:n,webp:o}}=i;return`
+           <li class="list-top__item" data-id="${c}">
             <p class="list-top__item-num"></p>
             <picture>
               <source
-                srcset="${l}"
+                srcset="${o}"
                 type="image/webp" />
 
               <img
@@ -96,7 +96,7 @@ import{s as w,g as L,h as $}from"../assets/header-N1GvQXYZ.js";import{i as S,g a
                 width="40"
                 height="40"
                 class="list-top__img"
-                src="${c}"
+                src="${n}"
                 alt="${a}" />
             </picture>
 
@@ -104,13 +104,13 @@ import{s as w,g as L,h as $}from"../assets/header-N1GvQXYZ.js";import{i as S,g a
               width="21"
               height="14"
               class="list-top__svg"
-              src="${n}"
+              src="${l}"
               alt="ua" />
 
             <p class="list-top__name">${a}</p>
-            <p class="list-top__score">${o}</p>
-          </li>`});t.innerHTML=e.join("")}function u(s=" "){const t=document.querySelector(".js-main-leaderboard-top-list");if(!t){console.error("Leaderboard container not found");return}if(s===h){m(s).then(e=>q(e,t)).catch(e=>console.error("Error fetching CS:GO data:",e));return}if(s===b){m(s).then(e=>z(e,t)).catch(e=>console.error("Error fetching Dota data:",e));return}console.log("Invalid search query")}function N(s){const t=document.querySelector(".js-main-leaderboard-cards-list");if(!s.length){t.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const e=s.map(i=>{const{title:a,date:o,description:r,id:n,img:{png:c,webp:l},likes:d,views:p}=i;return`
-          <li class="main-leaderboard__cards-item" data-id="${n}">
+            <p class="list-top__score">${r}</p>
+          </li>`});t.innerHTML=s.join("")}function h(e=" "){const t=document.querySelector(".js-main-leaderboard-top-list");if(!t){console.error("Leaderboard container not found");return}if(e===b){u(e).then(s=>z(s,t)).catch(s=>console.error("Error fetching CS:GO data:",s));return}if(e===f){u(e).then(s=>F(s,t)).catch(s=>console.error("Error fetching Dota data:",s));return}console.log("Invalid search query")}function N(e){const t=document.querySelector(".js-main-leaderboard-cards-list");if(!e.length){t.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const s=e.map(i=>{const{title:a,date:r,description:c,id:l,img:{png:n,webp:o},likes:m,views:_}=i;return`
+          <li class="main-leaderboard__cards-item" data-id="${l}">
             <a
               href="#"
               class="main-leaderboard__cards-link"
@@ -118,7 +118,7 @@ import{s as w,g as L,h as $}from"../assets/header-N1GvQXYZ.js";import{i as S,g a
    
               <picture>
                 <source
-                  srcset="${l}"
+                  srcset="${o}"
                   type="image/webp" />
 
                 <img
@@ -126,7 +126,7 @@ import{s as w,g as L,h as $}from"../assets/header-N1GvQXYZ.js";import{i as S,g a
                   width="248"
                   height="143"
                   class="main-leaderboard__cards-img"
-                  src="${c}"
+                  src="${n}"
                   alt="${a}" />
               </picture>
             </a>
@@ -139,11 +139,11 @@ import{s as w,g as L,h as $}from"../assets/header-N1GvQXYZ.js";import{i as S,g a
               </h3>
 
               <p class="main-leaderboard__cards-description">
-                ${r}
+                ${c}
               </p>
 
               <div class="main-leaderboard__cards-stats">
-                <p class="main-leaderboard__cards-stats-date">${o}</p>
+                <p class="main-leaderboard__cards-stats-date">${r}</p>
 
                 <div class="main-leaderboard__cards-stat">
                   <div class="main-leaderboard__cards-stat-like">
@@ -153,7 +153,7 @@ import{s as w,g as L,h as $}from"../assets/header-N1GvQXYZ.js";import{i as S,g a
                       <use xlink:href="#icon-like"></use>
                     </svg>
 
-                    <p class="main-leaderboard__cards-stat-like-number">${d}</p>
+                    <p class="main-leaderboard__cards-stat-like-number">${m}</p>
                   </div>
                   <!-- views -->
                   <div class="main-leaderboard__cards-stat-views">
@@ -163,12 +163,12 @@ import{s as w,g as L,h as $}from"../assets/header-N1GvQXYZ.js";import{i as S,g a
                       <use xlink:href="#icon-eye-views"></use>
                     </svg>
 
-                    <p class="main-leaderboard__cards-stat-views-number">${p}</p>
+                    <p class="main-leaderboard__cards-stat-views-number">${_}</p>
                   </div>
                 </div>
               </div>
             </div>
-          </li>`});t.innerHTML=e.join("")}function F(s=" "){m(s).then(t=>N(t)).catch(t=>console.error("Error fetching data:",t))}function R(){const s=document.querySelector(".js-leaderboard-btn-csgo"),t=document.querySelector(".js-leaderboard-btn-dota"),e=document.querySelector(".js-btns-thumb");s==null||s.addEventListener("click",i);function i(){e==null||e.classList.remove("main-leaderboard__btns-thumb_active"),s==null||s.classList.add("csgo-active"),t==null||t.classList.remove("dota-active"),u(h)}i(),t==null||t.addEventListener("click",a);function a(){e==null||e.classList.add("main-leaderboard__btns-thumb_active"),t==null||t.classList.add("dota-active"),s==null||s.classList.remove("csgo-active"),u(b)}F(x)}function B(s){const t=document.querySelector(".js-main-popular-matches-cards-list"),e=s.map(i=>{const{id:a,roundOf:o,image:{png:r,webp:n},firstTeam:{firstTeamLogo:c,firstTeamTitle:l},secondTeam:{secondTeamLogo:d,secondTeamTitle:p}}=i;return`
+          </li>`});t.innerHTML=s.join("")}function R(e=" "){u(e).then(t=>N(t)).catch(t=>console.error("Error fetching data:",t))}function G(){const e=document.querySelector(".js-leaderboard-btn-csgo"),t=document.querySelector(".js-leaderboard-btn-dota"),s=document.querySelector(".js-btns-thumb");e==null||e.addEventListener("click",i);function i(){s==null||s.classList.remove("main-leaderboard__btns-thumb_active"),e==null||e.classList.add("csgo-active"),t==null||t.classList.remove("dota-active"),h(b)}i(),t==null||t.addEventListener("click",a);function a(){s==null||s.classList.add("main-leaderboard__btns-thumb_active"),t==null||t.classList.add("dota-active"),e==null||e.classList.remove("csgo-active"),h(f)}R(O)}function B(e){const t=document.querySelector(".js-main-popular-matches-cards-list"),s=e.map(i=>{const{id:a,roundOf:r,image:{png:c,webp:l},firstTeam:{firstTeamLogo:n,firstTeamTitle:o},secondTeam:{secondTeamLogo:m,secondTeamTitle:_}}=i;return`
         <li class="list-cards__item" data-id="${a}">
           <a
             class="list-cards__link"
@@ -178,7 +178,7 @@ import{s as w,g as L,h as $}from"../assets/header-N1GvQXYZ.js";import{i as S,g a
 
             <picture>
               <source
-                srcset="${n}"
+                srcset="${l}"
                 type="image/webp" />
 
               <img
@@ -186,7 +186,7 @@ import{s as w,g as L,h as $}from"../assets/header-N1GvQXYZ.js";import{i as S,g a
                 width="693"
                 height="292"
                 loading="lazy"
-                src="${r}"
+                src="${c}"
                 alt="Match" />
             </picture>
           </a>
@@ -202,10 +202,10 @@ import{s as w,g as L,h as $}from"../assets/header-N1GvQXYZ.js";import{i as S,g a
                   width="27"
                   height="21"
                   loading="lazy"
-                  src="${c}"
+                  src="${n}"
                   alt="" />
 
-                <p class="list-cards__bottom-content-team-name">${l}</p>
+                <p class="list-cards__bottom-content-team-name">${o}</p>
               </div>
 
               <p class="list-cards__bottom-content-team-divider">VS</p>
@@ -216,16 +216,16 @@ import{s as w,g as L,h as $}from"../assets/header-N1GvQXYZ.js";import{i as S,g a
                   width="27"
                   height="21"
                   loading="lazy"
-                  src="${d}"
+                  src="${m}"
                   alt="" />
 
-                <p class="list-cards__bottom-content-team-name">${p}</p>
+                <p class="list-cards__bottom-content-team-name">${_}</p>
               </div>
             </div>
             <!-- round of -->
-            <p class="list-cards__bottom-content-round">${o}</p>
+            <p class="list-cards__bottom-content-round">${r}</p>
           </div>
-        </li>`});t.innerHTML=e.join("")}function G(s=" "){m(s).then(t=>B(t)).catch(t=>console.error("Error fetching data:",t))}function U(s){const t=document.querySelector(".js-popular-list"),e=s.map(i=>{const{id:a,title:o,time:r,score:n,isOnline:c,firstTeam:{firstTeamLogo:l,firstTeamName:d,firstTeamScore:p},secondTeam:{secondTeamLogo:v,secondTeamName:_,secondTeamScore:f}}=i;return`
+        </li>`});t.innerHTML=s.join("")}function U(e=" "){u(e).then(t=>B(t)).catch(t=>console.error("Error fetching data:",t))}function W(e){const t=document.querySelector(".js-popular-list"),s=e.map(i=>{const{id:a,title:r,time:c,score:l,isOnline:n,firstTeam:{firstTeamLogo:o,firstTeamName:m,firstTeamScore:_},secondTeam:{secondTeamLogo:w,secondTeamName:g,secondTeamScore:L}}=i;return`
             <li class="popular-list__item" data-id="${a}">
               <!-- team_first -->
               <div class="popular-list__team popular-list__team_first">
@@ -239,43 +239,43 @@ import{s as w,g as L,h as $}from"../assets/header-N1GvQXYZ.js";import{i as S,g a
                     class="popular-list__team-img"
                     width="58"
                     height="52"
-                    src="${l}"
-                    alt="${d}" />
+                    src="${o}"
+                    alt="${m}" />
                   <!-- name -->
-                  <p class="popular-list__team-name">${d}</p>
+                  <p class="popular-list__team-name">${m}</p>
                 </a>
 
                 <!-- points -->
-                <p class="popular-list__points">${p}</p>
+                <p class="popular-list__points">${_}</p>
               </div>
 
               <!-- score -->
                 <div class="popular-list__score">
-                  <p class="popular-list__score-time">${r}</p>
-                  ${c?'<p class="popular-list__score-online">Онлайн</p>':`<p class="popular-list__score-score">${n}</p>`}
+                  <p class="popular-list__score-time">${c}</p>
+                  ${n?'<p class="popular-list__score-online">Онлайн</p>':`<p class="popular-list__score-score">${l}</p>`}
                 </div>
 
               <!-- second team-->
               <div class="popular-list__team popular-list__team_second">
-                <p class="popular-list__status-title">${o}</p>
+                <p class="popular-list__status-title">${r}</p>
 
                 <a
                   class="popular-list__link"
                   href="#"
                   target="_blank">
                   <!-- points -->
-                  <p class="popular-list__points">${f}</p>
+                  <p class="popular-list__points">${L}</p>
                   <!-- name -->
-                  <p class="popular-list__team-name">${_}</p>
+                  <p class="popular-list__team-name">${g}</p>
                   <!-- image -->
                   <img
                     loading="lazy"
                     class="popular-list__team-img"
                     width="58"
                     height="52"
-                    src="${v}"
-                    alt="${_}" />
+                    src="${w}"
+                    alt="${g}" />
                 </a>
               </div>
-            </li>`});t.innerHTML=e.join("")}function W(s=" "){m(s).then(t=>U(t)).catch(t=>console.error("Error fetching data:",t))}function K(){G(C),W(H)}document.addEventListener("DOMContentLoaded",()=>{$(),j(),A(),E(),R(),I(),K()});
+            </li>`});t.innerHTML=s.join("")}function I(e=" "){u(e).then(t=>W(t)).catch(t=>console.error("Error fetching data:",t))}function K(){U(P),I(H)}document.addEventListener("DOMContentLoaded",()=>{j(),M(),q(),A(),G(),D(),K()});
 //# sourceMappingURL=index.js.map
