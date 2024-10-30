@@ -1,4 +1,4 @@
-import"../assets/modulepreload-polyfill-B5Qt9EMX.js";import{i as $,g as S,a as y,c as T,S as v,G as k}from"../assets/vendor-e19STYO_.js";const d=document.querySelector(".js-sergio-inner-list"),p=document.querySelector(".js-game-dropdown-item-inner-list");function j(){const e=document.querySelector(".js-sergio-item-box"),t=document.querySelector(".js-sergio-active-title"),s=document.querySelector(".js-game-dropdown-box"),i=document.querySelector(".js-game-dropdown-active-title");e==null||e.addEventListener("click",a);function a(){d==null||d.classList.toggle("header__Sergio-inner-list_open")}d==null||d.addEventListener("click",r);function r(n){const o=n.target;t&&o&&(t.textContent=o.textContent),a()}s==null||s.addEventListener("click",c);function c(){p==null||p.classList.toggle("game-dropdown-item__inner-list_open")}p==null||p.addEventListener("click",l);function l(n){const o=n.target;i&&(i.textContent=o.textContent),c()}}function M(){document.addEventListener("click",s=>{e(s),t(s)});function e(s){const i=s.target.closest(".header__Sergio-inner-item"),a=s.target.closest(".header__Sergio-item-box");!(i!=null&&i.classList.contains("header__Sergio-inner-item"))&&!(a!=null&&a.classList.contains("header__Sergio-item-box"))&&(d==null||d.classList.remove("header__Sergio-inner-list_open"))}function t(s){const i=s.target.closest(".game-dropdown-item__inner-item"),a=s.target.closest(".js-game-dropdown-box");!(i!=null&&i.classList.contains("game-dropdown-item__inner-item"))&&!(a!=null&&a.classList.contains("js-game-dropdown-box"))&&(p==null||p.classList.remove("game-dropdown-item__inner-list_open"))}}const E={apiKey:"AIzaSyAd5LeDQLc4i5UEZgy049Nmu5687cFRTFU",authDomain:"battlestar-514be.firebaseapp.com",projectId:"battlestar-514be",storageBucket:"battlestar-514be.appspot.com",messagingSenderId:"1041425711014",appId:"1:1041425711014:web:b36feae118870e4d2c5967"},x=$(E);async function u(e){const t=S(x);try{const s=await y(T(t,e)),i=[];return s.forEach(a=>{i.push({id:a.id,...a.data()})}),i}catch(s){return console.error("Error getting documents:",s),[]}}function C(e){const t=document.querySelector(".js-main-slider-news");if(!t)return;const s=e.map(i=>{const{title:a,description:r,views:c,date:l,image:{png:n,webp:o},author:{img:m,name:_}}=i;return`
+import{a as L}from"../assets/firebaseConfig-wgdHWFF0.js";import{g as S,a as y,c as T,S as v,G as k}from"../assets/vendor-F-QY0OwA.js";const d=document.querySelector(".js-sergio-inner-list"),p=document.querySelector(".js-game-dropdown-item-inner-list");function M(){const e=document.querySelector(".js-sergio-item-box"),t=document.querySelector(".js-sergio-active-title"),s=document.querySelector(".js-game-dropdown-box"),i=document.querySelector(".js-game-dropdown-active-title");e==null||e.addEventListener("click",a);function a(){d==null||d.classList.toggle("header__Sergio-inner-list_open")}d==null||d.addEventListener("click",r);function r(n){const o=n.target;t&&o&&(t.textContent=o.textContent),a()}s==null||s.addEventListener("click",c);function c(){p==null||p.classList.toggle("game-dropdown-item__inner-list_open")}p==null||p.addEventListener("click",l);function l(n){const o=n.target;i&&(i.textContent=o.textContent),c()}}function j(){document.addEventListener("click",s=>{e(s),t(s)});function e(s){const i=s.target.closest(".header__Sergio-inner-item"),a=s.target.closest(".header__Sergio-item-box");!(i!=null&&i.classList.contains("header__Sergio-inner-item"))&&!(a!=null&&a.classList.contains("header__Sergio-item-box"))&&(d==null||d.classList.remove("header__Sergio-inner-list_open"))}function t(s){const i=s.target.closest(".game-dropdown-item__inner-item"),a=s.target.closest(".js-game-dropdown-box");!(i!=null&&i.classList.contains("game-dropdown-item__inner-item"))&&!(a!=null&&a.classList.contains("js-game-dropdown-box"))&&(p==null||p.classList.remove("game-dropdown-item__inner-list_open"))}}async function u(e){const t=S(L);try{const s=await y(T(t,e)),i=[];return s.forEach(a=>{i.push({id:a.id,...a.data()})}),i}catch(s){return console.error("Error getting documents:",s),[]}}function x(e){const t=document.querySelector(".js-main-slider-news");if(!t)return;const s=e.map(i=>{const{title:a,description:r,views:c,date:l,image:{png:n,webp:o},author:{img:m,name:_}}=i;return`
       <li class="splide__slide">
             <!-- slide-body -->
 
@@ -57,7 +57,7 @@ import"../assets/modulepreload-polyfill-B5Qt9EMX.js";import{i as $,g as S,a as y
                 </div>
               </div>
             </div>
-          </li>`});t.innerHTML=s.join("")}function q(){u("SliderBattleStarNews").then(t=>C(t))}function A(){setTimeout(()=>{new v(" .main-stage__news-slider",{gap:"30px",grid:{rows:2,cols:3,gap:{row:"30px",col:"30px"}},pagination:!1,breakpoints:{768:{grid:{cols:2},pagination:!0},1919:{arrows:!1}}}).mount({Grid:k})},500)}function D(){new v(".main-stochholm__slider",{pagination:!1,breakpoints:{1919:{arrows:!1,pagination:!0}}}).mount()}const b="mainPageListTop",f="mainPageListTopDota",O="mainPageLeaderboardCards",P="mainPagePopularMatchesCardsList",H="mainPagePopularMatches";function z(e,t){if(!e.length){t.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const s=[...e].sort((i,a)=>a.score-i.score).map(i=>{const{name:a,score:r,id:c,countryFlagImg:{webp:l},avatar:{png:n,webp:o}}=i;return`
+          </li>`});t.innerHTML=s.join("")}function E(){u("SliderBattleStarNews").then(t=>x(t))}function q(){setTimeout(()=>{new v(" .main-stage__news-slider",{gap:"30px",grid:{rows:2,cols:3,gap:{row:"30px",col:"30px"}},pagination:!1,breakpoints:{768:{grid:{cols:2},pagination:!0},1919:{arrows:!1}}}).mount({Grid:k})},500)}function C(){new v(".main-stochholm__slider",{pagination:!1,breakpoints:{1919:{arrows:!1,pagination:!0}}}).mount()}const b="mainPageListTop",f="mainPageListTopDota",O="mainPageLeaderboardCards",P="mainPagePopularMatchesCardsList",D="mainPagePopularMatches";function A(e,t){if(!e.length){t.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const s=[...e].sort((i,a)=>a.score-i.score).map(i=>{const{name:a,score:r,id:c,countryFlagImg:{webp:l},avatar:{png:n,webp:o}}=i;return`
            <li class="list-top__item" data-id="${c}">
             <p class="list-top__item-num"></p>
             <picture>
@@ -83,7 +83,7 @@ import"../assets/modulepreload-polyfill-B5Qt9EMX.js";import{i as $,g as S,a as y
 
             <p class="list-top__name">${a}</p>
             <p class="list-top__score">${r}</p>
-          </li>`});t.innerHTML=s.join("")}function F(e,t){if(!e.length){t.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const s=[...e].sort((i,a)=>a.score-i.score).map(i=>{const{name:a,score:r,id:c,countryFlagImg:{webp:l},avatar:{png:n,webp:o}}=i;return`
+          </li>`});t.innerHTML=s.join("")}function H(e,t){if(!e.length){t.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const s=[...e].sort((i,a)=>a.score-i.score).map(i=>{const{name:a,score:r,id:c,countryFlagImg:{webp:l},avatar:{png:n,webp:o}}=i;return`
            <li class="list-top__item" data-id="${c}">
             <p class="list-top__item-num"></p>
             <picture>
@@ -109,7 +109,7 @@ import"../assets/modulepreload-polyfill-B5Qt9EMX.js";import{i as $,g as S,a as y
 
             <p class="list-top__name">${a}</p>
             <p class="list-top__score">${r}</p>
-          </li>`});t.innerHTML=s.join("")}function h(e=" "){const t=document.querySelector(".js-main-leaderboard-top-list");if(!t){console.error("Leaderboard container not found");return}if(e===b){u(e).then(s=>z(s,t)).catch(s=>console.error("Error fetching CS:GO data:",s));return}if(e===f){u(e).then(s=>F(s,t)).catch(s=>console.error("Error fetching Dota data:",s));return}console.log("Invalid search query")}function N(e){const t=document.querySelector(".js-main-leaderboard-cards-list");if(!e.length){t.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const s=e.map(i=>{const{title:a,date:r,description:c,id:l,img:{png:n,webp:o},likes:m,views:_}=i;return`
+          </li>`});t.innerHTML=s.join("")}function h(e=" "){const t=document.querySelector(".js-main-leaderboard-top-list");if(!t){console.error("Leaderboard container not found");return}if(e===b){u(e).then(s=>A(s,t)).catch(s=>console.error("Error fetching CS:GO data:",s));return}if(e===f){u(e).then(s=>H(s,t)).catch(s=>console.error("Error fetching Dota data:",s));return}console.log("Invalid search query")}function z(e){const t=document.querySelector(".js-main-leaderboard-cards-list");if(!e.length){t.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const s=e.map(i=>{const{title:a,date:r,description:c,id:l,img:{png:n,webp:o},likes:m,views:_}=i;return`
           <li class="main-leaderboard__cards-item" data-id="${l}">
             <a
               href="#"
@@ -168,7 +168,7 @@ import"../assets/modulepreload-polyfill-B5Qt9EMX.js";import{i as $,g as S,a as y
                 </div>
               </div>
             </div>
-          </li>`});t.innerHTML=s.join("")}function R(e=" "){u(e).then(t=>N(t)).catch(t=>console.error("Error fetching data:",t))}function G(){const e=document.querySelector(".js-leaderboard-btn-csgo"),t=document.querySelector(".js-leaderboard-btn-dota"),s=document.querySelector(".js-btns-thumb");e==null||e.addEventListener("click",i);function i(){s==null||s.classList.remove("main-leaderboard__btns-thumb_active"),e==null||e.classList.add("csgo-active"),t==null||t.classList.remove("dota-active"),h(b)}i(),t==null||t.addEventListener("click",a);function a(){s==null||s.classList.add("main-leaderboard__btns-thumb_active"),t==null||t.classList.add("dota-active"),e==null||e.classList.remove("csgo-active"),h(f)}R(O)}function B(e){const t=document.querySelector(".js-main-popular-matches-cards-list"),s=e.map(i=>{const{id:a,roundOf:r,image:{png:c,webp:l},firstTeam:{firstTeamLogo:n,firstTeamTitle:o},secondTeam:{secondTeamLogo:m,secondTeamTitle:_}}=i;return`
+          </li>`});t.innerHTML=s.join("")}function F(e=" "){u(e).then(t=>z(t)).catch(t=>console.error("Error fetching data:",t))}function N(){const e=document.querySelector(".js-leaderboard-btn-csgo"),t=document.querySelector(".js-leaderboard-btn-dota"),s=document.querySelector(".js-btns-thumb");e==null||e.addEventListener("click",i);function i(){s==null||s.classList.remove("main-leaderboard__btns-thumb_active"),e==null||e.classList.add("csgo-active"),t==null||t.classList.remove("dota-active"),h(b)}i(),t==null||t.addEventListener("click",a);function a(){s==null||s.classList.add("main-leaderboard__btns-thumb_active"),t==null||t.classList.add("dota-active"),e==null||e.classList.remove("csgo-active"),h(f)}F(O)}function G(e){const t=document.querySelector(".js-main-popular-matches-cards-list"),s=e.map(i=>{const{id:a,roundOf:r,image:{png:c,webp:l},firstTeam:{firstTeamLogo:n,firstTeamTitle:o},secondTeam:{secondTeamLogo:m,secondTeamTitle:_}}=i;return`
         <li class="list-cards__item" data-id="${a}">
           <a
             class="list-cards__link"
@@ -225,7 +225,7 @@ import"../assets/modulepreload-polyfill-B5Qt9EMX.js";import{i as $,g as S,a as y
             <!-- round of -->
             <p class="list-cards__bottom-content-round">${r}</p>
           </div>
-        </li>`});t.innerHTML=s.join("")}function U(e=" "){u(e).then(t=>B(t)).catch(t=>console.error("Error fetching data:",t))}function W(e){const t=document.querySelector(".js-popular-list"),s=e.map(i=>{const{id:a,title:r,time:c,score:l,isOnline:n,firstTeam:{firstTeamLogo:o,firstTeamName:m,firstTeamScore:_},secondTeam:{secondTeamLogo:w,secondTeamName:g,secondTeamScore:L}}=i;return`
+        </li>`});t.innerHTML=s.join("")}function R(e=" "){u(e).then(t=>G(t)).catch(t=>console.error("Error fetching data:",t))}function B(e){const t=document.querySelector(".js-popular-list"),s=e.map(i=>{const{id:a,title:r,time:c,score:l,isOnline:n,firstTeam:{firstTeamLogo:o,firstTeamName:m,firstTeamScore:_},secondTeam:{secondTeamLogo:w,secondTeamName:g,secondTeamScore:$}}=i;return`
             <li class="popular-list__item" data-id="${a}">
               <!-- team_first -->
               <div class="popular-list__team popular-list__team_first">
@@ -264,7 +264,7 @@ import"../assets/modulepreload-polyfill-B5Qt9EMX.js";import{i as $,g as S,a as y
                   href="#"
                   target="_blank">
                   <!-- points -->
-                  <p class="popular-list__points">${L}</p>
+                  <p class="popular-list__points">${$}</p>
                   <!-- name -->
                   <p class="popular-list__team-name">${g}</p>
                   <!-- image -->
@@ -277,5 +277,5 @@ import"../assets/modulepreload-polyfill-B5Qt9EMX.js";import{i as $,g as S,a as y
                     alt="${g}" />
                 </a>
               </div>
-            </li>`});t.innerHTML=s.join("")}function I(e=" "){u(e).then(t=>W(t)).catch(t=>console.error("Error fetching data:",t))}function K(){U(P),I(H)}document.addEventListener("DOMContentLoaded",()=>{j(),M(),q(),A(),G(),D(),K()});
+            </li>`});t.innerHTML=s.join("")}function W(e=" "){u(e).then(t=>B(t)).catch(t=>console.error("Error fetching data:",t))}function U(){R(P),W(D)}document.addEventListener("DOMContentLoaded",()=>{M(),j(),E(),q(),N(),C(),U()});
 //# sourceMappingURL=index.js.map
