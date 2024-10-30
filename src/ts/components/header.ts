@@ -3,7 +3,7 @@ export const gameInnerList = document.querySelector('.js-game-dropdown-item-inne
 // ---reusable-refs------------
 export function header() {
   const sergioBox = document.querySelector('.js-sergio-item-box');
-  const sergioActiveItem = document.querySelector('.js-sergio-active-title');
+  const sergioActiveItem = document.querySelector('.js-user-active-title');
   const gameDropdownBox = document.querySelector('.js-game-dropdown-box');
   const gameDropdownActiveTitle = document.querySelector('.js-game-dropdown-active-title');
   // ----local-refs------------------

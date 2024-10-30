@@ -8,16 +8,13 @@ export async function registerUser(
   email: string,
   password: string,
   nickname: string
-): Promise<User> {
-  console.log(passwordCriteria);
+): Promise<User | void> {
   // Валідація email та пароля
   if (!isEmail(email)) {
-    // throw new Error('Invalid email address');
     console.log('Invalid email address');
     return;
   }
   if (!isStrongPassword(password, passwordCriteria)) {
-    // throw new Error('Password is not strong enough');
     console.log('Password is not strong enough');
     return;
   }

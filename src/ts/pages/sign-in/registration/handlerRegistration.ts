@@ -15,18 +15,12 @@ export function handlerRegistration(form: HTMLFormElement): void {
 
     registerUser(email, password, nickname)
       .then(user => {
-        const uid = user.uid;
-        const email = user.email;
-        const displayName = user.displayName;
-        console.log('User ID:', uid);
-        console.log('User Email:', email);
-        console.log('User Display Name:', displayName);
+        console.log(user);
+        form.reset();
       })
       .catch(error => {
         console.error('Registration failed:', error.message);
       });
-
-    form.reset();
   });
 
   // toggleVisiblePassword

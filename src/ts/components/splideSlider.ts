@@ -29,7 +29,7 @@ export function battleStarNewsSlider(): void {
         },
       },
     }).mount({ Grid });
-  }, 500);
+  }, 1000);
 }
 
 // Major Stochholm 2021
