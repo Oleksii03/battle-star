@@ -145,6 +145,7 @@
           height: 2px;
           background-color: $light-gray-text;
           margin-top: 3px;
+          pointer-events: none;
 
           &_hidden {
             display: none;
