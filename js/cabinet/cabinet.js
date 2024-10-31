@@ -1,2 +1,2 @@
-import{o}from"../../assets/cabinet-CYTlPDzu.js";import{h as n}from"../../assets/header-BZdHPXoF.js";import{s as e}from"../../assets/loginOrRegistrationHandler-DTyAUGXw.js";import"../../assets/vendor-tCLRAaZl.js";document.addEventListener("DOMContentLoaded",()=>{n(),e(),o(),o(),console.log(window.location.pathname==="/cabinet.html")});
+import{o as e}from"../../assets/cabinet-CYTlPDzu.js";import{h as n}from"../../assets/header-BZdHPXoF.js";import{s as t}from"../../assets/loginOrRegistrationHandler-DTyAUGXw.js";import"../../assets/vendor-tCLRAaZl.js";document.addEventListener("DOMContentLoaded",()=>{n(),t(),e(),e();const o=window.location.pathname;o.includes("/cabinet")&&(console.log("You are on the cabinet page."),console.log(o))});
 //# sourceMappingURL=cabinet.js.map
