@@ -134,9 +134,9 @@
     }
   }
 
-  // Sergio-Richter-
-  // Sergio-Richter-list
-  &__Sergio-item {
+  // User-
+  // User-list
+  &__user-item {
     position: relative;
     cursor: pointer;
 
@@ -155,8 +155,8 @@
       fill: $light-text;
     }
   }
-  // Sergio-inner-list
-  &__Sergio-inner-list {
+  // user-inner-list
+  &__user-inner-list {
     display: flex;
     flex-direction: column;
     row-gap: 5px;
@@ -182,12 +182,29 @@
     }
   }
 
-  &__Sergio-inner-item {
+  &__user-inner-item {
     padding: 15px 5px 15px 10px;
-    transition: all 150ms linear;
+    opacity: 0.3;
+    cursor: not-allowed;
 
-    &:hover {
-      background-color: #fac90456;
+    & > a {
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    &_active {
+      transition: all 150ms linear;
+      cursor: pointer;
+      opacity: 1;
+
+      & > a {
+        pointer-events: auto;
+        cursor: pointer;
+      }
+
+      &:hover {
+        background-color: #fac90456;
+      }
     }
   }
 }

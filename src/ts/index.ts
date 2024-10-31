@@ -4,6 +4,7 @@ import { createMainStageSlider } from './pages/main/main-stage/slider/createSlid
 import { battleStarNewsSlider, majorStochholmSlider } from './components/splideSlider';
 import { mainLeaderboard } from './pages/main/main-leaderboard/mainLeaderboard';
 import { popularMatches } from './pages/main/popular-matches/popularMatches';
+import { onStateUserChanged } from './pages/sign-in/cabinet/cabinet';
 
 document.addEventListener('DOMContentLoaded', () => {
   header();
@@ -13,4 +14,5 @@ document.addEventListener('DOMContentLoaded', () => {
   mainLeaderboard();
   majorStochholmSlider();
   popularMatches();
+  onStateUserChanged();
 });

@@ -13,21 +13,21 @@
     <title>cabinet</title>
   </head>
   <body class="cabinet-body">
-    <!-- sidebar -->
-
-    <!-- header -->
-
-    <!-- main content -->
-    <main>
-      <p>
-        Привіт
-        <span class="js-user"></span>
-        я кабінет, ти все вірно робиш
-      </p>
-    </main>
+    <div class="main__wrapper wrapper">
+      <!-- sidebar -->
+      <load src="./html-partials/base/sidebar.html" />
+      <div class="main-body">
+        <!-- header -->
+        <load src="./html-partials/base/header.html" />
+        <!-- main content -->
+        <main>
+          <!-- main-stage -->
+        </main>
+      </div>
+    </div>
 
     <script
       type="module"
-      src="./ts/signIn.ts"></script>
+      src="./ts/cabinet.ts"></script>
   </body>
 </html>

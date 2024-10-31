@@ -5,6 +5,7 @@ export function markup(): string {
             type="text"
             class="sign-in__form-input js-input-nickname"
             placeholder="Введіть нікнейм"
+            pattern="^[a-zA-Zа-яА-ЯїЇєЄіІ]{2,15}$"
             required />
         </div>
 

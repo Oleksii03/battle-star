@@ -1,28 +1,28 @@
-import { sergioInnerList } from './header';
+import { userInnerList } from './header';
 import { gameInnerList } from './header';
 
 export function closeDropDownList(): void {
   document.addEventListener('click', (e: Event) => {
-    // SergioList
-    handlerSergioList(e);
+    // userList
+    handlerUserList(e);
     // gameList
     handlerGameDropdownList(e);
   });
 
   // ===function-handlers====
   // SergioList
-  function handlerSergioList(e: Event): void {
-    const targetEl = (e.target as HTMLElement).closest('.header__Sergio-inner-item');
-    const parentTargetEl = (e.target as HTMLElement).closest('.header__Sergio-item-box');
+  function handlerUserList(e: Event): void {
+    const targetEl = (e.target as HTMLElement).closest('.header__user-inner-item');
+    const parentTargetEl = (e.target as HTMLElement).closest('.header__user-item-box');
     // --refs----
 
     // handlers
-    const isSergioListOpen =
-      !targetEl?.classList.contains('header__Sergio-inner-item') &&
-      !parentTargetEl?.classList.contains('header__Sergio-item-box');
+    const isuserListOpen =
+      !targetEl?.classList.contains('header__user-inner-item') &&
+      !parentTargetEl?.classList.contains('header__user-item-box');
 
-    if (isSergioListOpen) {
-      sergioInnerList?.classList.remove('header__Sergio-inner-list_open');
+    if (isuserListOpen) {
+      userInnerList?.classList.remove('header__user-inner-list_open');
     }
   }
 

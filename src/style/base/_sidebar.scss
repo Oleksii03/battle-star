@@ -53,6 +53,16 @@
       }
     }
 
+    &-item_disabled {
+      cursor: not-allowed;
+      opacity: 0.3;
+
+      & > a {
+        cursor: not-allowed;
+        pointer-events: none;
+      }
+    }
+
     &-link {
       position: relative;
       color: $gray-text;
