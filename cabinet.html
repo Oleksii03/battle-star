@@ -165,25 +165,287 @@
 </svg>
 
     <title>cabinet</title>
-    <script type="module" crossorigin src="/battle-star/assets/vendor-tCLRAaZl.js"></script>
-    <script type="module" crossorigin src="/battle-star/assets/firebaseConfig-rGVLZpzj.js"></script>
-    <script type="module" crossorigin src="/battle-star/assets/signIn-DWPZ6bOd.js"></script>
+    <script type="module" crossorigin src="/battle-star/js/cabinet/cabinet.js"></script>
+    <link rel="modulepreload" crossorigin href="/battle-star/assets/vendor-tCLRAaZl.js">
+    <link rel="modulepreload" crossorigin href="/battle-star/assets/cabinet-CYTlPDzu.js">
+    <link rel="modulepreload" crossorigin href="/battle-star/assets/header-BZdHPXoF.js">
+    <link rel="modulepreload" crossorigin href="/battle-star/assets/loginOrRegistrationHandler-DTyAUGXw.js">
     <link rel="stylesheet" crossorigin href="/battle-star/assets/vendor-CEzdm8Kq.css">
-    <link rel="stylesheet" crossorigin href="/battle-star/assets/main-B3r1Ri5g.css">
+    <link rel="stylesheet" crossorigin href="/battle-star/assets/header-DvtBQz2F.css">
   </head>
   <body class="cabinet-body">
-    <!-- sidebar -->
+    <div class="main__wrapper wrapper">
+      <!-- sidebar -->
+      <aside class="sidebar">
+  <!-- logo -->
+  <a
+    href="../../index.html"
+    class="sidebar__logo">
+    <!-- logo-icon -->
+    <svg
+      class="sidebar__logo-icon"
+      width="65"
+      height="69">
+      <use xlink:href="#icon-logo"></use>
+    </svg>
+  </a>
 
-    <!-- header -->
+  <!-- navigation -->
+  <nav class="sidebar__nav">
+    <!-- navigation-list -->
+    <ul class="sidebar__nav-list">
+      <li class="sidebar__nav-item">
+        <a
+          href="#"
+          class="sidebar__nav-link sidebar__nav-link_active">
+          <svg
+            width="36"
+            height="36"
+            class="sidebar__nav-link-icon">
+            <use xlink:href="#icon-sidebar-main"></use>
+          </svg>
 
-    <!-- main content -->
-    <main>
-      <p>
-        Привіт
-        <span class="js-user"></span>
-        я кабінет, ти все вірно робиш
-      </p>
-    </main>
+          <p class="sidebar__nav-link-text">ГОЛОВНА</p>
+        </a>
+      </li>
+
+      <li class="sidebar__nav-item">
+        <a
+          href="#"
+          class="sidebar__nav-link">
+          <svg
+            width="36"
+            height="36"
+            class="sidebar__nav-link-icon">
+            <use xlink:href="#icon-sidebar-controller"></use>
+          </svg>
+
+          <p class="sidebar__nav-link-text">МАТЧІ</p>
+        </a>
+      </li>
+
+      <li class="sidebar__nav-item">
+        <a
+          href="#"
+          class="sidebar__nav-link">
+          <svg
+            width="36"
+            height="36"
+            class="sidebar__nav-link-icon">
+            <use xlink:href="#icon-sidebar-tournaments"></use>
+          </svg>
+
+          <p class="sidebar__nav-link-text">ТУРНІРИ</p>
+        </a>
+      </li>
+
+      <li class="sidebar__nav-item">
+        <a
+          href="#"
+          class="sidebar__nav-link">
+          <svg
+            width="36"
+            height="36"
+            class="sidebar__nav-link-icon">
+            <use xlink:href="#icon-sidebar-teams"></use>
+          </svg>
+
+          <p class="sidebar__nav-link-text">КОМАНДЫ</p>
+        </a>
+      </li>
+
+      <li class="sidebar__nav-item">
+        <a
+          href="#"
+          class="sidebar__nav-link">
+          <svg
+            width="36"
+            height="36"
+            class="sidebar__nav-link-icon">
+            <use xlink:href="#icon-sidebar-friends"></use>
+          </svg>
+
+          <p class="sidebar__nav-link-text">ДРУЗІ</p>
+
+          <span class="sidebar__nav-link-count">0</span>
+        </a>
+      </li>
+
+      <li class="sidebar__nav-item js-sidebar-btn-enter">
+        <a
+          href="./sign-in.html"
+          class="sidebar__nav-link">
+          <svg
+            width="36"
+            height="36"
+            class="sidebar__nav-link-icon">
+            <use xlink:href="#icon-enter"></use>
+          </svg>
+
+          <p class="sidebar__nav-link-text">УВІЙТИ</p>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+
+      <div class="main-body">
+        <!-- header -->
+        <header class="header">
+  <div class="header__container">
+    <!-- content-left -->
+    <div class="header__content-left">
+      <!-- btn-arrow-box -->
+      <div class="header__arrow-box">
+        <button class="header__arrow-btn header__arrow-btn_left">
+          <svg
+            width="38"
+            height="38"
+            class="icon-arrow-left">
+            <use xlink:href="#icon-arrow-left"></use>
+          </svg>
+        </button>
+
+        <button class="header__arrow-btn header__arrow-btn_right">
+          <svg
+            width="38"
+            height="38"
+            class="icon-arrow-left">
+            <use xlink:href="#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+      <!-- game-dropdown -->
+      <div class="header__game-dropdown">
+        <img
+          class="header__game-dropdown-img"
+          width="30"
+          height="30"
+          src="/battle-star/assets/header-cs-go-DPIzmvUb.svg"
+          alt="Game dropdown" />
+
+        <ul class="header__game-dropdown-list">
+          <li class="header__game-dropdown-item game-dropdown-item">
+            <div class="game-dropdown-item__box js-game-dropdown-box">
+              <p class="game-dropdown-item__title js-game-dropdown-active-title">CS:GO</p>
+
+              <svg
+                width="24"
+                height="24"
+                class="game-dropdown-item__icon">
+                <use xlink:href="#icon-arrow-down"></use>
+              </svg>
+            </div>
+            <!-- inner-list -->
+            <ul class="game-dropdown-item__inner-list js-game-dropdown-item-inner-list">
+              <li class="game-dropdown-item__inner-item">
+                <p class="game-dropdown-item__inner-item-text">CS:GO</p>
+              </li>
+              <li class="game-dropdown-item__inner-item">
+                <p class="game-dropdown-item__inner-item-text">DOTA 2</p>
+              </li>
+              <li class="game-dropdown-item__inner-item">
+                <p class="game-dropdown-item__inner-item-text">Call of Duty</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- content-right -->
+    <div class="header__content-right">
+      <!-- search-box -->
+      <div class="header__search-box">
+        <svg
+          class="header__search-icon"
+          width="24"
+          height="24">
+          <use xlink:href="#icon-search"></use>
+        </svg>
+
+        <input
+          type="text"
+          class="header__search-input"
+          placeholder="Пошук" />
+      </div>
+
+      <!-- balance-box -->
+      <div class="header__balance-box">
+        <div class="header__balance-box-top">
+          <p class="header__balance-text">Баланс</p>
+          <svg
+            class="header__balance-icon"
+            width="24"
+            height="24">
+            <use xlink:href="#icon-plus-box"></use>
+          </svg>
+        </div>
+        <div class="header__balance-box-bottom">
+          <p class="header__balance-sum">15600</p>
+          <p class="header__balance-currency">BS</p>
+        </div>
+      </div>
+
+      <!-- buttons -->
+      <button
+        type="button"
+        class="header__btn-message">
+        <svg
+          class="header__btn-message-icon"
+          width="24"
+          height="24">
+          <use xlink:href="#icon-message"></use>
+        </svg>
+
+        <span class="header__btn-message-count">0</span>
+      </button>
+      <button
+        type="button"
+        class="header__btn-bell">
+        <svg
+          class="header__btn-bell-icon"
+          width="24"
+          height="24">
+          <use xlink:href="#icon-bell"></use>
+        </svg>
+
+        <span class="header__btn-bell-count">0</span>
+      </button>
+
+      <!-- User -->
+      <ul class="header__user-list">
+        <li class="header__user-item">
+          <div class="header__user-item-box js-user-item-box">
+            <p class="header__user-item-title js-user-active-title">User</p>
+
+            <svg
+              width="24"
+              height="24"
+              class="header__user-item-icon">
+              <use xlink:href="#icon-arrow-down"></use>
+            </svg>
+          </div>
+
+          <ul class="header__user-inner-list js-user-inner-list">
+            <li class="header__user-inner-item js-item-cabinet">
+              <a href="cabinet.html">
+                <p class="header__user-inner-item-text">Кабінет</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+        <!-- main content -->
+        <main>
+          <!-- main-stage -->
+        </main>
+      </div>
+    </div>
 
   </body>
 </html>

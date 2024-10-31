@@ -1,4 +1,4 @@
-import{v as r,b as a,u as l,d as c,o as u}from"./vendor-tCLRAaZl.js";import{b as d}from"./firebaseConfig-rGVLZpzj.js";function m(){return`
+import{v as r,b as a,u as c}from"./vendor-tCLRAaZl.js";import{b as l}from"./cabinet-CYTlPDzu.js";function u(){return`
         <div class="sign-in__form-input__wrapper">
           <div class="sign-in__form-input-box">
             <input
@@ -86,12 +86,13 @@ import{v as r,b as a,u as l,d as c,o as u}from"./vendor-tCLRAaZl.js";import{b as
               <use xlink:href="#icon-form-facebook"></use>
             </svg>
           </li>
-        </ul>`}function g(i){i.innerHTML=m()}function p(){return`
+        </ul>`}function d(i){i.innerHTML=u()}function m(){return`
         <div class="sign-in__form-input-box">
           <input
             type="text"
             class="sign-in__form-input js-input-nickname"
             placeholder="Введіть нікнейм"
+            pattern="^[a-zA-Zа-яА-ЯїЇєЄіІ]{2,15}$"
             required />
         </div>
 
@@ -125,5 +126,5 @@ import{v as r,b as a,u as l,d as c,o as u}from"./vendor-tCLRAaZl.js";import{b as
           class="sign-in__form-btn-submit sign-in__form-btn-submit_create"
           type="submit">
           Створити
-        </button>`}function _(i){const n=i.querySelector(".js-form-input-icon-view");n==null||n.addEventListener("click",()=>{const s=document.querySelector(".js-form-input-password"),e=document.querySelector(".js-icon-line-cross-out");if(s.type==="password"){s.type="text",e.style.display="none";return}s.type="password",e.style.display="inline-block"})}const f={minLength:8,minLowercase:1,minUppercase:1,minNumbers:1,minSymbols:0};async function v(i,n,s){if(!r.isEmail(i)){console.log("Invalid email address");return}if(!r.isStrongPassword(n,f)){console.log("Password is not strong enough");return}try{const t=(await a(d,i,n)).user;return await l(t,{displayName:s}),window.location.href="cabinet.html",t}catch(e){throw console.error("Error creating user:",e.code,e.message),e}}function h(i){i.innerHTML=p(),i.addEventListener("submit",n=>{n.preventDefault();const s=document.querySelector(".js-form-input-email").value,e=document.querySelector(".js-form-input-password").value,t=document.querySelector(".js-input-nickname").value;v(s,e,t).then(o=>{console.log(o),i.reset()}).catch(o=>{console.error("Registration failed:",o.message)})}),_(i)}function b(){const i=document.querySelector(".js-form-btn-enter"),n=document.querySelector(".js-form-btn-create"),s=document.querySelector(".js-form-btns-tumb"),e=document.querySelector(".js-sign-in-form");i==null||i.addEventListener("click",t);function t(){i==null||i.classList.add("active-btn"),n==null||n.classList.remove("active-btn"),s==null||s.classList.remove("sign-in__form-btns-tumb_active"),e instanceof HTMLFormElement&&g(e)}t(),n==null||n.addEventListener("click",o);function o(){n==null||n.classList.add("active-btn"),i==null||i.classList.remove("active-btn"),s==null||s.classList.add("sign-in__form-btns-tumb_active"),e instanceof HTMLFormElement&&h(e)}}function y(){const i=document.querySelector(".js-user"),n=c();u(n,s=>{if(s){const e=s.uid,t=s.email,o=s.displayName;console.log("User ID:",e),console.log("User Email:",t),console.log("User Display Name:",o),i&&(i.textContent=o)}else console.log("No user is signed in.")})}document.addEventListener("DOMContentLoaded",()=>{b(),y()});
-//# sourceMappingURL=signIn-DWPZ6bOd.js.map
+        </button>`}function g(i){const n=i.querySelector(".js-form-input-icon-view");n==null||n.addEventListener("click",()=>{const s=document.querySelector(".js-form-input-password"),e=document.querySelector(".js-icon-line-cross-out");if(s.type==="password"){s.type="text",e.style.display="none";return}s.type="password",e.style.display="inline-block"})}const _={minLength:8,minLowercase:1,minUppercase:1,minNumbers:1,minSymbols:0};async function p(i,n,s){if(!r.isEmail(i)){console.log("Invalid email address");return}if(!r.isStrongPassword(n,_)){console.log("Password is not strong enough");return}try{const t=(await a(l,i,n)).user;return await c(t,{displayName:s}),window.location.href="cabinet.html",t}catch(e){throw console.error("Error creating user:",e.code,e.message),e}}function f(i){i.innerHTML=m(),i.addEventListener("submit",n=>{n.preventDefault();const s=document.querySelector(".js-form-input-email").value,e=document.querySelector(".js-form-input-password").value,t=document.querySelector(".js-input-nickname").value;p(s,e,t).then(o=>{console.log(o),i.reset()}).catch(o=>{console.error("Registration failed:",o.message)})}),g(i)}function b(){const i=document.querySelector(".js-form-btn-enter"),n=document.querySelector(".js-form-btn-create"),s=document.querySelector(".js-form-btns-tumb"),e=document.querySelector(".js-sign-in-form");i==null||i.addEventListener("click",t);function t(){i==null||i.classList.add("active-btn"),n==null||n.classList.remove("active-btn"),s==null||s.classList.remove("sign-in__form-btns-tumb_active"),e instanceof HTMLFormElement&&d(e)}t(),n==null||n.addEventListener("click",o);function o(){n==null||n.classList.add("active-btn"),i==null||i.classList.remove("active-btn"),s==null||s.classList.add("sign-in__form-btns-tumb_active"),e instanceof HTMLFormElement&&f(e)}}export{b as s};
+//# sourceMappingURL=loginOrRegistrationHandler-DTyAUGXw.js.map

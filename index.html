@@ -167,9 +167,10 @@
     <title>main</title>
     <script type="module" crossorigin src="/battle-star/js/index.js"></script>
     <link rel="modulepreload" crossorigin href="/battle-star/assets/vendor-tCLRAaZl.js">
-    <link rel="modulepreload" crossorigin href="/battle-star/assets/firebaseConfig-rGVLZpzj.js">
+    <link rel="modulepreload" crossorigin href="/battle-star/assets/cabinet-CYTlPDzu.js">
+    <link rel="modulepreload" crossorigin href="/battle-star/assets/header-BZdHPXoF.js">
+    <link rel="stylesheet" crossorigin href="/battle-star/assets/header-DvtBQz2F.css">
     <link rel="stylesheet" crossorigin href="/battle-star/assets/vendor-CEzdm8Kq.css">
-    <link rel="stylesheet" crossorigin href="/battle-star/assets/main-B3r1Ri5g.css">
   </head>
   <body>
     <div class="main__wrapper wrapper">
@@ -269,7 +270,7 @@
         </a>
       </li>
 
-      <li class="sidebar__nav-item">
+      <li class="sidebar__nav-item js-sidebar-btn-enter">
         <a
           href="./sign-in.html"
           class="sidebar__nav-link">
@@ -411,30 +412,26 @@
         <span class="header__btn-bell-count">0</span>
       </button>
 
-      <!-- Sergio-Richter -->
-      <ul class="header__Sergio-list">
-        <li class="header__Sergio-item">
-          <div class="header__Sergio-item-box js-sergio-item-box">
-            <p class="header__Sergio-item-title js-user-active-title">Sergio Richter</p>
+      <!-- User -->
+      <ul class="header__user-list">
+        <li class="header__user-item">
+          <div class="header__user-item-box js-user-item-box">
+            <p class="header__user-item-title js-user-active-title">User</p>
 
             <svg
               width="24"
               height="24"
-              class="header__Sergio-item-icon">
+              class="header__user-item-icon">
               <use xlink:href="#icon-arrow-down"></use>
             </svg>
           </div>
 
-          <ul class="header__Sergio-inner-list js-sergio-inner-list">
-            <li class="header__Sergio-inner-item">
-              <p class="header__Sergio-inner-item-text">Sergio Richter</p>
+          <ul class="header__user-inner-list js-user-inner-list">
+            <li class="header__user-inner-item js-item-cabinet">
+              <a href="cabinet.html">
+                <p class="header__user-inner-item-text">Кабінет</p>
+              </a>
             </li>
-            <li class="header__Sergio-inner-item">
-              <p class="header__Sergio-inner-item-text">Вийти</p>
-            </li>
-            <!-- <li class="header__Sergio-inner-item">
-              <p class="header__Sergio-inner-item-text">Item 3</p>
-            </li> -->
           </ul>
         </li>
       </ul>
