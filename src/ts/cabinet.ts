@@ -8,5 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
   onStateUserChanged();
   onStateUserChanged();
 
-  console.log(window.location.pathname === '/cabinet.html');
+  const currentPath = window.location.pathname;
+
+  if (currentPath.includes('/cabinet')) {
+    console.log('You are on the cabinet page.');
+    console.log(currentPath);
+  }
 });
