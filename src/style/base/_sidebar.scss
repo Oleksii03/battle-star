@@ -63,6 +63,10 @@
       }
     }
 
+    &-item_hidden {
+      display: none;
+    }
+
     &-link {
       position: relative;
       color: $gray-text;
@@ -121,6 +125,7 @@
 
         & .sidebar__nav-link-text {
           color: $dark-text;
+          text-transform: uppercase;
         }
         & .sidebar__nav-link-icon {
           fill: $dark-text;
