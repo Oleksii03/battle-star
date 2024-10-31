@@ -14,6 +14,13 @@
   xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <symbol
+      id="icon-exit"
+      viewBox="0 0 32 32">
+      <path
+        d="M24 20v-4h-10v-4h10v-4l6 6zM22 18v8h-10v6l-12-6v-26h22v10h-2v-8h-16l8 4v18h8v-6z"></path>
+    </symbol>
+
+    <symbol
       id="icon-form_steam"
       viewBox="0 0 32 32">
       <path
@@ -168,8 +175,8 @@
     <script type="module" crossorigin src="/battle-star/js/index.js"></script>
     <link rel="modulepreload" crossorigin href="/battle-star/assets/vendor-tCLRAaZl.js">
     <link rel="modulepreload" crossorigin href="/battle-star/assets/cabinet-CYTlPDzu.js">
-    <link rel="modulepreload" crossorigin href="/battle-star/assets/header-BZdHPXoF.js">
-    <link rel="stylesheet" crossorigin href="/battle-star/assets/header-DvtBQz2F.css">
+    <link rel="modulepreload" crossorigin href="/battle-star/assets/header-CdN_4YgH.js">
+    <link rel="stylesheet" crossorigin href="/battle-star/assets/header-C5UryqlN.css">
     <link rel="stylesheet" crossorigin href="/battle-star/assets/vendor-CEzdm8Kq.css">
   </head>
   <body>
@@ -282,6 +289,21 @@
           </svg>
 
           <p class="sidebar__nav-link-text">УВІЙТИ</p>
+        </a>
+      </li>
+
+      <li class="sidebar__nav-item sidebar__nav-item_hidden js-sidebar-btn-exit">
+        <a
+          href="./sign-in.html"
+          class="sidebar__nav-link">
+          <svg
+            width="36"
+            height="36"
+            class="sidebar__nav-link-icon">
+            <use xlink:href="#icon-exit"></use>
+          </svg>
+
+          <p class="sidebar__nav-link-text">ВИЙТИ</p>
         </a>
       </li>
     </ul>
