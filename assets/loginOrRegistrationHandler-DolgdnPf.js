@@ -1,9 +1,9 @@
-import{v as r,b as a,u as c}from"./vendor-CPpcl-xY.js";import{b as l}from"./cabinet-Q0sU3oaF.js";function u(){return`
+import{b as c,v as r,d as u,u as d}from"./vendor-CWeQpfky.js";import{b as a}from"./cabinet-C8vGW7nv.js";function m(){return`
         <div class="sign-in__form-input__wrapper">
           <div class="sign-in__form-input-box">
             <input
               type="email"
-              class="sign-in__form-input"
+              class="sign-in__form-input js-login-email"
               placeholder="Електронна пошта"
               required />
           </div>
@@ -11,7 +11,7 @@ import{v as r,b as a,u as c}from"./vendor-CPpcl-xY.js";import{b as l}from"./cabi
           <div class="sign-in__form-input-box">
             <input
               type="password"
-              class="sign-in__form-input"
+              class="sign-in__form-input js-form-input-password js-login-password"
               placeholder="Пароль"
               required />
 
@@ -19,10 +19,10 @@ import{v as r,b as a,u as c}from"./vendor-CPpcl-xY.js";import{b as l}from"./cabi
               <svg
                 width="24"
                 height="24"
-                class="sign-in__form-input-icon">
+                class="sign-in__form-input-icon js-form-input-icon-view">
                 <use xlink:href="#icon-eye-views"></use>
               </svg>
-              <span class="sign-in__form-input-icon-line"></span>
+              <span class="sign-in__form-input-icon-line js-icon-line-cross-out"></span>
             </div>
           </div>
         </div>
@@ -86,7 +86,7 @@ import{v as r,b as a,u as c}from"./vendor-CPpcl-xY.js";import{b as l}from"./cabi
               <use xlink:href="#icon-form-facebook"></use>
             </svg>
           </li>
-        </ul>`}function d(i){i.innerHTML=u()}function m(){return`
+        </ul>`}function l(i){const s=i.querySelector(".js-form-input-icon-view");s==null||s.addEventListener("click",()=>{const n=i.querySelector(".js-form-input-password"),e=i.querySelector(".js-icon-line-cross-out");if(n.type==="password"){n.type="text",e.style.display="none";return}n.type="password",e.style.display="inline-block"})}function g(i){i.innerHTML=m(),i.addEventListener("submit",s=>{s.preventDefault();const n=document.querySelector(".js-login-email").value,e=document.querySelector(".js-login-password").value;c(a,n,e).then(t=>{const o=t.user;console.log("User signed in:",o),window.location.href="/cabinet"}).catch(t=>{console.error("Error signing in:",t),alert("Не вдалося увійти. Перевірте свій email або пароль і спробуйте ще раз.")})}),l(i)}function p(){return`
         <div class="sign-in__form-input-box">
           <input
             type="text"
@@ -126,5 +126,5 @@ import{v as r,b as a,u as c}from"./vendor-CPpcl-xY.js";import{b as l}from"./cabi
           class="sign-in__form-btn-submit sign-in__form-btn-submit_create"
           type="submit">
           Створити
-        </button>`}function g(i){const n=i.querySelector(".js-form-input-icon-view");n==null||n.addEventListener("click",()=>{const s=document.querySelector(".js-form-input-password"),e=document.querySelector(".js-icon-line-cross-out");if(s.type==="password"){s.type="text",e.style.display="none";return}s.type="password",e.style.display="inline-block"})}const _={minLength:8,minLowercase:1,minUppercase:1,minNumbers:1,minSymbols:0};async function p(i,n,s){if(!r.isEmail(i)){console.log("Invalid email address");return}if(!r.isStrongPassword(n,_)){console.log("Password is not strong enough");return}try{const t=(await a(l,i,n)).user;return await c(t,{displayName:s}),window.location.href="cabinet.html",t}catch(e){throw console.error("Error creating user:",e.code,e.message),e}}function f(i){i.innerHTML=m(),i.addEventListener("submit",n=>{n.preventDefault();const s=document.querySelector(".js-form-input-email").value,e=document.querySelector(".js-form-input-password").value,t=document.querySelector(".js-input-nickname").value;p(s,e,t).then(o=>{console.log(o),i.reset()}).catch(o=>{console.error("Registration failed:",o.message)})}),g(i)}function b(){const i=document.querySelector(".js-form-btn-enter"),n=document.querySelector(".js-form-btn-create"),s=document.querySelector(".js-form-btns-tumb"),e=document.querySelector(".js-sign-in-form");i==null||i.addEventListener("click",t);function t(){i==null||i.classList.add("active-btn"),n==null||n.classList.remove("active-btn"),s==null||s.classList.remove("sign-in__form-btns-tumb_active"),e instanceof HTMLFormElement&&d(e)}t(),n==null||n.addEventListener("click",o);function o(){n==null||n.classList.add("active-btn"),i==null||i.classList.remove("active-btn"),s==null||s.classList.add("sign-in__form-btns-tumb_active"),e instanceof HTMLFormElement&&f(e)}}export{b as s};
-//# sourceMappingURL=loginOrRegistrationHandler-lMKTf-KX.js.map
+        </button>`}const _={minLength:8,minLowercase:1,minUppercase:1,minNumbers:1,minSymbols:0};async function v(i,s,n){if(!r.isEmail(i)){console.log("Invalid email address");return}if(!r.isStrongPassword(s,_)){console.log("Password is not strong enough");return}try{const t=(await u(a,i,s)).user;return await d(t,{displayName:n}),window.location.href="cabinet.html",t}catch(e){throw console.error("Error creating user:",e.code,e.message),e}}function f(i){i.innerHTML=p(),i.addEventListener("submit",s=>{s.preventDefault();const n=document.querySelector(".js-form-input-email").value,e=document.querySelector(".js-form-input-password").value,t=document.querySelector(".js-input-nickname").value;v(n,e,t).then(o=>{i.reset()}).catch(o=>{console.error("Registration failed:",o.message)})}),l(i)}function w(){const i=document.querySelector(".js-form-btn-enter"),s=document.querySelector(".js-form-btn-create"),n=document.querySelector(".js-form-btns-tumb"),e=document.querySelector(".js-sign-in-form");i==null||i.addEventListener("click",t);function t(){i==null||i.classList.add("active-btn"),s==null||s.classList.remove("active-btn"),n==null||n.classList.remove("sign-in__form-btns-tumb_active"),e instanceof HTMLFormElement&&g(e)}t(),s==null||s.addEventListener("click",o);function o(){s==null||s.classList.add("active-btn"),i==null||i.classList.remove("active-btn"),n==null||n.classList.add("sign-in__form-btns-tumb_active"),e instanceof HTMLFormElement&&f(e)}}export{w as s};
+//# sourceMappingURL=loginOrRegistrationHandler-DolgdnPf.js.map
