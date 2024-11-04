@@ -27,7 +27,7 @@ export async function registerUser(
     window.location.href = 'cabinet.html';
     return user;
   } catch (error: any) {
-    // console.error('Error creating user:', error.code, error.message);
+    console.error('Error creating user:', error.code, error.message);
     throw error;
   }
 }
