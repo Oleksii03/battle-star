@@ -2,14 +2,19 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '@/ts/utils/firebaseConfig';
 import { markup } from './createMarkup';
 import { toggleVisiblePassword } from '@/ts/utils/toggleVisiblePassword';
+import { loginThroughProvider } from './loginThroughProvider';
 
 export function handlerLogin(form: HTMLFormElement) {
   form.innerHTML = markup();
 
   form.addEventListener('submit', (e: Event) => {
     e.preventDefault();
-    const email = (document.querySelector('.js-login-email') as HTMLInputElement).value;
+    let emailEl = document.querySelector('.js-login-email') as HTMLInputElement;
+    if (!emailEl) return;
+    const email = emailEl.value;
     const password = (document.querySelector('.js-login-password') as HTMLInputElement).value;
+
+    console.log(email);
 
     signInWithEmailAndPassword(auth, email, password)
       .then(userCredential => {
@@ -24,5 +29,8 @@ export function handlerLogin(form: HTMLFormElement) {
       });
   });
 
+  // loginThroughProvider
+  loginThroughProvider(form);
+  // toggleVisiblePassword
   toggleVisiblePassword(form);
 }

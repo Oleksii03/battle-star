@@ -51,7 +51,7 @@ export function markup(): string {
           <p class="sign-in__log-in-via-title">Або увійдіть через</p>
         </div>
 
-        <ul class="sign-in__log-in-via-list">
+        <ul class="sign-in__log-in-via-list js-login-provider-list">
           <li class="sign-in__log-in-via-item">
             <svg
               width="44"
@@ -70,7 +70,7 @@ export function markup(): string {
             </svg>
           </li>
 
-          <li class="sign-in__log-in-via-item">
+          <li class="sign-in__log-in-via-item js-form-item-google">
             <svg
               width="44"
               height="44"
@@ -79,7 +79,7 @@ export function markup(): string {
             </svg>
           </li>
 
-          <li class="sign-in__log-in-via-item">
+          <li class="sign-in__log-in-via-item js-form-item-facebook">
             <svg
               width="44"
               height="44"

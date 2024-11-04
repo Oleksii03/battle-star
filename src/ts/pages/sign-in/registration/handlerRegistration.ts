@@ -9,7 +9,10 @@ export function handlerRegistration(form: HTMLFormElement): void {
   // handlerForm
   form.addEventListener('submit', (e: Event) => {
     e.preventDefault();
-    const email = (document.querySelector('.js-form-input-email') as HTMLInputElement).value;
+
+    let emailEl = document.querySelector('.js-form-input-email') as HTMLInputElement;
+    if (!emailEl) return;
+    const email = emailEl.value;
     const password = (document.querySelector('.js-form-input-password') as HTMLInputElement).value;
     const nickname = (document.querySelector('.js-input-nickname') as HTMLInputElement).value;
 
@@ -18,7 +21,8 @@ export function handlerRegistration(form: HTMLFormElement): void {
         form.reset();
       })
       .catch(error => {
-        console.error('Registration failed:', error.message);
+        // console.error('Registration failed:', error.message);
+        alert('Користувч з таким email вже зареєстрований');
       });
   });
 
