@@ -1,4 +1,4 @@
-import{b as c,v as r,d as u,u as d}from"./vendor-CWeQpfky.js";import{b as a}from"./cabinet-C8vGW7nv.js";function m(){return`
+import{b as u,d,e as g,v as l,f as m,u as p}from"./vendor-Dcs7zynJ.js";import{b as r}from"./cabinet-CHLFxy3L.js";function _(){return`
         <div class="sign-in__form-input__wrapper">
           <div class="sign-in__form-input-box">
             <input
@@ -50,7 +50,7 @@ import{b as c,v as r,d as u,u as d}from"./vendor-CWeQpfky.js";import{b as a}from
           <p class="sign-in__log-in-via-title">Або увійдіть через</p>
         </div>
 
-        <ul class="sign-in__log-in-via-list">
+        <ul class="sign-in__log-in-via-list js-login-provider-list">
           <li class="sign-in__log-in-via-item">
             <svg
               width="44"
@@ -69,7 +69,7 @@ import{b as c,v as r,d as u,u as d}from"./vendor-CWeQpfky.js";import{b as a}from
             </svg>
           </li>
 
-          <li class="sign-in__log-in-via-item">
+          <li class="sign-in__log-in-via-item js-form-item-google">
             <svg
               width="44"
               height="44"
@@ -78,7 +78,7 @@ import{b as c,v as r,d as u,u as d}from"./vendor-CWeQpfky.js";import{b as a}from
             </svg>
           </li>
 
-          <li class="sign-in__log-in-via-item">
+          <li class="sign-in__log-in-via-item js-form-item-facebook">
             <svg
               width="44"
               height="44"
@@ -86,7 +86,7 @@ import{b as c,v as r,d as u,u as d}from"./vendor-CWeQpfky.js";import{b as a}from
               <use xlink:href="#icon-form-facebook"></use>
             </svg>
           </li>
-        </ul>`}function l(i){const s=i.querySelector(".js-form-input-icon-view");s==null||s.addEventListener("click",()=>{const n=i.querySelector(".js-form-input-password"),e=i.querySelector(".js-icon-line-cross-out");if(n.type==="password"){n.type="text",e.style.display="none";return}n.type="password",e.style.display="inline-block"})}function g(i){i.innerHTML=m(),i.addEventListener("submit",s=>{s.preventDefault();const n=document.querySelector(".js-login-email").value,e=document.querySelector(".js-login-password").value;c(a,n,e).then(t=>{t.user,window.location.href="/cabinet",i.reset()}).catch(t=>{console.error("Error signing in:",t),alert("Не вдалося увійти. Перевірте свій email або пароль і спробуйте ще раз.")})}),l(i)}function p(){return`
+        </ul>`}function a(i){const n=i.querySelector(".js-form-input-icon-view");n==null||n.addEventListener("click",()=>{const s=i.querySelector(".js-form-input-password"),e=i.querySelector(".js-icon-line-cross-out");if(s.type==="password"){s.type="text",e.style.display="none";return}s.type="password",e.style.display="inline-block"})}function f(){const i=new u;d(r,i).then(n=>{const s=n.user;console.log("User signed in with Google:",s),window.location.href="/cabinet"}).catch(n=>{console.error("Error signing in with Google:",n)})}function v(i){const n=i.querySelector(".js-login-provider-list");n==null||n.addEventListener("click",s=>{const e=s.target.closest("li");if(e!=null&&e.classList.contains("js-form-item-google")){f();return}})}function h(i){i.innerHTML=_(),i.addEventListener("submit",n=>{n.preventDefault();let s=document.querySelector(".js-login-email");if(!s)return;const e=s.value,o=document.querySelector(".js-login-password").value;console.log(e),g(r,e,o).then(t=>{t.user,window.location.href="/cabinet",i.reset()}).catch(t=>{console.error("Error signing in:",t),alert("Не вдалося увійти. Перевірте свій email або пароль і спробуйте ще раз.")})}),v(i),a(i)}function w(){return`
         <div class="sign-in__form-input-box">
           <input
             type="text"
@@ -126,5 +126,5 @@ import{b as c,v as r,d as u,u as d}from"./vendor-CWeQpfky.js";import{b as a}from
           class="sign-in__form-btn-submit sign-in__form-btn-submit_create"
           type="submit">
           Створити
-        </button>`}const _={minLength:8,minLowercase:1,minUppercase:1,minNumbers:1,minSymbols:0};async function v(i,s,n){if(!r.isEmail(i)){console.log("Invalid email address");return}if(!r.isStrongPassword(s,_)){console.log("Password is not strong enough");return}try{const t=(await u(a,i,s)).user;return await d(t,{displayName:n}),window.location.href="cabinet.html",t}catch(e){throw console.error("Error creating user:",e.code,e.message),e}}function f(i){i.innerHTML=p(),i.addEventListener("submit",s=>{s.preventDefault();const n=document.querySelector(".js-form-input-email").value,e=document.querySelector(".js-form-input-password").value,t=document.querySelector(".js-input-nickname").value;v(n,e,t).then(o=>{i.reset()}).catch(o=>{console.error("Registration failed:",o.message)})}),l(i)}function w(){const i=document.querySelector(".js-form-btn-enter"),s=document.querySelector(".js-form-btn-create"),n=document.querySelector(".js-form-btns-tumb"),e=document.querySelector(".js-sign-in-form");i==null||i.addEventListener("click",t);function t(){i==null||i.classList.add("active-btn"),s==null||s.classList.remove("active-btn"),n==null||n.classList.remove("sign-in__form-btns-tumb_active"),e instanceof HTMLFormElement&&g(e)}t(),s==null||s.addEventListener("click",o);function o(){s==null||s.classList.add("active-btn"),i==null||i.classList.remove("active-btn"),n==null||n.classList.add("sign-in__form-btns-tumb_active"),e instanceof HTMLFormElement&&f(e)}}export{w as s};
-//# sourceMappingURL=loginOrRegistrationHandler-Dwqx-wpo.js.map
+        </button>`}const b={minLength:8,minLowercase:1,minUppercase:1,minNumbers:1,minSymbols:0};async function y(i,n,s){if(!l.isEmail(i)){console.log("Invalid email address");return}if(!l.isStrongPassword(n,b)){console.log("Password is not strong enough");return}try{const o=(await m(r,i,n)).user;return await p(o,{displayName:s}),window.location.href="cabinet.html",o}catch(e){throw e}}function j(i){i.innerHTML=w(),i.addEventListener("submit",n=>{n.preventDefault();let s=document.querySelector(".js-form-input-email");if(!s)return;const e=s.value,o=document.querySelector(".js-form-input-password").value,t=document.querySelector(".js-input-nickname").value;y(e,o,t).then(c=>{i.reset()}).catch(c=>{alert("Користувч з таким email вже зареєстрований")})}),a(i)}function q(){const i=document.querySelector(".js-form-btn-enter"),n=document.querySelector(".js-form-btn-create"),s=document.querySelector(".js-form-btns-tumb"),e=document.querySelector(".js-sign-in-form");i==null||i.addEventListener("click",o);function o(){i==null||i.classList.add("active-btn"),n==null||n.classList.remove("active-btn"),s==null||s.classList.remove("sign-in__form-btns-tumb_active"),e instanceof HTMLFormElement&&h(e)}o(),n==null||n.addEventListener("click",t);function t(){n==null||n.classList.add("active-btn"),i==null||i.classList.remove("active-btn"),s==null||s.classList.add("sign-in__form-btns-tumb_active"),e instanceof HTMLFormElement&&j(e)}}export{q as s};
+//# sourceMappingURL=loginOrRegistrationHandler-B5wWHVD8.js.map
