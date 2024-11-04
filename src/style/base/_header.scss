@@ -183,13 +183,14 @@
   }
 
   &__user-inner-item {
-    padding: 15px 5px 15px 10px;
     opacity: 0.3;
     cursor: not-allowed;
 
     & > a {
+      display: block;
       cursor: not-allowed;
       pointer-events: none;
+      padding: 15px 5px 15px 10px;
     }
 
     &_active {

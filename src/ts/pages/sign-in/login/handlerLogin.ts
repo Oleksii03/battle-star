@@ -15,9 +15,8 @@ export function handlerLogin(form: HTMLFormElement) {
       .then(userCredential => {
         const user = userCredential.user;
 
-        console.log('User signed in:', user);
-
         window.location.href = '/cabinet';
+        form.reset();
       })
       .catch(error => {
         console.error('Error signing in:', error);
