@@ -11,7 +11,7 @@ export function header() {
   // ===handlerSergioList======
   sergioBox?.addEventListener('click', toggleSergioList);
 
-  function toggleSergioList(): void {
+  function toggleSergioList() {
     userInnerList?.classList.toggle('header__user-inner-list_open');
   }
 

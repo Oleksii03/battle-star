@@ -6,6 +6,7 @@ export function onStateUserChanged(): void {
   const activeUser = document.querySelector('.js-user-active-title');
   const itemCabinet = document.querySelector('.js-item-cabinet');
   const btnEnter = document.querySelector('.js-sidebar-btn-enter');
+  const btnExid = document.querySelector('.js-sidebar-btn-exit');
   // ---local refs --------------------------------
   onAuthStateChanged(auth, user => {
     // console.log(!!user);
@@ -13,6 +14,8 @@ export function onStateUserChanged(): void {
     if (user) {
       itemCabinet?.classList.add('header__user-inner-item_active');
       btnEnter?.classList.add('sidebar__nav-item_disabled');
+      btnExid?.classList.remove('sidebar__nav-item_hidden');
+
       // Отримання інформації про користувача
       // const uid = user.uid;
       // const email = user.email;
@@ -34,8 +37,9 @@ export function onStateUserChanged(): void {
       return;
     }
 
-    console.log('No user is signed in.');
+    // console.log('No user is signed in.');
     itemCabinet?.classList.remove('header__user-inner-item_active');
     btnEnter?.classList.remove('sidebar__nav-item_disabled');
+    btnExid?.classList.add('sidebar__nav-item_hidden');
   });
 }

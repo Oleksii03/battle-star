@@ -4,7 +4,7 @@ export function markup(): string {
           <div class="sign-in__form-input-box">
             <input
               type="email"
-              class="sign-in__form-input"
+              class="sign-in__form-input js-login-email"
               placeholder="Електронна пошта"
               required />
           </div>
@@ -12,7 +12,7 @@ export function markup(): string {
           <div class="sign-in__form-input-box">
             <input
               type="password"
-              class="sign-in__form-input"
+              class="sign-in__form-input js-form-input-password js-login-password"
               placeholder="Пароль"
               required />
 
@@ -20,10 +20,10 @@ export function markup(): string {
               <svg
                 width="24"
                 height="24"
-                class="sign-in__form-input-icon">
+                class="sign-in__form-input-icon js-form-input-icon-view">
                 <use xlink:href="#icon-eye-views"></use>
               </svg>
-              <span class="sign-in__form-input-icon-line"></span>
+              <span class="sign-in__form-input-icon-line js-icon-line-cross-out"></span>
             </div>
           </div>
         </div>

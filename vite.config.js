@@ -74,6 +74,7 @@ export default defineConfig(({ command }) => {
       },
       outDir: '../dist',
     },
+    resolve: { alias: { '@': path.resolve(__dirname, './src') } },
     plugins: [injectHTML(), FullReload(['./src/**/**.html'])],
   };
 });

@@ -1,5 +1,5 @@
 import { markup } from './createMarkup';
-import { toggleVisiblePassword } from './toggleVisiblePassword';
+import { toggleVisiblePassword } from '@/ts/utils/toggleVisiblePassword';
 import { registerUser } from './registerUser';
 
 export function handlerRegistration(form: HTMLFormElement): void {
@@ -15,7 +15,6 @@ export function handlerRegistration(form: HTMLFormElement): void {
 
     registerUser(email, password, nickname)
       .then(user => {
-        console.log(user);
         form.reset();
       })
       .catch(error => {
