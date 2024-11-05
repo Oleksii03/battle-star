@@ -2,6 +2,7 @@ export function markup(): string {
   return `
         <div class="sign-in__form-input-box">
           <input
+            id="name"
             type="text"
             class="sign-in__form-input js-input-nickname"
             placeholder="Введіть нікнейм"
@@ -11,6 +12,7 @@ export function markup(): string {
 
         <div class="sign-in__form-input-box">
           <input
+            id="email"
             type="email"
             class="sign-in__form-input js-form-input-email"
             placeholder="Електронна пошта"
@@ -19,6 +21,7 @@ export function markup(): string {
 
         <div class="sign-in__form-input-box">
           <input
+            id="password"
             type="password"
             class="sign-in__form-input js-form-input-password"
             placeholder="Придумайте пароль"

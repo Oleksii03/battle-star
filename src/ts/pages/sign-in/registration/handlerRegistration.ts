@@ -1,12 +1,9 @@
 import { markup } from './createMarkup';
 import { toggleVisiblePassword } from '@/ts/utils/toggleVisiblePassword';
 import { registerUser } from './registerUser';
-
+import { validateForm } from '@/ts/utils/validateForm';
 import 'toastr/build/toastr.min.css';
-
-import toastr from 'toastr';
-
-import 'toastr/build/toastr.min.css';
+// import toastr from 'toastr';
 
 export function handlerRegistration(form: HTMLFormElement): void {
   // markup
@@ -30,10 +27,12 @@ export function handlerRegistration(form: HTMLFormElement): void {
       })
       .catch(error => {
         // console.error('Registration failed:', error.message);
-        toastr.error('Користувч з таким email вже зареєстрований');
+        // toastr.error('Помилка реєстрації');
       });
   });
 
   // toggleVisiblePassword
   toggleVisiblePassword(form);
+  // validateForm
+  validateForm(form);
 }

@@ -4,11 +4,12 @@ import { markup } from './createMarkup';
 import { toggleVisiblePassword } from '@/ts/utils/toggleVisiblePassword';
 import { loginThroughProvider } from './loginThroughProvider';
 import 'toastr/build/toastr.min.css';
-import toastr from 'toastr';
-import { toastrOptions } from '@/ts/types/base/lib/lib';
-// import { cabinetUrl } from '@/ts/cabinet';
+// import toastr from 'toastr';
+// import { toastrOptions } from '@/ts/types/base/lib/lib';
 
-toastr.options = toastrOptions;
+import { validateForm } from '@/ts/utils/validateForm';
+
+// toastr.options = toastrOptions;
 
 export function handlerLogin(form: HTMLFormElement) {
   form.innerHTML = markup();
@@ -20,8 +21,6 @@ export function handlerLogin(form: HTMLFormElement) {
     const email = emailEl.value;
     const password = (document.querySelector('.js-login-password') as HTMLInputElement).value;
 
-    console.log(email);
-
     signInWithEmailAndPassword(auth, email, password)
       .then(userCredential => {
         // const user = userCredential.user;
@@ -29,8 +28,8 @@ export function handlerLogin(form: HTMLFormElement) {
         form.reset();
       })
       .catch(error => {
-        console.error('Error signing in:', error);
-        toastr.error('Не вдалося увійти. Перевірте свій email або пароль і спробуйте ще раз.');
+        // console.error('Error signing in:', error);
+        // toastr.error('Не вдалося увійти. Перевірте свій email або пароль і спробуйте ще раз.');
       });
   });
 
@@ -38,4 +37,6 @@ export function handlerLogin(form: HTMLFormElement) {
   loginThroughProvider(form);
   // toggleVisiblePassword
   toggleVisiblePassword(form);
+  //  validateForm
+  validateForm(form);
 }
