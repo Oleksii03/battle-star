@@ -11,6 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
   onStateUserChanged();
   onStateUserChanged();
   logout();
-
-  console.log(window.location.pathname);
 });
+
+export const cabinetUrl = window.location.pathname;

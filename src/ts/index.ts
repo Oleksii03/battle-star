@@ -17,5 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
   popularMatches();
   onStateUserChanged();
   logout();
-  console.log(window.location.pathname);
 });
+
+export const indextUrl = window.location.pathname;
