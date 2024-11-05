@@ -11,4 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
   onStateUserChanged();
   onStateUserChanged();
   logout();
+
+  console.log(window.location.pathname);
 });

@@ -17,6 +17,4 @@ document.addEventListener('DOMContentLoaded', () => {
   popularMatches();
   onStateUserChanged();
   logout();
-
-  console.log(window.location.hash);
 });
