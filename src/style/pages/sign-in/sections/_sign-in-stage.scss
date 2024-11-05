@@ -99,10 +99,14 @@
       padding: 15px 50px 15px 20px;
       border: 1px solid $light-gray-text;
       background-color: rgba(248, 248, 248, 0.1);
-      color: $basic-yellow;
+      color: $light-text;
+      font-size: 18px;
+      font-family: Roboto-Bold;
+      font-weight: 700;
+      line-height: normal;
 
       &:focus {
-        outline: 1px solid $basic-yellow;
+        outline: 1px solid rgba(248, 248, 248, 0.1);
       }
 
       &::placeholder {
@@ -110,6 +114,7 @@
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
+        line-height: normal;
         line-height: normal;
       }
 
@@ -265,3 +270,20 @@
     }
   }
 }
+
+.just-validate-error-label {
+  font-size: 17px !important; /* Наприклад, 16px, можна змінити за потреби */
+  color: $light-text !important; /* Залишається червоний колір */
+  position: absolute !important;
+  bottom: 0;
+  left: 102%;
+  white-space: nowrap;
+  background-color: red;
+  padding: 5px 10px !important;
+  border-radius: 5px 10px;
+}
+
+// .just-validate-success-field {
+//   border: 1px solid green; /* Додає зелений колір границі поля, за бажанням */
+//   background-color: #0fc00f; /* Додає зелений колір фону поля, за бажанням */
+// }
