@@ -1,6 +1,7 @@
 import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { auth } from '@/ts/utils/firebaseConfig';
 // import { cabinetUrl } from '@/ts/cabinet';
+import { cabinetUrl } from '@/ts/utils/router';
 
 export function loginThroughGoogle() {
   const provider = new GoogleAuthProvider();
@@ -11,7 +12,7 @@ export function loginThroughGoogle() {
 
       console.log('User signed in with Google:', user);
 
-      window.location.href = '/cabinet';
+      window.location.href = cabinetUrl;
     })
     .catch(error => {
       console.error('Error signing in with Google:', error);

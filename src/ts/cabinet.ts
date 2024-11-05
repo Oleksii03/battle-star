@@ -13,4 +13,4 @@ document.addEventListener('DOMContentLoaded', () => {
   logout();
 });
 
-const cabinetUrl = window.location.pathname;
+// const cabinetUrl = window.location.pathname;

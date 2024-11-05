@@ -19,6 +19,5 @@ document.addEventListener('DOMContentLoaded', () => {
   logout();
 });
 
-export const indextUrl = window.location.pathname;
-
-// console.log(indextUrl);
+export const baseUrl = window.location.pathname;
+export const indextU = window.location.hostname;
