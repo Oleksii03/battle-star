@@ -21,4 +21,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 export const indextUrl = window.location.pathname;
 
-console.log(indextUrl);
+// console.log(indextUrl);

@@ -14,5 +14,3 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const cabinetUrl = window.location.pathname;
-
-console.log(cabinetUrl);

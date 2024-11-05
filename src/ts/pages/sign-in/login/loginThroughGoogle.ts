@@ -11,7 +11,7 @@ export function loginThroughGoogle() {
 
       console.log('User signed in with Google:', user);
 
-      window.location.href = '/battle-star/cabinet';
+      window.location.href = '/cabinet';
     })
     .catch(error => {
       console.error('Error signing in with Google:', error);
