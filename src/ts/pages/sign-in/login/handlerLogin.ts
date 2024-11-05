@@ -6,7 +6,7 @@ import { loginThroughProvider } from './loginThroughProvider';
 import 'toastr/build/toastr.min.css';
 import toastr from 'toastr';
 import { toastrOptions } from '@/ts/types/base/lib/lib';
-import { cabinetUrl } from '@/ts/cabinet';
+// import { cabinetUrl } from '@/ts/cabinet';
 
 toastr.options = toastrOptions;
 
@@ -25,7 +25,7 @@ export function handlerLogin(form: HTMLFormElement) {
     signInWithEmailAndPassword(auth, email, password)
       .then(userCredential => {
         // const user = userCredential.user;
-        window.location.href = cabinetUrl;
+        window.location.href = '/cabinet';
         form.reset();
       })
       .catch(error => {

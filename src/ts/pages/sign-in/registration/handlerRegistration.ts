@@ -3,6 +3,7 @@ import { toggleVisiblePassword } from '@/ts/utils/toggleVisiblePassword';
 import { registerUser } from './registerUser';
 
 import 'toastr/build/toastr.min.css';
+
 import toastr from 'toastr';
 
 import 'toastr/build/toastr.min.css';

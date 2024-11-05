@@ -10,6 +10,4 @@ export function returnToThePage(currentPage: string): string | undefined {
     console.log('cabinet');
     return '/index.html';
   }
-
-  console.log('no index');
 }

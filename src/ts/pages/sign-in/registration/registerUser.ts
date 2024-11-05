@@ -1,6 +1,6 @@
 import { createUserWithEmailAndPassword, updateProfile, User } from 'firebase/auth';
 import { auth } from '@/ts/utils/firebaseConfig';
-import { cabinetUrl } from '@/ts/cabinet';
+// import { cabinetUrl } from '@/ts/cabinet';
 import { passwordCriteria } from './passwordCriteria';
 import { isEmail, isStrongPassword } from 'validator';
 
@@ -24,7 +24,7 @@ export async function registerUser(
     const user = userCredential.user;
     await updateProfile(user, { displayName: nickname });
 
-    window.location.href = cabinetUrl;
+    // window.location.href = cabinetUrl;
     return user;
   } catch (error: any) {
     console.error('Error creating user:', error.code, error.message);
