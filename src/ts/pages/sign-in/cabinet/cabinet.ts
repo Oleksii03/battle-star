@@ -41,5 +41,6 @@ export function onStateUserChanged(): void {
     itemCabinet?.classList.remove('header__user-inner-item_active');
     btnEnter?.classList.remove('sidebar__nav-item_disabled');
     btnExid?.classList.add('sidebar__nav-item_hidden');
+    if (activeUser) activeUser.textContent = 'User';
   });
 }

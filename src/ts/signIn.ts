@@ -7,3 +7,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 export const signIntUrl = window.location.pathname;
+
+console.log(signIntUrl);
