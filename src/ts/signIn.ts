@@ -5,7 +5,3 @@ document.addEventListener('DOMContentLoaded', () => {
   signInOrSignUpHandler();
   onStateUserChanged();
 });
-
-export const signIntUrl = window.location.pathname;
-
-console.log(signIntUrl);

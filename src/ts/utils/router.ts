@@ -1,4 +1,6 @@
 import { baseUrl } from '../';
 
-export const cabinetUrl =
-  window.location.hostname === 'localhost' ? '/cabinet' : `${baseUrl}cabinet`;
+export function createCabinetUrl() {
+  const cabinetUrl = window.location.hostname === 'localhost' ? '/cabinet' : `${baseUrl}cabinet`;
+  return cabinetUrl;
+}
