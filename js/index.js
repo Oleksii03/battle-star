@@ -277,5 +277,5 @@ import{a as w,o as $}from"../assets/cabinet-CutMVcwI.js";import{u as L,g as y,T 
                     alt="${m}" />
                 </a>
               </div>
-            </li>`});s.innerHTML=e.join("")}function W(t=" "){_(t).then(s=>U(s)).catch(s=>console.error("Error fetching data:",s))}function V(){G(S),W(k)}document.addEventListener("DOMContentLoaded",()=>{M(),H(),A(),C(),R(),z(),V(),$(),j()});
+            </li>`});s.innerHTML=e.join("")}function W(t=" "){_(t).then(s=>U(s)).catch(s=>console.error("Error fetching data:",s))}function V(){G(S),W(k)}document.addEventListener("DOMContentLoaded",()=>{M(),H(),A(),C(),R(),z(),V(),$(),j(),console.log(window.location.host)});
 //# sourceMappingURL=index.js.map
