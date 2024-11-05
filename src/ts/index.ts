@@ -6,7 +6,6 @@ import { mainLeaderboard } from './pages/main/main-leaderboard/mainLeaderboard';
 import { popularMatches } from './pages/main/popular-matches/popularMatches';
 import { onStateUserChanged } from './pages/sign-in/cabinet/cabinet';
 import { logout } from './pages/sign-in/cabinet/signOut';
-import { createCabinetUrl } from './utils/router';
 
 document.addEventListener('DOMContentLoaded', () => {
   header();
@@ -18,8 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
   popularMatches();
   onStateUserChanged();
   logout();
-  console.log(createCabinetUrl());
 });
 
 export const baseUrl = window.location.pathname;
-export const indextU = window.location.hostname;
