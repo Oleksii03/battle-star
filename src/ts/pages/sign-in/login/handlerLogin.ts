@@ -5,22 +5,7 @@ import { toggleVisiblePassword } from '@/ts/utils/toggleVisiblePassword';
 import { loginThroughProvider } from './loginThroughProvider';
 import 'toastr/build/toastr.min.css';
 import toastr from 'toastr';
-
-interface ToastrOptions {
-  positionClass: string;
-  closeButton: boolean;
-  progressBar: boolean;
-  timeOut: number;
-  extendedTimeOut: number;
-}
-
-const toastrOptions: ToastrOptions = {
-  positionClass: 'toast-top-right',
-  closeButton: true,
-  progressBar: true,
-  timeOut: 5000,
-  extendedTimeOut: 1000,
-};
+import { toastrOptions } from '@/ts/types/base/lib/lib';
 
 toastr.options = toastrOptions;
 
@@ -38,7 +23,7 @@ export function handlerLogin(form: HTMLFormElement) {
 
     signInWithEmailAndPassword(auth, email, password)
       .then(userCredential => {
-        const user = userCredential.user;
+        // const user = userCredential.user;
 
         window.location.href = '/cabinet';
         form.reset();
