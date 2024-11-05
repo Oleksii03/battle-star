@@ -1,6 +1,6 @@
 import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { auth } from '@/ts/utils/firebaseConfig';
-import { createCabinetUrl } from '@/ts/utils/router';
+// import { createCabinetUrl } from '@/ts/utils/router';
 
 export function loginThroughGoogle() {
   const provider = new GoogleAuthProvider();
@@ -11,7 +11,8 @@ export function loginThroughGoogle() {
 
       console.log('User signed in with Google:', user);
 
-      window.location.href = createCabinetUrl();
+      window.location.href =
+        window.location.hostname === 'localhost' ? '/cabinet' : '/battle-star/cabinet';
     })
     .catch(error => {
       console.error('Error signing in with Google:', error);
