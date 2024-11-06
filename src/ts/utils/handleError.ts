@@ -11,5 +11,5 @@ export function handleError(error: unknown): void {
     console.log('Виникла невідома помилка:', error);
   }
 
-  toastr.error('Щось пішло не так. Спробуйте ще раз пізніше.');
+  toastr.error('Щось пішло не так. Спробуйте ще раз.');
 }
