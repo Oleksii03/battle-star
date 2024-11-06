@@ -128,7 +128,7 @@
       // icon-box
       &-icon-box {
         position: absolute;
-        top: 50%;
+        top: 28px;
         right: 16px;
         transform: translateY(-50%);
         color: $light-gray-text;
@@ -272,18 +272,12 @@
 }
 
 .just-validate-error-label {
-  font-size: 17px !important; /* Наприклад, 16px, можна змінити за потреби */
-  color: $light-text !important; /* Залишається червоний колір */
-  position: absolute !important;
-  bottom: 0;
-  left: 102%;
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 17px !important;
+  color: $light-text !important;
   white-space: nowrap;
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.614);
   padding: 5px 10px !important;
   border-radius: 5px 10px;
 }
-
-// .just-validate-success-field {
-//   border: 1px solid green; /* Додає зелений колір границі поля, за бажанням */
-//   background-color: #0fc00f; /* Додає зелений колір фону поля, за бажанням */
-// }

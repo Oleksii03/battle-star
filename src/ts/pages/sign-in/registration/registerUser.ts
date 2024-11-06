@@ -1,5 +1,6 @@
 import { createUserWithEmailAndPassword, updateProfile, User } from 'firebase/auth';
 import { auth } from '@/ts/utils/firebaseConfig';
+import { handleError } from '@/ts/utils/handleError';
 
 export async function registerUser(
   email: string,
@@ -13,8 +14,7 @@ export async function registerUser(
 
     window.location.href = '/cabinet';
     return user;
-  } catch (error: any) {
-    console.error('Error creating user:', error.code, error.message);
-    throw error;
+  } catch (error) {
+    handleError(error);
   }
 }

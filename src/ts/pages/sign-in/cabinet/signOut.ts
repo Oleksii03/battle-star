@@ -1,6 +1,7 @@
 import { signOut } from 'firebase/auth';
 import { auth } from '@/ts/utils/firebaseConfig';
 import { returnToThePage } from '@/ts/utils/returnToThePage';
+import { handleError } from '@/ts/utils/handleError';
 
 export function logout() {
   const logoutBtn = document.querySelector('.js-sidebar-btn-exit');
@@ -17,7 +18,7 @@ export function logout() {
           }
         })
         .catch(error => {
-          console.error('Error signing out:', error);
+          handleError(error);
         });
     });
   }

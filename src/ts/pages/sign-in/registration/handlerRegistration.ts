@@ -2,8 +2,7 @@ import { markup } from './createMarkup';
 import { toggleVisiblePassword } from '@/ts/utils/toggleVisiblePassword';
 import { registerUser } from './registerUser';
 import { validateForm } from '@/ts/utils/validateForm';
-import 'toastr/build/toastr.min.css';
-// import toastr from 'toastr';
+import { handleError } from '@/ts/utils/handleError';
 
 export function handlerRegistration(form: HTMLFormElement): void {
   // markup
@@ -26,8 +25,7 @@ export function handlerRegistration(form: HTMLFormElement): void {
         form.reset();
       })
       .catch(error => {
-        // console.error('Registration failed:', error.message);
-        // toastr.error('Помилка реєстрації');
+        handleError(error);
       });
   });
 

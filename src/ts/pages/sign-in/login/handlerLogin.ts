@@ -4,12 +4,8 @@ import { markup } from './createMarkup';
 import { toggleVisiblePassword } from '@/ts/utils/toggleVisiblePassword';
 import { loginThroughProvider } from './loginThroughProvider';
 import 'toastr/build/toastr.min.css';
-// import toastr from 'toastr';
-// import { toastrOptions } from '@/ts/types/base/lib/lib';
-
 import { validateForm } from '@/ts/utils/validateForm';
-
-// toastr.options = toastrOptions;
+import { handleError } from '@/ts/utils/handleError';
 
 export function handlerLogin(form: HTMLFormElement) {
   form.innerHTML = markup();
@@ -28,8 +24,7 @@ export function handlerLogin(form: HTMLFormElement) {
         form.reset();
       })
       .catch(error => {
-        // console.error('Error signing in:', error);
-        // toastr.error('Не вдалося увійти. Перевірте свій email або пароль і спробуйте ще раз.');
+        handleError(error);
       });
   });
 
