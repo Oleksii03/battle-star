@@ -3,6 +3,7 @@ import { signInOrSignUpHandler } from './pages/sign-in/loginOrRegistrationHandle
 import { onStateUserChanged } from './pages/sign-in/cabinet/cabinet';
 import { header } from './components/header';
 import { logout } from './pages/sign-in/cabinet/signOut';
+import { pageCabinet } from './pages/cabinet/pageCabinet';
 
 document.addEventListener('DOMContentLoaded', () => {
   settingsHtmlComponents();
@@ -11,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   onStateUserChanged();
   onStateUserChanged();
   logout();
+  pageCabinet();
 });
 
 // const cabinetUrl = window.location.pathname;

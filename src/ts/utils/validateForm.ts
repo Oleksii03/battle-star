@@ -1,12 +1,5 @@
 import JustValidate from 'just-validate';
 
-// type ValidationRule =
-//   | { rule: 'required'; errorMessage: string }
-//   | { rule: 'email'; errorMessage: string }
-//   | { rule: 'password'; errorMessage: string }
-//   | { rule: 'minLength'; value: number; errorMessage: string }
-//   | { rule: 'maxLength'; value: number; errorMessage: string };
-
 export function validateForm(form: HTMLFormElement) {
   const emailEl = form.querySelector('#email') as HTMLInputElement;
   const passwordEl = form.querySelector('#password') as HTMLInputElement;

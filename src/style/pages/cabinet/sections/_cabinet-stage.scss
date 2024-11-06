@@ -1,0 +1,108 @@
+.cabinet {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  min-height: calc(100vh - 180px);
+  background: url(../../../assets/img/pages/cabinet/stage/cabinet-bg-img.webp);
+  background-repeat: repeat-x;
+  background-position: 0 -18px;
+
+  &__container {
+    max-width: 1635px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 265px 1fr;
+    column-gap: 33px;
+
+    @include media-min-width(xl) {
+      grid-template-columns: 215px 1fr;
+    }
+  }
+
+  &__sidebar {
+    display: flex;
+    column-gap: 15px;
+  }
+
+  // navigation
+  // track
+  &__nav-track {
+    position: relative;
+    width: 4px;
+    height: 100%;
+    border-radius: 4px;
+    background: rgba(196, 196, 196, 0.1);
+    order: 2;
+  }
+  &__nav-thumb {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 16%;
+    border-radius: 4px;
+    background-color: $basic-yellow;
+    transition: top 200ms linear;
+  }
+
+  // --list
+  &__nav-list {
+    padding: 19px 0;
+    display: inline-flex;
+    flex-direction: column;
+    row-gap: 34px;
+    align-items: flex-end;
+
+    @media (max-width: 1919px) {
+      padding-left: 50px;
+    }
+  }
+
+  &__nav-item {
+    @include flex-align-row;
+    column-gap: 18px;
+    cursor: pointer;
+
+    &-text {
+      color: rgba(248, 248, 248, 0.6);
+      font-size: 20px;
+      line-height: normal;
+      white-space: nowrap;
+      transition: left 200ms linear;
+    }
+
+    &-icon {
+      width: 24px;
+      height: 24px;
+      fill: rgba(248, 248, 248, 0.6);
+      transition: left 200ms linear;
+    }
+
+    &:hover {
+      & > .cabinet__nav-item-text {
+        color: $basic-yellow;
+      }
+      & > .cabinet__nav-item-icon {
+        fill: $basic-yellow;
+      }
+    }
+
+    &_active {
+      & > .cabinet__nav-item-text {
+        color: $basic-yellow;
+      }
+      & > .cabinet__nav-item-icon {
+        fill: $basic-yellow;
+      }
+    }
+  }
+
+  // main
+  &__main {
+    background: rgba(88, 86, 86, 0.274);
+    backdrop-filter: blur(60px);
+  }
+}

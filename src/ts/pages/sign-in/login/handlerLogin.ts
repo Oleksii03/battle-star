@@ -8,8 +8,9 @@ import { validateForm } from '@/ts/utils/validateForm';
 import { handleError } from '@/ts/utils/handleError';
 
 export function handlerLogin(form: HTMLFormElement) {
+  // create-markup
   form.innerHTML = markup();
-
+  // handler-login
   form.addEventListener('submit', (e: Event) => {
     e.preventDefault();
     let emailEl = document.querySelector('.js-login-email') as HTMLInputElement;
@@ -28,10 +29,10 @@ export function handlerLogin(form: HTMLFormElement) {
       });
   });
 
-  // loginThroughProvider
+  // login-through-provider
   loginThroughProvider(form);
-  // toggleVisiblePassword
+  // toggle-visible-password
   toggleVisiblePassword(form);
-  //  validateForm
+  //  validate-form
   validateForm(form);
 }

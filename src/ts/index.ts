@@ -19,8 +19,4 @@ document.addEventListener('DOMContentLoaded', () => {
   logout();
 });
 
-export const baseUrl = window.location.pathname;
-
-import { createCabinetUrl } from './utils/router';
-
-console.log(createCabinetUrl());
+// export const baseUrl = window.location.pathname;
