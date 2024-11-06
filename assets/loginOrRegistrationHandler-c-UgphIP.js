@@ -1,4 +1,4 @@
-import{b as d,d as m,J as g,e as p,f as _,u as v}from"./vendor-D1i2NHrS.js";import{b as o,h as a}from"./cabinet-CaNW9s6h.js";function f(){return`
+import{b as d,d as m,J as g,e as p,f as _,u as v}from"./vendor-D1i2NHrS.js";import{b as o,h as a}from"./cabinet-gPkUm1Og.js";function f(){return`
         <div class="sign-in__form-input__wrapper">
           <div class="sign-in__form-input-box">
             <input
@@ -132,4 +132,4 @@ import{b as d,d as m,J as g,e as p,f as _,u as v}from"./vendor-D1i2NHrS.js";impo
           type="submit">
           Створити
         </button>`}async function j(i,e,s){try{const t=(await _(o,i,e)).user;return await v(t,{displayName:s}),window.location.href="/cabinet",t}catch(n){a(n)}}function q(i){i.innerHTML=y(),i.addEventListener("submit",e=>{e.preventDefault();let s=document.querySelector(".js-form-input-email");if(!s)return;const n=s.value.trim(),t=document.querySelector(".js-form-input-password").value,r=document.querySelector(".js-input-nickname").value.trim();j(n,t,r).then(l=>{i.reset()}).catch(l=>{a(l)})}),c(i),u(i)}function x(){const i=document.querySelector(".js-form-btn-enter"),e=document.querySelector(".js-form-btn-create"),s=document.querySelector(".js-form-btns-tumb"),n=document.querySelector(".js-sign-in-form");i==null||i.addEventListener("click",t);function t(){i==null||i.classList.add("active-btn"),e==null||e.classList.remove("active-btn"),s==null||s.classList.remove("sign-in__form-btns-tumb_active"),n instanceof HTMLFormElement&&b(n)}t(),e==null||e.addEventListener("click",r);function r(){e==null||e.classList.add("active-btn"),i==null||i.classList.remove("active-btn"),s==null||s.classList.add("sign-in__form-btns-tumb_active"),n instanceof HTMLFormElement&&q(n)}}export{x as s};
-//# sourceMappingURL=loginOrRegistrationHandler-DIBYyBI7.js.map
+//# sourceMappingURL=loginOrRegistrationHandler-c-UgphIP.js.map
