@@ -83,7 +83,77 @@
       </div>
 
       <!-- cabinet-main -->
-      <div class="cabinet__main"></div>
+      <div class="cabinet__main cabinet-main js-cabinet-main-body">
+        <!-- btns -->
+        <div class="cabinet-main__btns">
+          <div class="cabinet-main__btns-box">
+            <button
+              class="cabinet-main__btn cabinet-main__btn_csgo"
+              type="button">
+              CS:GO
+            </button>
+
+            <button
+              class="cabinet-main__btn cabinet-main__btn_active cabinet-main__btn_dota"
+              type="button">
+              DOTA 2
+            </button>
+          </div>
+          <!--btns track -->
+          <div class="cabinet-main__btns-track">
+            <span class="cabinet-main__btns-thumb js-cabinet-main-thumb"></span>
+          </div>
+        </div>
+
+        <!-- rank -->
+        <div class="cabinet-main__rank">
+          <p class="cabinet-main__rank-title">Ранг: 1682</p>
+
+          <ul class="cabinet-main__rank-list">
+            <li class="cabinet-main__rank-item">
+              <svg
+                width="26"
+                height="26"
+                class="cabinet-main__rank-item-icon cabinet-main__rank-item-icon_tournaments">
+                <use xlink:href="#icon-sidebar-tournaments"></use>
+              </svg>
+
+              <div class="cabinet-main__rank-item-desc">
+                <p class="cabinet-main__rank-item-value">4</p>
+                <p class="cabinet-main__rank-item-text">Турніру</p>
+              </div>
+            </li>
+
+            <li class="cabinet-main__rank-item">
+              <svg
+                width="26"
+                height="26"
+                class="cabinet-main__rank-item-icon cabinet-main__rank-item-icon_statistics">
+                <use xlink:href="#icon-statistics"></use>
+              </svg>
+
+              <div class="cabinet-main__rank-item-desc">
+                <p class="cabinet-main__rank-item-value">76%</p>
+                <p class="cabinet-main__rank-item-text">Вінрейт</p>
+              </div>
+            </li>
+
+            <li class="cabinet-main__rank-item">
+              <svg
+                width="26"
+                height="26"
+                class="cabinet-main__rank-item-icon cabinet-main__rank-item-icon_clock">
+                <use xlink:href="#icon-clock"></use>
+              </svg>
+
+              <div class="cabinet-main__rank-item-desc">
+                <p class="cabinet-main__rank-item-value">214</p>
+                <p class="cabinet-main__rank-item-text">Годинник у грі</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </section>

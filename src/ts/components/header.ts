@@ -1,30 +1,21 @@
 export const userInnerList = document.querySelector('.js-user-inner-list');
 export const gameInnerList = document.querySelector('.js-game-dropdown-item-inner-list');
+export const iconArrowDown = document.querySelector('.js-icon-arrow-down');
 // ---reusable-refs------------
 export function header() {
   const sergioBox = document.querySelector('.js-user-item-box');
-  // const activeUser = document.querySelector('.js-user-active-title');
   const gameDropdownBox = document.querySelector('.js-game-dropdown-box');
   const gameDropdownActiveTitle = document.querySelector('.js-game-dropdown-active-title');
+
   // ----local-refs------------------
 
   // ===handlerSergioList======
-  sergioBox?.addEventListener('click', toggleSergioList);
+  sergioBox?.addEventListener('click', toggleUserList);
 
-  function toggleSergioList() {
+  function toggleUserList() {
     userInnerList?.classList.toggle('header__user-inner-list_open');
+    iconArrowDown?.classList.toggle('header__user-item-icon_rotate');
   }
-
-  // ---userInnerList---
-  // userInnerList?.addEventListener('click', getTextContentFromuserList);
-
-  // function getTextContentFromuserList(e: Event): void {
-  //   const targetEL = e.target as HTMLElement;
-  //   if (activeUser && targetEL) {
-  //     activeUser.textContent = targetEL.textContent;
-  //   }
-  //   toggleuserList();
-  // }
 
   // ===handlerGameList======
   gameDropdownBox?.addEventListener('click', toggleGameList);

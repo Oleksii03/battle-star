@@ -153,6 +153,11 @@
       width: 24px;
       height: 24px;
       fill: $light-text;
+      transition: all 200ms linear;
+
+      &_rotate {
+        transform: rotate(-180deg);
+      }
     }
   }
   // user-inner-list

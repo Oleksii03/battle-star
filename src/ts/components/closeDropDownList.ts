@@ -1,5 +1,5 @@
-import { userInnerList } from './header';
-import { gameInnerList } from './header';
+import { userInnerList, gameInnerList, iconArrowDown } from './header';
+// import { gameInnerList } from './header';
 
 export function closeDropDownList(): void {
   document.addEventListener('click', (e: Event) => {
@@ -23,6 +23,7 @@ export function closeDropDownList(): void {
 
     if (isuserListOpen) {
       userInnerList?.classList.remove('header__user-inner-list_open');
+      iconArrowDown?.classList.remove('header__user-item-icon_rotate');
     }
   }
 
