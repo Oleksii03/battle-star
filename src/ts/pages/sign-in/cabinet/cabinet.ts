@@ -2,19 +2,19 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../../../utils/firebaseConfig';
 
 export function onStateUserChanged(): void {
-  // const userA = document.querySelector('.js-user');
   const activeUser = document.querySelector('.js-user-active-title');
   const itemCabinet = document.querySelector('.js-item-cabinet');
   const btnEnter = document.querySelector('.js-sidebar-btn-enter');
   const btnExid = document.querySelector('.js-sidebar-btn-exit');
   const pageError = document.querySelector('.js-page-error');
-
+  const cabinet = document.querySelector('.js-cabinet');
   // ---local refs --------------------------------
   onAuthStateChanged(auth, user => {
     if (user) {
       itemCabinet?.classList.add('header__user-inner-item_active');
       btnEnter?.classList.add('sidebar__nav-item_disabled');
       btnExid?.classList.remove('sidebar__nav-item_hidden');
+      cabinet?.classList.add('cabinet_visible');
 
       // Отримання інформації про користувача
       // const uid = user.uid;
@@ -47,6 +47,7 @@ export function onStateUserChanged(): void {
     btnEnter?.classList.remove('sidebar__nav-item_disabled');
     btnExid?.classList.add('sidebar__nav-item_hidden');
     pageError?.classList.remove('page-error_hidden');
+    cabinet?.classList.remove('cabinet_visible');
 
     if (activeUser) activeUser.textContent = 'User';
   });

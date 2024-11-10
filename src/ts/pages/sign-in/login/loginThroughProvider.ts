@@ -8,7 +8,6 @@ export function loginThroughProvider(form: HTMLFormElement) {
 
     if (targetEl?.classList.contains('js-form-item-google')) {
       loginThroughGoogle();
-      return;
     }
   });
 }

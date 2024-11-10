@@ -22,6 +22,7 @@ export function handlerLogin(form: HTMLFormElement) {
       .then(userCredential => {
         // const user = userCredential.user;
         window.location.href = '/cabinet';
+        localStorage.setItem('logged', 'true');
         form.reset();
       })
       .catch(handleError);

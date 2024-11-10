@@ -5,6 +5,11 @@
   background: url(../../../assets/img/pages/cabinet/stage/cabinet-bg-img.webp);
   background-repeat: repeat-x;
   background-position: 0 -18px;
+  opacity: 0;
+
+  &_visible {
+    opacity: 1;
+  }
 
   &__container {
     max-width: 1635px;
