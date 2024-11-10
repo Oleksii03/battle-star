@@ -12,8 +12,7 @@ export function loginThroughGoogle() {
 
       window.location.href =
         window.location.hostname === 'localhost' ? '/cabinet' : '/battle-star/cabinet';
+      localStorage.setItem('logged', 'true');
     })
-    .catch(error => {
-      handleError(error);
-    });
+    .catch(handleError);
 }

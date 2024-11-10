@@ -4,6 +4,7 @@ import { onStateUserChanged } from './pages/sign-in/cabinet/cabinet';
 import { header } from './components/header';
 import { logout } from './pages/sign-in/cabinet/signOut';
 import { pageCabinet } from './pages/cabinet/pageCabinet';
+import { checkAuth } from './utils/checkAuth';
 
 document.addEventListener('DOMContentLoaded', () => {
   settingsHtmlComponents();
@@ -13,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   onStateUserChanged();
   logout();
   pageCabinet();
+  checkAuth();
 });
 
 // const cabinetUrl = window.location.pathname;

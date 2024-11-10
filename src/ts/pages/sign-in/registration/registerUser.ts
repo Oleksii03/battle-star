@@ -13,6 +13,7 @@ export async function registerUser(
     await updateProfile(user, { displayName: nickname });
 
     window.location.href = '/cabinet';
+    localStorage.setItem('logged', 'true');
     return user;
   } catch (error) {
     handleError(error);

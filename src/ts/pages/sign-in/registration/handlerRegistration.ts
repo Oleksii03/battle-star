@@ -24,9 +24,7 @@ export function handlerRegistration(form: HTMLFormElement): void {
       .then(user => {
         form.reset();
       })
-      .catch(error => {
-        handleError(error);
-      });
+      .catch(handleError);
   });
 
   // toggleVisiblePassword

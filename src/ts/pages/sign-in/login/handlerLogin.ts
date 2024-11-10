@@ -24,9 +24,7 @@ export function handlerLogin(form: HTMLFormElement) {
         window.location.href = '/cabinet';
         form.reset();
       })
-      .catch(error => {
-        handleError(error);
-      });
+      .catch(handleError);
   });
 
   // login-through-provider

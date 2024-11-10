@@ -15,11 +15,10 @@ export function logout() {
           const page = returnToThePage(currentPage);
           if (typeof page === 'string') {
             window.location.href = page;
+            localStorage.setItem('logged', 'false');
           }
         })
-        .catch(error => {
-          handleError(error);
-        });
+        .catch(handleError);
     });
   }
 }

@@ -7,10 +7,10 @@ export function onStateUserChanged(): void {
   const itemCabinet = document.querySelector('.js-item-cabinet');
   const btnEnter = document.querySelector('.js-sidebar-btn-enter');
   const btnExid = document.querySelector('.js-sidebar-btn-exit');
+  const pageError = document.querySelector('.js-page-error');
+
   // ---local refs --------------------------------
   onAuthStateChanged(auth, user => {
-    // console.log(!!user);
-
     if (user) {
       itemCabinet?.classList.add('header__user-inner-item_active');
       btnEnter?.classList.add('sidebar__nav-item_disabled');
@@ -19,6 +19,7 @@ export function onStateUserChanged(): void {
       // Отримання інформації про користувача
       // const uid = user.uid;
       // const email = user.email;
+      // document.body.classList.remove('to-freeze');
 
       const displayName = user.displayName;
       // const displayName = 'Sergio Richterf';
@@ -37,10 +38,16 @@ export function onStateUserChanged(): void {
       return;
     }
 
+    // if (!user) {
+    //   window.location.href = '/';
+    //   return;
+    // }
     // console.log('No user is signed in.');
     itemCabinet?.classList.remove('header__user-inner-item_active');
     btnEnter?.classList.remove('sidebar__nav-item_disabled');
     btnExid?.classList.add('sidebar__nav-item_hidden');
+    pageError?.classList.remove('page-error_hidden');
+
     if (activeUser) activeUser.textContent = 'User';
   });
 }
