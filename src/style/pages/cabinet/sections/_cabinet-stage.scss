@@ -21,7 +21,6 @@
     display: grid;
     grid-template-columns: 265px 1fr;
     column-gap: 33px;
-    // align-items: start;
 
     @include media-min-width(xl) {
       grid-template-columns: 215px 1fr;
