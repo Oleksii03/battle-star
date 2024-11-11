@@ -1,7 +1,10 @@
-import { setActiveListItem } from './local-components/setActiveListItem';
+import { setActiveListItem } from './local-components/base/setActiveListItem';
+import { statisticHandler } from './local-components/statistics/statistic';
+import { historyMatches } from './local-components/history-matches/historyMatches';
 
 export function pageCabinet() {
   const navigationList = document.querySelector('.js-cabinet-nav-list') as HTMLUListElement;
+  const cabinetMainContainer = document.querySelector('.js-cabinet-main-body') as HTMLElement;
 
   navigationList?.addEventListener('click', handleNavigationList);
 
@@ -12,5 +15,9 @@ export function pageCabinet() {
 
     // sets-the-active-list-item
     setActiveListItem(targetEl, navigationList);
+
+    // ===component handlers====
+    if (targetEl.classList.contains('js-statistics')) statisticHandler(cabinetMainContainer);
+    if (targetEl.classList.contains('js-history')) historyMatches(cabinetMainContainer);
   }
 }

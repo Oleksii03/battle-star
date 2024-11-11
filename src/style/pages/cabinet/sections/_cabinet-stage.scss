@@ -328,6 +328,7 @@
   &__title-box {
     @include flex-align-row;
     justify-content: space-between;
+    margin-bottom: 32px;
   }
 
   &__title {
@@ -405,6 +406,98 @@
 
       &:hover {
         background-color: #fac9042e;
+      }
+    }
+  }
+
+  // cabinet-history__list
+  &__list {
+    &-item {
+      @include flex-align-row;
+      justify-content: space-between;
+      column-gap: 50px;
+      padding: 17px 0px;
+      border-top: 1px solid #3f3d46;
+
+      &-title {
+        font-family: Roboto-Regular;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      // medium-content
+      & > .medium-content {
+        @include flex-align-row;
+        column-gap: 50px;
+      }
+
+      &-date {
+        &-box {
+          @include flex-align-row;
+          column-gap: 23px;
+          font-family: Roboto-Regular;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+
+      &-regime {
+        &-box {
+          @include flex-align-row;
+          column-gap: 9px;
+          font-family: Roboto-Regular;
+          font-weight: 400;
+          line-height: normal;
+        }
+        &-title {
+          color: #989898;
+        }
+      }
+
+      &-id {
+        text-decoration: underline;
+
+        &-box {
+          @include flex-align-row;
+          column-gap: 11px;
+          font-family: Roboto-Regular;
+          font-weight: 400;
+          line-height: normal;
+        }
+        &-title {
+          color: #989898;
+        }
+      }
+      // --/-- medium-content
+
+      &-result {
+        @include flex-align-row;
+        column-gap: 52px;
+
+        &-title {
+          text-align: right;
+          font-family: Roboto-Regular;
+          font-weight: 400;
+          line-height: normal;
+
+          &_victory {
+            color: #6fff57;
+          }
+        }
+
+        &-score {
+          white-space: nowrap;
+          color: $basic-yellow;
+          text-align: right;
+          font-family: Roboto-Regular;
+          font-weight: 400;
+          line-height: normal;
+
+          & > .currency {
+            text-decoration: line-through;
+          }
+        }
       }
     }
   }
