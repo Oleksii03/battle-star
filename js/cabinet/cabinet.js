@@ -1,4 +1,4 @@
-import{h as _,o as l}from"../../assets/cabinet-CWERuWV8.js";import{P as r,g as o,H as m,h as p,l as u}from"../../assets/getDataFromFirestore-CBajoQ2D.js";import{s as b}from"../../assets/loginOrRegistrationHandler-CBIEuIa6.js";import"../../assets/vendor-DZUFF-U2.js";function d(){if(window.location.pathname.includes(r)){const s=document.querySelector(".js-user-inner-list"),a=document.querySelector(".js-sidebar-btn-exit"),e=document.querySelector(".js-sidebar-btn-enter"),i=document.querySelector(".js-user-active-title"),c=document.querySelector(".js-icon-arrow-down"),n=document.querySelector(".header__user-item");a==null||a.classList.remove("sidebar__nav-item_hidden"),e==null||e.classList.add("sidebar__nav-item_hidden"),i.style.cursor="auto",i&&(i.style.cursor="auto"),s&&(s.style.display="none"),c&&(c.style.display="none"),n&&(n.style.cursor="auto")}}function y(t,s){const a=document.querySelector(".js-cabinet-nav-thumb"),e=[...s.children],i=e.indexOf(t);a.style.top=`${16.66*i}%`,e.forEach(c=>{c.classList.remove("cabinet__nav-item_active")}),t.classList.add("cabinet__nav-item_active")}function g(t){const s=`
+import{h as y,o as l}from"../../assets/cabinet-CWERuWV8.js";import{P as h,g,H as v,h as k,l as w}from"../../assets/getDataFromFirestore-CBajoQ2D.js";import{s as f}from"../../assets/loginOrRegistrationHandler-CBIEuIa6.js";import"../../assets/vendor-DZUFF-U2.js";function x(){if(window.location.pathname.includes(h)){const s=document.querySelector(".js-user-inner-list"),a=document.querySelector(".js-sidebar-btn-exit"),e=document.querySelector(".js-sidebar-btn-enter"),i=document.querySelector(".js-user-active-title"),c=document.querySelector(".js-icon-arrow-down"),n=document.querySelector(".header__user-item");a==null||a.classList.remove("sidebar__nav-item_hidden"),e==null||e.classList.add("sidebar__nav-item_hidden"),i.style.cursor="auto",i&&(i.style.cursor="auto"),s&&(s.style.display="none"),c&&(c.style.display="none"),n&&(n.style.cursor="auto")}}function j(t,s){const a=document.querySelector(".js-cabinet-nav-thumb"),e=[...s.children],i=e.indexOf(t);a.style.top=`${16.66*i}%`,e.forEach(c=>{c.classList.remove("cabinet__nav-item_active")}),t.classList.add("cabinet__nav-item_active")}function S(t){const s=`
         <div class="cabinet-statistics">
           <div class="cabinet-statistics__btns">
             <div class="cabinet-statistics__btns-box">
@@ -144,25 +144,65 @@ import{h as _,o as l}from"../../assets/cabinet-CWERuWV8.js";import{P as r,g as o
               </picture>
             </div>
           </div>
-        </div>`;t.innerHTML=s}function h(t){g(t)}function v(t){return t.map(s=>`
-          <ul class="cabinet-history__list js-cabinet-history-list">
-            <li class="cabinet-history__list-item">
-              <p class="cabinet-history__list-item-title">CS:GO</p>
+        </div>`;t.innerHTML=s}function L(t){S(t)}function T(t,s){const a=`
+       <div class="cabinet__history cabinet-history">
+          <div class="cabinet-history__title-box">
+            <h3 class="cabinet-history__title">Історія матчів</h3>
+
+            <div class="cabinet-history__drop-down">
+              <p class="cabinet-history__drop-down-title">Показати:</p>
+
+              <ul class="cabinet-history__drop-down-list">
+                <li class="cabinet-history__drop-down-item">
+                  <div
+                    class="cabinet-history__drop-down-item-title-box js-drop-down-item-title-box">
+                    <p class="cabinet-history__drop-down-item-title js-drop-down-active-title">
+                      Усі матчі
+                    </p>
+
+                    <svg
+                      width="12"
+                      height="12"
+                      class="cabinet-history__drop-down-item-icon js-drop-down-icon">
+                      <use xlink:href="#icon-arrow-down"></use>
+                    </svg>
+                  </div>
+
+                  <ul class="cabinet-history__drop-down-inner-list">
+                    <li class="cabinet-history__drop-down-inner-item">
+                      <p class="cabinet-history__drop-down-inner-item-text">CS:GO</p>
+                    </li>
+                    <li class="cabinet-history__drop-down-inner-item">
+                      <p class="cabinet-history__drop-down-inner-item-text">DOTA 2</p>
+                    </li>
+                    <li class="cabinet-history__drop-down-inner-item">
+                      <p class="cabinet-history__drop-down-inner-item-text">За рейтингом</p>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <ul class="cabinet-history__list js-cabinet-history-list"></ul>
+        </div>`;s.innerHTML=a;const e=document.querySelector(".js-cabinet-history-list"),i=t.map(c=>{const{id:n,isVictory:H,score:r,title:_,objDate:{date:o,time:m},objID:{id:d,title:p},objRegime:{regime:b,title:u}}=c;return`
+            <li class="cabinet-history__list-item" data-id="${n}">
+              <p class="cabinet-history__list-item-title">${_}</p>
 
               <div class="medium-content">
                 <div class="cabinet-history__list-item-date-box">
-                  <p class="cabinet-history__list-item-date">07.06.2024</p>
-                  <p class="cabinet-history__list-item-time">19:20</p>
+                  <p class="cabinet-history__list-item-date-title">${o}</p>
+                  <p class="cabinet-history__list-item-time">${m}</p>
                 </div>
 
                 <div class="cabinet-history__list-item-regime-box">
-                  <p class="cabinet-history__list-item-regime-title">Режим</p>
-                  <p class="cabinet-history__list-item-regime">5v5</p>
+                  <p class="cabinet-history__list-item-regime-title">${u}</p>
+                  <p class="cabinet-history__list-item-regime">${b}</p>
                 </div>
 
                 <div class="cabinet-history__list-item-id-box">
-                  <p class="cabinet-history__list-item-id-title">ID</p>
-                  <p class="cabinet-history__list-item-id">37589023</p>
+                  <p class="cabinet-history__list-item-id-title">${p}</p>
+                  <p class="cabinet-history__list-item-id">${d}</p>
                 </div>
               </div>
 
@@ -173,10 +213,9 @@ import{h as _,o as l}from"../../assets/cabinet-CWERuWV8.js";import{P as r,g as o
                 </p>
                 <p class="cabinet-history__list-item-result-score">
                   <span class="symbol">+</span>
-                  <span class="amount">1200</span>
+                  <span class="amount">${r}</span>
                   <span class="currency">BS</span>
                 </p>
               </div>
-            </li>
-          </ul>`)}function k(t){o(m).then(s=>{t.innerHTML=v(s).join("")}).catch(_)}function f(t){k(t)}function x(){const t=document.querySelector(".js-cabinet-nav-list"),s=document.querySelector(".js-cabinet-main-body");t==null||t.addEventListener("click",a);function a(e){const i=e.target.closest("li");i&&(y(i,t),i.classList.contains("js-statistics")&&h(s),i.classList.contains("js-history")&&f(s))}}function S(){const t=localStorage.getItem("logged");(t==="false"||t===null)&&(window.location.href="404")}document.addEventListener("DOMContentLoaded",()=>{d(),p(),b(),l(),l(),u(),x(),S()});
+            </li>`});e.innerHTML=i.join("")}function I(t){g(v).then(s=>{T(s,t)}).catch(y)}function $(t){I(t)}function q(){const t=document.querySelector(".js-cabinet-nav-list"),s=document.querySelector(".js-cabinet-main-body");t==null||t.addEventListener("click",a);function a(e){const i=e.target.closest("li");i&&(j(i,t),i.classList.contains("js-statistics")&&L(s),i.classList.contains("js-history")&&$(s))}}function C(){const t=localStorage.getItem("logged");(t==="false"||t===null)&&(window.location.href="404")}document.addEventListener("DOMContentLoaded",()=>{x(),k(),f(),l(),l(),w(),q(),C()});
 //# sourceMappingURL=cabinet.js.map
