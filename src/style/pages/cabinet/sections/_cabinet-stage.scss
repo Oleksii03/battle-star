@@ -109,7 +109,12 @@
 // ====main=========
 .cabinet-main {
   padding-right: 128px;
+  // background: rgba(248, 248, 248, 0.05);
+  // backdrop-filter: blur(60px);
+}
 
+// cabinet-statistics----
+.cabinet-statistics {
   &__btns {
     margin-bottom: 29px;
 
@@ -154,7 +159,6 @@
     transition: top 200ms linear;
   }
 
-  // rank-box
   &__rank {
     margin-bottom: 29px;
     background: rgba(248, 248, 248, 0.05);
@@ -218,12 +222,190 @@
   }
 
   // game style
-
   &__game-style {
     background: rgba(248, 248, 248, 0.05);
     backdrop-filter: blur(60px);
-    width: 1227px;
-    height: 582px;
+    min-width: 935px;
+    max-width: 1227px;
     flex-shrink: 0;
+    display: flex;
+    column-gap: 70px;
+    padding: 40px 93px 33px 63px;
+
+    & .game-style {
+      &__title {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 23px;
+      }
+
+      // list
+      &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 45px;
+      }
+
+      &__inner-list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3px;
+
+        &-item {
+          @include flex-align-row;
+          justify-content: space-between;
+          column-gap: 25px;
+
+          &-text {
+            color: $light-gray-text;
+            line-height: normal;
+          }
+          &-score {
+            color: $basic-yellow;
+            line-height: normal;
+          }
+        }
+      }
+
+      &__chart {
+        &-box {
+          position: relative;
+          margin-top: 30px;
+          margin-left: 9%;
+        }
+        &-title {
+          position: absolute;
+          font-family: Roboto-Regular;
+          color: #989898;
+          text-align: center;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: normal;
+
+          &_flex {
+            top: -36px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+          &_farming {
+            top: 31%;
+            left: -78px;
+          }
+          &_fighting {
+            top: 31%;
+            right: -78px;
+            // padding-right: 20px;
+            // min-width: 100px;
+            // text-align: left;
+          }
+          &_support {
+            bottom: 13px;
+            left: 8px;
+          }
+          &_pushing {
+            bottom: 13px;
+            right: 24px;
+          }
+        }
+
+        &-img {
+          aspect-ratio: 1/1;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+// ---/-cabinet-statistics----
+
+// History of matches---
+.cabinet-history {
+  background: rgba(248, 248, 248, 0.05);
+  backdrop-filter: blur(60px);
+  padding: 29px 88px 53px 59px;
+
+  &__title-box {
+    @include flex-align-row;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-family: Roboto-Regular;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  // drop-down
+  &__drop-down {
+    @include flex-align-row;
+    column-gap: 7px;
+
+    &-title {
+      color: $gray-text;
+      line-height: normal;
+    }
+  }
+
+  //drop-down-item-title-box
+  &__drop-down-item {
+    position: relative;
+
+    &-title-box {
+      @include flex-align-row;
+      cursor: pointer;
+    }
+
+    &-title {
+      font-size: 18px;
+      line-height: normal;
+    }
+
+    &-icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      fill: $light-text;
+    }
+  }
+
+  &__drop-down-inner-list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 150%;
+    left: 0;
+    background-color: #1d1d21;
+    z-index: 1;
+    border: 1px solid #fac704;
+    transition: all 150ms linear;
+    border-radius: 4px;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    &_active {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
+
+  &__drop-down-inner-item {
+    cursor: pointer;
+
+    &-text {
+      font-weight: 500;
+      line-height: normal;
+      padding: 15px 10px;
+      white-space: nowrap;
+      transition: all 200ms linear;
+
+      &:hover {
+        background-color: #fac9042e;
+      }
+    }
   }
 }
