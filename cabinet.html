@@ -227,11 +227,11 @@
     <title>cabinet</title>
     <script type="module" crossorigin src="/battle-star/js/cabinet/cabinet.js"></script>
     <link rel="modulepreload" crossorigin href="/battle-star/assets/vendor-DZUFF-U2.js">
-    <link rel="modulepreload" crossorigin href="/battle-star/assets/cabinet-SgzsRjSu.js">
-    <link rel="modulepreload" crossorigin href="/battle-star/assets/signOut-nU_mwEHJ.js">
-    <link rel="modulepreload" crossorigin href="/battle-star/assets/loginOrRegistrationHandler-uHCgcz5p.js">
+    <link rel="modulepreload" crossorigin href="/battle-star/assets/cabinet-CWERuWV8.js">
+    <link rel="modulepreload" crossorigin href="/battle-star/assets/getDataFromFirestore-CBajoQ2D.js">
+    <link rel="modulepreload" crossorigin href="/battle-star/assets/loginOrRegistrationHandler-CBIEuIa6.js">
     <link rel="stylesheet" crossorigin href="/battle-star/assets/vendor-970_kJiQ.css">
-    <link rel="stylesheet" crossorigin href="/battle-star/assets/cabinet-mZAXurUb.css">
+    <link rel="stylesheet" crossorigin href="/battle-star/assets/cabinet-BHAsSUbr.css">
   </head>
   <body class="cabinet-body">
     <div class="main__wrapper wrapper">
@@ -532,7 +532,7 @@
           aria-label="Меню навігації">
           <!-- nav-list -->
           <ul class="cabinet__nav-list js-cabinet-nav-list">
-            <li class="cabinet__nav-item cabinet__nav-item_active">
+            <li class="cabinet__nav-item cabinet__nav-item_active js-statistics">
               <p class="cabinet__nav-item-text">Статистика</p>
               <!-- icon -->
               <svg
@@ -543,7 +543,7 @@
               </svg>
             </li>
 
-            <li class="cabinet__nav-item">
+            <li class="cabinet__nav-item js-history">
               <p class="cabinet__nav-item-text">Історія матчів</p>
               <!-- icon -->
               <svg
@@ -554,7 +554,7 @@
               </svg>
             </li>
 
-            <li class="cabinet__nav-item">
+            <li class="cabinet__nav-item js-personal-data">
               <p class="cabinet__nav-item-text">Особисті дані</p>
               <!-- icon -->
               <svg
@@ -565,7 +565,7 @@
               </svg>
             </li>
 
-            <li class="cabinet__nav-item">
+            <li class="cabinet__nav-item js-wallet">
               <p class="cabinet__nav-item-text">Гаманець</p>
               <!-- icon -->
               <svg
@@ -576,7 +576,7 @@
               </svg>
             </li>
 
-            <li class="cabinet__nav-item">
+            <li class="cabinet__nav-item js-setting">
               <p class="cabinet__nav-item-text">Параметри</p>
               <!-- icon -->
               <svg
@@ -587,7 +587,7 @@
               </svg>
             </li>
 
-            <li class="cabinet__nav-item">
+            <li class="cabinet__nav-item js-block-list">
               <p class="cabinet__nav-item-text">Чорний список</p>
               <!-- icon -->
               <svg
@@ -603,7 +603,7 @@
 
       <!-- cabinet-main -->
       <div class="cabinet__main cabinet-main js-cabinet-main-body">
-        <!-- <div class="cabinet-statistics">
+        <div class="cabinet-statistics">
           <div class="cabinet-statistics__btns">
             <div class="cabinet-statistics__btns-box">
               <button
@@ -618,13 +618,12 @@
                 DOTA 2
               </button>
             </div>
-         
+
             <div class="cabinet-statistics__btns-track">
               <span class="cabinet-statistics__btns-thumb js-cabinet-statistics-thumb"></span>
             </div>
           </div>
 
-   
           <div class="cabinet-statistics__rank">
             <p class="cabinet-statistics__rank-title">
               Ранг:
@@ -676,7 +675,6 @@
             </ul>
           </div>
 
-    
           <div class="cabinet-statistics__game-style game-style">
             <div class="game-style__game-box">
               <p class="game-style__title">Стиль гри</p>
@@ -723,7 +721,6 @@
               </ul>
             </div>
 
-         
             <div class="game-style__chart-box">
               <p class="game-style__chart-title game-style__chart-title_flex">Гнучкість</p>
               <p class="game-style__chart-title game-style__chart-title_farming">Фармінг</p>
@@ -733,9 +730,7 @@
 
               <picture>
                 <source
-                  srcset="
-                    ../../../assets/img/pages/cabinet/statistics/cabinet-chart-statistics.webp
-                  "
+                  srcset="../../../assets/img/pages/cabinet/statistics/cabinet-chart-statistics.webp"
                   type="image/webp" />
 
                 <img
@@ -748,10 +743,10 @@
               </picture>
             </div>
           </div>
-        </div> -->
+        </div>
 
         <!-- History of matches -->
-        <div class="cabinet__history cabinet-history">
+        <!-- <div class="cabinet__history cabinet-history">
           <div class="cabinet-history__title-box">
             <h3 class="cabinet-history__title">Історія матчів</h3>
 
@@ -790,11 +785,73 @@
             </div>
           </div>
 
-          <ul class="cabinet-history__list">
-            <!-- match-item -->
-            <li class="cabinet-history__list-item"></li>
+          <ul class="cabinet-history__list js-cabinet-history-list">
+            <li class="cabinet-history__list-item">
+              <p class="cabinet-history__list-item-title">CS:GO</p>
+
+              <div class="medium-content">
+                <div class="cabinet-history__list-item-date-box">
+                  <p class="cabinet-history__list-item-date">07.06.2024</p>
+                  <p class="cabinet-history__list-item-time">19:20</p>
+                </div>
+
+                <div class="cabinet-history__list-item-regime-box">
+                  <p class="cabinet-history__list-item-regime-title">Режим</p>
+                  <p class="cabinet-history__list-item-regime">5v5</p>
+                </div>
+
+                <div class="cabinet-history__list-item-id-box">
+                  <p class="cabinet-history__list-item-id-title">ID</p>
+                  <p class="cabinet-history__list-item-id">37589023</p>
+                </div>
+              </div>
+
+              <div class="cabinet-history__list-item-result">
+                <p
+                  class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_victory">
+                  Перемога
+                </p>
+                <p class="cabinet-history__list-item-result-score">
+                  <span class="symbol">+</span>
+                  <span class="amount">1200</span>
+                  <span class="currency">BS</span>
+                </p>
+              </div>
+            </li>
+            <li class="cabinet-history__list-item">
+              <p class="cabinet-history__list-item-title">CS:GO</p>
+
+              <div class="medium-content">
+                <div class="cabinet-history__list-item-date-box">
+                  <p class="cabinet-history__list-item-date">07.06.2024</p>
+                  <p class="cabinet-history__list-item-time">19:20</p>
+                </div>
+
+                <div class="cabinet-history__list-item-regime-box">
+                  <p class="cabinet-history__list-item-regime-title">Режим</p>
+                  <p class="cabinet-history__list-item-regime">5v5</p>
+                </div>
+
+                <div class="cabinet-history__list-item-id-box">
+                  <p class="cabinet-history__list-item-id-title">ID</p>
+                  <p class="cabinet-history__list-item-id">37589023</p>
+                </div>
+              </div>
+
+              <div class="cabinet-history__list-item-result">
+                <p
+                  class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_victory">
+                  Перемога
+                </p>
+                <p class="cabinet-history__list-item-result-score">
+                  <span class="symbol">+</span>
+                  <span class="amount">1200</span>
+                  <span class="currency">BS</span>
+                </p>
+              </div>
+            </li>
           </ul>
-        </div>
+        </div> -->
         <!--/ History of matches -->
       </div>
     </div>

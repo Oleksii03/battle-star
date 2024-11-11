@@ -1,4 +1,4 @@
-import{a as w,o as $}from"../assets/cabinet-SgzsRjSu.js";import{u as L,i as y,g as T,T as g,a as h,L as S,M as k,b as M,h as j,l as O}from"../assets/signOut-nU_mwEHJ.js";import{g as D,a as x,c as E,S as v,G as H}from"../assets/vendor-DZUFF-U2.js";function q(){document.addEventListener("click",e=>{t(e),s(e)});function t(e){var r,o;const i=e.target.closest(".header__user-inner-item"),a=e.target.closest(".header__user-item-box");!(i!=null&&i.classList.contains("header__user-inner-item"))&&!(a!=null&&a.classList.contains("header__user-item-box"))&&((r=L)==null||r.classList.remove("header__user-inner-list_open"),(o=y)==null||o.classList.remove("header__user-item-icon_rotate"))}function s(e){var r;const i=e.target.closest(".game-dropdown-item__inner-item"),a=e.target.closest(".js-game-dropdown-box");!(i!=null&&i.classList.contains("game-dropdown-item__inner-item"))&&!(a!=null&&a.classList.contains("js-game-dropdown-box"))&&((r=T)==null||r.classList.remove("game-dropdown-item__inner-list_open"))}}async function _(t){const s=D(w);try{const e=await x(E(s,t)),i=[];return e.forEach(a=>{i.push({id:a.id,...a.data()})}),i}catch(e){return console.error("Error getting documents:",e),[]}}function A(t){const s=document.querySelector(".js-main-slider-news");if(!s)return;const e=t.map(i=>{const{title:a,description:n,views:r,date:o,image:{png:c,webp:l},author:{img:d,name:p}}=i;return`
+import{o as w}from"../assets/cabinet-CWERuWV8.js";import{u as $,i as L,a as T,g as _,T as g,b as h,L as y,M as k,c as S,h as M,l as j}from"../assets/getDataFromFirestore-CBajoQ2D.js";import{S as v,G as O}from"../assets/vendor-DZUFF-U2.js";function x(){document.addEventListener("click",e=>{t(e),s(e)});function t(e){var r,o;const i=e.target.closest(".header__user-inner-item"),a=e.target.closest(".header__user-item-box");!(i!=null&&i.classList.contains("header__user-inner-item"))&&!(a!=null&&a.classList.contains("header__user-item-box"))&&((r=$)==null||r.classList.remove("header__user-inner-list_open"),(o=L)==null||o.classList.remove("header__user-item-icon_rotate"))}function s(e){var r;const i=e.target.closest(".game-dropdown-item__inner-item"),a=e.target.closest(".js-game-dropdown-box");!(i!=null&&i.classList.contains("game-dropdown-item__inner-item"))&&!(a!=null&&a.classList.contains("js-game-dropdown-box"))&&((r=T)==null||r.classList.remove("game-dropdown-item__inner-list_open"))}}function D(t){const s=document.querySelector(".js-main-slider-news");if(!s)return;const e=t.map(i=>{const{title:a,description:n,views:r,date:o,image:{png:l,webp:c},author:{img:d,name:p}}=i;return`
       <li class="splide__slide">
             <!-- slide-body -->
 
@@ -6,13 +6,13 @@ import{a as w,o as $}from"../assets/cabinet-SgzsRjSu.js";import{u as L,i as y,g 
              <a href="#">
               <picture>
                 <source
-                  srcset="${l}"
+                  srcset="${c}"
                   type="image/webp" />
                 <img
                   class="splide__slide-img"
                   width="489"
                   height="246"
-                  src="${c}"
+                  src="${l}"
                   alt="${a}" />
               </picture>
              </a>
@@ -57,12 +57,12 @@ import{a as w,o as $}from"../assets/cabinet-SgzsRjSu.js";import{u as L,i as y,g 
                 </div>
               </div>
             </div>
-          </li>`});s.innerHTML=e.join("")}function C(){_("SliderBattleStarNews").then(s=>A(s))}function z(){setTimeout(()=>{new v(" .main-stage__news-slider",{gap:"30px",grid:{rows:2,cols:3,gap:{row:"30px",col:"30px"}},pagination:!1,breakpoints:{768:{grid:{cols:2},pagination:!0},1919:{arrows:!1}}}).mount({Grid:H})},1e3)}function I(){new v(".main-stochholm__slider",{pagination:!1,breakpoints:{1919:{arrows:!1,pagination:!0}}}).mount()}function N(t,s){if(!t.length){s.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const e=[...t].sort((i,a)=>a.score-i.score).map(i=>{const{name:a,score:n,id:r,countryFlagImg:{webp:o},avatar:{png:c,webp:l}}=i;return`
+          </li>`});s.innerHTML=e.join("")}function H(){_("SliderBattleStarNews").then(s=>D(s))}function q(){setTimeout(()=>{new v(" .main-stage__news-slider",{gap:"30px",grid:{rows:2,cols:3,gap:{row:"30px",col:"30px"}},pagination:!1,breakpoints:{768:{grid:{cols:2},pagination:!0},1919:{arrows:!1}}}).mount({Grid:O})},1e3)}function A(){new v(".main-stochholm__slider",{pagination:!1,breakpoints:{1919:{arrows:!1,pagination:!0}}}).mount()}function C(t,s){if(!t.length){s.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const e=[...t].sort((i,a)=>a.score-i.score).map(i=>{const{name:a,score:n,id:r,countryFlagImg:{webp:o},avatar:{png:l,webp:c}}=i;return`
            <li class="list-top__item" data-id="${r}">
             <p class="list-top__item-num"></p>
             <picture>
               <source
-                srcset="${l}"
+                srcset="${c}"
                 type="image/webp" />
 
               <img
@@ -70,7 +70,7 @@ import{a as w,o as $}from"../assets/cabinet-SgzsRjSu.js";import{u as L,i as y,g 
                 width="40"
                 height="40"
                 class="list-top__img"
-                src="${c}"
+                src="${l}"
                 alt="${a}" />
             </picture>
 
@@ -83,12 +83,12 @@ import{a as w,o as $}from"../assets/cabinet-SgzsRjSu.js";import{u as L,i as y,g 
 
             <p class="list-top__name">${a}</p>
             <p class="list-top__score">${n}</p>
-          </li>`});s.innerHTML=e.join("")}function P(t,s){if(!t.length){s.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const e=[...t].sort((i,a)=>a.score-i.score).map(i=>{const{name:a,score:n,id:r,countryFlagImg:{webp:o},avatar:{png:c,webp:l}}=i;return`
+          </li>`});s.innerHTML=e.join("")}function E(t,s){if(!t.length){s.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const e=[...t].sort((i,a)=>a.score-i.score).map(i=>{const{name:a,score:n,id:r,countryFlagImg:{webp:o},avatar:{png:l,webp:c}}=i;return`
            <li class="list-top__item" data-id="${r}">
             <p class="list-top__item-num"></p>
             <picture>
               <source
-                srcset="${l}"
+                srcset="${c}"
                 type="image/webp" />
 
               <img
@@ -96,7 +96,7 @@ import{a as w,o as $}from"../assets/cabinet-SgzsRjSu.js";import{u as L,i as y,g 
                 width="40"
                 height="40"
                 class="list-top__img"
-                src="${c}"
+                src="${l}"
                 alt="${a}" />
             </picture>
 
@@ -109,7 +109,7 @@ import{a as w,o as $}from"../assets/cabinet-SgzsRjSu.js";import{u as L,i as y,g 
 
             <p class="list-top__name">${a}</p>
             <p class="list-top__score">${n}</p>
-          </li>`});s.innerHTML=e.join("")}function u(t=" "){const s=document.querySelector(".js-main-leaderboard-top-list");if(!s){console.error("Leaderboard container not found");return}if(t===g){_(t).then(e=>N(e,s)).catch(e=>console.error("Error fetching CS:GO data:",e));return}if(t===h){_(t).then(e=>P(e,s)).catch(e=>console.error("Error fetching Dota data:",e));return}console.log("Invalid search query")}function F(t){const s=document.querySelector(".js-main-leaderboard-cards-list");if(!t.length){s.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const e=t.map(i=>{const{title:a,date:n,description:r,id:o,img:{png:c,webp:l},likes:d,views:p}=i;return`
+          </li>`});s.innerHTML=e.join("")}function u(t=" "){const s=document.querySelector(".js-main-leaderboard-top-list");if(!s){console.error("Leaderboard container not found");return}if(t===g){_(t).then(e=>C(e,s)).catch(e=>console.error("Error fetching CS:GO data:",e));return}if(t===h){_(t).then(e=>E(e,s)).catch(e=>console.error("Error fetching Dota data:",e));return}console.log("Invalid search query")}function z(t){const s=document.querySelector(".js-main-leaderboard-cards-list");if(!t.length){s.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const e=t.map(i=>{const{title:a,date:n,description:r,id:o,img:{png:l,webp:c},likes:d,views:p}=i;return`
           <li class="main-leaderboard__cards-item" data-id="${o}">
             <a
               href="#"
@@ -118,7 +118,7 @@ import{a as w,o as $}from"../assets/cabinet-SgzsRjSu.js";import{u as L,i as y,g 
    
               <picture>
                 <source
-                  srcset="${l}"
+                  srcset="${c}"
                   type="image/webp" />
 
                 <img
@@ -126,7 +126,7 @@ import{a as w,o as $}from"../assets/cabinet-SgzsRjSu.js";import{u as L,i as y,g 
                   width="248"
                   height="143"
                   class="main-leaderboard__cards-img"
-                  src="${c}"
+                  src="${l}"
                   alt="${a}" />
               </picture>
             </a>
@@ -168,7 +168,7 @@ import{a as w,o as $}from"../assets/cabinet-SgzsRjSu.js";import{u as L,i as y,g 
                 </div>
               </div>
             </div>
-          </li>`});s.innerHTML=e.join("")}function R(t=" "){_(t).then(s=>F(s)).catch(s=>console.error("Error fetching data:",s))}function B(){const t=document.querySelector(".js-leaderboard-btn-csgo"),s=document.querySelector(".js-leaderboard-btn-dota"),e=document.querySelector(".js-btns-thumb");t==null||t.addEventListener("click",i);function i(){e==null||e.classList.remove("main-leaderboard__btns-thumb_active"),t==null||t.classList.add("csgo-active"),s==null||s.classList.remove("dota-active"),u(g)}i(),s==null||s.addEventListener("click",a);function a(){e==null||e.classList.add("main-leaderboard__btns-thumb_active"),s==null||s.classList.add("dota-active"),t==null||t.classList.remove("csgo-active"),u(h)}R(S)}function G(t){const s=document.querySelector(".js-main-popular-matches-cards-list"),e=t.map(i=>{const{id:a,roundOf:n,image:{png:r,webp:o},firstTeam:{firstTeamLogo:c,firstTeamTitle:l},secondTeam:{secondTeamLogo:d,secondTeamTitle:p}}=i;return`
+          </li>`});s.innerHTML=e.join("")}function I(t=" "){_(t).then(s=>z(s)).catch(s=>console.error("Error fetching data:",s))}function N(){const t=document.querySelector(".js-leaderboard-btn-csgo"),s=document.querySelector(".js-leaderboard-btn-dota"),e=document.querySelector(".js-btns-thumb");t==null||t.addEventListener("click",i);function i(){e==null||e.classList.remove("main-leaderboard__btns-thumb_active"),t==null||t.classList.add("csgo-active"),s==null||s.classList.remove("dota-active"),u(g)}i(),s==null||s.addEventListener("click",a);function a(){e==null||e.classList.add("main-leaderboard__btns-thumb_active"),s==null||s.classList.add("dota-active"),t==null||t.classList.remove("csgo-active"),u(h)}I(y)}function P(t){const s=document.querySelector(".js-main-popular-matches-cards-list"),e=t.map(i=>{const{id:a,roundOf:n,image:{png:r,webp:o},firstTeam:{firstTeamLogo:l,firstTeamTitle:c},secondTeam:{secondTeamLogo:d,secondTeamTitle:p}}=i;return`
         <li class="list-cards__item" data-id="${a}">
           <a
             class="list-cards__link"
@@ -202,10 +202,10 @@ import{a as w,o as $}from"../assets/cabinet-SgzsRjSu.js";import{u as L,i as y,g 
                   width="27"
                   height="21"
                   loading="lazy"
-                  src="${c}"
+                  src="${l}"
                   alt="" />
 
-                <p class="list-cards__bottom-content-team-name">${l}</p>
+                <p class="list-cards__bottom-content-team-name">${c}</p>
               </div>
 
               <p class="list-cards__bottom-content-team-divider">VS</p>
@@ -225,7 +225,7 @@ import{a as w,o as $}from"../assets/cabinet-SgzsRjSu.js";import{u as L,i as y,g 
             <!-- round of -->
             <p class="list-cards__bottom-content-round">${n}</p>
           </div>
-        </li>`});s.innerHTML=e.join("")}function U(t=" "){_(t).then(s=>G(s)).catch(s=>console.error("Error fetching data:",s))}function W(t){const s=document.querySelector(".js-popular-list"),e=t.map(i=>{const{id:a,title:n,time:r,score:o,isOnline:c,firstTeam:{firstTeamLogo:l,firstTeamName:d,firstTeamScore:p},secondTeam:{secondTeamLogo:b,secondTeamName:m,secondTeamScore:f}}=i;return`
+        </li>`});s.innerHTML=e.join("")}function R(t=" "){_(t).then(s=>P(s)).catch(s=>console.error("Error fetching data:",s))}function B(t){const s=document.querySelector(".js-popular-list"),e=t.map(i=>{const{id:a,title:n,time:r,score:o,isOnline:l,firstTeam:{firstTeamLogo:c,firstTeamName:d,firstTeamScore:p},secondTeam:{secondTeamLogo:b,secondTeamName:m,secondTeamScore:f}}=i;return`
             <li class="popular-list__item" data-id="${a}">
               <!-- team_first -->
               <div class="popular-list__team popular-list__team_first">
@@ -239,7 +239,7 @@ import{a as w,o as $}from"../assets/cabinet-SgzsRjSu.js";import{u as L,i as y,g 
                     class="popular-list__team-img"
                     width="58"
                     height="52"
-                    src="${l}"
+                    src="${c}"
                     alt="${d}" />
                   <!-- name -->
                   <p class="popular-list__team-name">${d}</p>
@@ -252,7 +252,7 @@ import{a as w,o as $}from"../assets/cabinet-SgzsRjSu.js";import{u as L,i as y,g 
               <!-- score -->
                 <div class="popular-list__score">
                   <p class="popular-list__score-time">${r}</p>
-                  ${c?'<p class="popular-list__score-online">Онлайн</p>':`<p class="popular-list__score-score">${o}</p>`}
+                  ${l?'<p class="popular-list__score-online">Онлайн</p>':`<p class="popular-list__score-score">${o}</p>`}
                 </div>
 
               <!-- second team-->
@@ -277,5 +277,5 @@ import{a as w,o as $}from"../assets/cabinet-SgzsRjSu.js";import{u as L,i as y,g 
                     alt="${m}" />
                 </a>
               </div>
-            </li>`});s.innerHTML=e.join("")}function V(t=" "){_(t).then(s=>W(s)).catch(s=>console.error("Error fetching data:",s))}function J(){U(k),V(M)}document.addEventListener("DOMContentLoaded",()=>{j(),q(),C(),z(),B(),I(),J(),$(),O()});
+            </li>`});s.innerHTML=e.join("")}function F(t=" "){_(t).then(s=>B(s)).catch(s=>console.error("Error fetching data:",s))}function G(){R(k),F(S)}document.addEventListener("DOMContentLoaded",()=>{M(),x(),H(),q(),N(),A(),G(),w(),j()});
 //# sourceMappingURL=index.js.map
