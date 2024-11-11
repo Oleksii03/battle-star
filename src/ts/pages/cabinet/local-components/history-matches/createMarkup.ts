@@ -6,7 +6,7 @@ import { markup } from './markup';
 export function createMarkup(container: HTMLElement) {
   getDataFromFirestore(HISTORY_MATCHES_LIST)
     .then(collection => {
-      container.innerHTML = markup(collection).join('');
+      markup(collection, container);
     })
     .catch(handleError);
 }

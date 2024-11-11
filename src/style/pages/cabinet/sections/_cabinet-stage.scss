@@ -413,11 +413,14 @@
   // cabinet-history__list
   &__list {
     &-item {
-      @include flex-align-row;
-      justify-content: space-between;
-      column-gap: 50px;
+      // @include flex-align-row;
+      // justify-content: space-between;
+      // column-gap: 50px;
       padding: 17px 0px;
       border-top: 1px solid #3f3d46;
+      display: grid;
+      grid-template-columns: 20% 50% 30%;
+      justify-content: space-between;
 
       &-title {
         font-family: Roboto-Regular;
@@ -430,11 +433,14 @@
       & > .medium-content {
         @include flex-align-row;
         column-gap: 50px;
+        margin: 0 auto;
       }
 
       &-date {
         &-box {
-          @include flex-align-row;
+          // @include flex-align-row;
+          display: flex;
+          justify-content: space-between;
           column-gap: 23px;
           font-family: Roboto-Regular;
           font-weight: 400;
@@ -472,6 +478,7 @@
       // --/-- medium-content
 
       &-result {
+        margin-left: auto;
         @include flex-align-row;
         column-gap: 52px;
 
@@ -480,6 +487,7 @@
           font-family: Roboto-Regular;
           font-weight: 400;
           line-height: normal;
+          // margin-right: auto;
 
           &_victory {
             color: #6fff57;
@@ -493,6 +501,7 @@
           font-family: Roboto-Regular;
           font-weight: 400;
           line-height: normal;
+          min-width: 73px;
 
           & > .currency {
             text-decoration: line-through;
