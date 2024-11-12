@@ -1,4 +1,4 @@
-import{o as w}from"../assets/cabinet-CWERuWV8.js";import{u as $,i as L,a as T,g as _,T as g,b as h,L as y,M as k,c as S,h as M,l as j}from"../assets/getDataFromFirestore-CBajoQ2D.js";import{S as v,G as O}from"../assets/vendor-DZUFF-U2.js";function x(){document.addEventListener("click",e=>{t(e),s(e)});function t(e){var r,o;const i=e.target.closest(".header__user-inner-item"),a=e.target.closest(".header__user-item-box");!(i!=null&&i.classList.contains("header__user-inner-item"))&&!(a!=null&&a.classList.contains("header__user-item-box"))&&((r=$)==null||r.classList.remove("header__user-inner-list_open"),(o=L)==null||o.classList.remove("header__user-item-icon_rotate"))}function s(e){var r;const i=e.target.closest(".game-dropdown-item__inner-item"),a=e.target.closest(".js-game-dropdown-box");!(i!=null&&i.classList.contains("game-dropdown-item__inner-item"))&&!(a!=null&&a.classList.contains("js-game-dropdown-box"))&&((r=T)==null||r.classList.remove("game-dropdown-item__inner-list_open"))}}function D(t){const s=document.querySelector(".js-main-slider-news");if(!s)return;const e=t.map(i=>{const{title:a,description:n,views:r,date:o,image:{png:l,webp:c},author:{img:d,name:p}}=i;return`
+import{o as $}from"../assets/cabinet-CWERuWV8.js";import{g as _,T as g,a as h,L as w,M as L,b as T,h as y,c as S,l as k}from"../assets/closeDropDownList-D3JACSJ9.js";import{S as v,G as M}from"../assets/vendor-DZUFF-U2.js";function j(s){const a=document.querySelector(".js-main-slider-news");if(!a)return;const t=s.map(i=>{const{title:e,description:r,views:o,date:l,image:{png:c,webp:n},author:{img:d,name:p}}=i;return`
       <li class="splide__slide">
             <!-- slide-body -->
 
@@ -6,22 +6,22 @@ import{o as w}from"../assets/cabinet-CWERuWV8.js";import{u as $,i as L,a as T,g 
              <a href="#">
               <picture>
                 <source
-                  srcset="${c}"
+                  srcset="${n}"
                   type="image/webp" />
                 <img
                   class="splide__slide-img"
                   width="489"
                   height="246"
-                  src="${l}"
-                  alt="${a}" />
+                  src="${c}"
+                  alt="${e}" />
               </picture>
              </a>
               <!-- slide-description -->
 
               <div class="splide__slide-description">
-                <h6 class="splide__slide-description-title">${a}</h6>
+                <h6 class="splide__slide-description-title">${e}</h6>
 
-                <p class="splide__slide-description-text">${n}</p>
+                <p class="splide__slide-description-text">${r}</p>
 
                 <!-- slide-author -->
 
@@ -37,7 +37,7 @@ import{o as w}from"../assets/cabinet-CWERuWV8.js";import{u as $,i as L,a as T,g 
                    </a>
                    
                     <span class="slide-author__name">${p}</span>
-                    <span class="slide-author__date">${o}</span>
+                    <span class="slide-author__date">${l}</span>
                   </div>
 
                   <div class="slide-author__content-right">
@@ -52,17 +52,17 @@ import{o as w}from"../assets/cabinet-CWERuWV8.js";import{u as $,i as L,a as T,g 
                       </svg>
                     </button>
 
-                    <p class="slide-author__views-count">${r}</p>
+                    <p class="slide-author__views-count">${o}</p>
                   </div>
                 </div>
               </div>
             </div>
-          </li>`});s.innerHTML=e.join("")}function H(){_("SliderBattleStarNews").then(s=>D(s))}function q(){setTimeout(()=>{new v(" .main-stage__news-slider",{gap:"30px",grid:{rows:2,cols:3,gap:{row:"30px",col:"30px"}},pagination:!1,breakpoints:{768:{grid:{cols:2},pagination:!0},1919:{arrows:!1}}}).mount({Grid:O})},1e3)}function A(){new v(".main-stochholm__slider",{pagination:!1,breakpoints:{1919:{arrows:!1,pagination:!0}}}).mount()}function C(t,s){if(!t.length){s.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const e=[...t].sort((i,a)=>a.score-i.score).map(i=>{const{name:a,score:n,id:r,countryFlagImg:{webp:o},avatar:{png:l,webp:c}}=i;return`
-           <li class="list-top__item" data-id="${r}">
+          </li>`});a.innerHTML=t.join("")}function E(){_("SliderBattleStarNews").then(a=>j(a))}function H(){setTimeout(()=>{new v(" .main-stage__news-slider",{gap:"30px",grid:{rows:2,cols:3,gap:{row:"30px",col:"30px"}},pagination:!1,breakpoints:{768:{grid:{cols:2},pagination:!0},1919:{arrows:!1}}}).mount({Grid:M})},1e3)}function O(){new v(".main-stochholm__slider",{pagination:!1,breakpoints:{1919:{arrows:!1,pagination:!0}}}).mount()}function q(s,a){if(!s.length){a.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const t=[...s].sort((i,e)=>e.score-i.score).map(i=>{const{name:e,score:r,id:o,countryFlagImg:{webp:l},avatar:{png:c,webp:n}}=i;return`
+           <li class="list-top__item" data-id="${o}">
             <p class="list-top__item-num"></p>
             <picture>
               <source
-                srcset="${c}"
+                srcset="${n}"
                 type="image/webp" />
 
               <img
@@ -70,25 +70,25 @@ import{o as w}from"../assets/cabinet-CWERuWV8.js";import{u as $,i as L,a as T,g 
                 width="40"
                 height="40"
                 class="list-top__img"
-                src="${l}"
-                alt="${a}" />
+                src="${c}"
+                alt="${e}" />
             </picture>
 
             <img
               width="21"
               height="14"
               class="list-top__svg"
-              src="${o}"
+              src="${l}"
               alt="ua" />
 
-            <p class="list-top__name">${a}</p>
-            <p class="list-top__score">${n}</p>
-          </li>`});s.innerHTML=e.join("")}function E(t,s){if(!t.length){s.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const e=[...t].sort((i,a)=>a.score-i.score).map(i=>{const{name:a,score:n,id:r,countryFlagImg:{webp:o},avatar:{png:l,webp:c}}=i;return`
-           <li class="list-top__item" data-id="${r}">
+            <p class="list-top__name">${e}</p>
+            <p class="list-top__score">${r}</p>
+          </li>`});a.innerHTML=t.join("")}function C(s,a){if(!s.length){a.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const t=[...s].sort((i,e)=>e.score-i.score).map(i=>{const{name:e,score:r,id:o,countryFlagImg:{webp:l},avatar:{png:c,webp:n}}=i;return`
+           <li class="list-top__item" data-id="${o}">
             <p class="list-top__item-num"></p>
             <picture>
               <source
-                srcset="${c}"
+                srcset="${n}"
                 type="image/webp" />
 
               <img
@@ -96,29 +96,29 @@ import{o as w}from"../assets/cabinet-CWERuWV8.js";import{u as $,i as L,a as T,g 
                 width="40"
                 height="40"
                 class="list-top__img"
-                src="${l}"
-                alt="${a}" />
+                src="${c}"
+                alt="${e}" />
             </picture>
 
             <img
               width="21"
               height="14"
               class="list-top__svg"
-              src="${o}"
+              src="${l}"
               alt="ua" />
 
-            <p class="list-top__name">${a}</p>
-            <p class="list-top__score">${n}</p>
-          </li>`});s.innerHTML=e.join("")}function u(t=" "){const s=document.querySelector(".js-main-leaderboard-top-list");if(!s){console.error("Leaderboard container not found");return}if(t===g){_(t).then(e=>C(e,s)).catch(e=>console.error("Error fetching CS:GO data:",e));return}if(t===h){_(t).then(e=>E(e,s)).catch(e=>console.error("Error fetching Dota data:",e));return}console.log("Invalid search query")}function z(t){const s=document.querySelector(".js-main-leaderboard-cards-list");if(!t.length){s.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const e=t.map(i=>{const{title:a,date:n,description:r,id:o,img:{png:l,webp:c},likes:d,views:p}=i;return`
-          <li class="main-leaderboard__cards-item" data-id="${o}">
+            <p class="list-top__name">${e}</p>
+            <p class="list-top__score">${r}</p>
+          </li>`});a.innerHTML=t.join("")}function u(s=" "){const a=document.querySelector(".js-main-leaderboard-top-list");if(!a){console.error("Leaderboard container not found");return}if(s===g){_(s).then(t=>q(t,a)).catch(t=>console.error("Error fetching CS:GO data:",t));return}if(s===h){_(s).then(t=>C(t,a)).catch(t=>console.error("Error fetching Dota data:",t));return}console.log("Invalid search query")}function z(s){const a=document.querySelector(".js-main-leaderboard-cards-list");if(!s.length){a.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const t=s.map(i=>{const{title:e,date:r,description:o,id:l,img:{png:c,webp:n},likes:d,views:p}=i;return`
+          <li class="main-leaderboard__cards-item" data-id="${l}">
             <a
               href="#"
               class="main-leaderboard__cards-link"
-              aria-label="${a}">
+              aria-label="${e}">
    
               <picture>
                 <source
-                  srcset="${c}"
+                  srcset="${n}"
                   type="image/webp" />
 
                 <img
@@ -126,8 +126,8 @@ import{o as w}from"../assets/cabinet-CWERuWV8.js";import{u as $,i as L,a as T,g 
                   width="248"
                   height="143"
                   class="main-leaderboard__cards-img"
-                  src="${l}"
-                  alt="${a}" />
+                  src="${c}"
+                  alt="${e}" />
               </picture>
             </a>
 
@@ -135,15 +135,15 @@ import{o as w}from"../assets/cabinet-CWERuWV8.js";import{u as $,i as L,a as T,g 
 
             <div class="main-leaderboard__cards-info">
               <h3 class="main-leaderboard__cards-title">
-                ${a}
+                ${e}
               </h3>
 
               <p class="main-leaderboard__cards-description">
-                ${r}
+                ${o}
               </p>
 
               <div class="main-leaderboard__cards-stats">
-                <p class="main-leaderboard__cards-stats-date">${n}</p>
+                <p class="main-leaderboard__cards-stats-date">${r}</p>
 
                 <div class="main-leaderboard__cards-stat">
                   <div class="main-leaderboard__cards-stat-like">
@@ -168,8 +168,8 @@ import{o as w}from"../assets/cabinet-CWERuWV8.js";import{u as $,i as L,a as T,g 
                 </div>
               </div>
             </div>
-          </li>`});s.innerHTML=e.join("")}function I(t=" "){_(t).then(s=>z(s)).catch(s=>console.error("Error fetching data:",s))}function N(){const t=document.querySelector(".js-leaderboard-btn-csgo"),s=document.querySelector(".js-leaderboard-btn-dota"),e=document.querySelector(".js-btns-thumb");t==null||t.addEventListener("click",i);function i(){e==null||e.classList.remove("main-leaderboard__btns-thumb_active"),t==null||t.classList.add("csgo-active"),s==null||s.classList.remove("dota-active"),u(g)}i(),s==null||s.addEventListener("click",a);function a(){e==null||e.classList.add("main-leaderboard__btns-thumb_active"),s==null||s.classList.add("dota-active"),t==null||t.classList.remove("csgo-active"),u(h)}I(y)}function P(t){const s=document.querySelector(".js-main-popular-matches-cards-list"),e=t.map(i=>{const{id:a,roundOf:n,image:{png:r,webp:o},firstTeam:{firstTeamLogo:l,firstTeamTitle:c},secondTeam:{secondTeamLogo:d,secondTeamTitle:p}}=i;return`
-        <li class="list-cards__item" data-id="${a}">
+          </li>`});a.innerHTML=t.join("")}function A(s=" "){_(s).then(a=>z(a)).catch(a=>console.error("Error fetching data:",a))}function x(){const s=document.querySelector(".js-leaderboard-btn-csgo"),a=document.querySelector(".js-leaderboard-btn-dota"),t=document.querySelector(".js-btns-thumb");s==null||s.addEventListener("click",i);function i(){t==null||t.classList.remove("main-leaderboard__btns-thumb_active"),s==null||s.classList.add("csgo-active"),a==null||a.classList.remove("dota-active"),u(g)}i(),a==null||a.addEventListener("click",e);function e(){t==null||t.classList.add("main-leaderboard__btns-thumb_active"),a==null||a.classList.add("dota-active"),s==null||s.classList.remove("csgo-active"),u(h)}A(w)}function D(s){const a=document.querySelector(".js-main-popular-matches-cards-list"),t=s.map(i=>{const{id:e,roundOf:r,image:{png:o,webp:l},firstTeam:{firstTeamLogo:c,firstTeamTitle:n},secondTeam:{secondTeamLogo:d,secondTeamTitle:p}}=i;return`
+        <li class="list-cards__item" data-id="${e}">
           <a
             class="list-cards__link"
             href="#"
@@ -178,7 +178,7 @@ import{o as w}from"../assets/cabinet-CWERuWV8.js";import{u as $,i as L,a as T,g 
 
             <picture>
               <source
-                srcset="${o}"
+                srcset="${l}"
                 type="image/webp" />
 
               <img
@@ -186,7 +186,7 @@ import{o as w}from"../assets/cabinet-CWERuWV8.js";import{u as $,i as L,a as T,g 
                 width="693"
                 height="292"
                 loading="lazy"
-                src="${r}"
+                src="${o}"
                 alt="Match" />
             </picture>
           </a>
@@ -202,10 +202,10 @@ import{o as w}from"../assets/cabinet-CWERuWV8.js";import{u as $,i as L,a as T,g 
                   width="27"
                   height="21"
                   loading="lazy"
-                  src="${l}"
+                  src="${c}"
                   alt="" />
 
-                <p class="list-cards__bottom-content-team-name">${c}</p>
+                <p class="list-cards__bottom-content-team-name">${n}</p>
               </div>
 
               <p class="list-cards__bottom-content-team-divider">VS</p>
@@ -223,10 +223,10 @@ import{o as w}from"../assets/cabinet-CWERuWV8.js";import{u as $,i as L,a as T,g 
               </div>
             </div>
             <!-- round of -->
-            <p class="list-cards__bottom-content-round">${n}</p>
+            <p class="list-cards__bottom-content-round">${r}</p>
           </div>
-        </li>`});s.innerHTML=e.join("")}function R(t=" "){_(t).then(s=>P(s)).catch(s=>console.error("Error fetching data:",s))}function B(t){const s=document.querySelector(".js-popular-list"),e=t.map(i=>{const{id:a,title:n,time:r,score:o,isOnline:l,firstTeam:{firstTeamLogo:c,firstTeamName:d,firstTeamScore:p},secondTeam:{secondTeamLogo:b,secondTeamName:m,secondTeamScore:f}}=i;return`
-            <li class="popular-list__item" data-id="${a}">
+        </li>`});a.innerHTML=t.join("")}function N(s=" "){_(s).then(a=>D(a)).catch(a=>console.error("Error fetching data:",a))}function P(s){const a=document.querySelector(".js-popular-list"),t=s.map(i=>{const{id:e,title:r,time:o,score:l,isOnline:c,firstTeam:{firstTeamLogo:n,firstTeamName:d,firstTeamScore:p},secondTeam:{secondTeamLogo:b,secondTeamName:m,secondTeamScore:f}}=i;return`
+            <li class="popular-list__item" data-id="${e}">
               <!-- team_first -->
               <div class="popular-list__team popular-list__team_first">
                 <a
@@ -239,7 +239,7 @@ import{o as w}from"../assets/cabinet-CWERuWV8.js";import{u as $,i as L,a as T,g 
                     class="popular-list__team-img"
                     width="58"
                     height="52"
-                    src="${c}"
+                    src="${n}"
                     alt="${d}" />
                   <!-- name -->
                   <p class="popular-list__team-name">${d}</p>
@@ -251,13 +251,13 @@ import{o as w}from"../assets/cabinet-CWERuWV8.js";import{u as $,i as L,a as T,g 
 
               <!-- score -->
                 <div class="popular-list__score">
-                  <p class="popular-list__score-time">${r}</p>
-                  ${l?'<p class="popular-list__score-online">Онлайн</p>':`<p class="popular-list__score-score">${o}</p>`}
+                  <p class="popular-list__score-time">${o}</p>
+                  ${c?'<p class="popular-list__score-online">Онлайн</p>':`<p class="popular-list__score-score">${l}</p>`}
                 </div>
 
               <!-- second team-->
               <div class="popular-list__team popular-list__team_second">
-                <p class="popular-list__status-title">${n}</p>
+                <p class="popular-list__status-title">${r}</p>
 
                 <a
                   class="popular-list__link"
@@ -277,5 +277,5 @@ import{o as w}from"../assets/cabinet-CWERuWV8.js";import{u as $,i as L,a as T,g 
                     alt="${m}" />
                 </a>
               </div>
-            </li>`});s.innerHTML=e.join("")}function F(t=" "){_(t).then(s=>B(s)).catch(s=>console.error("Error fetching data:",s))}function G(){R(k),F(S)}document.addEventListener("DOMContentLoaded",()=>{M(),x(),H(),q(),N(),A(),G(),w(),j()});
+            </li>`});a.innerHTML=t.join("")}function I(s=" "){_(s).then(a=>P(a)).catch(a=>console.error("Error fetching data:",a))}function R(){N(L),I(T)}document.addEventListener("DOMContentLoaded",()=>{y(),S(),E(),H(),x(),O(),R(),$(),k()});
 //# sourceMappingURL=index.js.map

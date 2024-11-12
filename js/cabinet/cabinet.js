@@ -1,4 +1,4 @@
-import{h as y,o as d}from"../../assets/cabinet-CWERuWV8.js";import{P as h,g,H as v,h as w,l as f}from"../../assets/getDataFromFirestore-CBajoQ2D.js";import{s as k}from"../../assets/loginOrRegistrationHandler-CBIEuIa6.js";import"../../assets/vendor-DZUFF-U2.js";function x(){if(window.location.pathname.includes(h)){const i=document.querySelector(".js-user-inner-list"),s=document.querySelector(".js-sidebar-btn-exit"),a=document.querySelector(".js-sidebar-btn-enter"),e=document.querySelector(".js-user-active-title"),n=document.querySelector(".js-icon-arrow-down"),c=document.querySelector(".header__user-item");s==null||s.classList.remove("sidebar__nav-item_hidden"),a==null||a.classList.add("sidebar__nav-item_hidden"),e.style.cursor="auto",e&&(e.style.cursor="auto"),i&&(i.style.display="none"),n&&(n.style.display="none"),c&&(c.style.cursor="auto")}}function j(t,i){const s=document.querySelector(".js-cabinet-nav-thumb"),a=[...i.children],e=a.indexOf(t);s.style.top=`${16.66*e}%`,a.forEach(n=>{n.classList.remove("cabinet__nav-item_active")}),t.classList.add("cabinet__nav-item_active")}function S(t){const i=`
+import{h,o as b}from"../../assets/cabinet-CWERuWV8.js";import{P as y,g,H as v,h as w,l as f,c as k}from"../../assets/closeDropDownList-D3JACSJ9.js";import{s as x}from"../../assets/loginOrRegistrationHandler-CBIEuIa6.js";import"../../assets/vendor-DZUFF-U2.js";function j(){if(window.location.pathname.includes(y)){const i=document.querySelector(".js-user-inner-list"),s=document.querySelector(".js-sidebar-btn-exit"),a=document.querySelector(".js-sidebar-btn-enter"),e=document.querySelector(".js-user-active-title"),n=document.querySelector(".js-icon-arrow-down"),o=document.querySelector(".header__user-item");s==null||s.classList.remove("sidebar__nav-item_hidden"),a==null||a.classList.add("sidebar__nav-item_hidden"),e.style.cursor="auto",e&&(e.style.cursor="auto"),i&&(i.style.display="none"),n&&(n.style.display="none"),o&&(o.style.cursor="auto")}}function S(t,i){const s=document.querySelector(".js-cabinet-nav-thumb"),a=[...i.children],e=a.indexOf(t);s.style.top=`${16.66*e}%`,a.forEach(n=>{n.classList.remove("cabinet__nav-item_active")}),t.classList.add("cabinet__nav-item_active")}function L(t){const i=`
         <div class="cabinet-statistics">
           <div class="cabinet-statistics__btns">
             <div class="cabinet-statistics__btns-box">
@@ -144,38 +144,37 @@ import{h as y,o as d}from"../../assets/cabinet-CWERuWV8.js";import{P as h,g,H as
               </picture>
             </div>
           </div>
-        </div>`;t.innerHTML=i}function L(t){S(t)}function m(t){const i=document.querySelector(".js-cabinet-history-list"),s=t.map(a=>{const{id:e,isVictory:n,score:c,title:_,objDate:{date:r,time:o},objID:{id:l,title:p},objRegime:{regime:b,title:u}}=a;return`
+        </div>`;t.innerHTML=i}function C(t,i){L(t);const s=i.dataset.hash;location.hash=s}function _(t){const i=document.querySelector(".js-cabinet-history-list"),s=t.map(a=>{const{id:e,isVictory:n,score:o,title:m,objDate:{date:l,time:r},objID:{id:c,title:d},objRegime:{regime:p,title:u}}=a;return`
             <li class="cabinet-history__list-item" data-id="${e}">
-              <p class="cabinet-history__list-item-title">${_}</p>
+              <p class="cabinet-history__list-item-title">${m}</p>
 
               <div class="medium-content">
                 <div class="cabinet-history__list-item-date-box">
-                  <p class="cabinet-history__list-item-date-title">${r}</p>
-                  <p class="cabinet-history__list-item-time">${o}</p>
+                  <p class="cabinet-history__list-item-date-title">${l}</p>
+                  <p class="cabinet-history__list-item-time">${r}</p>
                 </div>
 
                 <div class="cabinet-history__list-item-regime-box">
                   <p class="cabinet-history__list-item-regime-title">${u}</p>
-                  <p class="cabinet-history__list-item-regime">${b}</p>
+                  <p class="cabinet-history__list-item-regime">${p}</p>
                 </div>
 
                 <div class="cabinet-history__list-item-id-box">
-                  <p class="cabinet-history__list-item-id-title">${p}</p>
-                  <p class="cabinet-history__list-item-id">${l}</p>
+                  <p class="cabinet-history__list-item-id-title">${d}</p>
+                  <p class="cabinet-history__list-item-id">${c}</p>
                 </div>
               </div>
 
               <div class="cabinet-history__list-item-result">
                 
                 ${n?'<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_victory">Перемога</p>':'<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_loss">Програш</p>'}
-                <p class="cabinet-history__list-item-result-score js-result-score" 
-                  data-score="${n?`+${c}`:`-${c}`}">
+                <p class="cabinet-history__list-item-result-score js-result-score">
                   <span class="symbol">${n?"+ ":"- "}</span>
-                  <span class="amount">${c}</span>
+                  <span class="amount">${o}</span>
                   <span class="currency">BS</span>
                 </p>
               </div>
-            </li>`});i.innerHTML=s.join("")}function C(t){const i=document.querySelector(".js-drop-down-item-title-box"),s=document.querySelector(".js-drop-down-inner-list"),a=document.querySelector(".js-drop-down-active-title"),e=document.querySelector(".js-drop-down-icon");i==null||i.addEventListener("click",n);function n(){s==null||s.classList.toggle("cabinet-history__drop-down-inner-list_active"),e==null||e.classList.toggle("cabinet-history__drop-down-item-icon_active")}s==null||s.addEventListener("click",c);function c(r){const l=r.target.textContent;l&&(a.textContent=l,n(),_(l.toLowerCase()))}function _(r){const o=t.filter(({title:l})=>l.toLowerCase()===r);if(o.length){m(o);return}m(t)}}function $(t){const i=`
+            </li>`});i.innerHTML=s.join("")}function q(t){const i=document.querySelector(".js-drop-down-item-title-box"),s=document.querySelector(".js-drop-down-inner-list"),a=document.querySelector(".js-drop-down-active-title"),e=document.querySelector(".js-drop-down-icon");i==null||i.addEventListener("click",n);function n(){s==null||s.classList.toggle("cabinet-history__drop-down-inner-list_active"),e==null||e.classList.toggle("cabinet-history__drop-down-item-icon_active")}s==null||s.addEventListener("click",o);function o(l){const c=l.target.textContent;c&&(a.textContent=c,n(),m(c.toLowerCase()))}function m(l){if(l!=null&&l.includes("рейтинг")){const c=t.toSorted((d,p)=>p.sortScore-d.sortScore);_(c);return}const r=t.filter(({title:c})=>c.toLowerCase()===l);if(r.length){_(r);return}_(t)}}function T(t){const i=`
        <div class="cabinet__history cabinet-history">
           <div class="cabinet-history__title-box">
             <h3 class="cabinet-history__title">Історія матчів</h3>
@@ -219,5 +218,5 @@ import{h as y,o as d}from"../../assets/cabinet-CWERuWV8.js";import{P as h,g,H as
           </div>
 
           <ul class="cabinet-history__list js-cabinet-history-list"></ul>
-        </div>`;t.innerHTML=i,g(v).then(s=>{m(s),C(s)}).catch(y)}function q(t){$(t)}function T(){const t=document.querySelector(".js-cabinet-nav-list"),i=document.querySelector(".js-cabinet-main-body");t==null||t.addEventListener("click",s);function s(a){const e=a.target.closest("li");e&&(j(e,t),e.classList.contains("js-statistics")&&L(i),e.classList.contains("js-history")&&q(i))}}function M(){const t=localStorage.getItem("logged");(t==="false"||t===null)&&(window.location.href="404")}document.addEventListener("DOMContentLoaded",()=>{x(),w(),k(),d(),d(),f(),T(),M()});
+        </div>`;t.innerHTML=i,g(v).then(s=>{_(s),q(s)}).catch(h)}function E(t,i){T(t);const s=i.dataset.hash;location.hash=s}function $(){const t=document.querySelector(".js-cabinet-nav-list"),i=document.querySelector(".js-cabinet-main-body");t==null||t.addEventListener("click",s);function s(a){const e=a.target.closest("li");e&&(S(e,t),e.classList.contains("js-statistics")&&C(i,e),e.classList.contains("js-history")&&E(i,e))}window.addEventListener("load",()=>{const a=location.hash.slice(1);console.log(a)}),window.addEventListener("hashchange",()=>{const a=location.hash.slice(1);console.log(a)})}function M(){const t=localStorage.getItem("logged");(t==="false"||t===null)&&(window.location.href="404")}document.addEventListener("DOMContentLoaded",()=>{j(),w(),x(),b(),b(),f(),$(),M(),k()});
 //# sourceMappingURL=cabinet.js.map
