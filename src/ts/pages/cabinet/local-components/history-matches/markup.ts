@@ -1,51 +1,6 @@
 import { CabinetHistoryMatchesList } from '@/ts/types/pages/cabinet';
 
-export function markup(collection: CabinetHistoryMatchesList[], container: HTMLElement) {
-  const markup = `
-       <div class="cabinet__history cabinet-history">
-          <div class="cabinet-history__title-box">
-            <h3 class="cabinet-history__title">Історія матчів</h3>
-
-            <div class="cabinet-history__drop-down">
-              <p class="cabinet-history__drop-down-title">Показати:</p>
-
-              <ul class="cabinet-history__drop-down-list">
-                <li class="cabinet-history__drop-down-item">
-                  <div
-                    class="cabinet-history__drop-down-item-title-box js-drop-down-item-title-box">
-                    <p class="cabinet-history__drop-down-item-title js-drop-down-active-title">
-                      Усі матчі
-                    </p>
-
-                    <svg
-                      width="12"
-                      height="12"
-                      class="cabinet-history__drop-down-item-icon js-drop-down-icon">
-                      <use xlink:href="#icon-arrow-down"></use>
-                    </svg>
-                  </div>
-
-                  <ul class="cabinet-history__drop-down-inner-list">
-                    <li class="cabinet-history__drop-down-inner-item">
-                      <p class="cabinet-history__drop-down-inner-item-text">CS:GO</p>
-                    </li>
-                    <li class="cabinet-history__drop-down-inner-item">
-                      <p class="cabinet-history__drop-down-inner-item-text">DOTA 2</p>
-                    </li>
-                    <li class="cabinet-history__drop-down-inner-item">
-                      <p class="cabinet-history__drop-down-inner-item-text">За рейтингом</p>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <ul class="cabinet-history__list js-cabinet-history-list"></ul>
-        </div>`;
-
-  container.innerHTML = markup;
-
+export function markupListItem(collection: CabinetHistoryMatchesList[]) {
   const cabinetHistoryList = document.querySelector('.js-cabinet-history-list') as HTMLUListElement;
 
   const markupListItem = collection.map(obj => {
@@ -81,12 +36,11 @@ export function markup(collection: CabinetHistoryMatchesList[], container: HTMLE
               </div>
 
               <div class="cabinet-history__list-item-result">
-                <p
-                  class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_victory">
-                  Перемога
-                </p>
-                <p class="cabinet-history__list-item-result-score">
-                  <span class="symbol">+</span>
+                
+                ${isVictory ? '<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_victory">Перемога</p>' : '<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_loss">Програш</p>'}
+                <p class="cabinet-history__list-item-result-score js-result-score" 
+                  data-score="${isVictory ? `+${score}` : `-${score}`}">
+                  <span class="symbol">${isVictory ? '+ ' : '- '}</span>
                   <span class="amount">${score}</span>
                   <span class="currency">BS</span>
                 </p>

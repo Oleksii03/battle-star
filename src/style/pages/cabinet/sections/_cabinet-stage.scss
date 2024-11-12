@@ -368,6 +368,11 @@
       height: 24px;
       flex-shrink: 0;
       fill: $light-text;
+      transition: all 150ms linear;
+
+      &_active {
+        transform: rotate(-180deg);
+      }
     }
   }
 
@@ -413,21 +418,22 @@
   // cabinet-history__list
   &__list {
     &-item {
-      // @include flex-align-row;
-      // justify-content: space-between;
-
       padding: 17px 0px;
       border-top: 1px solid #3f3d46;
       display: grid;
-      grid-template-columns: 18% 50% 32%;
+      grid-template-columns: 8% 50% auto;
       column-gap: 50px;
-      // justify-content: space-between;
+
+      @include media-min-width(xl) {
+        grid-template-columns: 14% 50% auto;
+      }
 
       &-title {
         font-family: Roboto-Regular;
         font-size: 18px;
         font-weight: 400;
         line-height: normal;
+        white-space: nowrap;
       }
 
       // medium-content
@@ -440,7 +446,6 @@
 
       &-date {
         &-box {
-          // @include flex-align-row;
           display: flex;
           justify-content: space-between;
           column-gap: 23px;
@@ -465,7 +470,7 @@
 
       &-id {
         text-decoration: underline;
-
+        cursor: pointer;
         &-box {
           @include flex-align-row;
           column-gap: 11px;
@@ -482,17 +487,24 @@
       &-result {
         margin-left: auto;
         @include flex-align-row;
-        column-gap: 52px;
+        column-gap: 30px;
+
+        @include media-min-width(xl) {
+          column-gap: 52px;
+        }
 
         &-title {
           text-align: right;
           font-family: Roboto-Regular;
           font-weight: 400;
           line-height: normal;
-          // margin-right: auto;
 
           &_victory {
             color: #6fff57;
+          }
+
+          &_loss {
+            color: #f13939;
           }
         }
 

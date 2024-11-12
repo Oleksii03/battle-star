@@ -1,5 +1,5 @@
-import { createMarkup } from './createMarkup';
+import { createBaseMarkup } from './createMarkup';
 
 export function historyMatches(container: HTMLElement) {
-  createMarkup(container);
+  createBaseMarkup(container);
 }
