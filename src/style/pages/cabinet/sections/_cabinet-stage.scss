@@ -111,6 +111,21 @@
   padding-right: 128px;
   // background: rgba(248, 248, 248, 0.05);
   // backdrop-filter: blur(60px);
+
+  @media (min-width: 1440px) {
+    ::-webkit-scrollbar {
+      width: 1px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: rgba(196, 196, 196, 0);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: $basic-yellow;
+      border-radius: 4px;
+    }
+  }
 }
 
 // cabinet-statistics----
@@ -324,6 +339,8 @@
   background: rgba(248, 248, 248, 0.05);
   backdrop-filter: blur(60px);
   padding: 29px 88px 32px 59px;
+  min-height: 352px;
+  transition: all 200ms ease-in-out;
 
   &__title-box {
     @include flex-align-row;
@@ -417,6 +434,8 @@
 
   // cabinet-history__list
   &__list {
+    max-height: 620px;
+    overflow-y: auto;
     &-item {
       padding: 17px 0px;
       border-top: 1px solid #3f3d46;

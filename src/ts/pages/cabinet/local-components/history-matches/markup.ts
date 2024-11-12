@@ -38,8 +38,7 @@ export function markupListItem(collection: CabinetHistoryMatchesList[]) {
               <div class="cabinet-history__list-item-result">
                 
                 ${isVictory ? '<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_victory">Перемога</p>' : '<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_loss">Програш</p>'}
-                <p class="cabinet-history__list-item-result-score js-result-score" 
-                  data-score="${isVictory ? `+${score}` : `-${score}`}">
+                <p class="cabinet-history__list-item-result-score js-result-score">
                   <span class="symbol">${isVictory ? '+ ' : '- '}</span>
                   <span class="amount">${score}</span>
                   <span class="currency">BS</span>

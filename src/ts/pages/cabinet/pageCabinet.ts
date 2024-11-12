@@ -17,7 +17,22 @@ export function pageCabinet() {
     setActiveListItem(targetEl, navigationList);
 
     // ===component handlers====
-    if (targetEl.classList.contains('js-statistics')) statisticHandler(cabinetMainContainer);
-    if (targetEl.classList.contains('js-history')) historyMatches(cabinetMainContainer);
+    if (targetEl.classList.contains('js-statistics')) {
+      statisticHandler(cabinetMainContainer, targetEl);
+    }
+
+    if (targetEl.classList.contains('js-history')) {
+      historyMatches(cabinetMainContainer, targetEl);
+    }
   }
+
+  window.addEventListener('load', () => {
+    const tab = location.hash.slice(1); // Отримуємо поточний хеш без '#'
+    console.log(tab);
+  });
+
+  window.addEventListener('hashchange', () => {
+    const tab = location.hash.slice(1);
+    console.log(tab);
+  });
 }

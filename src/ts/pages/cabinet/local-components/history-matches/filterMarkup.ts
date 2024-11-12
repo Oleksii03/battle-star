@@ -1,11 +1,13 @@
 import { CabinetHistoryMatchesList } from '@/ts/types/pages/cabinet';
 import { markupListItem } from './markup';
+// ---imports-----------------------------------------
 
 export function filterMarkup(collection: CabinetHistoryMatchesList[]) {
   const itemTitleBox = document.querySelector('.js-drop-down-item-title-box');
   const dropDownInnerList = document.querySelector('.js-drop-down-inner-list');
   const dropDownActiveTitle = document.querySelector('.js-drop-down-active-title')!;
   const dropDownIcon = document.querySelector('.js-drop-down-icon');
+  // ---local refs --------------------------------
 
   itemTitleBox?.addEventListener('click', handlerDropDown);
 
@@ -28,7 +30,14 @@ export function filterMarkup(collection: CabinetHistoryMatchesList[]) {
     createFilterMarkup(targetElTextContent.toLowerCase());
   }
 
+  // --createFilterMarkup--
   function createFilterMarkup(searchQery: string | null) {
+    if (searchQery?.includes('рейтинг')) {
+      const byRating = collection.toSorted((a, b) => b.sortScore - a.sortScore);
+      markupListItem(byRating);
+      return;
+    }
+
     const filteredCollections = collection.filter(
       ({ title }) => title.toLowerCase() === searchQery
     );

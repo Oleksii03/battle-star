@@ -6,6 +6,7 @@ interface CabinetHistoryMatchesList {
   objRegime: { regime: string; title: string };
   score: number;
   title: string;
+  sortScore: number;
 }
 
 export { CabinetHistoryMatchesList };

@@ -5,6 +5,7 @@ import { header } from './components/header';
 import { logout } from './pages/sign-in/cabinet/signOut';
 import { pageCabinet } from './pages/cabinet/pageCabinet';
 import { checkAuth } from './utils/checkAuth';
+import { closeDropDownList } from './components/closeDropDownList';
 
 document.addEventListener('DOMContentLoaded', () => {
   settingsHtmlComponents();
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   logout();
   pageCabinet();
   checkAuth();
+  closeDropDownList();
 });
 
 // const cabinetUrl = window.location.pathname;

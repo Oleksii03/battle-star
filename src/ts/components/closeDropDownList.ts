@@ -7,10 +7,11 @@ export function closeDropDownList(): void {
     handlerUserList(e);
     // gameList
     handlerGameDropdownList(e);
+    // cabinetHistoryDropdownList
+    cabinetHistoryDropdownList(e);
   });
 
   // ===function-handlers====
-  // SergioList
   function handlerUserList(e: Event): void {
     const targetEl = (e.target as HTMLElement).closest('.header__user-inner-item');
     const parentTargetEl = (e.target as HTMLElement).closest('.header__user-item-box');
@@ -39,6 +40,25 @@ export function closeDropDownList(): void {
 
     if (isGameDropdownListOpen) {
       gameInnerList?.classList.remove('game-dropdown-item__inner-list_open');
+    }
+  }
+
+  // cabinetHistoryDropdownList
+  function cabinetHistoryDropdownList(e: Event) {
+    const targetEl = e.target as HTMLElement;
+    const parentTargetEl = (e.target as HTMLElement).closest('.js-drop-down-item-title-box');
+
+    const isCabinetHistoryDropdownListOpen =
+      !targetEl?.classList.contains('cabinet-history__drop-down-inner-item-text') &&
+      !parentTargetEl?.classList.contains('js-drop-down-item-title-box');
+
+    if (isCabinetHistoryDropdownListOpen) {
+      document
+        .querySelector('.js-drop-down-inner-list')
+        ?.classList.remove('cabinet-history__drop-down-inner-list_active');
+      document
+        .querySelector('.js-drop-down-icon')
+        ?.classList.remove('cabinet-history__drop-down-item-icon_active');
     }
   }
 }
