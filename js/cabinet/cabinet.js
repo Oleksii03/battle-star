@@ -1,4 +1,4 @@
-import{h,o as b}from"../../assets/cabinet-CWERuWV8.js";import{P as y,g,H as v,h as w,l as f,c as k}from"../../assets/closeDropDownList-D3JACSJ9.js";import{s as x}from"../../assets/loginOrRegistrationHandler-CBIEuIa6.js";import"../../assets/vendor-DZUFF-U2.js";function j(){if(window.location.pathname.includes(y)){const i=document.querySelector(".js-user-inner-list"),s=document.querySelector(".js-sidebar-btn-exit"),a=document.querySelector(".js-sidebar-btn-enter"),e=document.querySelector(".js-user-active-title"),n=document.querySelector(".js-icon-arrow-down"),o=document.querySelector(".header__user-item");s==null||s.classList.remove("sidebar__nav-item_hidden"),a==null||a.classList.add("sidebar__nav-item_hidden"),e.style.cursor="auto",e&&(e.style.cursor="auto"),i&&(i.style.display="none"),n&&(n.style.display="none"),o&&(o.style.cursor="auto")}}function S(t,i){const s=document.querySelector(".js-cabinet-nav-thumb"),a=[...i.children],e=a.indexOf(t);s.style.top=`${16.66*e}%`,a.forEach(n=>{n.classList.remove("cabinet__nav-item_active")}),t.classList.add("cabinet__nav-item_active")}function L(t){const i=`
+import{h as v,o as u}from"../../assets/cabinet-CWERuWV8.js";import{P as f,g as w,H as k,h as x,l as S,c as j}from"../../assets/closeDropDownList-D3JACSJ9.js";import{s as L}from"../../assets/loginOrRegistrationHandler-CBIEuIa6.js";import"../../assets/vendor-DZUFF-U2.js";function q(){if(window.location.pathname.includes(f)){const i=document.querySelector(".js-user-inner-list"),t=document.querySelector(".js-sidebar-btn-exit"),a=document.querySelector(".js-sidebar-btn-enter"),e=document.querySelector(".js-user-active-title"),n=document.querySelector(".js-icon-arrow-down"),o=document.querySelector(".header__user-item");t==null||t.classList.remove("sidebar__nav-item_hidden"),a==null||a.classList.add("sidebar__nav-item_hidden"),e.style.cursor="auto",e&&(e.style.cursor="auto"),i&&(i.style.display="none"),n&&(n.style.display="none"),o&&(o.style.cursor="auto")}}function b(s,i){const t=document.querySelector(".js-cabinet-nav-thumb"),a=[...i.children],e=a.indexOf(s);t.style.top=`${16.66*e}%`,a.forEach(n=>{n.classList.remove("cabinet__nav-item_active")}),s.classList.add("cabinet__nav-item_active")}function C(s){const i=`
         <div class="cabinet-statistics">
           <div class="cabinet-statistics__btns">
             <div class="cabinet-statistics__btns-box">
@@ -144,7 +144,7 @@ import{h,o as b}from"../../assets/cabinet-CWERuWV8.js";import{P as y,g,H as v,h 
               </picture>
             </div>
           </div>
-        </div>`;t.innerHTML=i}function C(t,i){L(t);const s=i.dataset.hash;location.hash=s}function _(t){const i=document.querySelector(".js-cabinet-history-list"),s=t.map(a=>{const{id:e,isVictory:n,score:o,title:m,objDate:{date:l,time:r},objID:{id:c,title:d},objRegime:{regime:p,title:u}}=a;return`
+        </div>`;s.innerHTML=i}function h(s,i){C(s);const t=i.dataset.hash;console.log(t),t&&(location.hash=t)}function _(s){const i=document.querySelector(".js-cabinet-history-list"),t=s.map(a=>{const{id:e,isVictory:n,score:o,title:m,objDate:{date:l,time:r},objID:{id:c,title:d},objRegime:{regime:p,title:g}}=a;return`
             <li class="cabinet-history__list-item" data-id="${e}">
               <p class="cabinet-history__list-item-title">${m}</p>
 
@@ -155,7 +155,7 @@ import{h,o as b}from"../../assets/cabinet-CWERuWV8.js";import{P as y,g,H as v,h 
                 </div>
 
                 <div class="cabinet-history__list-item-regime-box">
-                  <p class="cabinet-history__list-item-regime-title">${u}</p>
+                  <p class="cabinet-history__list-item-regime-title">${g}</p>
                   <p class="cabinet-history__list-item-regime">${p}</p>
                 </div>
 
@@ -174,7 +174,7 @@ import{h,o as b}from"../../assets/cabinet-CWERuWV8.js";import{P as y,g,H as v,h 
                   <span class="currency">BS</span>
                 </p>
               </div>
-            </li>`});i.innerHTML=s.join("")}function q(t){const i=document.querySelector(".js-drop-down-item-title-box"),s=document.querySelector(".js-drop-down-inner-list"),a=document.querySelector(".js-drop-down-active-title"),e=document.querySelector(".js-drop-down-icon");i==null||i.addEventListener("click",n);function n(){s==null||s.classList.toggle("cabinet-history__drop-down-inner-list_active"),e==null||e.classList.toggle("cabinet-history__drop-down-item-icon_active")}s==null||s.addEventListener("click",o);function o(l){const c=l.target.textContent;c&&(a.textContent=c,n(),m(c.toLowerCase()))}function m(l){if(l!=null&&l.includes("рейтинг")){const c=t.toSorted((d,p)=>p.sortScore-d.sortScore);_(c);return}const r=t.filter(({title:c})=>c.toLowerCase()===l);if(r.length){_(r);return}_(t)}}function T(t){const i=`
+            </li>`});i.innerHTML=t.join("")}function T(s){const i=document.querySelector(".js-drop-down-item-title-box"),t=document.querySelector(".js-drop-down-inner-list"),a=document.querySelector(".js-drop-down-active-title"),e=document.querySelector(".js-drop-down-icon");i==null||i.addEventListener("click",n);function n(){t==null||t.classList.toggle("cabinet-history__drop-down-inner-list_active"),e==null||e.classList.toggle("cabinet-history__drop-down-item-icon_active")}t==null||t.addEventListener("click",o);function o(l){const c=l.target.textContent;c&&(a.textContent=c,n(),m(c.toLowerCase()))}function m(l){if(l!=null&&l.includes("рейтинг")){const c=s.toSorted((d,p)=>p.sortScore-d.sortScore);_(c);return}const r=s.filter(({title:c})=>c.toLowerCase()===l);if(r.length){_(r);return}_(s)}}function $(s){const i=`
        <div class="cabinet__history cabinet-history">
           <div class="cabinet-history__title-box">
             <h3 class="cabinet-history__title">Історія матчів</h3>
@@ -218,5 +218,5 @@ import{h,o as b}from"../../assets/cabinet-CWERuWV8.js";import{P as y,g,H as v,h 
           </div>
 
           <ul class="cabinet-history__list js-cabinet-history-list"></ul>
-        </div>`;t.innerHTML=i,g(v).then(s=>{_(s),q(s)}).catch(h)}function E(t,i){T(t);const s=i.dataset.hash;location.hash=s}function $(){const t=document.querySelector(".js-cabinet-nav-list"),i=document.querySelector(".js-cabinet-main-body");t==null||t.addEventListener("click",s);function s(a){const e=a.target.closest("li");e&&(S(e,t),e.classList.contains("js-statistics")&&C(i,e),e.classList.contains("js-history")&&E(i,e))}window.addEventListener("load",()=>{const a=location.hash.slice(1);console.log(a)}),window.addEventListener("hashchange",()=>{const a=location.hash.slice(1);console.log(a)})}function M(){const t=localStorage.getItem("logged");(t==="false"||t===null)&&(window.location.href="404")}document.addEventListener("DOMContentLoaded",()=>{j(),w(),x(),b(),b(),f(),$(),M(),k()});
+        </div>`;s.innerHTML=i,w(k).then(t=>{_(t),T(t)}).catch(v)}function y(s,i){$(s);const t=i.dataset.hash;t&&(location.hash=t),console.log(t)}function E(s,i){const t=location.hash.slice(1),a=document.querySelector(`[data-hash="${t}"]`);switch(b(a,i),t){case"statistics":h(s,a);break;case"history":y(s,a);break}}function D(){const s=document.querySelector(".js-cabinet-nav-list"),i=document.querySelector(".js-cabinet-main-body");s==null||s.addEventListener("click",t);function t(a){const e=a.target.closest("li");e&&(b(e,s),e.classList.contains("js-statistics")&&h(i,e),e.classList.contains("js-history")&&y(i,e))}E(i,s)}function H(){const s=localStorage.getItem("logged");(s==="false"||s===null)&&(window.location.href="404")}document.addEventListener("DOMContentLoaded",()=>{q(),x(),L(),u(),u(),S(),D(),H(),j()});
 //# sourceMappingURL=cabinet.js.map
