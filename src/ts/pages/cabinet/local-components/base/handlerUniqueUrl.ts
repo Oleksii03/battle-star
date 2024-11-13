@@ -6,7 +6,7 @@ export function handlerUniqueUrl(
   cabinetMainContainer: HTMLElement,
   navigationList: HTMLUListElement
 ) {
-  const tab = location.hash.slice(1);
+  const tab = location.hash.slice(1) ? location.hash.slice(1) : 'statistics';
   const targetEl = document.querySelector(`[data-hash="${tab}"]`) as HTMLElement;
 
   setActiveListItem(targetEl, navigationList);
@@ -21,6 +21,7 @@ export function handlerUniqueUrl(
       break;
 
     default:
+      statisticHandler(cabinetMainContainer, targetEl);
       break;
   }
 }
