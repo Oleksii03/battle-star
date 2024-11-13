@@ -1,4 +1,4 @@
-import{h as v,o as u}from"../../assets/cabinet-CWERuWV8.js";import{P as f,g as w,H as k,h as x,l as S,c as j}from"../../assets/closeDropDownList-D3JACSJ9.js";import{s as L}from"../../assets/loginOrRegistrationHandler-CBIEuIa6.js";import"../../assets/vendor-DZUFF-U2.js";function q(){if(window.location.pathname.includes(f)){const i=document.querySelector(".js-user-inner-list"),t=document.querySelector(".js-sidebar-btn-exit"),a=document.querySelector(".js-sidebar-btn-enter"),e=document.querySelector(".js-user-active-title"),n=document.querySelector(".js-icon-arrow-down"),o=document.querySelector(".header__user-item");t==null||t.classList.remove("sidebar__nav-item_hidden"),a==null||a.classList.add("sidebar__nav-item_hidden"),e.style.cursor="auto",e&&(e.style.cursor="auto"),i&&(i.style.display="none"),n&&(n.style.display="none"),o&&(o.style.cursor="auto")}}function b(s,i){const t=document.querySelector(".js-cabinet-nav-thumb"),a=[...i.children],e=a.indexOf(s);t.style.top=`${16.66*e}%`,a.forEach(n=>{n.classList.remove("cabinet__nav-item_active")}),s.classList.add("cabinet__nav-item_active")}function C(s){const i=`
+import{h as v,o as b}from"../../assets/cabinet-CWERuWV8.js";import{P as f,g as w,H as k,h as x,l as S,c as j}from"../../assets/closeDropDownList-D3JACSJ9.js";import{s as L}from"../../assets/loginOrRegistrationHandler-CBIEuIa6.js";import"../../assets/vendor-DZUFF-U2.js";function q(){if(window.location.pathname.includes(f)){const i=document.querySelector(".js-user-inner-list"),s=document.querySelector(".js-sidebar-btn-exit"),a=document.querySelector(".js-sidebar-btn-enter"),e=document.querySelector(".js-user-active-title"),c=document.querySelector(".js-icon-arrow-down"),r=document.querySelector(".header__user-item");s==null||s.classList.remove("sidebar__nav-item_hidden"),a==null||a.classList.add("sidebar__nav-item_hidden"),e.style.cursor="auto",e&&(e.style.cursor="auto"),i&&(i.style.display="none"),c&&(c.style.display="none"),r&&(r.style.cursor="auto")}}function h(t,i){const s=document.querySelector(".js-cabinet-nav-thumb"),a=[...i.children],e=a.indexOf(t);s.style.top=`${16.66*e}%`,a.forEach(c=>{c.classList.remove("cabinet__nav-item_active")}),t.classList.add("cabinet__nav-item_active")}function C(t){const i=`
         <div class="cabinet-statistics">
           <div class="cabinet-statistics__btns">
             <div class="cabinet-statistics__btns-box">
@@ -144,14 +144,14 @@ import{h as v,o as u}from"../../assets/cabinet-CWERuWV8.js";import{P as f,g as w
               </picture>
             </div>
           </div>
-        </div>`;s.innerHTML=i}function h(s,i){C(s);const t=i.dataset.hash;console.log(t),t&&(location.hash=t)}function _(s){const i=document.querySelector(".js-cabinet-history-list"),t=s.map(a=>{const{id:e,isVictory:n,score:o,title:m,objDate:{date:l,time:r},objID:{id:c,title:d},objRegime:{regime:p,title:g}}=a;return`
+        </div>`;t.innerHTML=i}function u(t,i){C(t);const s=i.dataset.hash;s&&(location.hash=s)}function _(t){const i=document.querySelector(".js-cabinet-history-list"),s=t.map(a=>{const{id:e,isVictory:c,score:r,title:m,objDate:{date:l,time:o},objID:{id:n,title:d},objRegime:{regime:p,title:g}}=a;return`
             <li class="cabinet-history__list-item" data-id="${e}">
               <p class="cabinet-history__list-item-title">${m}</p>
 
               <div class="medium-content">
                 <div class="cabinet-history__list-item-date-box">
                   <p class="cabinet-history__list-item-date-title">${l}</p>
-                  <p class="cabinet-history__list-item-time">${r}</p>
+                  <p class="cabinet-history__list-item-time">${o}</p>
                 </div>
 
                 <div class="cabinet-history__list-item-regime-box">
@@ -161,20 +161,20 @@ import{h as v,o as u}from"../../assets/cabinet-CWERuWV8.js";import{P as f,g as w
 
                 <div class="cabinet-history__list-item-id-box">
                   <p class="cabinet-history__list-item-id-title">${d}</p>
-                  <p class="cabinet-history__list-item-id">${c}</p>
+                  <p class="cabinet-history__list-item-id">${n}</p>
                 </div>
               </div>
 
               <div class="cabinet-history__list-item-result">
                 
-                ${n?'<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_victory">Перемога</p>':'<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_loss">Програш</p>'}
+                ${c?'<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_victory">Перемога</p>':'<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_loss">Програш</p>'}
                 <p class="cabinet-history__list-item-result-score js-result-score">
-                  <span class="symbol">${n?"+ ":"- "}</span>
-                  <span class="amount">${o}</span>
+                  <span class="symbol">${c?"+ ":"- "}</span>
+                  <span class="amount">${r}</span>
                   <span class="currency">BS</span>
                 </p>
               </div>
-            </li>`});i.innerHTML=t.join("")}function T(s){const i=document.querySelector(".js-drop-down-item-title-box"),t=document.querySelector(".js-drop-down-inner-list"),a=document.querySelector(".js-drop-down-active-title"),e=document.querySelector(".js-drop-down-icon");i==null||i.addEventListener("click",n);function n(){t==null||t.classList.toggle("cabinet-history__drop-down-inner-list_active"),e==null||e.classList.toggle("cabinet-history__drop-down-item-icon_active")}t==null||t.addEventListener("click",o);function o(l){const c=l.target.textContent;c&&(a.textContent=c,n(),m(c.toLowerCase()))}function m(l){if(l!=null&&l.includes("рейтинг")){const c=s.toSorted((d,p)=>p.sortScore-d.sortScore);_(c);return}const r=s.filter(({title:c})=>c.toLowerCase()===l);if(r.length){_(r);return}_(s)}}function $(s){const i=`
+            </li>`});i.innerHTML=s.join("")}function T(t){const i=document.querySelector(".js-drop-down-item-title-box"),s=document.querySelector(".js-drop-down-inner-list"),a=document.querySelector(".js-drop-down-active-title"),e=document.querySelector(".js-drop-down-icon");i==null||i.addEventListener("click",c);function c(){s==null||s.classList.toggle("cabinet-history__drop-down-inner-list_active"),e==null||e.classList.toggle("cabinet-history__drop-down-item-icon_active")}s==null||s.addEventListener("click",r);function r(l){const n=l.target.textContent;n&&(a.textContent=n,c(),m(n.toLowerCase()))}function m(l){if(l!=null&&l.includes("рейтинг")){const n=t.toSorted((d,p)=>p.sortScore-d.sortScore);_(n);return}const o=t.filter(({title:n})=>n.toLowerCase()===l);if(o.length){_(o);return}_(t)}}function $(t){const i=`
        <div class="cabinet__history cabinet-history">
           <div class="cabinet-history__title-box">
             <h3 class="cabinet-history__title">Історія матчів</h3>
@@ -218,5 +218,5 @@ import{h as v,o as u}from"../../assets/cabinet-CWERuWV8.js";import{P as f,g as w
           </div>
 
           <ul class="cabinet-history__list js-cabinet-history-list"></ul>
-        </div>`;s.innerHTML=i,w(k).then(t=>{_(t),T(t)}).catch(v)}function y(s,i){$(s);const t=i.dataset.hash;t&&(location.hash=t),console.log(t)}function E(s,i){const t=location.hash.slice(1),a=document.querySelector(`[data-hash="${t}"]`);switch(b(a,i),t){case"statistics":h(s,a);break;case"history":y(s,a);break}}function D(){const s=document.querySelector(".js-cabinet-nav-list"),i=document.querySelector(".js-cabinet-main-body");s==null||s.addEventListener("click",t);function t(a){const e=a.target.closest("li");e&&(b(e,s),e.classList.contains("js-statistics")&&h(i,e),e.classList.contains("js-history")&&y(i,e))}E(i,s)}function H(){const s=localStorage.getItem("logged");(s==="false"||s===null)&&(window.location.href="404")}document.addEventListener("DOMContentLoaded",()=>{q(),x(),L(),u(),u(),S(),D(),H(),j()});
+        </div>`;t.innerHTML=i,w(k).then(s=>{_(s),T(s)}).catch(v)}function y(t,i){$(t);const s=i.dataset.hash;s&&(location.hash=s)}function E(t,i){const s=location.hash.slice(1)?location.hash.slice(1):"statistics",a=document.querySelector(`[data-hash="${s}"]`);switch(h(a,i),s){case"statistics":u(t,a);break;case"history":y(t,a);break;default:u(t,a);break}}function D(){const t=document.querySelector(".js-cabinet-nav-list"),i=document.querySelector(".js-cabinet-main-body");t==null||t.addEventListener("click",s);function s(a){const e=a.target.closest("li");e&&(h(e,t),e.classList.contains("js-statistics")&&u(i,e),e.classList.contains("js-history")&&y(i,e))}E(i,t)}function H(){const t=localStorage.getItem("logged");(t==="false"||t===null)&&(window.location.href="404")}document.addEventListener("DOMContentLoaded",()=>{q(),x(),L(),b(),b(),S(),D(),H(),j()});
 //# sourceMappingURL=cabinet.js.map
