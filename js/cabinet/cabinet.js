@@ -1,4 +1,4 @@
-import{h as k,o as u}from"../../assets/cabinet-CWERuWV8.js";import{P as f,g as w,H as x,h as j,l as L,c as S}from"../../assets/closeDropDownList-D3JACSJ9.js";import{s as q}from"../../assets/loginOrRegistrationHandler-CBIEuIa6.js";import"../../assets/vendor-DZUFF-U2.js";function T(){if(window.location.pathname.includes(f)){const i=document.querySelector(".js-user-inner-list"),t=document.querySelector(".js-sidebar-btn-exit"),a=document.querySelector(".js-sidebar-btn-enter"),e=document.querySelector(".js-user-active-title"),c=document.querySelector(".js-icon-arrow-down"),r=document.querySelector(".header__user-item");t==null||t.classList.remove("sidebar__nav-item_hidden"),a==null||a.classList.add("sidebar__nav-item_hidden"),e.style.cursor="auto",e&&(e.style.cursor="auto"),i&&(i.style.display="none"),c&&(c.style.display="none"),r&&(r.style.cursor="auto")}}function g(s,i){const t=document.querySelector(".js-cabinet-nav-thumb"),a=[...i.children],e=a.indexOf(s);t.style.top=`${16.66*e}%`,a.forEach(c=>{c.classList.remove("cabinet__nav-item_active")}),s.classList.add("cabinet__nav-item_active")}function y(){return`
+import{h as k,o as u}from"../../assets/cabinet-CWERuWV8.js";import{P as f,g as w,H as x,h as j,l as L,c as S}from"../../assets/closeDropDownList-D3JACSJ9.js";import{s as q}from"../../assets/loginOrRegistrationHandler-CBIEuIa6.js";import"../../assets/vendor-DZUFF-U2.js";function T(){if(window.location.pathname.includes(f)){const i=document.querySelector(".js-user-inner-list"),t=document.querySelector(".js-sidebar-btn-exit"),a=document.querySelector(".js-sidebar-btn-enter"),e=document.querySelector(".js-user-active-title"),c=document.querySelector(".js-icon-arrow-down"),r=document.querySelector(".header__user-item");t==null||t.classList.remove("sidebar__nav-item_hidden"),a==null||a.classList.add("sidebar__nav-item_hidden"),e.style.cursor="auto",e&&(e.style.cursor="auto"),i&&(i.style.display="none"),c&&(c.style.display="none"),r&&(r.style.cursor="auto")}}function y(s,i){const t=document.querySelector(".js-cabinet-nav-thumb"),a=[...i.children],e=a.indexOf(s);t.style.top=`${16.66*e}%`,a.forEach(c=>{c.classList.remove("cabinet__nav-item_active")}),s.classList.add("cabinet__nav-item_active")}function g(){return`
           <div class="cabinet-statistics__rank">
             <p class="cabinet-statistics__rank-title">
               Ранг:
@@ -124,6 +124,14 @@ import{h as k,o as u}from"../../assets/cabinet-CWERuWV8.js";import{P as f,g as w
             <p class="cabinet-statistics__rank-title">
               Ранг:
               <span>1682</span>
+
+                <img
+                  width="63"
+                  height="30"
+                  loading="lazy"
+                  class="cabinet-statistics__rank-title-icon"
+                  src="../../assets/img/pages/cabinet/statistics/rank-icon-scgo.svg"
+                  alt="rank icon scgo" />
             </p>
 
             <ul class="cabinet-statistics__rank-list">
@@ -218,7 +226,7 @@ import{h as k,o as u}from"../../assets/cabinet-CWERuWV8.js";import{P as f,g as w
               </ul>
             </div>
 
-          </div>`}function C(s,i){const t=document.querySelector(".js-cabinet-statistics-thumb");s.innerHTML=y(),i.addEventListener("click",a=>{const e=a.target;if(e.tagName==="BUTTON"){if([...i.children].forEach(c=>c.classList.remove("cabinet-statistics__btn_active")),e.classList.contains("js-statistics-btn-csgo")){s.innerHTML=M(),t==null||t.classList.add("cabinet-statistics__btns-thumb_active"),e.classList.add("cabinet-statistics__btn_active");return}if(e.classList.contains("js-statistics-btn-dota")){s.innerHTML=y(),t==null||t.classList.remove("cabinet-statistics__btns-thumb_active"),e.classList.add("cabinet-statistics__btn_active");return}}})}function E(s){const i=`
+          </div>`}function C(s,i){const t=document.querySelector(".js-cabinet-statistics-thumb");s.innerHTML=g(),i.addEventListener("click",a=>{const e=a.target;if(e.tagName==="BUTTON"){if([...i.children].forEach(c=>c.classList.remove("cabinet-statistics__btn_active")),e.classList.contains("js-statistics-btn-csgo")){s.innerHTML=M(),t==null||t.classList.add("cabinet-statistics__btns-thumb_active"),e.classList.add("cabinet-statistics__btn_active");return}if(e.classList.contains("js-statistics-btn-dota")){s.innerHTML=g(),t==null||t.classList.remove("cabinet-statistics__btns-thumb_active"),e.classList.add("cabinet-statistics__btn_active");return}}})}function E(s){const i=`
         <div class="cabinet-statistics">
           <div class="cabinet-statistics__btns">
             <div class="cabinet-statistics__btns-box js-statistics-btns-box">
@@ -320,5 +328,5 @@ import{h as k,o as u}from"../../assets/cabinet-CWERuWV8.js";import{P as f,g as w
           </div>
 
           <ul class="cabinet-history__list js-cabinet-history-list"></ul>
-        </div>`;s.innerHTML=i,w(x).then(t=>{o(t),H(t)}).catch(k)}function h(s,i){$(s);const t=i.dataset.hash;t&&(location.hash=t)}function D(s,i){const t=location.hash.slice(1)?location.hash.slice(1):"statistics",a=document.querySelector(`[data-hash="${t}"]`);switch(g(a,i),t){case"statistics":b(s,a);break;case"history":h(s,a);break;default:b(s,a);break}}function I(){const s=document.querySelector(".js-cabinet-nav-list"),i=document.querySelector(".js-cabinet-main-body");s==null||s.addEventListener("click",t);function t(a){const e=a.target.closest("li");e&&(g(e,s),e.classList.contains("js-statistics")&&b(i,e),e.classList.contains("js-history")&&h(i,e))}D(i,s)}function O(){const s=localStorage.getItem("logged");(s==="false"||s===null)&&(window.location.href="404")}document.addEventListener("DOMContentLoaded",()=>{T(),j(),q(),u(),u(),L(),I(),O(),S()});
+        </div>`;s.innerHTML=i,w(x).then(t=>{o(t),H(t)}).catch(k)}function h(s,i){$(s);const t=i.dataset.hash;t&&(location.hash=t)}function D(s,i){const t=location.hash.slice(1)?location.hash.slice(1):"statistics",a=document.querySelector(`[data-hash="${t}"]`);switch(y(a,i),t){case"statistics":b(s,a);break;case"history":h(s,a);break;default:b(s,a);break}}function I(){const s=document.querySelector(".js-cabinet-nav-list"),i=document.querySelector(".js-cabinet-main-body");s==null||s.addEventListener("click",t);function t(a){const e=a.target.closest("li");e&&(y(e,s),e.classList.contains("js-statistics")&&b(i,e),e.classList.contains("js-history")&&h(i,e))}D(i,s)}function O(){const s=localStorage.getItem("logged");(s==="false"||s===null)&&(window.location.href="404")}document.addEventListener("DOMContentLoaded",()=>{T(),j(),q(),u(),u(),L(),I(),O(),S()});
 //# sourceMappingURL=cabinet.js.map
