@@ -4,6 +4,14 @@ export function createMainBodyMarkupCsgo(): string {
             <p class="cabinet-statistics__rank-title">
               Ранг:
               <span>1682</span>
+
+                <img
+                  width="63"
+                  height="30"
+                  loading="lazy"
+                  class="cabinet-statistics__rank-title-icon"
+                  src="../../assets/img/pages/cabinet/statistics/rank-icon-scgo.svg"
+                  alt="rank icon scgo" />
             </p>
 
             <ul class="cabinet-statistics__rank-list">
