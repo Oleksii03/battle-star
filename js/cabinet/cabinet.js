@@ -129,9 +129,7 @@ import{h as v,o as b}from"../../assets/cabinet-CWERuWV8.js";import{P as f,g as w
 
               <picture>
                 <source
-                  srcset="
-                    ../../../assets/img/pages/cabinet/statistics/cabinet-chart-statistics.webp
-                  "
+                  srcset="../../assets/img/pages/cabinet/statistics/cabinet-chart-statistics.webp"
                   type="image/webp" />
 
                 <img
@@ -139,7 +137,7 @@ import{h as v,o as b}from"../../assets/cabinet-CWERuWV8.js";import{P as f,g as w
                   height="480"
                   loading="lazy"
                   class="game-style__chart-img"
-                  src="../../../assets/img/pages/cabinet/statistics/cabinet-chart-statistics.png"
+                  src="../../assets/img/pages/cabinet/statistics/cabinet-chart-statistics.png"
                   alt="game style chart" />
               </picture>
             </div>
