@@ -5,7 +5,9 @@ export function statisticHandler(container: HTMLElement, targetEl: HTMLElement) 
 
   // ------------
 
-  const hash = targetEl.dataset.hash; // Отримуємо значення з data-url
+  const hash = targetEl.dataset.hash;
 
-  location.hash = hash;
+  console.log(hash);
+
+  if (hash) location.hash = hash;
 }

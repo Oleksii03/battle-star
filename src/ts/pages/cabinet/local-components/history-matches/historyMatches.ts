@@ -6,5 +6,7 @@ export function historyMatches(container: HTMLElement, targetEl: HTMLElement) {
   // --------------------
 
   const hash = targetEl.dataset.hash;
-  location.hash = hash;
+  if (hash) location.hash = hash;
+
+  console.log(hash);
 }

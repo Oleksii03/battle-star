@@ -1,6 +1,7 @@
 import { setActiveListItem } from './local-components/base/setActiveListItem';
 import { statisticHandler } from './local-components/statistics/statistic';
 import { historyMatches } from './local-components/history-matches/historyMatches';
+import { handlerUniqueUrl } from './local-components/base/handlerUniqueUrl';
 
 export function pageCabinet() {
   const navigationList = document.querySelector('.js-cabinet-nav-list') as HTMLUListElement;
@@ -26,13 +27,19 @@ export function pageCabinet() {
     }
   }
 
-  window.addEventListener('load', () => {
-    const tab = location.hash.slice(1); // Отримуємо поточний хеш без '#'
-    console.log(tab);
-  });
+  // handlerUniqueUrl
+  handlerUniqueUrl(cabinetMainContainer, navigationList);
 
-  window.addEventListener('hashchange', () => {
-    const tab = location.hash.slice(1);
-    console.log(tab);
-  });
+  // window.addEventListener('load', () => {
+  //   const tab = location.hash.slice(1); // Отримуємо поточний хеш без '#'
+
+  //   if (tab.includes('history')) {
+  //     console.log('test');
+  //   }
+  // });
+
+  // window.addEventListener('hashchange', () => {
+  //   const tab = location.hash.slice(1);
+  //   console.log(tab);
+  // });
 }
