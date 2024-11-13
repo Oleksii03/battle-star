@@ -1,26 +1,4 @@
-import{h as v,o as b}from"../../assets/cabinet-CWERuWV8.js";import{P as f,g as w,H as k,h as x,l as S,c as j}from"../../assets/closeDropDownList-D3JACSJ9.js";import{s as L}from"../../assets/loginOrRegistrationHandler-CBIEuIa6.js";import"../../assets/vendor-DZUFF-U2.js";function q(){if(window.location.pathname.includes(f)){const i=document.querySelector(".js-user-inner-list"),s=document.querySelector(".js-sidebar-btn-exit"),a=document.querySelector(".js-sidebar-btn-enter"),e=document.querySelector(".js-user-active-title"),c=document.querySelector(".js-icon-arrow-down"),r=document.querySelector(".header__user-item");s==null||s.classList.remove("sidebar__nav-item_hidden"),a==null||a.classList.add("sidebar__nav-item_hidden"),e.style.cursor="auto",e&&(e.style.cursor="auto"),i&&(i.style.display="none"),c&&(c.style.display="none"),r&&(r.style.cursor="auto")}}function h(t,i){const s=document.querySelector(".js-cabinet-nav-thumb"),a=[...i.children],e=a.indexOf(t);s.style.top=`${16.66*e}%`,a.forEach(c=>{c.classList.remove("cabinet__nav-item_active")}),t.classList.add("cabinet__nav-item_active")}function C(t){const i=`
-        <div class="cabinet-statistics">
-          <div class="cabinet-statistics__btns">
-            <div class="cabinet-statistics__btns-box">
-              <button
-                class="cabinet-statistics__btn cabinet-statistics__btn_csgo"
-                type="button">
-                CS:GO
-              </button>
-
-              <button
-                class="cabinet-statistics__btn cabinet-statistics__btn_active cabinet-statistics__btn_dota"
-                type="button">
-                DOTA 2
-              </button>
-            </div>
-         
-            <div class="cabinet-statistics__btns-track">
-              <span class="cabinet-statistics__btns-thumb js-cabinet-statistics-thumb"></span>
-            </div>
-          </div>
-
-   
+import{h as f,o as b}from"../../assets/cabinet-CWERuWV8.js";import{P as k,g as w,H as x,h as j,l as S,c as L}from"../../assets/closeDropDownList-D3JACSJ9.js";import{s as q}from"../../assets/loginOrRegistrationHandler-CBIEuIa6.js";import"../../assets/vendor-DZUFF-U2.js";function T(){if(window.location.pathname.includes(k)){const i=document.querySelector(".js-user-inner-list"),s=document.querySelector(".js-sidebar-btn-exit"),e=document.querySelector(".js-sidebar-btn-enter"),a=document.querySelector(".js-user-active-title"),n=document.querySelector(".js-icon-arrow-down"),o=document.querySelector(".header__user-item");s==null||s.classList.remove("sidebar__nav-item_hidden"),e==null||e.classList.add("sidebar__nav-item_hidden"),a.style.cursor="auto",a&&(a.style.cursor="auto"),i&&(i.style.display="none"),n&&(n.style.display="none"),o&&(o.style.cursor="auto")}}function y(t,i){const s=document.querySelector(".js-cabinet-nav-thumb"),e=[...i.children],a=e.indexOf(t);s.style.top=`${16.66*a}%`,e.forEach(n=>{n.classList.remove("cabinet__nav-item_active")}),t.classList.add("cabinet__nav-item_active")}function h(){return`
           <div class="cabinet-statistics__rank">
             <p class="cabinet-statistics__rank-title">
               Ранг:
@@ -141,38 +119,65 @@ import{h as v,o as b}from"../../assets/cabinet-CWERuWV8.js";import{P as f,g as w
                   alt="game style chart" />
               </picture>
             </div>
+          </div>`}function M(t,i){t.innerHTML=h(),i.addEventListener("click",s=>{const e=s.target;if(e.tagName==="BUTTON"){if(e.classList.contains("js-statistics-btn-csgo")){console.log(e);return}if(e.classList.contains("js-statistics-btn-dota")){t.innerHTML=h();return}}})}function C(t){const i=`
+        <div class="cabinet-statistics">
+          <div class="cabinet-statistics__btns">
+            <div class="cabinet-statistics__btns-box js-statistics-btns-box">
+              <button
+                class="cabinet-statistics__btn 
+                cabinet-statistics__btn_csgo 
+                js-statistics-btn-csgo"
+                type="button">
+                CS:GO
+              </button>
+
+              <button
+                class="cabinet-statistics__btn 
+                cabinet-statistics__btn_active 
+                cabinet-statistics__btn_dota
+                js-statistics-btn-dota"
+                type="button">
+                DOTA 2
+              </button>
+            </div>
+         
+            <div class="cabinet-statistics__btns-track">
+              <span class="cabinet-statistics__btns-thumb js-cabinet-statistics-thumb"></span>
+            </div>
           </div>
-        </div>`;t.innerHTML=i}function u(t,i){C(t);const s=i.dataset.hash;s&&(location.hash=s)}function _(t){const i=document.querySelector(".js-cabinet-history-list"),s=t.map(a=>{const{id:e,isVictory:c,score:r,title:m,objDate:{date:l,time:o},objID:{id:n,title:d},objRegime:{regime:p,title:g}}=a;return`
-            <li class="cabinet-history__list-item" data-id="${e}">
-              <p class="cabinet-history__list-item-title">${m}</p>
+
+          <div class="cabinet-statistics__content js-cabinet-statistics-content">
+       </div>`;t.innerHTML=i;const s=document.querySelector(".js-cabinet-statistics-content"),e=document.querySelector(".js-statistics-btns-box");M(s,e)}function u(t,i){C(t);const s=i.dataset.hash;s&&(location.hash=s)}function _(t){const i=document.querySelector(".js-cabinet-history-list"),s=t.map(e=>{const{id:a,isVictory:n,score:o,title:d,objDate:{date:l,time:r},objID:{id:c,title:m},objRegime:{regime:p,title:v}}=e;return`
+            <li class="cabinet-history__list-item" data-id="${a}">
+              <p class="cabinet-history__list-item-title">${d}</p>
 
               <div class="medium-content">
                 <div class="cabinet-history__list-item-date-box">
                   <p class="cabinet-history__list-item-date-title">${l}</p>
-                  <p class="cabinet-history__list-item-time">${o}</p>
+                  <p class="cabinet-history__list-item-time">${r}</p>
                 </div>
 
                 <div class="cabinet-history__list-item-regime-box">
-                  <p class="cabinet-history__list-item-regime-title">${g}</p>
+                  <p class="cabinet-history__list-item-regime-title">${v}</p>
                   <p class="cabinet-history__list-item-regime">${p}</p>
                 </div>
 
                 <div class="cabinet-history__list-item-id-box">
-                  <p class="cabinet-history__list-item-id-title">${d}</p>
-                  <p class="cabinet-history__list-item-id">${n}</p>
+                  <p class="cabinet-history__list-item-id-title">${m}</p>
+                  <p class="cabinet-history__list-item-id">${c}</p>
                 </div>
               </div>
 
               <div class="cabinet-history__list-item-result">
                 
-                ${c?'<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_victory">Перемога</p>':'<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_loss">Програш</p>'}
+                ${n?'<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_victory">Перемога</p>':'<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_loss">Програш</p>'}
                 <p class="cabinet-history__list-item-result-score js-result-score">
-                  <span class="symbol">${c?"+ ":"- "}</span>
-                  <span class="amount">${r}</span>
+                  <span class="symbol">${n?"+ ":"- "}</span>
+                  <span class="amount">${o}</span>
                   <span class="currency">BS</span>
                 </p>
               </div>
-            </li>`});i.innerHTML=s.join("")}function T(t){const i=document.querySelector(".js-drop-down-item-title-box"),s=document.querySelector(".js-drop-down-inner-list"),a=document.querySelector(".js-drop-down-active-title"),e=document.querySelector(".js-drop-down-icon");i==null||i.addEventListener("click",c);function c(){s==null||s.classList.toggle("cabinet-history__drop-down-inner-list_active"),e==null||e.classList.toggle("cabinet-history__drop-down-item-icon_active")}s==null||s.addEventListener("click",r);function r(l){const n=l.target.textContent;n&&(a.textContent=n,c(),m(n.toLowerCase()))}function m(l){if(l!=null&&l.includes("рейтинг")){const n=t.toSorted((d,p)=>p.sortScore-d.sortScore);_(n);return}const o=t.filter(({title:n})=>n.toLowerCase()===l);if(o.length){_(o);return}_(t)}}function $(t){const i=`
+            </li>`});i.innerHTML=s.join("")}function E(t){const i=document.querySelector(".js-drop-down-item-title-box"),s=document.querySelector(".js-drop-down-inner-list"),e=document.querySelector(".js-drop-down-active-title"),a=document.querySelector(".js-drop-down-icon");i==null||i.addEventListener("click",n);function n(){s==null||s.classList.toggle("cabinet-history__drop-down-inner-list_active"),a==null||a.classList.toggle("cabinet-history__drop-down-item-icon_active")}s==null||s.addEventListener("click",o);function o(l){const c=l.target.textContent;c&&(e.textContent=c,n(),d(c.toLowerCase()))}function d(l){if(l!=null&&l.includes("рейтинг")){const c=t.toSorted((m,p)=>p.sortScore-m.sortScore);_(c);return}const r=t.filter(({title:c})=>c.toLowerCase()===l);if(r.length){_(r);return}_(t)}}function $(t){const i=`
        <div class="cabinet__history cabinet-history">
           <div class="cabinet-history__title-box">
             <h3 class="cabinet-history__title">Історія матчів</h3>
@@ -216,5 +221,5 @@ import{h as v,o as b}from"../../assets/cabinet-CWERuWV8.js";import{P as f,g as w
           </div>
 
           <ul class="cabinet-history__list js-cabinet-history-list"></ul>
-        </div>`;t.innerHTML=i,w(k).then(s=>{_(s),T(s)}).catch(v)}function y(t,i){$(t);const s=i.dataset.hash;s&&(location.hash=s)}function E(t,i){const s=location.hash.slice(1)?location.hash.slice(1):"statistics",a=document.querySelector(`[data-hash="${s}"]`);switch(h(a,i),s){case"statistics":u(t,a);break;case"history":y(t,a);break;default:u(t,a);break}}function D(){const t=document.querySelector(".js-cabinet-nav-list"),i=document.querySelector(".js-cabinet-main-body");t==null||t.addEventListener("click",s);function s(a){const e=a.target.closest("li");e&&(h(e,t),e.classList.contains("js-statistics")&&u(i,e),e.classList.contains("js-history")&&y(i,e))}E(i,t)}function H(){const t=localStorage.getItem("logged");(t==="false"||t===null)&&(window.location.href="404")}document.addEventListener("DOMContentLoaded",()=>{q(),x(),L(),b(),b(),S(),D(),H(),j()});
+        </div>`;t.innerHTML=i,w(x).then(s=>{_(s),E(s)}).catch(f)}function g(t,i){$(t);const s=i.dataset.hash;s&&(location.hash=s)}function H(t,i){const s=location.hash.slice(1)?location.hash.slice(1):"statistics",e=document.querySelector(`[data-hash="${s}"]`);switch(y(e,i),s){case"statistics":u(t,e);break;case"history":g(t,e);break;default:u(t,e);break}}function D(){const t=document.querySelector(".js-cabinet-nav-list"),i=document.querySelector(".js-cabinet-main-body");t==null||t.addEventListener("click",s);function s(e){const a=e.target.closest("li");a&&(y(a,t),a.classList.contains("js-statistics")&&u(i,a),a.classList.contains("js-history")&&g(i,a))}H(i,t)}function I(){const t=localStorage.getItem("logged");(t==="false"||t===null)&&(window.location.href="404")}document.addEventListener("DOMContentLoaded",()=>{T(),j(),q(),b(),b(),S(),D(),I(),L()});
 //# sourceMappingURL=cabinet.js.map
