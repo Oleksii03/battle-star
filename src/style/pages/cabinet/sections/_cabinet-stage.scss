@@ -171,7 +171,11 @@
     height: 100%;
     border-radius: 4px;
     background-color: $basic-yellow;
-    transition: top 200ms linear;
+    transition: left 200ms linear;
+
+    &_active {
+      left: 0%;
+    }
   }
 
   &__rank {
