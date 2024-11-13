@@ -302,7 +302,11 @@
         &-box {
           position: relative;
           margin-top: 30px;
-          margin-left: 9%;
+
+          @media (min-width: 1715px) {
+            padding-right: 190px;
+          }
+          // margin: 0 50px 20px 20px;
         }
         &-title {
           position: absolute;
@@ -314,31 +318,55 @@
           line-height: normal;
 
           &_flex {
-            top: -36px;
+            top: -32px;
             left: 50%;
             transform: translateX(-50%);
+
+            @media (min-width: 1715px) {
+              top: -36px;
+              left: 50%;
+              transform: translateX(-200%);
+            }
           }
           &_farming {
             top: 31%;
-            left: -78px;
+            left: -30px;
+
+            @media (min-width: 1715px) {
+              left: 12px;
+            }
           }
           &_fighting {
             top: 31%;
-            right: -78px;
+            right: -20px;
+
+            @media (min-width: 1715px) {
+              right: 211px;
+            }
           }
           &_support {
-            bottom: 13px;
-            left: 8px;
+            bottom: 41px;
+            left: 30px;
+
+            @media (min-width: 1715px) {
+              bottom: 13px;
+              left: 99px;
+            }
           }
           &_pushing {
-            bottom: 13px;
-            right: 24px;
+            bottom: 41px;
+            right: 55px;
+
+            @media (min-width: 1715px) {
+              bottom: 13px;
+              right: 310px;
+            }
           }
         }
 
         &-img {
           aspect-ratio: 1/1;
-          object-fit: cover;
+          object-fit: contain;
         }
       }
     }
@@ -386,7 +414,6 @@
   // list
   &__indicators-list {
     display: flex;
-    // align-items: flex-start;
     justify-content: space-between;
     border-radius: 18px;
     background: rgba(248, 248, 248, 0.1);
@@ -404,24 +431,50 @@
       left: 50%;
       transform: translateX(-50%);
       width: 21px;
-      height: 298px;
-
-      background: linear-gradient(
-        90deg,
-        rgba(248, 248, 248, 0.2) 0%,
-        rgba(248, 248, 248, 0) 96.55%
-      );
-
+      height: 306px;
       border-radius: 6px 6px 0px 0px;
+      overflow: hidden;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1px;
+        height: 99%;
+        background: linear-gradient(
+          0deg,
+          rgba(248, 248, 248, 0.2) 0%,
+          rgba(248, 248, 248, 0) 96.55%
+        );
+      }
 
       & > .performance-indicators-track-thumb {
         border-radius: 6px 6px 0px 0px;
         background: linear-gradient(180deg, #fac704 0%, rgba(196, 196, 196, 0) 100%);
-        height: 50%;
-        // margin-top: auto;
         position: absolute;
         width: 100%;
         bottom: 0;
+
+        &_precision {
+          height: 95%;
+        }
+        &_hitting-head {
+          height: 51%;
+        }
+        &_vitality {
+          height: 80%;
+        }
+        &_play-time {
+          height: 65%;
+        }
+        &_weapon-efficiency {
+          height: 45%;
+        }
+        &_assists {
+          height: 35%;
+        }
       }
     }
 
