@@ -29,17 +29,4 @@ export function pageCabinet() {
 
   // handlerUniqueUrl
   handlerUniqueUrl(cabinetMainContainer, navigationList);
-
-  // window.addEventListener('load', () => {
-  //   const tab = location.hash.slice(1); // Отримуємо поточний хеш без '#'
-
-  //   if (tab.includes('history')) {
-  //     console.log('test');
-  //   }
-  // });
-
-  // window.addEventListener('hashchange', () => {
-  //   const tab = location.hash.slice(1);
-  //   console.log(tab);
-  // });
 }

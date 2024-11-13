@@ -130,9 +130,7 @@ export function createMarkup(container: HTMLElement) {
 
               <picture>
                 <source
-                  srcset="
-                    ../../../assets/img/pages/cabinet/statistics/cabinet-chart-statistics.webp
-                  "
+                  srcset="../../assets/img/pages/cabinet/statistics/cabinet-chart-statistics.webp"
                   type="image/webp" />
 
                 <img
@@ -140,7 +138,7 @@ export function createMarkup(container: HTMLElement) {
                   height="480"
                   loading="lazy"
                   class="game-style__chart-img"
-                  src="../../../assets/img/pages/cabinet/statistics/cabinet-chart-statistics.png"
+                  src="../../assets/img/pages/cabinet/statistics/cabinet-chart-statistics.png"
                   alt="game style chart" />
               </picture>
             </div>
