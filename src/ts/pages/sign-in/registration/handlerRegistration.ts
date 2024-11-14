@@ -22,6 +22,8 @@ export function handlerRegistration(form: HTMLFormElement): void {
 
     registerUser(email, password, nickname)
       .then(user => {
+        if (!user) return;
+
         form.reset();
       })
       .catch(handleError);
