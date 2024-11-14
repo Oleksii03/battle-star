@@ -1,4 +1,4 @@
-import{h as k,o as h}from"../../assets/cabinet-BBv-qIRL.js";import{g as f,H as x,s as w,h as L,l as j,c as S}from"../../assets/closeDropDownList-S_Fr-5b0.js";import{s as M}from"../../assets/loginOrRegistrationHandler-BMVZZRe2.js";import"../../assets/vendor-DZUFF-U2.js";function g(t,i){const s=document.querySelector(".js-cabinet-nav-thumb"),a=[...i.children],e=a.indexOf(t);s.style.top=`${16.66*e}%`,a.forEach(c=>{c.classList.remove("cabinet__nav-item_active")}),t.classList.add("cabinet__nav-item_active")}function u(){return`
+import{h as k,o as h}from"../../assets/cabinet-BBv-qIRL.js";import{g as f,H as x,s as w,h as L,l as j,c as S}from"../../assets/closeDropDownList-S_Fr-5b0.js";import{s as M}from"../../assets/loginOrRegistrationHandler-BMVZZRe2.js";import"../../assets/vendor-DZUFF-U2.js";function u(t,i){const s=document.querySelector(".js-cabinet-nav-thumb"),a=[...i.children],e=a.indexOf(t);s.style.top=`${16.66*e}%`,a.forEach(c=>{c.classList.remove("cabinet__nav-item_active")}),t.classList.add("cabinet__nav-item_active")}function g(){return`
           <div class="cabinet-statistics__rank">
             <p class="cabinet-statistics__rank-title">
               Ранг:
@@ -107,7 +107,7 @@ import{h as k,o as h}from"../../assets/cabinet-BBv-qIRL.js";import{g as f,H as x
 
               <picture>
                 <source
-                  srcset="../../assets/img/pages/cabinet/statistics/cabinet-chart-statistics.webp"
+                  srcset="https://firebasestorage.googleapis.com/v0/b/battlestar-514be.appspot.com/o/pages%2Fcabinet%2Fstatistics%2Fcabinet-chart-statistics.webp?alt=media&token=26bc2098-6db3-48cc-bffd-9af72f98a72f"
                   type="image/webp" />
 
                 <img
@@ -115,7 +115,7 @@ import{h as k,o as h}from"../../assets/cabinet-BBv-qIRL.js";import{g as f,H as x
                   height="480"
                   loading="lazy"
                   class="game-style__chart-img"
-                  src="../../assets/img/pages/cabinet/statistics/cabinet-chart-statistics.png"
+                  src="https://firebasestorage.googleapis.com/v0/b/battlestar-514be.appspot.com/o/pages%2Fcabinet%2Fstatistics%2Fcabinet-chart-statistics.png?alt=media&token=16f4d31c-ad8c-40f9-a740-25a5db769aee"
                   alt="game style chart" />
               </picture>
             </div>
@@ -130,7 +130,7 @@ import{h as k,o as h}from"../../assets/cabinet-BBv-qIRL.js";import{g as f,H as x
               height="30"
               loading="lazy"
               class="cabinet-statistics__rank-title-icon"
-              src="../../assets/img/pages/cabinet/statistics/rank-icon-scgo.svg"
+              src="https://firebasestorage.googleapis.com/v0/b/battlestar-514be.appspot.com/o/pages%2Fcabinet%2Fstatistics%2Frank-icon-scgo.svg?alt=media&token=4c9e3636-8f00-4fc9-975f-67786a9ec5b2"
               alt="rank icon scgo" />
           </p>
 
@@ -309,7 +309,7 @@ import{h as k,o as h}from"../../assets/cabinet-BBv-qIRL.js";import{g as f,H as x
               </div>
             </div>
           </div>
-        </div>`}function E(t,i){const s=document.querySelector(".js-cabinet-statistics-thumb");t.innerHTML=u(),i.addEventListener("click",a=>{const e=a.target;if(e.tagName==="BUTTON"){if([...i.children].forEach(c=>c.classList.remove("cabinet-statistics__btn_active")),e.classList.contains("js-statistics-btn-csgo")){t.innerHTML=T(),s==null||s.classList.add("cabinet-statistics__btns-thumb_active"),e.classList.add("cabinet-statistics__btn_active");return}if(e.classList.contains("js-statistics-btn-dota")){t.innerHTML=u(),s==null||s.classList.remove("cabinet-statistics__btns-thumb_active"),e.classList.add("cabinet-statistics__btn_active");return}}})}function q(t){const i=`
+        </div>`}function E(t,i){const s=document.querySelector(".js-cabinet-statistics-thumb");t.innerHTML=g(),i.addEventListener("click",a=>{const e=a.target;if(e.tagName==="BUTTON"){if([...i.children].forEach(c=>c.classList.remove("cabinet-statistics__btn_active")),e.classList.contains("js-statistics-btn-csgo")){t.innerHTML=T(),s==null||s.classList.add("cabinet-statistics__btns-thumb_active"),e.classList.add("cabinet-statistics__btn_active");return}if(e.classList.contains("js-statistics-btn-dota")){t.innerHTML=g(),s==null||s.classList.remove("cabinet-statistics__btns-thumb_active"),e.classList.add("cabinet-statistics__btn_active");return}}})}function q(t){const i=`
         <div class="cabinet-statistics">
           <div class="cabinet-statistics__btns">
             <div class="cabinet-statistics__btns-box js-statistics-btns-box">
@@ -411,5 +411,5 @@ import{h as k,o as h}from"../../assets/cabinet-BBv-qIRL.js";import{g as f,H as x
           </div>
 
           <ul class="cabinet-history__list js-cabinet-history-list"></ul>
-        </div>`;t.innerHTML=i,f(x).then(s=>{_(s),H(s)}).catch(k)}function v(t,i){$(t);const s=i.dataset.hash;s&&(location.hash=s)}function C(t,i){const s=location.hash.slice(1)?location.hash.slice(1):"statistics",a=document.querySelector(`[data-hash="${s}"]`);switch(g(a,i),s){case"statistics":b(t,a);break;case"history":v(t,a);break;default:b(t,a);break}}function D(){const t=document.querySelector(".js-cabinet-nav-list"),i=document.querySelector(".js-cabinet-main-body");t==null||t.addEventListener("click",s);function s(a){const e=a.target.closest("li");e&&(g(e,t),e.classList.contains("js-statistics")&&b(i,e),e.classList.contains("js-history")&&v(i,e))}C(i,t)}function O(){const t=localStorage.getItem("logged");(t==="false"||t===null)&&(window.location.href="404")}document.addEventListener("DOMContentLoaded",()=>{w(),L(),M(),h(),h(),j(),D(),O(),S()});
+        </div>`;t.innerHTML=i,f(x).then(s=>{_(s),H(s)}).catch(k)}function v(t,i){$(t);const s=i.dataset.hash;s&&(location.hash=s)}function C(t,i){const s=location.hash.slice(1)?location.hash.slice(1):"statistics",a=document.querySelector(`[data-hash="${s}"]`);switch(u(a,i),s){case"statistics":b(t,a);break;case"history":v(t,a);break;default:b(t,a);break}}function F(){const t=document.querySelector(".js-cabinet-nav-list"),i=document.querySelector(".js-cabinet-main-body");t==null||t.addEventListener("click",s);function s(a){const e=a.target.closest("li");e&&(u(e,t),e.classList.contains("js-statistics")&&b(i,e),e.classList.contains("js-history")&&v(i,e))}C(i,t)}function D(){const t=localStorage.getItem("logged");(t==="false"||t===null)&&(window.location.href="404")}document.addEventListener("DOMContentLoaded",()=>{w(),L(),M(),h(),h(),j(),F(),D(),S()});
 //# sourceMappingURL=cabinet.js.map
