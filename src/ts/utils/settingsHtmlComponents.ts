@@ -5,6 +5,8 @@ export function settingsHtmlComponents() {
   // reuse-refs---
   const currentPath = window.location.pathname;
 
+  console.log(currentPath);
+
   // PAGE_CABINET
   if (currentPath.includes(PAGE_CABINET)) {
     const listCabinet = document.querySelector('.js-user-inner-list') as HTMLUListElement;

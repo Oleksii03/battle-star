@@ -9,8 +9,6 @@ export function onStateUserChanged(): void {
   const pageError = document.querySelector('.js-page-error');
   const cabinet = document.querySelector('.js-cabinet');
   const headerUserList = document.querySelector('.js-header-user-list') as HTMLUListElement;
-
-  console.log(headerUserList);
   // ---/local refs --------------------------------
 
   onAuthStateChanged(auth, user => {
