@@ -108,7 +108,7 @@ export function createMainBodyMarkupDota(): string {
 
               <picture>
                 <source
-                  srcset="../../assets/img/pages/cabinet/statistics/cabinet-chart-statistics.webp"
+                  srcset="https://firebasestorage.googleapis.com/v0/b/battlestar-514be.appspot.com/o/pages%2Fcabinet%2Fstatistics%2Fcabinet-chart-statistics.webp?alt=media&token=26bc2098-6db3-48cc-bffd-9af72f98a72f"
                   type="image/webp" />
 
                 <img
@@ -116,7 +116,7 @@ export function createMainBodyMarkupDota(): string {
                   height="480"
                   loading="lazy"
                   class="game-style__chart-img"
-                  src="../../assets/img/pages/cabinet/statistics/cabinet-chart-statistics.png"
+                  src="https://firebasestorage.googleapis.com/v0/b/battlestar-514be.appspot.com/o/pages%2Fcabinet%2Fstatistics%2Fcabinet-chart-statistics.png?alt=media&token=16f4d31c-ad8c-40f9-a740-25a5db769aee"
                   alt="game style chart" />
               </picture>
             </div>

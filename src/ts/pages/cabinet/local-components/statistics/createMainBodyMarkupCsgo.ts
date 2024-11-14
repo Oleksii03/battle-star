@@ -10,7 +10,7 @@ export function createMainBodyMarkupCsgo(): string {
               height="30"
               loading="lazy"
               class="cabinet-statistics__rank-title-icon"
-              src="../../assets/img/pages/cabinet/statistics/rank-icon-scgo.svg"
+              src="https://firebasestorage.googleapis.com/v0/b/battlestar-514be.appspot.com/o/pages%2Fcabinet%2Fstatistics%2Frank-icon-scgo.svg?alt=media&token=4c9e3636-8f00-4fc9-975f-67786a9ec5b2"
               alt="rank icon scgo" />
           </p>
 
