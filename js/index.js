@@ -1,4 +1,4 @@
-import{o as $}from"../assets/cabinet-BiW08QWy.js";import{g as _,T as g,a as h,L as w,M as L,P as T,h as y,c as S,s as k,l as M}from"../assets/closeDropDownList-BEL3FiEp.js";import{S as v,G as j}from"../assets/vendor-DZUFF-U2.js";function E(s){const a=document.querySelector(".js-main-slider-news");if(!a)return;const t=s.map(i=>{const{title:e,description:r,views:o,date:l,image:{png:c,webp:n},author:{img:d,name:p}}=i;return`
+import{o as $}from"../assets/cabinet-BBv-qIRL.js";import{g as _,T as g,a as h,L as w,M as L,P as T,h as y,c as S,s as k,l as M}from"../assets/closeDropDownList-S_Fr-5b0.js";import{S as v,G as j}from"../assets/vendor-DZUFF-U2.js";function E(s){const a=document.querySelector(".js-main-slider-news");if(!a)return;const t=s.map(i=>{const{title:e,description:r,views:o,date:l,image:{png:c,webp:n},author:{img:d,name:p}}=i;return`
       <li class="splide__slide">
             <!-- slide-body -->
 
