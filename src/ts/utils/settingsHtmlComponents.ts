@@ -34,7 +34,7 @@ export function settingsHtmlComponents() {
   }
 
   // PAGE_MAIN
-  if (currentPath === PAGE_MAIN) {
+  if (currentPath.includes(PAGE_MAIN)) {
     [...sidebarLinkList].forEach(item => {
       if (item.classList.contains('sidebar__nav-link_main')) {
         item.classList.add('sidebar__nav-link_active');
