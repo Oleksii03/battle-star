@@ -5,11 +5,32 @@
       Новини
     </h1>
     <!-- slider -->
-    <div
-      class="splide main-stage__news-slider"
-      aria-label="slider">
-      <div class="splide__track">
-        <ul class="splide__list js-main-slider-news"></ul>
+    <div class="main-stage__news-slider-wrapp">
+      <ul class="skeleton-loading">
+        <li class="skeleton-loading__item"></li>
+        <li class="skeleton-loading__item"></li>
+        <li class="skeleton-loading__item"></li>
+        <li class="skeleton-loading__item"></li>
+        <li class="skeleton-loading__item"></li>
+        <li class="skeleton-loading__item"></li>
+      </ul>
+      <div
+        class="splide main-stage__news-slider"
+        aria-label="slider">
+        <div class="splide__track">
+          <ul
+            class="splide__list js-main-slider-news"
+            data-class="js-main-slider-news">
+            <li class="skeleton-loading">
+              <div class="skeleton-loading__item"></div>
+              <div class="skeleton-loading__item"></div>
+              <div class="skeleton-loading__item"></div>
+              <div class="skeleton-loading__item"></div>
+              <div class="skeleton-loading__item"></div>
+              <div class="skeleton-loading__item"></div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
