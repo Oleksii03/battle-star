@@ -1,5 +1,5 @@
 // ===PAGES ===
-const PAGE_MAIN = 'index';
+const PAGE_MAIN = '/';
 const PAGE_CABINET = 'cabinet';
 
 // ===PAGE MAIN==============
