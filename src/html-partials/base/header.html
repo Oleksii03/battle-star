@@ -25,6 +25,7 @@
       <!-- game-dropdown -->
       <div class="header__game-dropdown">
         <img
+          loading="lazy"
           class="header__game-dropdown-img"
           width="30"
           height="30"
@@ -39,7 +40,7 @@
               <svg
                 width="24"
                 height="24"
-                class="game-dropdown-item__icon">
+                class="game-dropdown-item__icon js-game-dropdown-icon">
                 <use xlink:href="#icon-arrow-down"></use>
               </svg>
             </div>
@@ -121,10 +122,10 @@
       </button>
 
       <!-- User -->
-      <ul class="header__user-list">
+      <ul class="header__user-list js-header-user-list">
         <li class="header__user-item">
           <div class="header__user-item-box js-user-item-box">
-            <p class="header__user-item-title js-user-active-title">User</p>
+            <p class="header__user-item-title js-user-active-title">...</p>
 
             <svg
               width="24"

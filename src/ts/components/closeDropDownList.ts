@@ -1,5 +1,4 @@
-import { userInnerList, gameInnerList, iconArrowDown } from './header';
-// import { gameInnerList } from './header';
+import { userInnerList, gameInnerList, iconArrowDown, gameDropdownIcon } from './header';
 
 export function closeDropDownList(): void {
   document.addEventListener('click', (e: Event) => {
@@ -40,6 +39,7 @@ export function closeDropDownList(): void {
 
     if (isGameDropdownListOpen) {
       gameInnerList?.classList.remove('game-dropdown-item__inner-list_open');
+      gameDropdownIcon?.classList.remove('game-dropdown-item__icon_active');
     }
   }
 

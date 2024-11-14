@@ -302,9 +302,10 @@
         &-box {
           position: relative;
           margin-top: 30px;
+          max-width: 670px;
 
           @media (min-width: 1715px) {
-            padding-right: 190px;
+            // padding-right: 20px;
           }
           // margin: 0 50px 20px 20px;
         }
@@ -324,8 +325,6 @@
 
             @media (min-width: 1715px) {
               top: -36px;
-              left: 50%;
-              transform: translateX(-200%);
             }
           }
           &_farming {
@@ -341,7 +340,7 @@
             right: -20px;
 
             @media (min-width: 1715px) {
-              right: 211px;
+              right: 20px;
             }
           }
           &_support {
@@ -359,7 +358,7 @@
 
             @media (min-width: 1715px) {
               bottom: 13px;
-              right: 310px;
+              right: 120px;
             }
           }
         }

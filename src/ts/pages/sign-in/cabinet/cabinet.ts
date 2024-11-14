@@ -8,13 +8,18 @@ export function onStateUserChanged(): void {
   const btnExid = document.querySelector('.js-sidebar-btn-exit');
   const pageError = document.querySelector('.js-page-error');
   const cabinet = document.querySelector('.js-cabinet');
-  // ---local refs --------------------------------
+  const headerUserList = document.querySelector('.js-header-user-list') as HTMLUListElement;
+
+  console.log(headerUserList);
+  // ---/local refs --------------------------------
+
   onAuthStateChanged(auth, user => {
     if (user) {
       itemCabinet?.classList.add('header__user-inner-item_active');
       btnEnter?.classList.add('sidebar__nav-item_disabled');
       btnExid?.classList.remove('sidebar__nav-item_hidden');
       cabinet?.classList.add('cabinet_visible');
+      if (headerUserList) headerUserList.style.display = 'block';
 
       // Отримання інформації про користувача
       // const uid = user.uid;
@@ -50,5 +55,6 @@ export function onStateUserChanged(): void {
     cabinet?.classList.remove('cabinet_visible');
 
     if (activeUser) activeUser.textContent = 'User';
+    if (headerUserList) headerUserList.style.display = 'none';
   });
 }
