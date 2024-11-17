@@ -880,7 +880,7 @@
     display: grid;
     grid-template-columns: minmax(240px, calc(34% - 19px)) minmax(calc(47% - 19px), 1fr);
     column-gap: 38px;
-    height: 223px;
+    margin-bottom: 55px;
   }
 
   // CARD-
@@ -948,7 +948,127 @@
     }
   }
 
+  // subscription-type
   &__subscription-type {
-    background: #47454d69;
+    @include flex-align-row;
+    column-gap: 15px;
+    margin-bottom: 11px;
+
+    &-title {
+      font-size: 28px;
+      line-height: normal;
+    }
+
+    // list
+    &-list-box {
+      position: relative;
+    }
+    &-list-title {
+      @include flex-align-row;
+      cursor: pointer;
+
+      & > span {
+        color: $basic-yellow;
+        font-size: 28px;
+        line-height: normal;
+      }
+      & > svg {
+        fill: $light-text;
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        transform: rotate(-90deg);
+      }
+    }
+
+    &-list {
+      position: absolute;
+      top: 45px;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      row-gap: 5px;
+      position: absolute;
+      padding: 0px 0px;
+      background-color: #1d1d21;
+      z-index: 1;
+      border: 1px solid #fac704;
+      transition: all 150ms linear;
+      border-radius: 4px;
+
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+
+      &_active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+    }
+
+    &-item {
+      padding: 15px 15px 15px 10px;
+      transition: all 150ms linear;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba(250, 201, 4, 0.337254902);
+      }
+    }
+  }
+
+  &__balance {
+    position: relative;
+
+    &-title {
+      font-family: Roboto-Regular;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: normal;
+    }
+
+    &-amount {
+      color: $basic-yellow;
+      font-size: 48px;
+      font-style: normal;
+      font-family: Roboto-Bold;
+      font-weight: 700;
+      line-height: normal;
+      padding-bottom: 92px;
+
+      & > .currency-symbol {
+        text-decoration: line-through;
+      }
+    }
+
+    &-bg {
+      position: absolute;
+      bottom: 0px;
+      right: 0;
+      pointer-events: none;
+
+      & > img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  // contrnt medium
+  &__content-medium {
+    font-family: Roboto-Regular;
+    font-weight: 400;
+  }
+  &__lists-box {
+    @include flex-align-row;
+    justify-content: space-between;
+
+    &-transfer {
+      &-title {
+        font-size: 24px;
+        line-height: normal;
+      }
+    }
   }
 }
