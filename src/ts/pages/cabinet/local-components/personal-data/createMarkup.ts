@@ -1,99 +1,6 @@
-<section class="cabinet js-cabinet">
-  <div class="cabinet__container">
-    <div class="cabinet__content">
-      <!-- cabinet-sidebar -->
-      <div class="cabinet__sidebar">
-        <!-- navigation -->
-        <div class="cabinet__nav-track">
-          <span class="cabinet__nav-thumb js-cabinet-nav-thumb"></span>
-        </div>
-        <!-- nav -->
-        <nav
-          class="cabinet__nav"
-          aria-label="Меню навігації">
-          <!-- nav-list -->
-          <ul class="cabinet__nav-list js-cabinet-nav-list">
-            <li
-              class="cabinet__nav-item cabinet__nav-item_active js-statistics"
-              data-hash="statistics">
-              <p class="cabinet__nav-item-text">Статистика</p>
-              <!-- icon -->
-              <svg
-                class="cabinet__nav-item-icon"
-                width="24"
-                height="24">
-                <use xlink:href="#icon-statistics"></use>
-              </svg>
-            </li>
-
-            <li
-              class="cabinet__nav-item js-history"
-              data-hash="history">
-              <p class="cabinet__nav-item-text">Історія матчів</p>
-              <!-- icon -->
-              <svg
-                class="cabinet__nav-item-icon"
-                width="24"
-                height="24">
-                <use xlink:href="#icon-history"></use>
-              </svg>
-            </li>
-
-            <li
-              class="cabinet__nav-item js-personal-data"
-              data-hash="personal-data">
-              <p class="cabinet__nav-item-text">Особисті дані</p>
-              <!-- icon -->
-              <svg
-                class="cabinet__nav-item-icon"
-                width="24"
-                height="24">
-                <use xlink:href="#icon-personal-datd"></use>
-              </svg>
-            </li>
-
-            <li class="cabinet__nav-item js-wallet">
-              <p class="cabinet__nav-item-text">Гаманець</p>
-              <!-- icon -->
-              <svg
-                class="cabinet__nav-item-icon"
-                width="24"
-                height="24">
-                <use xlink:href="#icon-wallet"></use>
-              </svg>
-            </li>
-
-            <li class="cabinet__nav-item js-setting">
-              <p class="cabinet__nav-item-text">Параметри</p>
-              <!-- icon -->
-              <svg
-                class="cabinet__nav-item-icon"
-                width="24"
-                height="24">
-                <use xlink:href="#icon-setting"></use>
-              </svg>
-            </li>
-
-            <li class="cabinet__nav-item js-block-list">
-              <p class="cabinet__nav-item-text">Чорний список</p>
-              <!-- icon -->
-              <svg
-                class="cabinet__nav-item-icon"
-                width="24"
-                height="24">
-                <use xlink:href="#icon-block-list"></use>
-              </svg>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
-      <!-- cabinet-main -->
-      <div
-        class="cabinet__main cabinet-main js-cabinet-main-body"
-        data-class="">
-        <!-- personal-data -->
-        <!-- <div class="cabinet-personal-data">
+export function createMarkup(): string {
+  return `
+        <div class="cabinet-personal-data">
           <div class="cabinet-personal-data__info">
             <div class="cabinet-personal-data__info-title-box">
               <h3 class="cabinet-personal-data__info-title">Основна інформація</h3>
@@ -202,9 +109,5 @@
               </li>
             </ul>
           </div>
-        </div> -->
-      </div>
-    </div>
-  </div>
-  <load src="/html-partials/base/page-not-found.html" />
-</section>
+        </div>`;
+}

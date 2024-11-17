@@ -698,3 +698,173 @@
     }
   }
 }
+
+// personal-data
+.cabinet-personal-data {
+  font-family: Roboto-Regular;
+  font-weight: 400;
+  background: rgba(248, 248, 248, 0.05);
+  backdrop-filter: blur(60px);
+  padding: 29px 84px 50px 59px;
+
+  // ====INFORMATION========
+  &__info {
+    padding-bottom: 29px;
+    border-bottom: 1px solid #3f3d46;
+
+    &-title-box {
+      @include flex-align-row;
+      column-gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    &-title {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    &-subtitle > a {
+      color: $basic-yellow;
+
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+
+  &__info-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    // list
+    &-list {
+      margin-top: 9px;
+      display: grid;
+      row-gap: 27px;
+    }
+
+    &-item {
+      display: grid;
+      grid-template-columns: 136px 470px;
+      column-gap: 43px;
+
+      &-title {
+        color: #989898;
+        line-height: normal;
+        white-space: nowrap;
+      }
+
+      &-text {
+        @include flex-align-row;
+        font-size: 18px;
+
+        & > span {
+          line-height: normal;
+        }
+        & > svg {
+          width: 18px;
+          height: 18px;
+          flex-shrink: 0;
+          fill: $gray-text;
+          margin-left: 11px;
+        }
+
+        &_nick {
+          & > span {
+            font-size: 24px;
+          }
+        }
+        &_bio {
+          font-size: 14px;
+        }
+      }
+    }
+
+    // img
+    &-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      aspect-ratio: 1/1;
+      margin-bottom: 5px;
+    }
+  }
+
+  // form
+  &__info-body-form {
+    @include flex-align-row;
+    justify-content: center;
+
+    & .form-label {
+      cursor: pointer;
+      background-color: transparent;
+      color: $basic-yellow;
+      text-align: center;
+      line-height: normal;
+
+      &-icon {
+        width: 30px;
+        height: 30px;
+        fill: $light-gray-text;
+      }
+
+      &-input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+      }
+    }
+  }
+
+  // ====E-mail address========
+  &__mail {
+    padding-top: 25px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #3f3d46;
+
+    & > .mail-title-box {
+      margin-bottom: 20px;
+    }
+
+    &-body {
+      @include flex-align-row;
+      column-gap: 32px;
+
+      &-title {
+        color: #989898;
+        line-height: normal;
+      }
+
+      &-text {
+        @include flex-align-row;
+        column-gap: 15px;
+        font-size: 18px;
+        line-height: normal;
+
+        & > svg {
+          width: 24px;
+          height: 24px;
+          flex-shrink: 0;
+          fill: #6fff57;
+        }
+      }
+    }
+  }
+
+  // ====Steam account========
+
+  &__steam {
+    padding-top: 25px;
+
+    & > .steam-title-box {
+      margin-bottom: 21px;
+    }
+  }
+}

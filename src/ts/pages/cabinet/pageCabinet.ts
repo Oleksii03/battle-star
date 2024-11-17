@@ -2,6 +2,7 @@ import { setActiveListItem } from './local-components/base/setActiveListItem';
 import { statisticHandler } from './local-components/statistics/statistic';
 import { historyMatches } from './local-components/history-matches/historyMatches';
 import { handlerUniqueUrl } from './local-components/base/handlerUniqueUrl';
+import { personalData } from './local-components/personal-data/personalData';
 
 export function pageCabinet() {
   const navigationList = document.querySelector('.js-cabinet-nav-list') as HTMLUListElement;
@@ -24,6 +25,10 @@ export function pageCabinet() {
 
     if (targetEl.classList.contains('js-history')) {
       historyMatches(cabinetMainContainer, targetEl);
+    }
+
+    if (targetEl.classList.contains('js-personal-data')) {
+      personalData(cabinetMainContainer, targetEl);
     }
   }
 
