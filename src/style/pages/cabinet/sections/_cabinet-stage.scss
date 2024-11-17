@@ -871,16 +871,22 @@
 
 // =====cabinet-wallet========
 .cabinet-wallet {
-  padding: 46px 84px 47px 59px;
+  padding: 10px;
+  @include media-min-width(xl) {
+    padding: 46px 84px 47px 59px;
+  }
 
   &__content-top {
     display: grid;
-    grid-template-columns: minmax(300px, calc(34% - 19px)) calc(66% - 19px);
+    grid-template-columns: minmax(240px, calc(34% - 19px)) minmax(calc(47% - 19px), 1fr);
     column-gap: 38px;
     height: 223px;
   }
 
+  // CARD-
   &__card {
+    font-family: Roboto-Regular;
+    font-weight: 400;
     border-radius: 10px;
     background: #3f3d46;
     box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -907,6 +913,38 @@
       fill: #aaaaaa;
       display: block;
       margin-left: auto;
+      margin-bottom: 14px;
+    }
+
+    &-chip {
+      width: 54px;
+      height: 38px;
+      flex-shrink: 0;
+      border-radius: 8px;
+      border: 1px solid #29292e;
+      background: #cbbc8a;
+      margin-bottom: 26px;
+      padding: 4px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px;
+
+      & > div {
+        border-radius: 8px;
+        border: 1px solid #29292e;
+      }
+    }
+
+    &-personal-data {
+      &-id,
+      &-name {
+        color: #fff;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+        -webkit-text-stroke-width: 1;
+        -webkit-text-stroke-color: #47454c;
+        font-size: 24px;
+        line-height: normal;
+      }
     }
   }
 
