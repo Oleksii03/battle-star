@@ -1,4 +1,4 @@
-import{h as f,o as h}from"../../assets/cabinet-BBv-qIRL.js";import{g as k,H as x,s as w,h as L,l as j,c as S}from"../../assets/closeDropDownList-S_Fr-5b0.js";import{s as M}from"../../assets/loginOrRegistrationHandler-zsTQJq6b.js";import"../../assets/vendor-DZUFF-U2.js";function u(s,i){const t=document.querySelector(".js-cabinet-nav-thumb"),e=[...i.children],a=e.indexOf(s);t.style.top=`${16.66*a}%`,e.forEach(c=>{c.classList.remove("cabinet__nav-item_active")}),s.classList.add("cabinet__nav-item_active")}function g(){return`
+import{h as k,o as h}from"../../assets/cabinet-BBv-qIRL.js";import{g as x,H as w,s as L,h as j,l as S,c as M}from"../../assets/closeDropDownList-S_Fr-5b0.js";import{s as T}from"../../assets/loginOrRegistrationHandler-zsTQJq6b.js";import"../../assets/vendor-DZUFF-U2.js";function u(s,i){const t=document.querySelector(".js-cabinet-nav-thumb"),e=[...i.children],a=e.indexOf(s);t.style.top=`${16.66*a}%`,e.forEach(c=>{c.classList.remove("cabinet__nav-item_active")}),s.classList.add("cabinet__nav-item_active")}function g(){return`
           <div class="cabinet-statistics__rank">
             <p class="cabinet-statistics__rank-title">
               Ранг:
@@ -119,7 +119,7 @@ import{h as f,o as h}from"../../assets/cabinet-BBv-qIRL.js";import{g as k,H as x
                   alt="game style chart" />
               </picture>
             </div>
-          </div>`}function T(){return`
+          </div>`}function E(){return`
             <div class="cabinet-statistics__rank">
           <p class="cabinet-statistics__rank-title">
             Ранг:
@@ -309,7 +309,7 @@ import{h as f,o as h}from"../../assets/cabinet-BBv-qIRL.js";import{g as k,H as x
               </div>
             </div>
           </div>
-        </div>`}function E(s,i){const t=document.querySelector(".js-cabinet-statistics-thumb");s.innerHTML=g(),i.addEventListener("click",e=>{const a=e.target;if(a.tagName==="BUTTON"){if([...i.children].forEach(c=>c.classList.remove("cabinet-statistics__btn_active")),a.classList.contains("js-statistics-btn-csgo")){s.innerHTML=T(),t==null||t.classList.add("cabinet-statistics__btns-thumb_active"),a.classList.add("cabinet-statistics__btn_active");return}if(a.classList.contains("js-statistics-btn-dota")){s.innerHTML=g(),t==null||t.classList.remove("cabinet-statistics__btns-thumb_active"),a.classList.add("cabinet-statistics__btn_active");return}}})}function H(s){const i=`
+        </div>`}function H(s,i){const t=document.querySelector(".js-cabinet-statistics-thumb");s.innerHTML=g(),i.addEventListener("click",e=>{const a=e.target;if(a.tagName==="BUTTON"){if([...i.children].forEach(c=>c.classList.remove("cabinet-statistics__btn_active")),a.classList.contains("js-statistics-btn-csgo")){s.innerHTML=E(),t==null||t.classList.add("cabinet-statistics__btns-thumb_active"),a.classList.add("cabinet-statistics__btn_active");return}if(a.classList.contains("js-statistics-btn-dota")){s.innerHTML=g(),t==null||t.classList.remove("cabinet-statistics__btns-thumb_active"),a.classList.add("cabinet-statistics__btn_active");return}}})}function $(s){const i=`
         <div class="cabinet-statistics">
           <div class="cabinet-statistics__btns">
             <div class="cabinet-statistics__btns-box js-statistics-btns-box">
@@ -337,7 +337,7 @@ import{h as f,o as h}from"../../assets/cabinet-BBv-qIRL.js";import{g as k,H as x
           </div>
 
           <div class="cabinet-statistics__content js-cabinet-statistics-content">
-       </div>`;s.innerHTML=i;const t=document.querySelector(".js-cabinet-statistics-content"),e=document.querySelector(".js-statistics-btns-box");E(t,e)}function b(s,i){H(s);const t=i.dataset.hash;t&&(location.hash=t),console.log(t)}function o(s){const i=document.querySelector(".js-cabinet-history-list"),t=s.map(e=>{const{id:a,isVictory:c,score:_,title:d,objDate:{date:n,time:r},objID:{id:l,title:p},objRegime:{regime:m,title:v}}=e;return`
+       </div>`;s.innerHTML=i;const t=document.querySelector(".js-cabinet-statistics-content"),e=document.querySelector(".js-statistics-btns-box");H(t,e)}function b(s,i){$(s);const t=i.dataset.hash;t&&(location.hash=t),console.log(t)}function o(s){const i=document.querySelector(".js-cabinet-history-list"),t=s.map(e=>{const{id:a,isVictory:c,score:_,title:d,objDate:{date:n,time:r},objID:{id:l,title:p},objRegime:{regime:m,title:f}}=e;return`
             <li class="cabinet-history__list-item" data-id="${a}">
               <p class="cabinet-history__list-item-title">${d}</p>
 
@@ -348,7 +348,7 @@ import{h as f,o as h}from"../../assets/cabinet-BBv-qIRL.js";import{g as k,H as x
                 </div>
 
                 <div class="cabinet-history__list-item-regime-box">
-                  <p class="cabinet-history__list-item-regime-title">${v}</p>
+                  <p class="cabinet-history__list-item-regime-title">${f}</p>
                   <p class="cabinet-history__list-item-regime">${m}</p>
                 </div>
 
@@ -367,7 +367,7 @@ import{h as f,o as h}from"../../assets/cabinet-BBv-qIRL.js";import{g as k,H as x
                   <span class="currency">BS</span>
                 </p>
               </div>
-            </li>`});i.innerHTML=t.join("")}function $(s){const i=document.querySelector(".js-drop-down-item-title-box"),t=document.querySelector(".js-drop-down-inner-list"),e=document.querySelector(".js-drop-down-active-title"),a=document.querySelector(".js-drop-down-icon");i==null||i.addEventListener("click",c);function c(){t==null||t.classList.toggle("cabinet-history__drop-down-inner-list_active"),a==null||a.classList.toggle("cabinet-history__drop-down-item-icon_active")}t==null||t.addEventListener("click",_);function _(n){const l=n.target.textContent;l&&(e.textContent=l,c(),d(l.toLowerCase()))}function d(n){if(n!=null&&n.includes("рейтинг")){const l=s.toSorted((p,m)=>m.sortScore-p.sortScore);o(l);return}const r=s.filter(({title:l})=>l.toLowerCase()===n);if(r.length){o(r);return}o(s)}}function q(s){const i=`
+            </li>`});i.innerHTML=t.join("")}function q(s){const i=document.querySelector(".js-drop-down-item-title-box"),t=document.querySelector(".js-drop-down-inner-list"),e=document.querySelector(".js-drop-down-active-title"),a=document.querySelector(".js-drop-down-icon");i==null||i.addEventListener("click",c);function c(){t==null||t.classList.toggle("cabinet-history__drop-down-inner-list_active"),a==null||a.classList.toggle("cabinet-history__drop-down-item-icon_active")}t==null||t.addEventListener("click",_);function _(n){const l=n.target.textContent;l&&(e.textContent=l,c(),d(l.toLowerCase()))}function d(n){if(n!=null&&n.includes("рейтинг")){const l=s.toSorted((p,m)=>m.sortScore-p.sortScore);o(l);return}const r=s.filter(({title:l})=>l.toLowerCase()===n);if(r.length){o(r);return}o(s)}}function D(s){const i=`
        <div class="cabinet__history cabinet-history">
           <div class="cabinet-history__title-box">
             <h3 class="cabinet-history__title">Історія матчів</h3>
@@ -411,7 +411,7 @@ import{h as f,o as h}from"../../assets/cabinet-BBv-qIRL.js";import{g as k,H as x
           </div>
 
           <ul class="cabinet-history__list js-cabinet-history-list"></ul>
-        </div>`;s.innerHTML=i,k(x).then(t=>{o(t),$(t)}).catch(f)}function y(s,i){q(s);const t=i.dataset.hash;t&&(location.hash=t)}function C(s,i){const t=location.hash.slice(1)?location.hash.slice(1):"statistics",e=document.querySelector(`[data-hash="${t}"]`);switch(u(e,i),t){case"statistics":b(s,e);break;case"history":y(s,e);break;default:b(s,e);break}}function D(){return`
+        </div>`;s.innerHTML=i,x(w).then(t=>{o(t),q(t)}).catch(k)}function y(s,i){D(s);const t=i.dataset.hash;t&&(location.hash=t)}function F(){return`
         <div class="cabinet-personal-data">
           <div class="cabinet-personal-data__info">
             <div class="cabinet-personal-data__info-title-box">
@@ -521,5 +521,5 @@ import{h as f,o as h}from"../../assets/cabinet-BBv-qIRL.js";import{g as k,H as x
               </li>
             </ul>
           </div>
-        </div>`}function F(s,i){s.innerHTML=D();const t=i.dataset.hash;t&&(location.hash=t),console.log(t)}function I(){const s=document.querySelector(".js-cabinet-nav-list"),i=document.querySelector(".js-cabinet-main-body");s==null||s.addEventListener("click",t);function t(e){const a=e.target.closest("li");a&&(u(a,s),a.classList.contains("js-statistics")&&b(i,a),a.classList.contains("js-history")&&y(i,a),a.classList.contains("js-personal-data")&&F(i,a))}C(i,s)}function O(){const s=localStorage.getItem("logged");(s==="false"||s===null)&&(window.location.href="404")}document.addEventListener("DOMContentLoaded",()=>{w(),L(),M(),h(),h(),j(),I(),O(),S()});
+        </div>`}function v(s,i){s.innerHTML=F();const t=i.dataset.hash;t&&(location.hash=t)}function C(s,i){const t=location.hash.slice(1)?location.hash.slice(1):"statistics",e=document.querySelector(`[data-hash="${t}"]`);switch(u(e,i),t){case"statistics":b(s,e);break;case"history":y(s,e);break;case"personal-data":v(s,e);break;default:b(s,e);break}}function I(){const s=document.querySelector(".js-cabinet-nav-list"),i=document.querySelector(".js-cabinet-main-body");s==null||s.addEventListener("click",t);function t(e){const a=e.target.closest("li");a&&(u(a,s),a.classList.contains("js-statistics")&&b(i,a),a.classList.contains("js-history")&&y(i,a),a.classList.contains("js-personal-data")&&v(i,a))}C(i,s)}function O(){const s=localStorage.getItem("logged");(s==="false"||s===null)&&(window.location.href="404")}document.addEventListener("DOMContentLoaded",()=>{L(),j(),T(),h(),h(),S(),I(),O(),M()});
 //# sourceMappingURL=cabinet.js.map
