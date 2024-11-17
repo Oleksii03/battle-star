@@ -1,13 +1,14 @@
+import { setActiveListItem } from './setActiveListItem';
 import { statisticHandler } from '../statistics/statistic';
 import { historyMatches } from '../history-matches/historyMatches';
-import { setActiveListItem } from './setActiveListItem';
+import { personalData } from '../personal-data/personalData';
 
 export function handlerUniqueUrl(
   cabinetMainContainer: HTMLElement,
   navigationList: HTMLUListElement
 ) {
   const tab = location.hash.slice(1) ? location.hash.slice(1) : 'statistics';
-  const targetEl = document.querySelector(`[data-hash="${tab}"]`) as HTMLElement;
+  const targetEl = document.querySelector(`[data-hash="${tab}"]`) as HTMLLIElement;
 
   setActiveListItem(targetEl, navigationList);
 
@@ -18,6 +19,10 @@ export function handlerUniqueUrl(
 
     case 'history':
       historyMatches(cabinetMainContainer, targetEl);
+      break;
+
+    case 'personal-data':
+      personalData(cabinetMainContainer, targetEl);
       break;
 
     default:

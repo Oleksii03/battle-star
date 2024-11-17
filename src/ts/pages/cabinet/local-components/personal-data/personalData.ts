@@ -8,5 +8,4 @@ export function personalData(container: HTMLElement, targetEl: HTMLLIElement) {
   // -----handlerHash-------
   const hash = targetEl.dataset.hash;
   if (hash) location.hash = hash;
-  console.log(hash);
 }
