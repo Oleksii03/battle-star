@@ -202,6 +202,8 @@
                         <use xlink:href="#icon-credit-card"></use>
                       </svg>
                     </div>
+
+                    <p class="cabinet-wallet__transfer-item-title">Вивести на карту</p>
                   </li>
 
                   <li class="cabinet-wallet__transfer-item">
@@ -217,18 +219,117 @@
                         width="24"
                         height="24"
                         class="cabinet-wallet__transfer-item-icon">
-                        <use xlink:href="#icon-credit-card"></use>
+                        <use xlink:href="#icon-people"></use>
                       </svg>
                     </div>
+
+                    <p class="cabinet-wallet__transfer-item-title">Перекласти BS другові</p>
                   </li>
                 </ul>
               </div>
 
               <!-- list-box-topup -->
-              <div class="cabinet-wallet__list-box-topup">
-                <p class="cabinet-wallet__list-box-topup-title">Поповнити баланс</p>
+              <div class="cabinet-wallet__lists-box-topup">
+                <p class="cabinet-wallet__lists-box-topup-title">Поповнити баланс</p>
+
+                <ul class="cabinet-wallet__list-topup">
+                  <li class="cabinet-wallet__topup-item">
+                    <svg
+                      width="32"
+                      height="32"
+                      class="cabinet-wallet__topup-item-icon">
+                      <use xlink:href="#icon-monobank"></use>
+                    </svg>
+
+                    <p class="cabinet-wallet__topup-item-title">Monobank</p>
+                  </li>
+
+                  <li class="cabinet-wallet__topup-item">
+                    <svg
+                      width="32"
+                      height="32"
+                      class="cabinet-wallet__topup-item-icon">
+                      <use xlink:href="#icon-wallet-apple"></use>
+                    </svg>
+
+                    <p class="cabinet-wallet__topup-item-title">Pay</p>
+                  </li>
+
+                  <li class="cabinet-wallet__topup-item">
+                    <svg
+                      width="135"
+                      height="24"
+                      class="cabinet-wallet__topup-item-icon cabinet-wallet__topup-item-icon_google-pay">
+                      <use xlink:href="#icon-google-pay"></use>
+                    </svg>
+                  </li>
+
+                  <li class="cabinet-wallet__topup-item">
+                    <svg
+                      width="32"
+                      height="32"
+                      class="cabinet-wallet__topup-item-icon">
+                      <use xlink:href="#icon-webmoney"></use>
+                    </svg>
+
+                    <p class="cabinet-wallet__topup-item-title">WebMoney</p>
+                  </li>
+                </ul>
               </div>
             </div>
+
+            <!-- btn -->
+            <div class="cabinet-wallet__btn">
+              <a
+                href="#"
+                class="cabinet-wallet__btn-link">
+                Запроси друзів та зароби до 2000
+                <span>BS</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- content bottom -->
+          <div class="cabinet-wallet__history">
+            <h3 class="cabinet-wallet__history-title">Історія матчів</h3>
+
+            <ul class="cabinet-wallet__history-list">
+              <li
+                class="cabinet-history__list-item"
+                data-id="${id}">
+                <p class="cabinet-history__list-item-title">CS:GO</p>
+
+                <div class="medium-content">
+                  <div class="cabinet-history__list-item-date-box">
+                    <p class="cabinet-history__list-item-date-title">07.06.2021</p>
+                    <p class="cabinet-history__list-item-time">19:20</p>
+                  </div>
+
+                  <div class="cabinet-history__list-item-regime-box">
+                    <p class="cabinet-history__list-item-regime-title">Режим</p>
+                    <p class="cabinet-history__list-item-regime">5v5</p>
+                  </div>
+
+                  <div class="cabinet-history__list-item-id-box">
+                    <p class="cabinet-history__list-item-id-title">ID</p>
+                    <p class="cabinet-history__list-item-id">37589023</p>
+                  </div>
+                </div>
+
+                <div class="cabinet-history__list-item-result">
+                  <p
+                    class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_victory">
+                    Перемога
+                  </p>
+
+                  <p class="cabinet-history__list-item-result-score js-result-score">
+                    <span class="symbol">-</span>
+                    <span class="amount">1200</span>
+                    <span class="currency">BS</span>
+                  </p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
