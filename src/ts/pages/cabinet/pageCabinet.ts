@@ -3,6 +3,7 @@ import { statisticHandler } from './local-components/statistics/statistic';
 import { historyMatches } from './local-components/history-matches/historyMatches';
 import { handlerUniqueUrl } from './local-components/base/handlerUniqueUrl';
 import { personalData } from './local-components/personal-data/personalData';
+import { handlerWallet } from './local-components/wallet/wallet';
 
 export function pageCabinet() {
   const navigationList = document.querySelector('.js-cabinet-nav-list') as HTMLUListElement;
@@ -29,6 +30,10 @@ export function pageCabinet() {
 
     if (targetEl.classList.contains('js-personal-data')) {
       personalData(cabinetMainContainer, targetEl);
+    }
+
+    if (targetEl.classList.contains('js-wallet')) {
+      handlerWallet(cabinetMainContainer, targetEl);
     }
   }
 

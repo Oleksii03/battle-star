@@ -92,12 +92,11 @@
 
       <!-- cabinet-main -->
       <div
-        class="cabinet__main cabinet-main"
+        class="cabinet__main cabinet-main js-cabinet-main-body"
         data-class="js-cabinet-main-body">
         <!-- abinet-wallet -->
-        <div class="cabinet-wallet">
+        <!-- <div class="cabinet-wallet">
           <div class="cabinet-wallet__content-top">
-            <!-- wallet__card -->
             <div class="cabinet-wallet__card">
               <div class="cabinet-wallet__card-bg">
                 <img
@@ -135,7 +134,6 @@
             </div>
 
             <div class="cabinet-wallet__balance-content">
-              <!-- subscription type -->
               <div class="cabinet-wallet__subscription-type">
                 <p class="cabinet-wallet__subscription-type-title">Підписка:</p>
                 <div class="cabinet-wallet__subscription-type-list-box">
@@ -156,7 +154,7 @@
                   </ul>
                 </div>
               </div>
-              <!-- balance -->
+
               <div class="cabinet-wallet__balance">
                 <p class="cabinet-wallet__balance-title">Баланс</p>
                 <p class="cabinet-wallet__balance-amount">
@@ -174,14 +172,10 @@
                 </div>
               </div>
             </div>
-
-            <!--  -->
           </div>
 
-          <!-- contrnt medium -->
           <div class="cabinet-wallet__content-medium">
             <div class="cabinet-wallet__lists-box">
-              <!-- list-box-transfer -->
               <div class="cabinet-wallet__lists-box-transfer">
                 <p class="cabinet-wallet__lists-box-transfer-title">Перевести монети</p>
 
@@ -228,7 +222,6 @@
                 </ul>
               </div>
 
-              <!-- list-box-topup -->
               <div class="cabinet-wallet__lists-box-topup">
                 <p class="cabinet-wallet__lists-box-topup-title">Поповнити баланс</p>
 
@@ -278,7 +271,6 @@
               </div>
             </div>
 
-            <!-- btn -->
             <div class="cabinet-wallet__btn">
               <a
                 href="#"
@@ -289,15 +281,122 @@
             </div>
           </div>
 
-          <!-- content bottom -->
           <div class="cabinet-wallet__history">
             <h3 class="cabinet-wallet__history-title">Історія матчів</h3>
 
             <ul class="cabinet-wallet__history-list">
               <li
                 class="cabinet-history__list-item"
-                data-id="${id}">
+                data-id="">
                 <p class="cabinet-history__list-item-title">CS:GO</p>
+
+                <div class="medium-content">
+                  <div class="cabinet-history__list-item-date-box">
+                    <p class="cabinet-history__list-item-date-title">07.06.2021</p>
+                    <p class="cabinet-history__list-item-time">19:20</p>
+                  </div>
+
+                  <div class="cabinet-history__list-item-regime-box">
+                    <p class="cabinet-history__list-item-regime-title">Режим</p>
+                    <p class="cabinet-history__list-item-regime">5v5</p>
+                  </div>
+
+                  <div class="cabinet-history__list-item-id-box">
+                    <p class="cabinet-history__list-item-id-title">ID</p>
+                    <p class="cabinet-history__list-item-id">37589023</p>
+                  </div>
+                </div>
+
+                <div class="cabinet-history__list-item-result">
+                  <p
+                    class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_victory">
+                    Перемога
+                  </p>
+
+                  <p class="cabinet-history__list-item-result-score js-result-score">
+                    <span class="symbol">-</span>
+                    <span class="amount">1200</span>
+                    <span class="currency">BS</span>
+                  </p>
+                </div>
+              </li>
+
+              <li
+                class="cabinet-history__list-item"
+                data-id="">
+                <div
+                  class="cabinet-wallet__list-item-title-box cabinet-wallet__list-item-title-box_translation">
+                  <div class="cabinet-wallet__list-item-title-svg-box svg-box-translation">
+                    <svg
+                      width="24"
+                      height="24"
+                      class="cabinet-wallet__list-item-title-svg">
+                      <use xlink:href="#icon-arrow-right"></use>
+                    </svg>
+
+                    <svg
+                      width="24"
+                      height="24"
+                      class="cabinet-wallet__list-item-title-svg">
+                      <use xlink:href="#icon-people"></use>
+                    </svg>
+                  </div>
+                  <p class="cabinet-history__list-item-title">Переказ коштів</p>
+                </div>
+
+                <div class="medium-content">
+                  <div class="cabinet-history__list-item-date-box">
+                    <p class="cabinet-history__list-item-date-title">07.06.2021</p>
+                    <p class="cabinet-history__list-item-time">19:20</p>
+                  </div>
+
+                  <div class="cabinet-history__list-item-regime-box">
+                    <p class="cabinet-history__list-item-regime-title">Режим</p>
+                    <p class="cabinet-history__list-item-regime">5v5</p>
+                  </div>
+
+                  <div class="cabinet-history__list-item-id-box">
+                    <p class="cabinet-history__list-item-id-title">ID</p>
+                    <p class="cabinet-history__list-item-id">37589023</p>
+                  </div>
+                </div>
+
+                <div class="cabinet-history__list-item-result">
+                  <p
+                    class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_victory">
+                    Перемога
+                  </p>
+
+                  <p class="cabinet-history__list-item-result-score js-result-score">
+                    <span class="symbol">-</span>
+                    <span class="amount">1200</span>
+                    <span class="currency">BS</span>
+                  </p>
+                </div>
+              </li>
+
+              <li
+                class="cabinet-history__list-item"
+                data-id="">
+                <div
+                  class="cabinet-wallet__list-item-title-box cabinet-wallet__list-item-title-box_withdrawal">
+                  <div class="cabinet-wallet__list-item-title-svg-box svg-box-withdrawal">
+                    <svg
+                      width="24"
+                      height="24"
+                      class="cabinet-wallet__list-item-title-svg">
+                      <use xlink:href="#icon-arrow-right"></use>
+                    </svg>
+
+                    <svg
+                      width="24"
+                      height="24"
+                      class="cabinet-wallet__list-item-title-svg">
+                      <use xlink:href="#icon-credit-card"></use>
+                    </svg>
+                  </div>
+                  <p class="cabinet-history__list-item-title">Виведення коштів</p>
+                </div>
 
                 <div class="medium-content">
                   <div class="cabinet-history__list-item-date-box">
@@ -331,7 +430,7 @@
               </li>
             </ul>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

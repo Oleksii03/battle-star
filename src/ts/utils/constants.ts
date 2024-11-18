@@ -13,6 +13,7 @@ const POPULAR_MATCHES: string = 'mainPagePopularMatches';
 
 // ===PAGE CABINET==============
 const HISTORY_MATCHES_LIST: string = 'cabinetHistoryMatches';
+const HISTORY_TRANSACTIONS_LIST: string = 'cabinetHistoryTransactions';
 
 export {
   PAGE_MAIN,
@@ -23,4 +24,5 @@ export {
   MATCHES_CARDS_LIST,
   POPULAR_MATCHES,
   HISTORY_MATCHES_LIST,
+  HISTORY_TRANSACTIONS_LIST,
 };

@@ -2,6 +2,7 @@ import { setActiveListItem } from './setActiveListItem';
 import { statisticHandler } from '../statistics/statistic';
 import { historyMatches } from '../history-matches/historyMatches';
 import { personalData } from '../personal-data/personalData';
+import { handlerWallet } from '../wallet/wallet';
 
 export function handlerUniqueUrl(
   cabinetMainContainer: HTMLElement,
@@ -23,6 +24,10 @@ export function handlerUniqueUrl(
 
     case 'personal-data':
       personalData(cabinetMainContainer, targetEl);
+      break;
+
+    case 'wallet':
+      handlerWallet(cabinetMainContainer, targetEl);
       break;
 
     default:
