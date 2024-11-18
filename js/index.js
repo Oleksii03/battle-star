@@ -57,7 +57,7 @@ import{o as $}from"../assets/cabinet-BBv-qIRL.js";import{g as _,T as g,a as h,L 
                 </div>
               </div>
             </div>
-          </li>`});a.innerHTML=t.join("")}function H(){_("SliderBattleStarNews").then(a=>E(a))}function C(){setTimeout(()=>{new v(" .main-stage__news-slider",{gap:"30px",grid:{rows:2,cols:3,gap:{row:"30px",col:"30px"}},pagination:!1,breakpoints:{768:{grid:{cols:2},pagination:!0},1919:{arrows:!1}}}).mount({Grid:j})},1e3)}function O(){new v(".main-stochholm__slider",{pagination:!1,breakpoints:{1919:{arrows:!1,pagination:!0}}}).mount()}function q(s,a){if(!s.length){a.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const t=[...s].sort((i,e)=>e.score-i.score).map(i=>{const{name:e,score:r,id:o,countryFlagImg:{webp:l},avatar:{png:c,webp:n}}=i;return`
+          </li>`});a.innerHTML=t.join("")}function H(){_("SliderBattleStarNews").then(a=>E(a))}function C(){setTimeout(()=>{new v(" .main-stage__news-slider",{gap:"30px",grid:{rows:2,cols:3,gap:{row:"30px",col:"30px"}},pagination:!1,breakpoints:{768:{grid:{cols:2},pagination:!0},1919:{arrows:!1}}}).mount({Grid:j})},1400)}function O(){new v(".main-stochholm__slider",{pagination:!1,breakpoints:{1919:{arrows:!1,pagination:!0}}}).mount()}function q(s,a){if(!s.length){a.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const t=[...s].sort((i,e)=>e.score-i.score).map(i=>{const{name:e,score:r,id:o,countryFlagImg:{webp:l},avatar:{png:c,webp:n}}=i;return`
            <li class="list-top__item" data-id="${o}">
             <p class="list-top__item-num"></p>
             <picture>
