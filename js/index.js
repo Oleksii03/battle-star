@@ -1,4 +1,4 @@
-import{o as $}from"../assets/cabinet-BBv-qIRL.js";import{g as _,T as g,a as h,L as w,M as L,P as T,h as y,c as S,s as k,l as M}from"../assets/closeDropDownList-S_Fr-5b0.js";import{S as v,G as j}from"../assets/vendor-DZUFF-U2.js";function E(s){const a=document.querySelector(".js-main-slider-news");if(!a)return;const t=s.map(i=>{const{title:e,description:r,views:o,date:l,image:{png:c,webp:n},author:{img:d,name:p}}=i;return`
+import{h as $,o as w}from"../assets/cabinet-BBv-qIRL.js";import{g as _,T as g,b as h,L,M as T,P as y,h as S,c as k,s as M,l as j}from"../assets/closeDropDownList-CugoLy9B.js";import{S as v,G as E}from"../assets/vendor-DZUFF-U2.js";function H(s){const a=document.querySelector(".js-main-slider-news");if(!a)return;const t=s.map(i=>{const{title:e,description:r,views:o,date:l,image:{png:c,webp:n},author:{img:d,name:p}}=i;return`
       <li class="splide__slide">
             <!-- slide-body -->
 
@@ -57,7 +57,7 @@ import{o as $}from"../assets/cabinet-BBv-qIRL.js";import{g as _,T as g,a as h,L 
                 </div>
               </div>
             </div>
-          </li>`});a.innerHTML=t.join("")}function H(){_("SliderBattleStarNews").then(a=>E(a))}function C(){setTimeout(()=>{new v(" .main-stage__news-slider",{gap:"30px",grid:{rows:2,cols:3,gap:{row:"30px",col:"30px"}},pagination:!1,breakpoints:{768:{grid:{cols:2},pagination:!0},1919:{arrows:!1}}}).mount({Grid:j})},1400)}function O(){new v(".main-stochholm__slider",{pagination:!1,breakpoints:{1919:{arrows:!1,pagination:!0}}}).mount()}function q(s,a){if(!s.length){a.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const t=[...s].sort((i,e)=>e.score-i.score).map(i=>{const{name:e,score:r,id:o,countryFlagImg:{webp:l},avatar:{png:c,webp:n}}=i;return`
+          </li>`});a.innerHTML=t.join("")}function C(){_("SliderBattleStarNews").then(a=>H(a)).catch($)}function O(){setTimeout(()=>{new v(" .main-stage__news-slider",{gap:"30px",grid:{rows:2,cols:3,gap:{row:"30px",col:"30px"}},pagination:!1,breakpoints:{768:{grid:{cols:2},pagination:!0},1919:{arrows:!1}}}).mount({Grid:E})},1400)}function q(){new v(".main-stochholm__slider",{pagination:!1,breakpoints:{1919:{arrows:!1,pagination:!0}}}).mount()}function z(s,a){if(!s.length){a.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const t=[...s].sort((i,e)=>e.score-i.score).map(i=>{const{name:e,score:r,id:o,countryFlagImg:{webp:l},avatar:{png:c,webp:n}}=i;return`
            <li class="list-top__item" data-id="${o}">
             <p class="list-top__item-num"></p>
             <picture>
@@ -83,7 +83,7 @@ import{o as $}from"../assets/cabinet-BBv-qIRL.js";import{g as _,T as g,a as h,L 
 
             <p class="list-top__name">${e}</p>
             <p class="list-top__score">${r}</p>
-          </li>`});a.innerHTML=t.join("")}function z(s,a){if(!s.length){a.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const t=[...s].sort((i,e)=>e.score-i.score).map(i=>{const{name:e,score:r,id:o,countryFlagImg:{webp:l},avatar:{png:c,webp:n}}=i;return`
+          </li>`});a.innerHTML=t.join("")}function A(s,a){if(!s.length){a.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const t=[...s].sort((i,e)=>e.score-i.score).map(i=>{const{name:e,score:r,id:o,countryFlagImg:{webp:l},avatar:{png:c,webp:n}}=i;return`
            <li class="list-top__item" data-id="${o}">
             <p class="list-top__item-num"></p>
             <picture>
@@ -109,7 +109,7 @@ import{o as $}from"../assets/cabinet-BBv-qIRL.js";import{g as _,T as g,a as h,L 
 
             <p class="list-top__name">${e}</p>
             <p class="list-top__score">${r}</p>
-          </li>`});a.innerHTML=t.join("")}function u(s=" "){const a=document.querySelector(".js-main-leaderboard-top-list");if(!a){console.error("Leaderboard container not found");return}if(s===g){_(s).then(t=>q(t,a)).catch(t=>console.error("Error fetching CS:GO data:",t));return}if(s===h){_(s).then(t=>z(t,a)).catch(t=>console.error("Error fetching Dota data:",t));return}console.log("Invalid search query")}function A(s){const a=document.querySelector(".js-main-leaderboard-cards-list");if(!s.length){a.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const t=s.map(i=>{const{title:e,date:r,description:o,id:l,img:{png:c,webp:n},likes:d,views:p}=i;return`
+          </li>`});a.innerHTML=t.join("")}function u(s=" "){const a=document.querySelector(".js-main-leaderboard-top-list");if(!a){console.error("Leaderboard container not found");return}if(s===g){_(s).then(t=>z(t,a)).catch(t=>console.error("Error fetching CS:GO data:",t));return}if(s===h){_(s).then(t=>A(t,a)).catch(t=>console.error("Error fetching Dota data:",t));return}console.log("Invalid search query")}function P(s){const a=document.querySelector(".js-main-leaderboard-cards-list");if(!s.length){a.innerHTML='<li><p class="list-top__empty">No data available</p></li>';return}const t=s.map(i=>{const{title:e,date:r,description:o,id:l,img:{png:c,webp:n},likes:d,views:p}=i;return`
           <li class="main-leaderboard__cards-item" data-id="${l}">
             <a
               href="#"
@@ -168,7 +168,7 @@ import{o as $}from"../assets/cabinet-BBv-qIRL.js";import{g as _,T as g,a as h,L 
                 </div>
               </div>
             </div>
-          </li>`});a.innerHTML=t.join("")}function P(s=" "){_(s).then(a=>A(a)).catch(a=>console.error("Error fetching data:",a))}function x(){const s=document.querySelector(".js-leaderboard-btn-csgo"),a=document.querySelector(".js-leaderboard-btn-dota"),t=document.querySelector(".js-btns-thumb");s==null||s.addEventListener("click",i);function i(){t==null||t.classList.remove("main-leaderboard__btns-thumb_active"),s==null||s.classList.add("csgo-active"),a==null||a.classList.remove("dota-active"),u(g)}i(),a==null||a.addEventListener("click",e);function e(){t==null||t.classList.add("main-leaderboard__btns-thumb_active"),a==null||a.classList.add("dota-active"),s==null||s.classList.remove("csgo-active"),u(h)}P(w)}function D(s){const a=document.querySelector(".js-main-popular-matches-cards-list"),t=s.map(i=>{const{id:e,roundOf:r,image:{png:o,webp:l},firstTeam:{firstTeamLogo:c,firstTeamTitle:n},secondTeam:{secondTeamLogo:d,secondTeamTitle:p}}=i;return`
+          </li>`});a.innerHTML=t.join("")}function x(s=" "){_(s).then(a=>P(a)).catch(a=>console.error("Error fetching data:",a))}function D(){const s=document.querySelector(".js-leaderboard-btn-csgo"),a=document.querySelector(".js-leaderboard-btn-dota"),t=document.querySelector(".js-btns-thumb");s==null||s.addEventListener("click",i);function i(){t==null||t.classList.remove("main-leaderboard__btns-thumb_active"),s==null||s.classList.add("csgo-active"),a==null||a.classList.remove("dota-active"),u(g)}i(),a==null||a.addEventListener("click",e);function e(){t==null||t.classList.add("main-leaderboard__btns-thumb_active"),a==null||a.classList.add("dota-active"),s==null||s.classList.remove("csgo-active"),u(h)}x(L)}function N(s){const a=document.querySelector(".js-main-popular-matches-cards-list"),t=s.map(i=>{const{id:e,roundOf:r,image:{png:o,webp:l},firstTeam:{firstTeamLogo:c,firstTeamTitle:n},secondTeam:{secondTeamLogo:d,secondTeamTitle:p}}=i;return`
         <li class="list-cards__item" data-id="${e}">
           <a
             class="list-cards__link"
@@ -225,7 +225,7 @@ import{o as $}from"../assets/cabinet-BBv-qIRL.js";import{g as _,T as g,a as h,L 
             <!-- round of -->
             <p class="list-cards__bottom-content-round">${r}</p>
           </div>
-        </li>`});a.innerHTML=t.join("")}function N(s=" "){_(s).then(a=>D(a)).catch(a=>console.error("Error fetching data:",a))}function I(s){const a=document.querySelector(".js-popular-list"),t=s.map(i=>{const{id:e,title:r,time:o,score:l,isOnline:c,firstTeam:{firstTeamLogo:n,firstTeamName:d,firstTeamScore:p},secondTeam:{secondTeamLogo:b,secondTeamName:m,secondTeamScore:f}}=i;return`
+        </li>`});a.innerHTML=t.join("")}function I(s=" "){_(s).then(a=>N(a)).catch(a=>console.error("Error fetching data:",a))}function R(s){const a=document.querySelector(".js-popular-list"),t=s.map(i=>{const{id:e,title:r,time:o,score:l,isOnline:c,firstTeam:{firstTeamLogo:n,firstTeamName:d,firstTeamScore:p},secondTeam:{secondTeamLogo:b,secondTeamName:m,secondTeamScore:f}}=i;return`
             <li class="popular-list__item" data-id="${e}">
               <!-- team_first -->
               <div class="popular-list__team popular-list__team_first">
@@ -277,5 +277,5 @@ import{o as $}from"../assets/cabinet-BBv-qIRL.js";import{g as _,T as g,a as h,L 
                     alt="${m}" />
                 </a>
               </div>
-            </li>`});a.innerHTML=t.join("")}function R(s=" "){_(s).then(a=>I(a)).catch(a=>console.error("Error fetching data:",a))}function B(){N(L),R(T)}document.addEventListener("DOMContentLoaded",()=>{y(),S(),H(),C(),x(),O(),B(),$(),k(),M()});
+            </li>`});a.innerHTML=t.join("")}function B(s=" "){_(s).then(a=>R(a)).catch(a=>console.error("Error fetching data:",a))}function F(){I(T),B(y)}document.addEventListener("DOMContentLoaded",()=>{S(),k(),C(),O(),D(),q(),F(),w(),M(),j()});
 //# sourceMappingURL=index.js.map
