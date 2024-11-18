@@ -1,45 +1,11 @@
 export function transactionHistoryList(collection: any, container: HTMLElement) {
-  const markup = collection.map(({ isVictory, objDate, objID, objRegime, score, title }) => {
+  const markup = collection.map(({ id, isVictory, objDate, objID, objRegime, score, title }) => {
+    console.log(title.toLowerCase().includes('виведення'));
     return `
-         <li
-                class="cabinet-history__list-item"
-                data-id="">
-                <p class="cabinet-history__list-item-title">CS:GO</p>
-
-                <div class="medium-content">
-                  <div class="cabinet-history__list-item-date-box">
-                    <p class="cabinet-history__list-item-date-title">07.06.2021</p>
-                    <p class="cabinet-history__list-item-time">19:20</p>
-                  </div>
-
-                  <div class="cabinet-history__list-item-regime-box">
-                    <p class="cabinet-history__list-item-regime-title">Режим</p>
-                    <p class="cabinet-history__list-item-regime">5v5</p>
-                  </div>
-
-                  <div class="cabinet-history__list-item-id-box">
-                    <p class="cabinet-history__list-item-id-title">ID</p>
-                    <p class="cabinet-history__list-item-id">37589023</p>
-                  </div>
-                </div>
-
-                <div class="cabinet-history__list-item-result">
-                  <p
-                    class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_victory">
-                    Перемога
-                  </p>
-
-                  <p class="cabinet-history__list-item-result-score js-result-score">
-                    <span class="symbol">-</span>
-                    <span class="amount">1200</span>
-                    <span class="currency">BS</span>
-                  </p>
-                </div>
-              </li>
-
-              <li
-                class="cabinet-history__list-item"
-                data-id="">
+        <li class="cabinet-history__list-item" data-id="${id}">
+        ${
+          title.toLowerCase().includes('переказ')
+            ? `
                 <div
                   class="cabinet-wallet__list-item-title-box cabinet-wallet__list-item-title-box_translation">
                   <div class="cabinet-wallet__list-item-title-svg-box svg-box-translation">
@@ -57,43 +23,11 @@ export function transactionHistoryList(collection: any, container: HTMLElement) 
                       <use xlink:href="#icon-people"></use>
                     </svg>
                   </div>
+
                   <p class="cabinet-history__list-item-title">Переказ коштів</p>
-                </div>
-
-                <div class="medium-content">
-                  <div class="cabinet-history__list-item-date-box">
-                    <p class="cabinet-history__list-item-date-title">07.06.2021</p>
-                    <p class="cabinet-history__list-item-time">19:20</p>
-                  </div>
-
-                  <div class="cabinet-history__list-item-regime-box">
-                    <p class="cabinet-history__list-item-regime-title">Режим</p>
-                    <p class="cabinet-history__list-item-regime">5v5</p>
-                  </div>
-
-                  <div class="cabinet-history__list-item-id-box">
-                    <p class="cabinet-history__list-item-id-title">ID</p>
-                    <p class="cabinet-history__list-item-id">37589023</p>
-                  </div>
-                </div>
-
-                <div class="cabinet-history__list-item-result">
-                  <p
-                    class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_victory">
-                    Перемога
-                  </p>
-
-                  <p class="cabinet-history__list-item-result-score js-result-score">
-                    <span class="symbol">-</span>
-                    <span class="amount">1200</span>
-                    <span class="currency">BS</span>
-                  </p>
-                </div>
-              </li>
-
-              <li
-                class="cabinet-history__list-item"
-                data-id="">
+              </div>`
+            : title.toLowerCase().includes('виведення')
+              ? `
                 <div
                   class="cabinet-wallet__list-item-title-box cabinet-wallet__list-item-title-box_withdrawal">
                   <div class="cabinet-wallet__list-item-title-svg-box svg-box-withdrawal">
@@ -113,36 +47,36 @@ export function transactionHistoryList(collection: any, container: HTMLElement) 
                   </div>
                   <p class="cabinet-history__list-item-title">Виведення коштів</p>
                 </div>
+                `
+              : `<p class="cabinet-history__list-item-title">${title}</p>`
+        }
 
-                <div class="medium-content">
+                <div class="cabinet-wallet__medium-content">
                   <div class="cabinet-history__list-item-date-box">
-                    <p class="cabinet-history__list-item-date-title">07.06.2021</p>
-                    <p class="cabinet-history__list-item-time">19:20</p>
+                    <p class="cabinet-history__list-item-date-title">${objDate.date}</p>
+                    <p class="cabinet-history__list-item-time">${objDate.time}</p>
                   </div>
 
                   <div class="cabinet-history__list-item-regime-box">
-                    <p class="cabinet-history__list-item-regime-title">Режим</p>
-                    <p class="cabinet-history__list-item-regime">5v5</p>
+                    <p class="cabinet-history__list-item-regime-title">${objRegime.title}</p>
+                    <p class="cabinet-history__list-item-regime">${objRegime.regime}</p>
                   </div>
 
-                  <div class="cabinet-history__list-item-id-box">
-                    <p class="cabinet-history__list-item-id-title">ID</p>
-                    <p class="cabinet-history__list-item-id">37589023</p>
+                  <div class="cabinet-history__list-item-id-box cabinet-wallet__list-item-id-box">
+                    <p class="cabinet-history__list-item-id-title">${objID.title}</p>
+                    <p class="cabinet-history__list-item-id">${objID.id}</p>
                   </div>
                 </div>
 
-                <div class="cabinet-history__list-item-result">
-                  <p
-                    class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_victory">
-                    Перемога
-                  </p>
-
-                  <p class="cabinet-history__list-item-result-score js-result-score">
-                    <span class="symbol">-</span>
-                    <span class="amount">1200</span>
-                    <span class="currency">BS</span>
-                  </p>
-                </div>
+                 <div class="cabinet-history__list-item-result">
+                
+                ${isVictory ? '<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_victory">Перемога</p>' : '<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_loss">Програш</p>'}
+                <p class="cabinet-history__list-item-result-score js-result-score">
+                  <span class="symbol">${isVictory ? '+ ' : '- '}</span>
+                  <span class="amount">${score}</span>
+                  <span class="currency">BS</span>
+                </p>
+              </div>
               </li>`;
   });
 

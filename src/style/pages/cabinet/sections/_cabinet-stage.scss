@@ -305,9 +305,7 @@
           max-width: 670px;
 
           @media (min-width: 1715px) {
-            // padding-right: 20px;
           }
-          // margin: 0 50px 20px 20px;
         }
         &-title {
           position: absolute;
@@ -590,6 +588,7 @@
   &__list {
     max-height: 620px;
     overflow-y: auto;
+
     &-item {
       padding: 17px 0px;
       border-top: 1px solid #3f3d46;
@@ -1250,5 +1249,18 @@
         }
       }
     }
+  }
+
+  &__medium-content {
+    display: grid;
+    grid-template-columns: 30% 21% 30%;
+    margin-left: 60px;
+    column-gap: 45px;
+  }
+
+  &__list-item-id-box {
+    margin-left: auto !important;
+    white-space: nowrap;
+    transform: translateX(-57px);
   }
 }
