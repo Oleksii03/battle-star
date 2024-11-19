@@ -1253,14 +1253,41 @@
 
   &__medium-content {
     display: grid;
-    grid-template-columns: 30% 21% 30%;
+    grid-template-columns: 40% 37% 30%;
     margin-left: 60px;
     column-gap: 45px;
+
+    @include media-min-width(lg) {
+      grid-template-columns: 30% 21% 30%;
+    }
   }
 
   &__list-item-id-box {
     margin-left: auto !important;
     white-space: nowrap;
     transform: translateX(-57px);
+  }
+
+  &__list-item-id {
+    &_withdrawal {
+      text-decoration: none;
+    }
+    &_transfer {
+      position: relative;
+      border-radius: 12px;
+      background: rgba(0, 0, 0, 0.25);
+      padding: 10px 9px 8px 40px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 6px;
+        left: 26px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #6fff57;
+      }
+    }
   }
 }

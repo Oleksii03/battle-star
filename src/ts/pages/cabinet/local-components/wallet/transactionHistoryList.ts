@@ -1,6 +1,10 @@
-export function transactionHistoryList(collection: any, container: HTMLElement) {
+import { CabinetHistoryTransactions } from '@/ts/types/pages/cabinet';
+
+export function transactionHistoryList(
+  collection: CabinetHistoryTransactions[],
+  container: HTMLElement
+) {
   const markup = collection.map(({ id, isVictory, objDate, objID, objRegime, score, title }) => {
-    console.log(title.toLowerCase().includes('виведення'));
     return `
         <li class="cabinet-history__list-item" data-id="${id}">
         ${
@@ -64,13 +68,13 @@ export function transactionHistoryList(collection: any, container: HTMLElement) 
 
                   <div class="cabinet-history__list-item-id-box cabinet-wallet__list-item-id-box">
                     <p class="cabinet-history__list-item-id-title">${objID.title}</p>
-                    <p class="cabinet-history__list-item-id">${objID.id}</p>
+                    <p class="${title.toLowerCase().includes('переказ') ? 'cabinet-wallet__list-item-id_transfer' : title.toLowerCase().includes('виведення') ? 'cabinet-wallet__list-item-id_withdrawal' : 'cabinet-history__list-item-id'}">${objID.id}</p>
                   </div>
                 </div>
 
                  <div class="cabinet-history__list-item-result">
                 
-                ${isVictory ? '<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_victory">Перемога</p>' : '<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_loss">Програш</p>'}
+                ${isVictory ? '<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_victory">Перемога</p>' : `${title.toLowerCase().includes('коштів') ? '<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_loss"></p>' : '<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_loss">Програш</p>'}`}
                 <p class="cabinet-history__list-item-result-score js-result-score">
                   <span class="symbol">${isVictory ? '+ ' : '- '}</span>
                   <span class="amount">${score}</span>

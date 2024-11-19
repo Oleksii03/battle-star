@@ -9,4 +9,14 @@ interface CabinetHistoryMatchesList {
   sortScore: number;
 }
 
-export { CabinetHistoryMatchesList };
+interface CabinetHistoryTransactions {
+  id: string;
+  isVictory: boolean;
+  objDate: { date: string; time: string };
+  objID: { id: number | string; title: string };
+  objRegime: { regime: string; title: string };
+  score: number;
+  title: string;
+}
+
+export { CabinetHistoryMatchesList, CabinetHistoryTransactions };
