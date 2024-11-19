@@ -1,4 +1,4 @@
-import{h as u,o as h}from"../../assets/cabinet-BBv-qIRL.js";import{g,H as L,a as j,s as S,h as $,l as M,c as T}from"../../assets/closeDropDownList-CugoLy9B.js";import{s as F}from"../../assets/loginOrRegistrationHandler-zsTQJq6b.js";import"../../assets/vendor-DZUFF-U2.js";function y(i,s){const t=document.querySelector(".js-cabinet-nav-thumb"),e=[...s.children],a=e.indexOf(i);t.style.top=`${16.66*a}%`,e.forEach(l=>{l.classList.remove("cabinet__nav-item_active")}),i.classList.add("cabinet__nav-item_active")}function v(){return`
+import{h as v,o as g}from"../../assets/cabinet-BBv-qIRL.js";import{g as u,H as j,a as S,s as F,h as T,l as M,c as $}from"../../assets/closeDropDownList-cv9qH4zE.js";import{s as E}from"../../assets/loginOrRegistrationHandler-zsTQJq6b.js";import"../../assets/vendor-DZUFF-U2.js";function y(t,i){const s=document.querySelector(".js-cabinet-nav-thumb"),a=[...i.children],e=a.indexOf(t);s.style.top=`${16.66*e}%`,a.forEach(l=>{l.classList.remove("cabinet__nav-item_active")}),t.classList.add("cabinet__nav-item_active")}function h(){return`
           <div class="cabinet-statistics__rank">
             <p class="cabinet-statistics__rank-title">
               Ранг:
@@ -119,7 +119,7 @@ import{h as u,o as h}from"../../assets/cabinet-BBv-qIRL.js";import{g,H as L,a as
                   alt="game style chart" />
               </picture>
             </div>
-          </div>`}function H(){return`
+          </div>`}function q(){return`
             <div class="cabinet-statistics__rank">
           <p class="cabinet-statistics__rank-title">
             Ранг:
@@ -309,7 +309,7 @@ import{h as u,o as h}from"../../assets/cabinet-BBv-qIRL.js";import{g,H as L,a as
               </div>
             </div>
           </div>
-        </div>`}function C(i,s){const t=document.querySelector(".js-cabinet-statistics-thumb");i.innerHTML=v(),s.addEventListener("click",e=>{const a=e.target;if(a.tagName==="BUTTON"){if([...s.children].forEach(l=>l.classList.remove("cabinet-statistics__btn_active")),a.classList.contains("js-statistics-btn-csgo")){i.innerHTML=H(),t==null||t.classList.add("cabinet-statistics__btns-thumb_active"),a.classList.add("cabinet-statistics__btn_active");return}if(a.classList.contains("js-statistics-btn-dota")){i.innerHTML=v(),t==null||t.classList.remove("cabinet-statistics__btns-thumb_active"),a.classList.add("cabinet-statistics__btn_active");return}}})}function E(i){const s=`
+        </div>`}function C(t,i){const s=document.querySelector(".js-cabinet-statistics-thumb");t.innerHTML=h(),i.addEventListener("click",a=>{const e=a.target;if(e.tagName==="BUTTON"){if([...i.children].forEach(l=>l.classList.remove("cabinet-statistics__btn_active")),e.classList.contains("js-statistics-btn-csgo")){t.innerHTML=q(),s==null||s.classList.add("cabinet-statistics__btns-thumb_active"),e.classList.add("cabinet-statistics__btn_active");return}if(e.classList.contains("js-statistics-btn-dota")){t.innerHTML=h(),s==null||s.classList.remove("cabinet-statistics__btns-thumb_active"),e.classList.add("cabinet-statistics__btn_active");return}}})}function H(t){const i=`
         <div class="cabinet-statistics">
           <div class="cabinet-statistics__btns">
             <div class="cabinet-statistics__btns-box js-statistics-btns-box">
@@ -337,9 +337,9 @@ import{h as u,o as h}from"../../assets/cabinet-BBv-qIRL.js";import{g,H as L,a as
           </div>
 
           <div class="cabinet-statistics__content js-cabinet-statistics-content">
-       </div>`;i.innerHTML=s;const t=document.querySelector(".js-cabinet-statistics-content"),e=document.querySelector(".js-statistics-btns-box");C(t,e)}function m(i,s){E(i);const t=s.dataset.hash;t&&(location.hash=t),console.log(t)}function d(i){const s=document.querySelector(".js-cabinet-history-list"),t=i.map(e=>{const{id:a,isVictory:l,score:o,title:_,objDate:{date:n,time:c},objID:{id:r,title:p},objRegime:{regime:b,title:x}}=e;return`
-            <li class="cabinet-history__list-item" data-id="${a}">
-              <p class="cabinet-history__list-item-title">${_}</p>
+       </div>`;t.innerHTML=i;const s=document.querySelector(".js-cabinet-statistics-content"),a=document.querySelector(".js-statistics-btns-box");C(s,a)}function m(t,i){H(t);const s=i.dataset.hash;s&&(location.hash=s),console.log(s)}function b(t){const i=document.querySelector(".js-cabinet-history-list"),s=t.map(a=>{const{id:e,isVictory:l,score:_,title:r,objDate:{date:n,time:c},objID:{id:o,title:d},objRegime:{regime:p,title:L}}=a;return`
+            <li class="cabinet-history__list-item" data-id="${e}">
+              <p class="cabinet-history__list-item-title">${r}</p>
 
               <div class="medium-content">
                 <div class="cabinet-history__list-item-date-box">
@@ -348,13 +348,13 @@ import{h as u,o as h}from"../../assets/cabinet-BBv-qIRL.js";import{g,H as L,a as
                 </div>
 
                 <div class="cabinet-history__list-item-regime-box">
-                  <p class="cabinet-history__list-item-regime-title">${x}</p>
-                  <p class="cabinet-history__list-item-regime">${b}</p>
+                  <p class="cabinet-history__list-item-regime-title">${L}</p>
+                  <p class="cabinet-history__list-item-regime">${p}</p>
                 </div>
 
                 <div class="cabinet-history__list-item-id-box">
-                  <p class="cabinet-history__list-item-id-title">${p}</p>
-                  <p class="cabinet-history__list-item-id">${r}</p>
+                  <p class="cabinet-history__list-item-id-title">${d}</p>
+                  <p class="cabinet-history__list-item-id">${o}</p>
                 </div>
               </div>
 
@@ -363,11 +363,11 @@ import{h as u,o as h}from"../../assets/cabinet-BBv-qIRL.js";import{g,H as L,a as
                 ${l?'<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_victory">Перемога</p>':'<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_loss">Програш</p>'}
                 <p class="cabinet-history__list-item-result-score js-result-score">
                   <span class="symbol">${l?"+ ":"- "}</span>
-                  <span class="amount">${o}</span>
+                  <span class="amount">${_}</span>
                   <span class="currency">BS</span>
                 </p>
               </div>
-            </li>`});s.innerHTML=t.join("")}function q(i){const s=document.querySelector(".js-drop-down-item-title-box"),t=document.querySelector(".js-drop-down-inner-list"),e=document.querySelector(".js-drop-down-active-title"),a=document.querySelector(".js-drop-down-icon");s==null||s.addEventListener("click",l);function l(){t==null||t.classList.toggle("cabinet-history__drop-down-inner-list_active"),a==null||a.classList.toggle("cabinet-history__drop-down-item-icon_active")}t==null||t.addEventListener("click",o);function o(n){const r=n.target.textContent;r&&(e.textContent=r,l(),_(r.toLowerCase()))}function _(n){if(n!=null&&n.includes("рейтинг")){const r=i.toSorted((p,b)=>b.sortScore-p.sortScore);d(r);return}const c=i.filter(({title:r})=>r.toLowerCase()===n);if(c.length){d(c);return}d(i)}}function I(i){const s=`
+            </li>`});i.innerHTML=s.join("")}function A(t){const i=document.querySelector(".js-drop-down-item-title-box"),s=document.querySelector(".js-drop-down-inner-list"),a=document.querySelector(".js-drop-down-active-title"),e=document.querySelector(".js-drop-down-icon");i==null||i.addEventListener("click",l);function l(){s==null||s.classList.toggle("cabinet-history__drop-down-inner-list_active"),e==null||e.classList.toggle("cabinet-history__drop-down-item-icon_active")}s==null||s.addEventListener("click",_);function _(n){const o=n.target.textContent;o&&(a.textContent=o,l(),r(o.toLowerCase()))}function r(n){if(n!=null&&n.includes("рейтинг")){const o=t.toSorted((d,p)=>p.sortScore-d.sortScore);b(o);return}const c=t.filter(({title:o})=>o.toLowerCase()===n);if(c.length){b(c);return}b(t)}}function I(t){const i=`
        <div class="cabinet__history cabinet-history">
           <div class="cabinet-history__title-box">
             <h3 class="cabinet-history__title">Історія матчів</h3>
@@ -411,7 +411,7 @@ import{h as u,o as h}from"../../assets/cabinet-BBv-qIRL.js";import{g,H as L,a as
           </div>
 
           <ul class="cabinet-history__list js-cabinet-history-list"></ul>
-        </div>`;i.innerHTML=s,g(L).then(t=>{d(t),q(t)}).catch(u)}function f(i,s){I(i);const t=s.dataset.hash;t&&(location.hash=t)}function D(){return`
+        </div>`;t.innerHTML=i,u(j).then(s=>{b(s),A(s)}).catch(v)}function f(t,i){I(t);const s=i.dataset.hash;s&&(location.hash=s)}function D(){return`
         <div class="cabinet-personal-data">
           <div class="cabinet-personal-data__info">
             <div class="cabinet-personal-data__info-title-box">
@@ -521,8 +521,8 @@ import{h as u,o as h}from"../../assets/cabinet-BBv-qIRL.js";import{g,H as L,a as
               </li>
             </ul>
           </div>
-        </div>`}function w(i,s){i.innerHTML=D();const t=s.dataset.hash;t&&(location.hash=t)}function O(i,s){const t=i.map(({id:e,isVictory:a,objDate:l,objID:o,objRegime:_,score:n,title:c})=>`
-        <li class="cabinet-history__list-item" data-id="${e}">
+        </div>`}function w(t,i){t.innerHTML=D();const s=i.dataset.hash;s&&(location.hash=s)}function O(t,i){const s=t.map(({id:a,isVictory:e,objDate:l,objID:_,objRegime:r,score:n,title:c})=>`
+        <li class="cabinet-history__list-item" data-id="${a}">
         ${c.toLowerCase().includes("переказ")?`
                 <div
                   class="cabinet-wallet__list-item-title-box cabinet-wallet__list-item-title-box_translation">
@@ -572,26 +572,26 @@ import{h as u,o as h}from"../../assets/cabinet-BBv-qIRL.js";import{g,H as L,a as
                   </div>
 
                   <div class="cabinet-history__list-item-regime-box">
-                    <p class="cabinet-history__list-item-regime-title">${_.title}</p>
-                    <p class="cabinet-history__list-item-regime">${_.regime}</p>
+                    <p class="cabinet-history__list-item-regime-title">${r.title}</p>
+                    <p class="cabinet-history__list-item-regime">${r.regime}</p>
                   </div>
 
                   <div class="cabinet-history__list-item-id-box cabinet-wallet__list-item-id-box">
-                    <p class="cabinet-history__list-item-id-title">${o.title}</p>
-                    <p class="${c.toLowerCase().includes("переказ")?"cabinet-wallet__list-item-id_transfer":c.toLowerCase().includes("виведення")?"cabinet-wallet__list-item-id_withdrawal":"cabinet-history__list-item-id"}">${o.id}</p>
+                    <p class="cabinet-history__list-item-id-title">${_.title}</p>
+                    <p class="${c.toLowerCase().includes("переказ")?"cabinet-wallet__list-item-id_transfer":c.toLowerCase().includes("виведення")?"cabinet-wallet__list-item-id_withdrawal":"cabinet-history__list-item-id"}">${_.id}</p>
                   </div>
                 </div>
 
                  <div class="cabinet-history__list-item-result">
                 
-                ${a?'<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_victory">Перемога</p>':`${c.toLowerCase().includes("коштів")?'<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_loss"></p>':'<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_loss">Програш</p>'}`}
+                ${e?'<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_victory">Перемога</p>':`${c.toLowerCase().includes("коштів")?'<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_loss"></p>':'<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_loss">Програш</p>'}`}
                 <p class="cabinet-history__list-item-result-score js-result-score">
-                  <span class="symbol">${a?"+ ":"- "}</span>
+                  <span class="symbol">${e?"+ ":"- "}</span>
                   <span class="amount">${n}</span>
                   <span class="currency">BS</span>
                 </p>
               </div>
-              </li>`);s.innerHTML=t.join("")}function A(i){const s=`
+              </li>`);i.innerHTML=s.join("")}function R(t){const i=`
         <div class="cabinet-wallet">
           <div class="cabinet-wallet__content-top">
             <div class="cabinet-wallet__card">
@@ -783,5 +783,180 @@ import{h as u,o as h}from"../../assets/cabinet-BBv-qIRL.js";import{g,H as L,a as
 
             <ul class="cabinet-wallet__history-list js-cabinet-wallet-history-list"></ul>
           </div>
-        </div>`;i.innerHTML=s;const t=document.querySelector(".js-cabinet-wallet-history-list");g(j).then(e=>O(e,t)).catch(u)}function k(i,s){A(i);const t=s.dataset.hash;t&&(location.hash=t),console.log(t)}function B(i,s){const t=location.hash.slice(1)?location.hash.slice(1):"statistics",e=document.querySelector(`[data-hash="${t}"]`);switch(y(e,s),t){case"statistics":m(i,e);break;case"history":f(i,e);break;case"personal-data":w(i,e);break;case"wallet":k(i,e);break;default:m(i,e);break}}function R(){const i=document.querySelector(".js-cabinet-nav-list"),s=document.querySelector(".js-cabinet-main-body");i==null||i.addEventListener("click",t);function t(e){const a=e.target.closest("li");a&&(y(a,i),a.classList.contains("js-statistics")&&m(s,a),a.classList.contains("js-history")&&f(s,a),a.classList.contains("js-personal-data")&&w(s,a),a.classList.contains("js-wallet")&&k(s,a))}B(s,i)}function N(){const i=localStorage.getItem("logged");(i==="false"||i===null)&&(window.location.href="404")}document.addEventListener("DOMContentLoaded",()=>{S(),$(),F(),h(),h(),M(),R(),N(),T()});
+        </div>`;t.innerHTML=i;const s=document.querySelector(".js-cabinet-wallet-history-list");u(S).then(a=>O(a,s)).catch(v)}function k(t,i){R(t);const s=i.dataset.hash;s&&(location.hash=s)}function B(){const t=document.querySelector(".js-message-list");t==null||t.addEventListener("click",i=>{const s=i.target;s.classList.contains("js-item-message-switch")&&s.classList.toggle("cabinet-settings__message-item-switch_active")})}function U(){return`
+        <div class="cabinet-settings">
+          <div class="cabinet-settings__message">
+            <h3 class="cabinet-settings__message-title">Повідомлення</h3>
+
+            <ul class="cabinet-settings__message-list js-message-list">
+              <li class="cabinet-settings__message-item">
+                <div class="cabinet-settings__message-item-switch js-item-message-switch"></div>
+                <p class="cabinet-settings__message-item-text">Новини платформи</p>
+              </li>
+
+              <li class="cabinet-settings__message-item">
+                <div
+                  class="cabinet-settings__message-item-switch js-item-message-switch"></div>
+                <p class="cabinet-settings__message-item-text">Нові турніри</p>
+              </li>
+              <li class="cabinet-settings__message-item">
+                <div class="cabinet-settings__message-item-switch js-item-message-switch"></div>
+                <p class="cabinet-settings__message-item-text">Вхідні повідомлення</p>
+              </li>
+              <li class="cabinet-settings__message-item">
+                <div class="cabinet-settings__message-item-switch js-item-message-switch"></div>
+                <p class="cabinet-settings__message-item-text">Запрошення до команди</p>
+              </li>
+              <li class="cabinet-settings__message-item">
+                <div class="cabinet-settings__message-item-switch js-item-message-switch"></div>
+                <p class="cabinet-settings__message-item-text">Запити у друзі</p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- settings__invitations -->
+          <div class="cabinet-settings__invitations">
+            <h3 class="cabinet-settings__invitations-title">Запрошення до команди</h3>
+
+            <ul class="cabinet-settings__invitations-list js-invitations-list">
+              <li class="cabinet-settings__invitations-item">
+                <div
+                  class="cabinet-settings__invitations-item-switch cabinet-settings__invitations-item-switch_active js-item-invitations-switch"></div>
+                <p class="cabinet-settings__invitations-item-text">Дозволити лише від друзів</p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- language -->
+          <div class="cabinet-settings__language">
+            <h3 class="cabinet-settings__language-title">Мова інтерфейсу</h3>
+
+            <div class="cabinet-settings__language-box">
+              <p class="cabinet-settings__language-box-title">Мова</p>
+
+              <ul class="cabinet-settings__language-list">
+                <li class="cabinet-settings__language-item">
+                  <div class="cabinet-settings__language-item-title-box js-language-item-title-box">
+                    <p class="cabinet-settings__language-item-title js-language-item-title">Українська</p>
+
+                    <svg
+                      class="cabinet-settings__language-item-title-icon"
+                      width="25"
+                      height="25">
+                      <use xlink:href="#icon-arrow-down"></use>
+                    </svg>
+                  </div>
+
+                  <ul class="cabinet-settings__language-inner-list js-language-inner-list">
+                    <li class="cabinet-settings__language-inner-item">Українська</li>
+                    <li class="cabinet-settings__language-inner-item">Аронглійська</li>
+                    <li class="cabinet-settings__language-inner-item">Російська</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Region -->
+          <div class="cabinet-settings__region">
+            <h3 class="cabinet-settings__region-title">Регіон</h3>
+
+            <div class="cabinet-settings__region-box">
+              <p class="cabinet-settings__region-box-title">Регіон</p>
+
+              <ul class="cabinet-settings__region-list">
+                <li class="cabinet-settings__region-item">
+                  <div class="cabinet-settings__region-item-title-box js-region-item-title-box">
+                    <img
+                      width="34"
+                      height="22"
+                      class="cabinet-settings__region-item-img"
+                      loading="lazy"
+                      src="https://firebasestorage.googleapis.com/v0/b/battlestar-514be.appspot.com/o/pages%2Fcabinet%2Fsettings%2Fflag-Ukraine.svg?alt=media&token=72482342-f473-4850-8428-ff8e93e9986c"
+                      alt="прапор країни" />
+
+                    <p class="cabinet-settings__region-item-title">Україна</p>
+
+                    <svg
+                      class="cabinet-settings__region-item-title-icon"
+                      width="25"
+                      height="25">
+                      <use xlink:href="#icon-arrow-down"></use>
+                    </svg>
+                  </div>
+
+                  <ul class="cabinet-settings__region-inner-list js-region-inner-list">
+                    <li
+                      class="cabinet-settings__region-inner-item"
+                      data-src="https://firebasestorage.googleapis.com/v0/b/battlestar-514be.appspot.com/o/pages%2Fcabinet%2Fsettings%2Fflag-Ukraine.svg?alt=media&token=72482342-f473-4850-8428-ff8e93e9986c">
+                      Україна
+                    </li>
+                    <li
+                      class="cabinet-settings__region-inner-item"
+                      data-src="https://firebasestorage.googleapis.com/v0/b/battlestar-514be.appspot.com/o/pages%2Fcabinet%2Fsettings%2Fflag-Austria.svg?alt=media&token=34c00985-a901-4a23-bb9e-59741abd2fb1">
+                      Австралія
+                    </li>
+                    <li
+                      class="cabinet-settings__region-inner-item"
+                      data-src="https://firebasestorage.googleapis.com/v0/b/battlestar-514be.appspot.com/o/pages%2Fcabinet%2Fsettings%2Fflag-Afganistan.svg?alt=media&token=42bc0b54-58c8-4e0b-8ff3-d1e61f17d58b">
+                      Афганістан
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- accounts -->
+          <div class="cabinet-settings__accounts">
+            <h3 class="cabinet-settings__accounts-title">Прив'язати обліковий запис</h3>
+
+            <ul class="cabinet-settings__accounts-list js-accounts-list">
+              <li class="cabinet-settings__accounts-item">
+                <p class="cabinet-settings__accounts-item-title">Steam</p>
+
+                <div class="cabinet-settings__accounts-item-box">
+                  <div class="cabinet-settings__accounts-item-box-icon"></div>
+
+                  <p class="cabinet-settings__accounts-item-box-text">VERITA_Luts</p>
+                </div>
+              </li>
+
+              <li class="cabinet-settings__accounts-item">
+                <p class="cabinet-settings__accounts-item-title">Google</p>
+
+                <div class="cabinet-settings__accounts-item-box">
+                  <div class="cabinet-settings__accounts-item-box-icon"></div>
+
+                  <p class="cabinet-settings__accounts-item-box-text">Example@mail.com</p>
+                </div>
+              </li>
+
+              <li class="cabinet-settings__accounts-item">
+                <p class="cabinet-settings__accounts-item-title">Facebook</p>
+
+                <p class="cabinet-settings__accounts-item-box-text_accent">Прив'язати</p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Change password -->
+          <div class="cabinet-settings__password">
+            <h3 class="cabinet-settings__password-title">Змінити пароль</h3>
+
+            <p class="cabinet-settings__password-change"><a href="#">Змінити</a></p>
+          </div>
+
+          <!-- Log out of the account -->
+          <div class="cabinet-settings__logout">
+            <button class="cabinet-settings__logout-btn">
+              <svg
+                width="24"
+                height="24">
+                <use xlink:href="#icon-exit-arrow"></use>
+              </svg>
+              <span>Вийти з облікового запису</span>
+            </button>
+          </div>
+        </div>`}function N(){const t=document.querySelector(".js-invitations-list");t==null||t.addEventListener("click",i=>{const s=i.target;s.classList.contains("js-item-invitations-switch")&&s.classList.toggle("cabinet-settings__invitations-item-switch_active")})}function z(){const t=document.querySelector(".js-language-item-title-box"),i=document.querySelector(".js-language-inner-list");t==null||t.addEventListener("click",s);function s(){t==null||t.classList.toggle("cabinet-settings__language-item-title-box_active"),i==null||i.classList.toggle("cabinet-settings__language-inner-list_active")}i==null||i.addEventListener("click",a=>{const e=document.querySelector(".js-language-item-title"),l=a.target;l.tagName!=="LI"||!e||(e.textContent=l.textContent,s())})}function x(t,i){t.innerHTML=U(),B(),N(),z();const s=i.dataset.hash;s&&(location.hash=s)}function G(t,i){const s=location.hash.slice(1)?location.hash.slice(1):"statistics",a=document.querySelector(`[data-hash="${s}"]`);switch(y(a,i),s){case"statistics":m(t,a);break;case"history":f(t,a);break;case"personal-data":w(t,a);break;case"wallet":k(t,a);break;case"setting":x(t,a);break;default:m(t,a);break}}function W(){const t=document.querySelector(".js-cabinet-nav-list"),i=document.querySelector(".js-cabinet-main-body");t==null||t.addEventListener("click",s);function s(a){const e=a.target.closest("li");e&&(y(e,t),e.classList.contains("js-statistics")&&m(i,e),e.classList.contains("js-history")&&f(i,e),e.classList.contains("js-personal-data")&&w(i,e),e.classList.contains("js-wallet")&&k(i,e),e.classList.contains("js-setting")&&x(i,e))}G(i,t)}function V(){const t=localStorage.getItem("logged");(t==="false"||t===null)&&(window.location.href="404")}document.addEventListener("DOMContentLoaded",()=>{F(),T(),E(),g(),g(),M(),W(),V(),$()});
 //# sourceMappingURL=cabinet.js.map
