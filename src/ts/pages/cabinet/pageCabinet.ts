@@ -4,6 +4,7 @@ import { historyMatches } from './local-components/history-matches/historyMatche
 import { handlerUniqueUrl } from './local-components/base/handlerUniqueUrl';
 import { personalData } from './local-components/personal-data/personalData';
 import { handlerWallet } from './local-components/wallet/wallet';
+import { handlerSettings } from './local-components/cabinet-settings/settings';
 
 export function pageCabinet() {
   const navigationList = document.querySelector('.js-cabinet-nav-list') as HTMLUListElement;
@@ -34,6 +35,10 @@ export function pageCabinet() {
 
     if (targetEl.classList.contains('js-wallet')) {
       handlerWallet(cabinetMainContainer, targetEl);
+    }
+
+    if (targetEl.classList.contains('js-setting')) {
+      handlerSettings(cabinetMainContainer, targetEl);
     }
   }
 

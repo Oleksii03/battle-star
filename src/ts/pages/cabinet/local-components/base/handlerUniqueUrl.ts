@@ -3,6 +3,7 @@ import { statisticHandler } from '../statistics/statistic';
 import { historyMatches } from '../history-matches/historyMatches';
 import { personalData } from '../personal-data/personalData';
 import { handlerWallet } from '../wallet/wallet';
+import { handlerSettings } from '../cabinet-settings/settings';
 
 export function handlerUniqueUrl(
   cabinetMainContainer: HTMLElement,
@@ -28,6 +29,10 @@ export function handlerUniqueUrl(
 
     case 'wallet':
       handlerWallet(cabinetMainContainer, targetEl);
+      break;
+
+    case 'setting':
+      handlerSettings(cabinetMainContainer, targetEl);
       break;
 
     default:

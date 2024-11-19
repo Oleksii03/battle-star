@@ -1300,12 +1300,16 @@
   font-family: Roboto-Regular;
   font-weight: 400;
 
+  // message
   &__message {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #3f3d46;
+
     &-title {
       font-size: 24px;
       line-height: normal;
       font-weight: 400;
-      margin-bottom: 38px;
+      margin-bottom: 36px;
     }
 
     &-list {
@@ -1318,13 +1322,21 @@
       @include flex-align-row;
       column-gap: 40px;
 
+      &-text {
+        color: #989898;
+        line-height: normal;
+      }
+
       &-switch {
         position: relative;
         width: 38px;
-        height: 19px;
+        height: 20px;
         flex-shrink: 0;
         background-color: $gray-text;
         border-radius: 10px;
+        padding: 2px;
+        cursor: pointer;
+        transition: all 150ms linear;
 
         &::before {
           content: '';
@@ -1336,7 +1348,378 @@
           height: 12px;
           background-color: $dark-text;
           border-radius: 50%;
+          transition: all 150ms linear;
         }
+
+        &_active {
+          background-color: $basic-yellow;
+          &:before {
+            left: calc(100% - 16px);
+          }
+
+          & ~ .cabinet-settings__message-item-text {
+            color: $light-text;
+          }
+        }
+      }
+    }
+  }
+
+  // invitations
+  &__invitations {
+    padding-top: 25px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #3f3d46;
+
+    &-title {
+      font-size: 24px;
+      line-height: normal;
+      font-weight: 400;
+      margin-bottom: 22px;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 33px;
+    }
+
+    &-item {
+      @include flex-align-row;
+      column-gap: 40px;
+
+      &-text {
+        color: #989898;
+        line-height: normal;
+      }
+
+      &-switch {
+        position: relative;
+        width: 38px;
+        height: 20px;
+        flex-shrink: 0;
+        background-color: $gray-text;
+        border-radius: 10px;
+        padding: 2px;
+        cursor: pointer;
+        transition: all 150ms linear;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 4px;
+          transform: translateY(-50%);
+          width: 12px;
+          height: 12px;
+          background-color: $dark-text;
+          border-radius: 50%;
+          transition: all 150ms linear;
+        }
+
+        &_active {
+          background-color: $basic-yellow;
+          &:before {
+            left: calc(100% - 16px);
+          }
+
+          & ~ .cabinet-settings__invitations-item-text {
+            color: $light-text;
+          }
+        }
+      }
+    }
+  }
+
+  // language
+  &__language {
+    padding-top: 25px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #3f3d46;
+
+    &-title {
+      font-size: 24px;
+      line-height: normal;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+    &-box {
+      @include flex-align-row;
+      column-gap: 59px;
+
+      &-title {
+        color: #989898;
+      }
+    }
+
+    &-item {
+      position: relative;
+
+      &-title-box {
+        @include flex-align-row;
+        column-gap: 6px;
+        cursor: pointer;
+
+        &_active {
+          & > .cabinet-settings__language-item-title-icon {
+            transform: rotate(-90deg);
+          }
+        }
+      }
+
+      &-title {
+        font-size: 18px;
+        line-height: normal;
+
+        &-icon {
+          width: 25px;
+          height: 25px;
+          flex-shrink: 0;
+          fill: $basic-white;
+          transition: transform 200ms linear;
+        }
+      }
+    }
+
+    // inner list
+    &-inner {
+      &-list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+        position: absolute;
+        top: 150%;
+        left: 0;
+        padding: 0px 0px;
+        background-color: #1d1d21;
+        z-index: 1;
+        border: 1px solid #fac704;
+        transition: all 200ms linear;
+        border-radius: 4px;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        &_active {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
+        }
+      }
+
+      &-item {
+        padding: 15px 15px 15px 10px;
+        white-space: nowrap;
+        transition: all 150ms linear;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgba(250, 201, 4, 0.337254902);
+        }
+      }
+    }
+  }
+
+  // Region
+  &__region {
+    padding-top: 25px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #3f3d46;
+
+    &-title {
+      font-size: 24px;
+      line-height: normal;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+    &-box {
+      @include flex-align-row;
+      column-gap: 52px;
+
+      &-title {
+        color: #989898;
+      }
+    }
+
+    &-item {
+      position: relative;
+
+      &-img {
+        margin-right: 7px;
+      }
+
+      &-title-box {
+        @include flex-align-row;
+        column-gap: 6px;
+        cursor: pointer;
+
+        &_active {
+          & > .cabinet-settings__language-item-title-icon {
+            transform: rotate(-90deg);
+          }
+        }
+      }
+
+      &-title {
+        font-size: 18px;
+        line-height: normal;
+
+        &-icon {
+          width: 25px;
+          height: 25px;
+          flex-shrink: 0;
+          fill: $basic-white;
+          transition: rotate 200ms linear;
+        }
+      }
+    }
+
+    // inner list
+    &-inner {
+      &-list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+        position: absolute;
+        top: 150%;
+        left: 0;
+        padding: 0px 0px;
+        background-color: #1d1d21;
+        z-index: 1;
+        border: 1px solid #fac704;
+        transition: all 150ms linear;
+        border-radius: 4px;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        &_active {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
+        }
+      }
+
+      &-item {
+        padding: 15px 15px 15px 10px;
+        white-space: nowrap;
+        transition: all 150ms linear;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgba(250, 201, 4, 0.337254902);
+        }
+      }
+    }
+  }
+
+  // accounts
+  &__accounts {
+    padding-top: 25px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #3f3d46;
+
+    &-title {
+      font-size: 24px;
+      line-height: normal;
+      font-weight: 400;
+      margin-bottom: 22px;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 23px;
+    }
+
+    &-item {
+      display: grid;
+      grid-template-columns: 6% 1fr;
+      // column-gap: 38px;
+
+      &-title {
+        color: #989898;
+        line-height: normal;
+      }
+
+      &-box {
+        @include flex-align-row;
+        column-gap: 10px;
+        margin-left: 38px;
+
+        &-text {
+          font-size: 18px;
+          line-height: normal;
+
+          &_accent {
+            color: $basic-yellow;
+            margin-left: 35px;
+          }
+        }
+
+        &-icon {
+          display: grid;
+          place-content: center;
+          width: 15px;
+          height: 15px;
+          background-color: #f13939;
+          border-radius: 50%;
+
+          &::before {
+            content: '';
+            width: 10px;
+            height: 1px;
+            background-color: $dark-text;
+          }
+        }
+      }
+    }
+  }
+
+  // Change password
+  &__password {
+    padding-top: 25px;
+    padding-bottom: 34px;
+    border-bottom: 1px solid #3f3d46;
+
+    &-title {
+      font-size: 24px;
+      line-height: normal;
+      font-weight: 400;
+      margin-bottom: 25px;
+    }
+
+    &-change {
+      color: $basic-yellow;
+    }
+  }
+
+  // Log out of the account
+
+  &__logout {
+    padding-top: 25px;
+
+    &-btn {
+      border-radius: 4px;
+      background: rgba(248, 248, 248, 0.05);
+      @include flex-align-row;
+      column-gap: 15px;
+      padding: 16px;
+
+      & > span {
+        color: #f13939;
+        font-family: Roboto-Bold;
+        font-weight: 700;
+        line-height: normal;
+      }
+
+      & > svg {
+        fill: #f13939;
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
       }
     }
   }
