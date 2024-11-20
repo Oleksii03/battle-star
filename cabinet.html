@@ -18,6 +18,21 @@
   xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <symbol
+      id="icon-information-outline"
+      viewBox="0 0 32 32">
+      <path
+        d="M14.666 12h2.667v-2.667h-2.667v2.667zM15.999 26.666c-5.88 0-10.667-4.787-10.667-10.667s4.787-10.667 10.667-10.667c5.88 0 10.667 4.787 10.667 10.667s-4.787 10.667-10.667 10.667zM15.999 2.666c-1.751 0-3.485 0.345-5.102 1.015s-3.088 1.652-4.326 2.89c-2.5 2.501-3.905 5.892-3.905 9.428s1.405 6.928 3.905 9.428c1.238 1.238 2.708 2.22 4.326 2.89s3.352 1.015 5.102 1.015c3.536 0 6.928-1.405 9.428-3.905s3.905-5.892 3.905-9.428c0-1.751-0.345-3.485-1.015-5.102s-1.652-3.088-2.89-4.326c-1.238-1.238-2.708-2.22-4.326-2.89s-3.352-1.015-5.102-1.015zM14.666 22.666h2.667v-8h-2.667v8z"></path>
+      <path
+        d="M14.666 12h2.667v-2.667h-2.667v2.667zM15.999 26.666c-5.88 0-10.667-4.787-10.667-10.667s4.787-10.667 10.667-10.667c5.88 0 10.667 4.787 10.667 10.667s-4.787 10.667-10.667 10.667zM15.999 2.666c-1.751 0-3.485 0.345-5.102 1.015s-3.088 1.652-4.326 2.89c-2.5 2.501-3.905 5.892-3.905 9.428s1.405 6.928 3.905 9.428c1.238 1.238 2.708 2.22 4.326 2.89s3.352 1.015 5.102 1.015c3.536 0 6.928-1.405 9.428-3.905s3.905-5.892 3.905-9.428c0-1.751-0.345-3.485-1.015-5.102s-1.652-3.088-2.89-4.326c-1.238-1.238-2.708-2.22-4.326-2.89s-3.352-1.015-5.102-1.015zM14.666 22.666h2.667v-8h-2.667v8z"></path>
+    </symbol>
+
+    <symbol
+      id="icon-dots-vertical"
+      viewBox="0 0 32 32">
+      <path
+        d="M16 21.333c0.707 0 1.385 0.281 1.886 0.781s0.781 1.178 0.781 1.886c0 0.707-0.281 1.385-0.781 1.886s-1.178 0.781-1.886 0.781c-0.707 0-1.385-0.281-1.886-0.781s-0.781-1.178-0.781-1.886c0-0.707 0.281-1.385 0.781-1.886s1.178-0.781 1.886-0.781zM16 13.333c0.707 0 1.385 0.281 1.886 0.781s0.781 1.178 0.781 1.886c0 0.707-0.281 1.385-0.781 1.886s-1.178 0.781-1.886 0.781c-0.707 0-1.385-0.281-1.886-0.781s-0.781-1.178-0.781-1.886c0-0.707 0.281-1.385 0.781-1.886s1.178-0.781 1.886-0.781zM16 5.333c0.707 0 1.385 0.281 1.886 0.781s0.781 1.178 0.781 1.886c0 0.707-0.281 1.386-0.781 1.886s-1.178 0.781-1.886 0.781c-0.707 0-1.385-0.281-1.886-0.781s-0.781-1.178-0.781-1.886c0-0.707 0.281-1.386 0.781-1.886s1.178-0.781 1.886-0.781z"></path>
+    </symbol>
+    <symbol
       id="icon-exit-arrow"
       viewBox="0 0 32 32">
       <path
@@ -344,10 +359,10 @@
     <script type="module" crossorigin src="/battle-star/js/cabinet/cabinet.js"></script>
     <link rel="modulepreload" crossorigin href="/battle-star/assets/vendor-DZUFF-U2.js">
     <link rel="modulepreload" crossorigin href="/battle-star/assets/cabinet-BBv-qIRL.js">
-    <link rel="modulepreload" crossorigin href="/battle-star/assets/closeDropDownList-cv9qH4zE.js">
+    <link rel="modulepreload" crossorigin href="/battle-star/assets/closeDropDownList-C3fUxmNA.js">
     <link rel="modulepreload" crossorigin href="/battle-star/assets/loginOrRegistrationHandler-zsTQJq6b.js">
     <link rel="stylesheet" crossorigin href="/battle-star/assets/vendor-970_kJiQ.css">
-    <link rel="stylesheet" crossorigin href="/battle-star/assets/cabinet-BGyFhm7K.css">
+    <link rel="stylesheet" crossorigin href="/battle-star/assets/cabinet-C03SfGJK.css">
   </head>
   <body class="cabinet-body">
     <div class="main__wrapper wrapper">
@@ -715,7 +730,7 @@
             </li>
 
             <li
-              class="cabinet__nav-item js-block-list"
+              class="cabinet__nav-item dangerous js-block-list"
               data-hash="block-list">
               <p class="cabinet__nav-item-text">Чорний список</p>
               <!-- icon -->
@@ -732,10 +747,297 @@
 
       <!-- cabinet-main -->
       <div
-        class="cabinet__main cabinet-main js-cabinet-main-body"
-        data-class="js-cabinet-main-body"></div>
+        class="cabinet__main cabinet-main"
+        data-class="js-cabinet-main-body">
+        <!-- block-list -->
+        <!-- <div class="cabinet-block">
+          <h3 class="cabinet-block__title">Чорний список</h3>
+
+          <div class="cabinet-block__body">
+            <ul class="cabinet-block__list">
+              <li class="cabinet-block__item">
+                <div class="cabinet-block__item-user">
+                  <picture class="cabinet-block__item-user-picture">
+                    <span class="status"></span>
+                    <source
+                      srcset="../../../assets/img/pages/cabinet/user1.png"
+                      type="image/webp" />
+
+                    <img
+                      loading="lazy"
+                      width="46"
+                      height="46"
+                      class="cabinet-block__item-user-img"
+                      src="../../../assets/img/pages/cabinet/user1.png"
+                      alt="User" />
+                  </picture>
+
+                  <div class="cabinet-block__item-user-info">
+                    <p class="cabinet-block__item-user-name">SergioRicht</p>
+                    <p class="cabinet-block__item-user-game">Играет в CS:GO</p>
+                  </div>
+                </div>
+
+                <img
+                  loading="lazy"
+                  width="66"
+                  height="29"
+                  class="cabinet-block__item-img-honors"
+                  src="../../../assets/img/pages/cabinet/honors-eagle.svg"
+                  alt="honors" />
+
+                <button
+                  type="button"
+                  class="cabinet-block__item-btn">
+                  <svg
+                    class="cabinet-block__item-icon"
+                    width="24"
+                    height="24">
+                    <use xlink:href="#icon-dots-vertical"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="cabinet-block__item">
+                <div class="cabinet-block__item-user">
+                  <picture class="cabinet-block__item-user-picture">
+                    <span class="status"></span>
+                    <source
+                      srcset="../../../assets/img/pages/cabinet/user1.png"
+                      type="image/webp" />
+
+                    <img
+                      loading="lazy"
+                      width="46"
+                      height="46"
+                      class="cabinet-block__item-user-img"
+                      src="../../../assets/img/pages/cabinet/user1.png"
+                      alt="User" />
+                  </picture>
+
+                  <div class="cabinet-block__item-user-info">
+                    <p class="cabinet-block__item-user-name">SergioRicht</p>
+                    <p class="cabinet-block__item-user-game">Играет в CS:GO</p>
+                  </div>
+                </div>
+
+                <img
+                  loading="lazy"
+                  width="66"
+                  height="29"
+                  class="cabinet-block__item-img-honors"
+                  src="../../../assets/img/pages/cabinet/honors-eagle.svg"
+                  alt="honors" />
+
+                <button
+                  type="button"
+                  class="cabinet-block__item-btn">
+                  <svg
+                    class="cabinet-block__item-icon"
+                    width="24"
+                    height="24">
+                    <use xlink:href="#icon-dots-vertical"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="cabinet-block__item">
+                <div class="cabinet-block__item-user">
+                  <picture class="cabinet-block__item-user-picture">
+                    <span class="status"></span>
+                    <source
+                      srcset="../../../assets/img/pages/cabinet/user1.png"
+                      type="image/webp" />
+
+                    <img
+                      loading="lazy"
+                      width="46"
+                      height="46"
+                      class="cabinet-block__item-user-img"
+                      src="../../../assets/img/pages/cabinet/user1.png"
+                      alt="User" />
+                  </picture>
+
+                  <div class="cabinet-block__item-user-info">
+                    <p class="cabinet-block__item-user-name">SergioRicht</p>
+                    <p class="cabinet-block__item-user-game">Играет в CS:GO</p>
+                  </div>
+                </div>
+
+                <img
+                  loading="lazy"
+                  width="66"
+                  height="29"
+                  class="cabinet-block__item-img-honors"
+                  src="../../../assets/img/pages/cabinet/honors-eagle.svg"
+                  alt="honors" />
+
+                <button
+                  type="button"
+                  class="cabinet-block__item-btn">
+                  <svg
+                    class="cabinet-block__item-icon"
+                    width="24"
+                    height="24">
+                    <use xlink:href="#icon-dots-vertical"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="cabinet-block__item">
+                <div class="cabinet-block__item-user">
+                  <picture class="cabinet-block__item-user-picture">
+                    <span class="status"></span>
+                    <source
+                      srcset="../../../assets/img/pages/cabinet/user1.png"
+                      type="image/webp" />
+
+                    <img
+                      loading="lazy"
+                      width="46"
+                      height="46"
+                      class="cabinet-block__item-user-img"
+                      src="../../../assets/img/pages/cabinet/user1.png"
+                      alt="User" />
+                  </picture>
+
+                  <div class="cabinet-block__item-user-info">
+                    <p class="cabinet-block__item-user-name">SergioRicht</p>
+                    <p class="cabinet-block__item-user-game">Играет в CS:GO</p>
+                  </div>
+                </div>
+
+                <img
+                  loading="lazy"
+                  width="66"
+                  height="29"
+                  class="cabinet-block__item-img-honors"
+                  src="../../../assets/img/pages/cabinet/honors-eagle.svg"
+                  alt="honors" />
+
+                <button
+                  type="button"
+                  class="cabinet-block__item-btn">
+                  <svg
+                    class="cabinet-block__item-icon"
+                    width="24"
+                    height="24">
+                    <use xlink:href="#icon-dots-vertical"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="cabinet-block__item">
+                <div class="cabinet-block__item-user">
+                  <picture class="cabinet-block__item-user-picture">
+                    <span class="status"></span>
+                    <source
+                      srcset="../../../assets/img/pages/cabinet/user1.png"
+                      type="image/webp" />
+
+                    <img
+                      loading="lazy"
+                      width="46"
+                      height="46"
+                      class="cabinet-block__item-user-img"
+                      src="../../../assets/img/pages/cabinet/user1.png"
+                      alt="User" />
+                  </picture>
+
+                  <div class="cabinet-block__item-user-info">
+                    <p class="cabinet-block__item-user-name">SergioRicht</p>
+                    <p class="cabinet-block__item-user-game">Играет в CS:GO</p>
+                  </div>
+                </div>
+
+                <img
+                  loading="lazy"
+                  width="66"
+                  height="29"
+                  class="cabinet-block__item-img-honors"
+                  src="../../../assets/img/pages/cabinet/honors-eagle.svg"
+                  alt="honors" />
+
+                <button
+                  type="button"
+                  class="cabinet-block__item-btn">
+                  <svg
+                    class="cabinet-block__item-icon"
+                    width="24"
+                    height="24">
+                    <use xlink:href="#icon-dots-vertical"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="cabinet-block__item">
+                <div class="cabinet-block__item-user">
+                  <picture class="cabinet-block__item-user-picture">
+                    <span class="status"></span>
+                    <source
+                      srcset="../../../assets/img/pages/cabinet/user1.png"
+                      type="image/webp" />
+
+                    <img
+                      loading="lazy"
+                      width="46"
+                      height="46"
+                      class="cabinet-block__item-user-img"
+                      src="../../../assets/img/pages/cabinet/user1.png"
+                      alt="User" />
+                  </picture>
+
+                  <div class="cabinet-block__item-user-info">
+                    <p class="cabinet-block__item-user-name">SergioRicht</p>
+                    <p class="cabinet-block__item-user-game">Играет в CS:GO</p>
+                  </div>
+                </div>
+
+                <img
+                  loading="lazy"
+                  width="66"
+                  height="29"
+                  class="cabinet-block__item-img-honors"
+                  src="../../../assets/img/pages/cabinet/honors-eagle.svg"
+                  alt="honors" />
+
+                <button
+                  type="button"
+                  class="cabinet-block__item-btn">
+                  <svg
+                    class="cabinet-block__item-icon"
+                    width="24"
+                    height="24">
+                    <use xlink:href="#icon-dots-vertical"></use>
+                  </svg>
+                </button>
+              </li>
+            </ul>
+
+            <div class="cabinet-block__info">
+              <div class="cabinet-block__info-message">
+                <svg
+                  width="40"
+                  height="40">
+                  <use xlink:href="#icon-information-outline"></use>
+                </svg>
+                <p class="cabinet-block__info-message-text">
+                  Люди з чорного списку не можуть запрошувати вас до команд, надсилати повідомлення
+                  або додавати до паті
+                </p>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <div class="cabinet-block__empty">
+          <div class="cabinet-block__empty-message">
+            <h3 class="cabinet-block__empty-message-title">Чорний список порожній</h3>
+            <p class="cabinet-block__empty-message-text">Ви ще нікого не заблокували</p>
+            <p class="cabinet-block__empty-message-text">
+              Люди з чорного списку не можуть запрошувати вас до команд, надсилати повідомлення або
+              додавати до паті
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
   
 </section>
 
