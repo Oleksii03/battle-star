@@ -11,4 +11,13 @@ export function setActiveListItem(targetEl: HTMLElement, navigationList: HTMLULi
   });
 
   targetEl.classList.add('cabinet__nav-item_active');
+
+  // handler-last-item
+  const lastItemPercent = 16.66 * (items.length - 1);
+
+  if (16.66 * idx >= lastItemPercent) {
+    navigationThumb.classList.add('dangerous');
+  } else {
+    navigationThumb.classList.remove('dangerous');
+  }
 }

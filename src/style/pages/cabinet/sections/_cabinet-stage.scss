@@ -43,6 +43,7 @@
     background: rgba(196, 196, 196, 0.1);
     order: 2;
   }
+
   &__nav-thumb {
     position: absolute;
     top: 0%;
@@ -52,6 +53,10 @@
     border-radius: 4px;
     background-color: $basic-yellow;
     transition: top 200ms linear;
+
+    &.dangerous {
+      background-color: #f13939;
+    }
   }
 
   // --list
