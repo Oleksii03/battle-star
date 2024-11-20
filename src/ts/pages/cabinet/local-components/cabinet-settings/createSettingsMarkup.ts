@@ -86,12 +86,12 @@ export function createSettingsMarkup() {
                     <img
                       width="34"
                       height="22"
-                      class="cabinet-settings__region-item-img"
+                      class="cabinet-settings__region-item-img js-region-item-img"
                       loading="lazy"
                       src="https://firebasestorage.googleapis.com/v0/b/battlestar-514be.appspot.com/o/pages%2Fcabinet%2Fsettings%2Fflag-Ukraine.svg?alt=media&token=72482342-f473-4850-8428-ff8e93e9986c"
                       alt="прапор країни" />
 
-                    <p class="cabinet-settings__region-item-title">Україна</p>
+                    <p class="cabinet-settings__region-item-title js-active-title">Україна</p>
 
                     <svg
                       class="cabinet-settings__region-item-title-icon"
@@ -164,8 +164,9 @@ export function createSettingsMarkup() {
           </div>
 
           <!-- Log out of the account -->
+
           <div class="cabinet-settings__logout">
-            <button class="cabinet-settings__logout-btn">
+            <button class="cabinet-settings__logout-btn js-logout-btn">
               <svg
                 width="24"
                 height="24">

@@ -8,9 +8,47 @@ export function closeDropDownList(): void {
     handlerGameDropdownList(e);
     // cabinetHistoryDropdownList
     cabinetHistoryDropdownList(e);
+    // handlerCabinetLanguage
+    handlerLanguageList(e);
+    // handlerCabinetTitleBox
+    handlerCabinetTitleBox(e);
   });
 
   // ===function-handlers====
+  function handlerCabinetTitleBox(e: Event) {
+    const titleBox = document.querySelector('.js-region-item-title-box');
+    const regionList = document.querySelector('.js-region-inner-list');
+    // --refs----
+    const targetEl = (e.target as HTMLElement).closest('.js-region-item-title-box');
+    const parentTargetEl = (e.target as HTMLElement).closest('.js-region-inner-list');
+
+    const isRegionDropdownListOpen =
+      !targetEl?.classList.contains('js-region-item-title-box') &&
+      !parentTargetEl?.classList.contains('js-region-inner-list');
+
+    if (isRegionDropdownListOpen) {
+      regionList?.classList.remove('cabinet-settings__region-inner-list_active');
+      titleBox?.classList.remove('cabinet-settings__region-item-title-box_active');
+    }
+  }
+
+  function handlerLanguageList(e: Event) {
+    const titleBox = document.querySelector('.js-language-item-title-box');
+    const languageInnerList = document.querySelector('.js-language-inner-list');
+    // --refs----
+    const targetEl = (e.target as HTMLElement).closest('.js-language-item-title-box');
+    const parentTargetEl = (e.target as HTMLElement).closest('.js-language-inner-list');
+
+    const isLanguageDropdownListOpen =
+      !targetEl?.classList.contains('js-language-item-title-box') &&
+      !parentTargetEl?.classList.contains('js-language-inner-list');
+
+    if (isLanguageDropdownListOpen) {
+      languageInnerList?.classList.remove('cabinet-settings__language-inner-list_active');
+      titleBox?.classList.remove('cabinet-settings__language-item-title-box_active');
+    }
+  }
+
   function handlerUserList(e: Event): void {
     const targetEl = (e.target as HTMLElement).closest('.header__user-inner-item');
     const parentTargetEl = (e.target as HTMLElement).closest('.header__user-item-box');

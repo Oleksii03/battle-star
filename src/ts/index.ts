@@ -6,7 +6,7 @@ import { battleStarNewsSlider, majorStochholmSlider } from './components/splideS
 import { mainLeaderboard } from './pages/main/main-leaderboard/mainLeaderboard';
 import { popularMatches } from './pages/main/popular-matches/popularMatches';
 import { onStateUserChanged } from './pages/sign-in/cabinet/cabinet';
-import { logout } from './pages/sign-in/cabinet/signOut';
+import { logoutThroughSidebar } from './pages/sign-in/cabinet/signOut';
 
 document.addEventListener('DOMContentLoaded', () => {
   header();
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   popularMatches();
   onStateUserChanged();
   settingsHtmlComponents();
-  logout();
+  logoutThroughSidebar();
 });
 
 // export const baseUrl = window.location.pathname;

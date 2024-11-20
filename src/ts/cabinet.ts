@@ -2,7 +2,7 @@ import { settingsHtmlComponents } from './utils/settingsHtmlComponents';
 import { signInOrSignUpHandler } from './pages/sign-in/loginOrRegistrationHandler';
 import { onStateUserChanged } from './pages/sign-in/cabinet/cabinet';
 import { header } from './components/header';
-import { logout } from './pages/sign-in/cabinet/signOut';
+import { logoutThroughSidebar } from './pages/sign-in/cabinet/signOut';
 import { pageCabinet } from './pages/cabinet/pageCabinet';
 import { checkAuth } from './utils/checkAuth';
 import { closeDropDownList } from './components/closeDropDownList';
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   signInOrSignUpHandler();
   onStateUserChanged();
   onStateUserChanged();
-  logout();
+  logoutThroughSidebar();
   pageCabinet();
   checkAuth();
   closeDropDownList();
