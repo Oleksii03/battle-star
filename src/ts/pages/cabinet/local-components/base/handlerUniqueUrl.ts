@@ -4,6 +4,7 @@ import { historyMatches } from '../history-matches/historyMatches';
 import { personalData } from '../personal-data/personalData';
 import { handlerWallet } from '../wallet/wallet';
 import { handlerSettings } from '../cabinet-settings/settings';
+import { handlerBlockList } from '../block-list/blockList';
 
 export function handlerUniqueUrl(
   cabinetMainContainer: HTMLElement,
@@ -33,6 +34,10 @@ export function handlerUniqueUrl(
 
     case 'setting':
       handlerSettings(cabinetMainContainer, targetEl);
+      break;
+
+    case 'block-list':
+      handlerBlockList(cabinetMainContainer, targetEl);
       break;
 
     default:

@@ -1776,9 +1776,6 @@
         font-weight: 400;
         line-height: normal;
       }
-
-      &-text {
-      }
     }
   }
 
@@ -1799,11 +1796,19 @@
   // __item
   &__item {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: 50% 1fr auto;
     align-items: center;
     column-gap: 49px;
-    border-bottom: 1px solid #606060;
+
     padding: 15px 19px 17px 17px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #606060;
+    }
+
+    @include media-min-width(xl) {
+      grid-template-columns: 32% 1fr auto;
+    }
 
     // user
     &-user {
@@ -1837,6 +1842,7 @@
         font-size: 18px;
         line-height: normal;
         margin-bottom: 2px;
+        white-space: nowrap;
       }
 
       &-game {
@@ -1874,7 +1880,6 @@
   }
 
   // info-message
-
   &__info {
     margin-top: 10px;
     margin-left: 58px;
