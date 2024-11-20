@@ -1,4 +1,4 @@
-import{h as v,o as g}from"../../assets/cabinet-BBv-qIRL.js";import{g as y,H as S,a as F,l as h,s as T,h as E,b as M,c as $}from"../../assets/closeDropDownList-C3fUxmNA.js";import{s as q}from"../../assets/loginOrRegistrationHandler-zsTQJq6b.js";import"../../assets/vendor-DZUFF-U2.js";function f(t,i){const s=document.querySelector(".js-cabinet-nav-thumb"),a=[...i.children],e=a.indexOf(t);s.style.top=`${16.66*e}%`,a.forEach(c=>{c.classList.remove("cabinet__nav-item_active")}),t.classList.add("cabinet__nav-item_active");const l=16.66*(a.length-1);16.66*e>=l?s.classList.add("dangerous"):s.classList.remove("dangerous")}function u(){return`
+import{h as g,o as h}from"../../assets/cabinet-BBv-qIRL.js";import{g as u,H as T,a as $,l as v,B as F,s as M,h as E,b as C,c as q}from"../../assets/closeDropDownList-ysV4H44f.js";import{s as H}from"../../assets/loginOrRegistrationHandler-zsTQJq6b.js";import"../../assets/vendor-DZUFF-U2.js";function f(t,i){const s=document.querySelector(".js-cabinet-nav-thumb"),a=[...i.children],e=a.indexOf(t);s.style.top=`${16.66*e}%`,a.forEach(l=>{l.classList.remove("cabinet__nav-item_active")}),t.classList.add("cabinet__nav-item_active");const c=16.66*(a.length-1);16.66*e>=c?s.classList.add("dangerous"):s.classList.remove("dangerous")}function y(){return`
           <div class="cabinet-statistics__rank">
             <p class="cabinet-statistics__rank-title">
               Ранг:
@@ -119,7 +119,7 @@ import{h as v,o as g}from"../../assets/cabinet-BBv-qIRL.js";import{g as y,H as S
                   alt="game style chart" />
               </picture>
             </div>
-          </div>`}function C(){return`
+          </div>`}function I(){return`
             <div class="cabinet-statistics__rank">
           <p class="cabinet-statistics__rank-title">
             Ранг:
@@ -309,7 +309,7 @@ import{h as v,o as g}from"../../assets/cabinet-BBv-qIRL.js";import{g as y,H as S
               </div>
             </div>
           </div>
-        </div>`}function H(t,i){const s=document.querySelector(".js-cabinet-statistics-thumb");t.innerHTML=u(),i.addEventListener("click",a=>{const e=a.target;if(e.tagName==="BUTTON"){if([...i.children].forEach(l=>l.classList.remove("cabinet-statistics__btn_active")),e.classList.contains("js-statistics-btn-csgo")){t.innerHTML=C(),s==null||s.classList.add("cabinet-statistics__btns-thumb_active"),e.classList.add("cabinet-statistics__btn_active");return}if(e.classList.contains("js-statistics-btn-dota")){t.innerHTML=u(),s==null||s.classList.remove("cabinet-statistics__btns-thumb_active"),e.classList.add("cabinet-statistics__btn_active");return}}})}function I(t){const i=`
+        </div>`}function O(t,i){const s=document.querySelector(".js-cabinet-statistics-thumb");t.innerHTML=y(),i.addEventListener("click",a=>{const e=a.target;if(e.tagName==="BUTTON"){if([...i.children].forEach(c=>c.classList.remove("cabinet-statistics__btn_active")),e.classList.contains("js-statistics-btn-csgo")){t.innerHTML=I(),s==null||s.classList.add("cabinet-statistics__btns-thumb_active"),e.classList.add("cabinet-statistics__btn_active");return}if(e.classList.contains("js-statistics-btn-dota")){t.innerHTML=y(),s==null||s.classList.remove("cabinet-statistics__btns-thumb_active"),e.classList.add("cabinet-statistics__btn_active");return}}})}function z(t){const i=`
         <div class="cabinet-statistics">
           <div class="cabinet-statistics__btns">
             <div class="cabinet-statistics__btns-box js-statistics-btns-box">
@@ -337,7 +337,7 @@ import{h as v,o as g}from"../../assets/cabinet-BBv-qIRL.js";import{g as y,H as S
           </div>
 
           <div class="cabinet-statistics__content js-cabinet-statistics-content">
-       </div>`;t.innerHTML=i;const s=document.querySelector(".js-cabinet-statistics-content"),a=document.querySelector(".js-statistics-btns-box");H(s,a)}function m(t,i){I(t);const s=i.dataset.hash;s&&(location.hash=s),console.log(s)}function d(t){const i=document.querySelector(".js-cabinet-history-list"),s=t.map(a=>{const{id:e,isVictory:l,score:c,title:_,objDate:{date:o,time:n},objID:{id:r,title:b},objRegime:{regime:p,title:L}}=a;return`
+       </div>`;t.innerHTML=i;const s=document.querySelector(".js-cabinet-statistics-content"),a=document.querySelector(".js-statistics-btns-box");O(s,a)}function m(t,i){z(t);const s=i.dataset.hash;s&&(location.hash=s)}function b(t){const i=document.querySelector(".js-cabinet-history-list"),s=t.map(a=>{const{id:e,isVictory:c,score:l,title:_,objDate:{date:o,time:n},objID:{id:r,title:d},objRegime:{regime:p,title:S}}=a;return`
             <li class="cabinet-history__list-item" data-id="${e}">
               <p class="cabinet-history__list-item-title">${_}</p>
 
@@ -348,26 +348,26 @@ import{h as v,o as g}from"../../assets/cabinet-BBv-qIRL.js";import{g as y,H as S
                 </div>
 
                 <div class="cabinet-history__list-item-regime-box">
-                  <p class="cabinet-history__list-item-regime-title">${L}</p>
+                  <p class="cabinet-history__list-item-regime-title">${S}</p>
                   <p class="cabinet-history__list-item-regime">${p}</p>
                 </div>
 
                 <div class="cabinet-history__list-item-id-box">
-                  <p class="cabinet-history__list-item-id-title">${b}</p>
+                  <p class="cabinet-history__list-item-id-title">${d}</p>
                   <p class="cabinet-history__list-item-id">${r}</p>
                 </div>
               </div>
 
               <div class="cabinet-history__list-item-result">
                 
-                ${l?'<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_victory">Перемога</p>':'<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_loss">Програш</p>'}
+                ${c?'<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_victory">Перемога</p>':'<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_loss">Програш</p>'}
                 <p class="cabinet-history__list-item-result-score js-result-score">
-                  <span class="symbol">${l?"+ ":"- "}</span>
-                  <span class="amount">${c}</span>
+                  <span class="symbol">${c?"+ ":"- "}</span>
+                  <span class="amount">${l}</span>
                   <span class="currency">BS</span>
                 </p>
               </div>
-            </li>`});i.innerHTML=s.join("")}function A(t){const i=document.querySelector(".js-drop-down-item-title-box"),s=document.querySelector(".js-drop-down-inner-list"),a=document.querySelector(".js-drop-down-active-title"),e=document.querySelector(".js-drop-down-icon");i==null||i.addEventListener("click",l);function l(){s==null||s.classList.toggle("cabinet-history__drop-down-inner-list_active"),e==null||e.classList.toggle("cabinet-history__drop-down-item-icon_active")}s==null||s.addEventListener("click",c);function c(o){const r=o.target.textContent;r&&(a.textContent=r,l(),_(r.toLowerCase()))}function _(o){if(o!=null&&o.includes("рейтинг")){const r=t.toSorted((b,p)=>p.sortScore-b.sortScore);d(r);return}const n=t.filter(({title:r})=>r.toLowerCase()===o);if(n.length){d(n);return}d(t)}}function D(t){const i=`
+            </li>`});i.innerHTML=s.join("")}function R(t){const i=document.querySelector(".js-drop-down-item-title-box"),s=document.querySelector(".js-drop-down-inner-list"),a=document.querySelector(".js-drop-down-active-title"),e=document.querySelector(".js-drop-down-icon");i==null||i.addEventListener("click",c);function c(){s==null||s.classList.toggle("cabinet-history__drop-down-inner-list_active"),e==null||e.classList.toggle("cabinet-history__drop-down-item-icon_active")}s==null||s.addEventListener("click",l);function l(o){const r=o.target.textContent;r&&(a.textContent=r,c(),_(r.toLowerCase()))}function _(o){if(o!=null&&o.includes("рейтинг")){const r=t.toSorted((d,p)=>p.sortScore-d.sortScore);b(r);return}const n=t.filter(({title:r})=>r.toLowerCase()===o);if(n.length){b(n);return}b(t)}}function A(t){const i=`
        <div class="cabinet__history cabinet-history">
           <div class="cabinet-history__title-box">
             <h3 class="cabinet-history__title">Історія матчів</h3>
@@ -411,7 +411,7 @@ import{h as v,o as g}from"../../assets/cabinet-BBv-qIRL.js";import{g as y,H as S
           </div>
 
           <ul class="cabinet-history__list js-cabinet-history-list"></ul>
-        </div>`;t.innerHTML=i,y(S).then(s=>{d(s),A(s)}).catch(v)}function w(t,i){D(t);const s=i.dataset.hash;s&&(location.hash=s)}function O(){return`
+        </div>`;t.innerHTML=i,u(T).then(s=>{b(s),R(s)}).catch(g)}function k(t,i){A(t);const s=i.dataset.hash;s&&(location.hash=s)}function D(){return`
         <div class="cabinet-personal-data">
           <div class="cabinet-personal-data__info">
             <div class="cabinet-personal-data__info-title-box">
@@ -521,7 +521,7 @@ import{h as v,o as g}from"../../assets/cabinet-BBv-qIRL.js";import{g as y,H as S
               </li>
             </ul>
           </div>
-        </div>`}function k(t,i){t.innerHTML=O();const s=i.dataset.hash;s&&(location.hash=s)}function R(t,i){const s=t.map(({id:a,isVictory:e,objDate:l,objID:c,objRegime:_,score:o,title:n})=>`
+        </div>`}function w(t,i){t.innerHTML=D();const s=i.dataset.hash;s&&(location.hash=s)}function U(t,i){const s=t.map(({id:a,isVictory:e,objDate:c,objID:l,objRegime:_,score:o,title:n})=>`
         <li class="cabinet-history__list-item" data-id="${a}">
         ${n.toLowerCase().includes("переказ")?`
                 <div
@@ -567,8 +567,8 @@ import{h as v,o as g}from"../../assets/cabinet-BBv-qIRL.js";import{g as y,H as S
 
                 <div class="cabinet-wallet__medium-content">
                   <div class="cabinet-history__list-item-date-box">
-                    <p class="cabinet-history__list-item-date-title">${l.date}</p>
-                    <p class="cabinet-history__list-item-time">${l.time}</p>
+                    <p class="cabinet-history__list-item-date-title">${c.date}</p>
+                    <p class="cabinet-history__list-item-time">${c.time}</p>
                   </div>
 
                   <div class="cabinet-history__list-item-regime-box">
@@ -577,8 +577,8 @@ import{h as v,o as g}from"../../assets/cabinet-BBv-qIRL.js";import{g as y,H as S
                   </div>
 
                   <div class="cabinet-history__list-item-id-box cabinet-wallet__list-item-id-box">
-                    <p class="cabinet-history__list-item-id-title">${c.title}</p>
-                    <p class="${n.toLowerCase().includes("переказ")?"cabinet-wallet__list-item-id_transfer":n.toLowerCase().includes("виведення")?"cabinet-wallet__list-item-id_withdrawal":"cabinet-history__list-item-id"}">${c.id}</p>
+                    <p class="cabinet-history__list-item-id-title">${l.title}</p>
+                    <p class="${n.toLowerCase().includes("переказ")?"cabinet-wallet__list-item-id_transfer":n.toLowerCase().includes("виведення")?"cabinet-wallet__list-item-id_withdrawal":"cabinet-history__list-item-id"}">${l.id}</p>
                   </div>
                 </div>
 
@@ -591,7 +591,7 @@ import{h as v,o as g}from"../../assets/cabinet-BBv-qIRL.js";import{g as y,H as S
                   <span class="currency">BS</span>
                 </p>
               </div>
-              </li>`);i.innerHTML=s.join("")}function U(t){const i=`
+              </li>`);i.innerHTML=s.join("")}function B(t){const i=`
         <div class="cabinet-wallet">
           <div class="cabinet-wallet__content-top">
             <div class="cabinet-wallet__card">
@@ -783,7 +783,7 @@ import{h as v,o as g}from"../../assets/cabinet-BBv-qIRL.js";import{g as y,H as S
 
             <ul class="cabinet-wallet__history-list js-cabinet-wallet-history-list"></ul>
           </div>
-        </div>`;t.innerHTML=i;const s=document.querySelector(".js-cabinet-wallet-history-list");y(F).then(a=>R(a,s)).catch(v)}function x(t,i){U(t);const s=i.dataset.hash;s&&(location.hash=s)}function N(){const t=document.querySelector(".js-message-list");t==null||t.addEventListener("click",i=>{const s=i.target;s.classList.contains("js-item-message-switch")&&s.classList.toggle("cabinet-settings__message-item-switch_active")})}function z(){return`
+        </div>`;t.innerHTML=i;const s=document.querySelector(".js-cabinet-wallet-history-list");u($).then(a=>U(a,s)).catch(g)}function x(t,i){B(t);const s=i.dataset.hash;s&&(location.hash=s)}function G(){const t=document.querySelector(".js-message-list");t==null||t.addEventListener("click",i=>{const s=i.target;s.classList.contains("js-item-message-switch")&&s.classList.toggle("cabinet-settings__message-item-switch_active")})}function N(){return`
         <div class="cabinet-settings">
           <div class="cabinet-settings__message">
             <h3 class="cabinet-settings__message-title">Повідомлення</h3>
@@ -959,5 +959,237 @@ import{h as v,o as g}from"../../assets/cabinet-BBv-qIRL.js";import{g as y,H as S
               <span>Вийти з облікового запису</span>
             </button>
           </div>
-        </div>`}function B(){const t=document.querySelector(".js-invitations-list");t==null||t.addEventListener("click",i=>{const s=i.target;s.classList.contains("js-item-invitations-switch")&&s.classList.toggle("cabinet-settings__invitations-item-switch_active")})}function G(){const t=document.querySelector(".js-language-item-title-box"),i=document.querySelector(".js-language-inner-list");t==null||t.addEventListener("click",s);function s(){t==null||t.classList.toggle("cabinet-settings__language-item-title-box_active"),i==null||i.classList.toggle("cabinet-settings__language-inner-list_active")}i==null||i.addEventListener("click",a=>{const e=document.querySelector(".js-language-item-title"),l=a.target;l.tagName!=="LI"||!e||(e.textContent=l.textContent,s())})}function W(){const t=document.querySelector(".js-region-item-title-box"),i=document.querySelector(".js-region-inner-list"),s=document.querySelector(".js-active-title"),a=document.querySelector(".js-region-item-img");t==null||t.addEventListener("click",e);function e(){t==null||t.classList.toggle("cabinet-settings__region-item-title-box_active"),i==null||i.classList.toggle("cabinet-settings__region-inner-list_active")}i==null||i.addEventListener("click",l=>{const c=l.target;s&&(s.textContent=c.textContent),c.dataset.src&&(a.src=c.dataset.src),e()})}function P(){const t=document.querySelector(".js-logout-btn");t==null||t.addEventListener("click",()=>{console.log(h),h()})}function j(t,i){t.innerHTML=z(),N(),B(),G(),W(),P();const s=i.dataset.hash;s&&(location.hash=s)}function V(t,i){const s=location.hash.slice(1)?location.hash.slice(1):"statistics",a=document.querySelector(`[data-hash="${s}"]`);switch(f(a,i),s){case"statistics":m(t,a);break;case"history":w(t,a);break;case"personal-data":k(t,a);break;case"wallet":x(t,a);break;case"setting":j(t,a);break;default:m(t,a);break}}function Y(){const t=document.querySelector(".js-cabinet-nav-list"),i=document.querySelector(".js-cabinet-main-body");t==null||t.addEventListener("click",s);function s(a){const e=a.target.closest("li");e&&(f(e,t),e.classList.contains("js-statistics")&&m(i,e),e.classList.contains("js-history")&&w(i,e),e.classList.contains("js-personal-data")&&k(i,e),e.classList.contains("js-wallet")&&x(i,e),e.classList.contains("js-setting")&&j(i,e))}V(i,t)}function X(){const t=localStorage.getItem("logged");(t==="false"||t===null)&&(window.location.href="404")}document.addEventListener("DOMContentLoaded",()=>{T(),E(),q(),g(),g(),M(),Y(),X(),$()});
+        </div>`}function W(){const t=document.querySelector(".js-invitations-list");t==null||t.addEventListener("click",i=>{const s=i.target;s.classList.contains("js-item-invitations-switch")&&s.classList.toggle("cabinet-settings__invitations-item-switch_active")})}function P(){const t=document.querySelector(".js-language-item-title-box"),i=document.querySelector(".js-language-inner-list");t==null||t.addEventListener("click",s);function s(){t==null||t.classList.toggle("cabinet-settings__language-item-title-box_active"),i==null||i.classList.toggle("cabinet-settings__language-inner-list_active")}i==null||i.addEventListener("click",a=>{const e=document.querySelector(".js-language-item-title"),c=a.target;c.tagName!=="LI"||!e||(e.textContent=c.textContent,s())})}function V(){const t=document.querySelector(".js-region-item-title-box"),i=document.querySelector(".js-region-inner-list"),s=document.querySelector(".js-active-title"),a=document.querySelector(".js-region-item-img");t==null||t.addEventListener("click",e);function e(){t==null||t.classList.toggle("cabinet-settings__region-item-title-box_active"),i==null||i.classList.toggle("cabinet-settings__region-inner-list_active")}i==null||i.addEventListener("click",c=>{const l=c.target;s&&(s.textContent=l.textContent),l.dataset.src&&(a.src=l.dataset.src),e()})}function Y(){const t=document.querySelector(".js-logout-btn");t==null||t.addEventListener("click",()=>{console.log(v),v()})}function L(t,i){t.innerHTML=N(),G(),W(),P(),V(),Y();const s=i.dataset.hash;s&&(location.hash=s)}function K(t){const i=document.querySelector(".js-cabinet-block-list"),s=t.map(({id:a,avatar:e,name:c,status:l,teamLogo:_})=>`<li class="cabinet-block__item" data-id="${a}">
+                <div class="cabinet-block__item-user">
+                  <picture class="cabinet-block__item-user-picture">
+                    <span class="status"></span>
+                    <source
+                      srcset="${e.webp}"
+                      type="image/webp" />
+
+                    <img
+                      loading="lazy"
+                      width="46"
+                      height="46"
+                      class="cabinet-block__item-user-img"
+                      src="${e.png}"
+                      alt="${c}" />
+                  </picture>
+
+                  <div class="cabinet-block__item-user-info">
+                    <p class="cabinet-block__item-user-name">${c}</p>
+                    <p class="cabinet-block__item-user-game">${l}</p>
+                  </div>
+                </div>
+
+                <img
+                  loading="lazy"
+                  width="66"
+                  height="29"
+                  class="cabinet-block__item-img-honors"
+                  src="${_}"
+                  alt="honors" />
+
+                <button
+                  type="button"
+                  class="cabinet-block__item-btn">
+                  <svg
+                    class="cabinet-block__item-icon"
+                    width="24"
+                    height="24">
+                    <use xlink:href="#icon-dots-vertical"></use>
+                  </svg>
+                </button>
+              </li>`);i.innerHTML=s.join("")}function X(t){const i=`<div class="cabinet-block">
+          <h3 class="cabinet-block__title">Чорний список</h3>
+
+          <div class="cabinet-block__body">
+            <ul class="cabinet-block__list js-cabinet-block-list">
+             
+             
+              <li class="cabinet-block__item">
+                <div class="cabinet-block__item-user">
+                  <picture class="cabinet-block__item-user-picture">
+                    <span class="status"></span>
+                    <source
+                      srcset="../../../assets/img/pages/cabinet/user1.png"
+                      type="image/webp" />
+
+                    <img
+                      loading="lazy"
+                      width="46"
+                      height="46"
+                      class="cabinet-block__item-user-img"
+                      src="../../../assets/img/pages/cabinet/user1.png"
+                      alt="User" />
+                  </picture>
+
+                  <div class="cabinet-block__item-user-info">
+                    <p class="cabinet-block__item-user-name">SergioRicht</p>
+                    <p class="cabinet-block__item-user-game">Играет в CS:GO</p>
+                  </div>
+                </div>
+
+                <img
+                  loading="lazy"
+                  width="66"
+                  height="29"
+                  class="cabinet-block__item-img-honors"
+                  src="../../../assets/img/pages/cabinet/honors-eagle.svg"
+                  alt="honors" />
+
+                <button
+                  type="button"
+                  class="cabinet-block__item-btn">
+                  <svg
+                    class="cabinet-block__item-icon"
+                    width="24"
+                    height="24">
+                    <use xlink:href="#icon-dots-vertical"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="cabinet-block__item">
+                <div class="cabinet-block__item-user">
+                  <picture class="cabinet-block__item-user-picture">
+                    <span class="status"></span>
+                    <source
+                      srcset="../../../assets/img/pages/cabinet/user1.png"
+                      type="image/webp" />
+
+                    <img
+                      loading="lazy"
+                      width="46"
+                      height="46"
+                      class="cabinet-block__item-user-img"
+                      src="../../../assets/img/pages/cabinet/user1.png"
+                      alt="User" />
+                  </picture>
+
+                  <div class="cabinet-block__item-user-info">
+                    <p class="cabinet-block__item-user-name">SergioRicht</p>
+                    <p class="cabinet-block__item-user-game">Играет в CS:GO</p>
+                  </div>
+                </div>
+
+                <img
+                  loading="lazy"
+                  width="66"
+                  height="29"
+                  class="cabinet-block__item-img-honors"
+                  src="../../../assets/img/pages/cabinet/honors-eagle.svg"
+                  alt="honors" />
+
+                <button
+                  type="button"
+                  class="cabinet-block__item-btn">
+                  <svg
+                    class="cabinet-block__item-icon"
+                    width="24"
+                    height="24">
+                    <use xlink:href="#icon-dots-vertical"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="cabinet-block__item">
+                <div class="cabinet-block__item-user">
+                  <picture class="cabinet-block__item-user-picture">
+                    <span class="status"></span>
+                    <source
+                      srcset="../../../assets/img/pages/cabinet/user1.png"
+                      type="image/webp" />
+
+                    <img
+                      loading="lazy"
+                      width="46"
+                      height="46"
+                      class="cabinet-block__item-user-img"
+                      src="../../../assets/img/pages/cabinet/user1.png"
+                      alt="User" />
+                  </picture>
+
+                  <div class="cabinet-block__item-user-info">
+                    <p class="cabinet-block__item-user-name">SergioRicht</p>
+                    <p class="cabinet-block__item-user-game">Играет в CS:GO</p>
+                  </div>
+                </div>
+
+                <img
+                  loading="lazy"
+                  width="66"
+                  height="29"
+                  class="cabinet-block__item-img-honors"
+                  src="../../../assets/img/pages/cabinet/honors-eagle.svg"
+                  alt="honors" />
+
+                <button
+                  type="button"
+                  class="cabinet-block__item-btn">
+                  <svg
+                    class="cabinet-block__item-icon"
+                    width="24"
+                    height="24">
+                    <use xlink:href="#icon-dots-vertical"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="cabinet-block__item">
+                <div class="cabinet-block__item-user">
+                  <picture class="cabinet-block__item-user-picture">
+                    <span class="status"></span>
+                    <source
+                      srcset="../../../assets/img/pages/cabinet/user1.png"
+                      type="image/webp" />
+
+                    <img
+                      loading="lazy"
+                      width="46"
+                      height="46"
+                      class="cabinet-block__item-user-img"
+                      src="../../../assets/img/pages/cabinet/user1.png"
+                      alt="User" />
+                  </picture>
+
+                  <div class="cabinet-block__item-user-info">
+                    <p class="cabinet-block__item-user-name">SergioRicht</p>
+                    <p class="cabinet-block__item-user-game">Играет в CS:GO</p>
+                  </div>
+                </div>
+
+                <img
+                  loading="lazy"
+                  width="66"
+                  height="29"
+                  class="cabinet-block__item-img-honors"
+                  src="../../../assets/img/pages/cabinet/honors-eagle.svg"
+                  alt="honors" />
+
+                <button
+                  type="button"
+                  class="cabinet-block__item-btn">
+                  <svg
+                    class="cabinet-block__item-icon"
+                    width="24"
+                    height="24">
+                    <use xlink:href="#icon-dots-vertical"></use>
+                  </svg>
+                </button>
+              </li>
+            </ul>
+
+            <div class="cabinet-block__info">
+              <div class="cabinet-block__info-message">
+                <svg
+                  width="40"
+                  height="40">
+                  <use xlink:href="#icon-information-outline"></use>
+                </svg>
+                <p class="cabinet-block__info-message-text">
+                  Люди з чорного списку не можуть запрошувати вас до команд, надсилати повідомлення
+                  або додавати до паті
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>`;t.innerHTML=i,u(F).then(K).catch(g)}function j(t,i){X(t);const s=i.dataset.hash;s&&(location.hash=s)}function J(t,i){const s=location.hash.slice(1)?location.hash.slice(1):"statistics",a=document.querySelector(`[data-hash="${s}"]`);switch(f(a,i),s){case"statistics":m(t,a);break;case"history":k(t,a);break;case"personal-data":w(t,a);break;case"wallet":x(t,a);break;case"setting":L(t,a);break;case"block-list":j(t,a);break;default:m(t,a);break}}function Z(){const t=document.querySelector(".js-cabinet-nav-list"),i=document.querySelector(".js-cabinet-main-body");t==null||t.addEventListener("click",s);function s(a){const e=a.target.closest("li");e&&(f(e,t),e.classList.contains("js-statistics")&&m(i,e),e.classList.contains("js-history")&&k(i,e),e.classList.contains("js-personal-data")&&w(i,e),e.classList.contains("js-wallet")&&x(i,e),e.classList.contains("js-setting")&&L(i,e),e.classList.contains("js-block-list")&&j(i,e))}J(i,t)}function Q(){const t=localStorage.getItem("logged");(t==="false"||t===null)&&(window.location.href="404")}document.addEventListener("DOMContentLoaded",()=>{M(),E(),H(),h(),h(),C(),Z(),Q(),q()});
 //# sourceMappingURL=cabinet.js.map
