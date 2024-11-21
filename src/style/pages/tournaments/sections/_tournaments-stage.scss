@@ -10,6 +10,7 @@
     display: grid;
     grid-template-columns: minmax(306px, 1fr) 306px;
     column-gap: 33px;
+    align-items: start;
   }
 
   &__img {
@@ -24,5 +25,34 @@
     border-radius: 4px;
     background: rgba(67, 67, 67, 0.2);
     backdrop-filter: blur(40px);
+
+    &-title {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: normal;
+      margin-bottom: 15px;
+    }
+
+    &-text {
+      color: #bfbfbf;
+      font-family: $font-secondary;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 38px;
+    }
+
+    &-btn {
+      @include flex-align-row;
+      justify-content: center;
+      padding: 13px 55px;
+      border-radius: 4px;
+      background: var(--Main, #fac704);
+
+      color: #18181b;
+      font-size: 20px;
+      line-height: normal;
+      white-space: nowrap;
+    }
   }
 }
