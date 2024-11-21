@@ -1,4 +1,4 @@
-import{h as g,o as u}from"../../assets/cabinet-BBv-qIRL.js";import{g as h,H as T,a as $,l as v,B as F,s as M,h as E,b as q,c as C}from"../../assets/closeDropDownList-ysV4H44f.js";import{s as H}from"../../assets/loginOrRegistrationHandler-zsTQJq6b.js";import"../../assets/vendor-DZUFF-U2.js";function f(t,i){const s=document.querySelector(".js-cabinet-nav-thumb"),a=[...i.children],e=a.indexOf(t);s.style.top=`${16.66*e}%`,a.forEach(l=>{l.classList.remove("cabinet__nav-item_active")}),t.classList.add("cabinet__nav-item_active");const c=16.66*(a.length-1);16.66*e>=c?s.classList.add("dangerous"):s.classList.remove("dangerous")}function y(){return`
+import{h as g,o as u}from"../../assets/cabinet-BBv-qIRL.js";import{g as h,H as M,a as $,l as v,B as E,s as F,h as q,b as H,c as C}from"../../assets/closeDropDownList-mI4hREpp.js";import{s as I}from"../../assets/loginOrRegistrationHandler-zsTQJq6b.js";import"../../assets/vendor-DZUFF-U2.js";function w(t,s){const i=document.querySelector(".js-cabinet-nav-thumb"),a=[...s.children],e=a.indexOf(t);i.style.top=`${16.66*e}%`,a.forEach(l=>{l.classList.remove("cabinet__nav-item_active")}),t.classList.add("cabinet__nav-item_active");const c=16.66*(a.length-1);16.66*e>=c?i.classList.add("dangerous"):i.classList.remove("dangerous")}function y(){return`
           <div class="cabinet-statistics__rank">
             <p class="cabinet-statistics__rank-title">
               Ранг:
@@ -119,7 +119,7 @@ import{h as g,o as u}from"../../assets/cabinet-BBv-qIRL.js";import{g as h,H as T
                   alt="game style chart" />
               </picture>
             </div>
-          </div>`}function I(){return`
+          </div>`}function A(){return`
             <div class="cabinet-statistics__rank">
           <p class="cabinet-statistics__rank-title">
             Ранг:
@@ -309,7 +309,7 @@ import{h as g,o as u}from"../../assets/cabinet-BBv-qIRL.js";import{g as h,H as T
               </div>
             </div>
           </div>
-        </div>`}function A(t,i){const s=document.querySelector(".js-cabinet-statistics-thumb");t.innerHTML=y(),i.addEventListener("click",a=>{const e=a.target;if(e.tagName==="BUTTON"){if([...i.children].forEach(c=>c.classList.remove("cabinet-statistics__btn_active")),e.classList.contains("js-statistics-btn-csgo")){t.innerHTML=I(),s==null||s.classList.add("cabinet-statistics__btns-thumb_active"),e.classList.add("cabinet-statistics__btn_active");return}if(e.classList.contains("js-statistics-btn-dota")){t.innerHTML=y(),s==null||s.classList.remove("cabinet-statistics__btns-thumb_active"),e.classList.add("cabinet-statistics__btn_active");return}}})}function O(t){const i=`
+        </div>`}function D(t,s){const i=document.querySelector(".js-cabinet-statistics-thumb");t.innerHTML=y(),s.addEventListener("click",a=>{const e=a.target;if(e.tagName==="BUTTON"){if([...s.children].forEach(c=>c.classList.remove("cabinet-statistics__btn_active")),e.classList.contains("js-statistics-btn-csgo")){t.innerHTML=A(),i==null||i.classList.add("cabinet-statistics__btns-thumb_active"),e.classList.add("cabinet-statistics__btn_active");return}if(e.classList.contains("js-statistics-btn-dota")){t.innerHTML=y(),i==null||i.classList.remove("cabinet-statistics__btns-thumb_active"),e.classList.add("cabinet-statistics__btn_active");return}}})}function O(t){const s=`
         <div class="cabinet-statistics">
           <div class="cabinet-statistics__btns">
             <div class="cabinet-statistics__btns-box js-statistics-btns-box">
@@ -337,7 +337,7 @@ import{h as g,o as u}from"../../assets/cabinet-BBv-qIRL.js";import{g as h,H as T
           </div>
 
           <div class="cabinet-statistics__content js-cabinet-statistics-content">
-       </div>`;t.innerHTML=i;const s=document.querySelector(".js-cabinet-statistics-content"),a=document.querySelector(".js-statistics-btns-box");A(s,a)}function m(t,i){O(t);const s=i.dataset.hash;s&&(location.hash=s)}function b(t){const i=document.querySelector(".js-cabinet-history-list"),s=t.map(a=>{const{id:e,isVictory:c,score:l,title:_,objDate:{date:o,time:n},objID:{id:r,title:d},objRegime:{regime:p,title:S}}=a;return`
+       </div>`;t.innerHTML=s;const i=document.querySelector(".js-cabinet-statistics-content"),a=document.querySelector(".js-statistics-btns-box");D(i,a)}function m(t,s){O(t);const i=s.dataset.hash;i&&(location.hash=i)}function b(t){const s=document.querySelector(".js-cabinet-history-list"),i=t.map(a=>{const{id:e,isVictory:c,score:l,title:_,objDate:{date:o,time:n},objID:{id:r,title:d},objRegime:{regime:p,title:T}}=a;return`
             <li class="cabinet-history__list-item" data-id="${e}">
               <p class="cabinet-history__list-item-title">${_}</p>
 
@@ -348,7 +348,7 @@ import{h as g,o as u}from"../../assets/cabinet-BBv-qIRL.js";import{g as h,H as T
                 </div>
 
                 <div class="cabinet-history__list-item-regime-box">
-                  <p class="cabinet-history__list-item-regime-title">${S}</p>
+                  <p class="cabinet-history__list-item-regime-title">${T}</p>
                   <p class="cabinet-history__list-item-regime">${p}</p>
                 </div>
 
@@ -367,7 +367,7 @@ import{h as g,o as u}from"../../assets/cabinet-BBv-qIRL.js";import{g as h,H as T
                   <span class="currency">BS</span>
                 </p>
               </div>
-            </li>`});i.innerHTML=s.join("")}function D(t){const i=document.querySelector(".js-drop-down-item-title-box"),s=document.querySelector(".js-drop-down-inner-list"),a=document.querySelector(".js-drop-down-active-title"),e=document.querySelector(".js-drop-down-icon");i==null||i.addEventListener("click",c);function c(){s==null||s.classList.toggle("cabinet-history__drop-down-inner-list_active"),e==null||e.classList.toggle("cabinet-history__drop-down-item-icon_active")}s==null||s.addEventListener("click",l);function l(o){const r=o.target.textContent;r&&(a.textContent=r,c(),_(r.toLowerCase()))}function _(o){if(o!=null&&o.includes("рейтинг")){const r=t.toSorted((d,p)=>p.sortScore-d.sortScore);b(r);return}const n=t.filter(({title:r})=>r.toLowerCase()===o);if(n.length){b(n);return}b(t)}}function R(t){const i=`
+            </li>`});s.innerHTML=i.join("")}function B(t){const s=document.querySelector(".js-drop-down-item-title-box"),i=document.querySelector(".js-drop-down-inner-list"),a=document.querySelector(".js-drop-down-active-title"),e=document.querySelector(".js-drop-down-icon");s==null||s.addEventListener("click",c);function c(){i==null||i.classList.toggle("cabinet-history__drop-down-inner-list_active"),e==null||e.classList.toggle("cabinet-history__drop-down-item-icon_active")}i==null||i.addEventListener("click",l);function l(o){const r=o.target.textContent;r&&(a.textContent=r,c(),_(r.toLowerCase()))}function _(o){if(o!=null&&o.includes("рейтинг")){const r=t.toSorted((d,p)=>p.sortScore-d.sortScore);b(r);return}const n=t.filter(({title:r})=>r.toLowerCase()===o);if(n.length){b(n);return}b(t)}}function R(t){const s=`
        <div class="cabinet__history cabinet-history">
           <div class="cabinet-history__title-box">
             <h3 class="cabinet-history__title">Історія матчів</h3>
@@ -411,7 +411,7 @@ import{h as g,o as u}from"../../assets/cabinet-BBv-qIRL.js";import{g as h,H as T
           </div>
 
           <ul class="cabinet-history__list js-cabinet-history-list"></ul>
-        </div>`;t.innerHTML=i,h(T).then(s=>{b(s),D(s)}).catch(g)}function w(t,i){R(t);const s=i.dataset.hash;s&&(location.hash=s)}function B(){return`
+        </div>`;t.innerHTML=s,h(M).then(i=>{b(i),B(i)}).catch(g)}function k(t,s){R(t);const i=s.dataset.hash;i&&(location.hash=i)}function z(){return`
         <div class="cabinet-personal-data">
           <div class="cabinet-personal-data__info">
             <div class="cabinet-personal-data__info-title-box">
@@ -521,7 +521,7 @@ import{h as g,o as u}from"../../assets/cabinet-BBv-qIRL.js";import{g as h,H as T
               </li>
             </ul>
           </div>
-        </div>`}function k(t,i){t.innerHTML=B();const s=i.dataset.hash;s&&(location.hash=s)}function z(t,i){const s=t.map(({id:a,isVictory:e,objDate:c,objID:l,objRegime:_,score:o,title:n})=>`
+        </div>`}function x(t,s){t.innerHTML=z();const i=s.dataset.hash;i&&(location.hash=i)}function U(t,s){const i=t.map(({id:a,isVictory:e,objDate:c,objID:l,objRegime:_,score:o,title:n})=>`
         <li class="cabinet-history__list-item" data-id="${a}">
         ${n.toLowerCase().includes("переказ")?`
                 <div
@@ -591,7 +591,7 @@ import{h as g,o as u}from"../../assets/cabinet-BBv-qIRL.js";import{g as h,H as T
                   <span class="currency">BS</span>
                 </p>
               </div>
-              </li>`);i.innerHTML=s.join("")}function U(t){const i=`
+              </li>`);s.innerHTML=i.join("")}function N(t){const s=`
         <div class="cabinet-wallet">
           <div class="cabinet-wallet__content-top">
             <div class="cabinet-wallet__card">
@@ -783,7 +783,7 @@ import{h as g,o as u}from"../../assets/cabinet-BBv-qIRL.js";import{g as h,H as T
 
             <ul class="cabinet-wallet__history-list js-cabinet-wallet-history-list"></ul>
           </div>
-        </div>`;t.innerHTML=i;const s=document.querySelector(".js-cabinet-wallet-history-list");h($).then(a=>z(a,s)).catch(g)}function x(t,i){U(t);const s=i.dataset.hash;s&&(location.hash=s)}function N(){const t=document.querySelector(".js-message-list");t==null||t.addEventListener("click",i=>{const s=i.target;s.classList.contains("js-item-message-switch")&&s.classList.toggle("cabinet-settings__message-item-switch_active")})}function G(){return`
+        </div>`;t.innerHTML=s;const i=document.querySelector(".js-cabinet-wallet-history-list");h($).then(a=>U(a,i)).catch(g)}function L(t,s){N(t);const i=s.dataset.hash;i&&(location.hash=i)}function G(){const t=document.querySelector(".js-message-list");t==null||t.addEventListener("click",s=>{const i=s.target;i.classList.contains("js-item-message-switch")&&i.classList.toggle("cabinet-settings__message-item-switch_active")})}function W(){return`
         <div class="cabinet-settings">
           <div class="cabinet-settings__message">
             <h3 class="cabinet-settings__message-title">Повідомлення</h3>
@@ -959,7 +959,16 @@ import{h as g,o as u}from"../../assets/cabinet-BBv-qIRL.js";import{g as h,H as T
               <span>Вийти з облікового запису</span>
             </button>
           </div>
-        </div>`}function W(){const t=document.querySelector(".js-invitations-list");t==null||t.addEventListener("click",i=>{const s=i.target;s.classList.contains("js-item-invitations-switch")&&s.classList.toggle("cabinet-settings__invitations-item-switch_active")})}function P(){const t=document.querySelector(".js-language-item-title-box"),i=document.querySelector(".js-language-inner-list");t==null||t.addEventListener("click",s);function s(){t==null||t.classList.toggle("cabinet-settings__language-item-title-box_active"),i==null||i.classList.toggle("cabinet-settings__language-inner-list_active")}i==null||i.addEventListener("click",a=>{const e=document.querySelector(".js-language-item-title"),c=a.target;c.tagName!=="LI"||!e||(e.textContent=c.textContent,s())})}function V(){const t=document.querySelector(".js-region-item-title-box"),i=document.querySelector(".js-region-inner-list"),s=document.querySelector(".js-active-title"),a=document.querySelector(".js-region-item-img");t==null||t.addEventListener("click",e);function e(){t==null||t.classList.toggle("cabinet-settings__region-item-title-box_active"),i==null||i.classList.toggle("cabinet-settings__region-inner-list_active")}i==null||i.addEventListener("click",c=>{const l=c.target;s&&(s.textContent=l.textContent),l.dataset.src&&(a.src=l.dataset.src),e()})}function Y(){const t=document.querySelector(".js-logout-btn");t==null||t.addEventListener("click",()=>{console.log(v),v()})}function L(t,i){t.innerHTML=G(),N(),W(),P(),V(),Y();const s=i.dataset.hash;s&&(location.hash=s)}function K(t){const i=document.querySelector(".js-cabinet-block-list"),s=t.map(({id:a,avatar:e,name:c,status:l,teamLogo:_})=>`<li class="cabinet-block__item" data-id="${a}">
+        </div>`}function P(){const t=document.querySelector(".js-invitations-list");t==null||t.addEventListener("click",s=>{const i=s.target;i.classList.contains("js-item-invitations-switch")&&i.classList.toggle("cabinet-settings__invitations-item-switch_active")})}function V(){const t=document.querySelector(".js-language-item-title-box"),s=document.querySelector(".js-language-inner-list");t==null||t.addEventListener("click",i);function i(){t==null||t.classList.toggle("cabinet-settings__language-item-title-box_active"),s==null||s.classList.toggle("cabinet-settings__language-inner-list_active")}s==null||s.addEventListener("click",a=>{const e=document.querySelector(".js-language-item-title"),c=a.target;c.tagName!=="LI"||!e||(e.textContent=c.textContent,i())})}function Y(){const t=document.querySelector(".js-region-item-title-box"),s=document.querySelector(".js-region-inner-list"),i=document.querySelector(".js-active-title"),a=document.querySelector(".js-region-item-img");t==null||t.addEventListener("click",e);function e(){t==null||t.classList.toggle("cabinet-settings__region-item-title-box_active"),s==null||s.classList.toggle("cabinet-settings__region-inner-list_active")}s==null||s.addEventListener("click",c=>{const l=c.target;i&&(i.textContent=l.textContent),l.dataset.src&&(a.src=l.dataset.src),e()})}function K(){const t=document.querySelector(".js-logout-btn");t==null||t.addEventListener("click",()=>{console.log(v),v()})}function j(t,s){t.innerHTML=W(),G(),P(),V(),Y(),K();const i=s.dataset.hash;i&&(location.hash=i)}function f(){return` <div class="cabinet-block__empty">
+            <div class="cabinet-block__empty-message">
+              <h3 class="cabinet-block__empty-message-title">Чорний список порожній</h3>
+              <p class="cabinet-block__empty-message-text">Ви ще нікого не заблокували</p>
+              <p class="cabinet-block__empty-message-text">
+               Люди з чорного списку не можуть запрошувати вас до команд, надсилати повідомлення або
+               додавати до паті
+              </p>
+            </div>
+           </div>`}function X(t){const s=document.querySelector(".js-cabinet-main-body");t.addEventListener("click",i);function i(e){const c=e.target.closest(".js-btn-dots"),l=c==null?void 0:c.nextElementSibling;c&&(l==null||l.classList.toggle("cabinet-block__item-btn-remove_active"),a(l))}function a(e){e.addEventListener("click",()=>{var c;(c=e.closest(".cabinet-block__item"))==null||c.remove(),t.children.length||(s.innerHTML=f())})}t.children.length||(s.innerHTML=f())}function J(t){const s=document.querySelector(".js-cabinet-block-list"),i=t.map(({id:a,avatar:e,name:c,status:l,teamLogo:_})=>`<li class="cabinet-block__item" data-id="${a}">
                 <div class="cabinet-block__item-user">
                   <picture class="cabinet-block__item-user-picture">
                     <span class="status"></span>
@@ -989,10 +998,11 @@ import{h as g,o as u}from"../../assets/cabinet-BBv-qIRL.js";import{g as h,H as T
                   class="cabinet-block__item-img-honors"
                   src="${_}"
                   alt="honors" />
-
+                
+               <div class="cabinet-block__item-btn-box"> 
                 <button
                   type="button"
-                  class="cabinet-block__item-btn">
+                  class="cabinet-block__item-btn js-btn-dots">
                   <svg
                     class="cabinet-block__item-icon"
                     width="24"
@@ -1000,7 +1010,19 @@ import{h as g,o as u}from"../../assets/cabinet-BBv-qIRL.js";import{g as h,H as T
                     <use xlink:href="#icon-dots-vertical"></use>
                   </svg>
                 </button>
-              </li>`);i.innerHTML=s.join("")}function X(t){const i=`<div class="cabinet-block">
+
+                <button
+                  type="button"
+                  class="cabinet-block__item-btn-remove js-item-btn-remove">
+                  <svg
+                    class="cabinet-block__item-icon-remove"
+                    width="24"
+                    height="24">
+                    <use xlink:href="#icon-user-minus"></use>
+                  </svg> 
+                </button>
+               </div> 
+              </li>`);s.innerHTML=i.join(""),X(s)}function Z(t){const s=`<div class="cabinet-block">
           <h3 class="cabinet-block__title">Чорний список</h3>
 
           <div class="cabinet-block__body">
@@ -1020,5 +1042,5 @@ import{h as g,o as u}from"../../assets/cabinet-BBv-qIRL.js";import{g as h,H as T
               </div>
             </div>
           </div>
-        </div>`;t.innerHTML=i,h(F).then(K).catch(g)}function j(t,i){X(t);const s=i.dataset.hash;s&&(location.hash=s)}function J(t,i){const s=location.hash.slice(1)?location.hash.slice(1):"statistics",a=document.querySelector(`[data-hash="${s}"]`);switch(f(a,i),s){case"statistics":m(t,a);break;case"history":w(t,a);break;case"personal-data":k(t,a);break;case"wallet":x(t,a);break;case"setting":L(t,a);break;case"block-list":j(t,a);break;default:m(t,a);break}}function Z(){const t=document.querySelector(".js-cabinet-nav-list"),i=document.querySelector(".js-cabinet-main-body");t==null||t.addEventListener("click",s);function s(a){const e=a.target.closest("li");e&&(f(e,t),e.classList.contains("js-statistics")&&m(i,e),e.classList.contains("js-history")&&w(i,e),e.classList.contains("js-personal-data")&&k(i,e),e.classList.contains("js-wallet")&&x(i,e),e.classList.contains("js-setting")&&L(i,e),e.classList.contains("js-block-list")&&j(i,e))}J(i,t)}function Q(){const t=localStorage.getItem("logged");(t==="false"||t===null)&&(window.location.href="404")}document.addEventListener("DOMContentLoaded",()=>{M(),E(),H(),u(),u(),q(),Z(),Q(),C()});
+        </div>`;t.innerHTML=s,h(E).then(J).catch(g)}function S(t,s){Z(t);const i=s.dataset.hash;i&&(location.hash=i)}function Q(t,s){const i=location.hash.slice(1)?location.hash.slice(1):"statistics",a=document.querySelector(`[data-hash="${i}"]`);switch(w(a,s),i){case"statistics":m(t,a);break;case"history":k(t,a);break;case"personal-data":x(t,a);break;case"wallet":L(t,a);break;case"setting":j(t,a);break;case"block-list":S(t,a);break;default:m(t,a);break}}function tt(){const t=document.querySelector(".js-cabinet-nav-list"),s=document.querySelector(".js-cabinet-main-body");t==null||t.addEventListener("click",i);function i(a){const e=a.target.closest("li");e&&(w(e,t),e.classList.contains("js-statistics")&&m(s,e),e.classList.contains("js-history")&&k(s,e),e.classList.contains("js-personal-data")&&x(s,e),e.classList.contains("js-wallet")&&L(s,e),e.classList.contains("js-setting")&&j(s,e),e.classList.contains("js-block-list")&&S(s,e))}Q(s,t)}function st(){const t=localStorage.getItem("logged");(t==="false"||t===null)&&(window.location.href="404")}document.addEventListener("DOMContentLoaded",()=>{F(),q(),I(),u(),u(),H(),tt(),st(),C()});
 //# sourceMappingURL=cabinet.js.map
