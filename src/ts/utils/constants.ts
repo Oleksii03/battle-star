@@ -1,6 +1,7 @@
 // ===PAGES ===
 const PAGE_MAIN = '/';
 const PAGE_CABINET = 'cabinet';
+const PAGE_TOURNAMENTS = 'tournaments';
 
 // ===PAGE MAIN==============
 // ---leaderboard---
@@ -19,6 +20,7 @@ const BLOCK_LIST: string = 'cabinetBlockList';
 export {
   PAGE_MAIN,
   PAGE_CABINET,
+  PAGE_TOURNAMENTS,
   TOP_LIST_CSGO,
   TOP_LIST_DOTA,
   LEADERBOARD_CARDS,

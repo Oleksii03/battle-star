@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./style/pages/tournaments/tournaments.scss" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/base/general/favicon.svg"
+      type="image/x-icon" />
+    <load src="./html-partials/base/sprite.htm" />
+    <title>tournaments</title>
+  </head>
+  <body>
+    <div class="main__wrapper wrapper">
+      <!-- sidebar -->
+      <load src="./html-partials/base/sidebar.html" />
+      <div class="main-body">
+        <!-- header -->
+        <load src="./html-partials/base/header.html" />
+        <!-- main content -->
+        <main>
+          <!-- main-stage -->
+          <load src="./html-partials/pages/tournaments/tournaments-stage.html" />
+        </main>
+      </div>
+
+      <script
+        type="module"
+        src="./ts/tournaments.ts"></script>
+    </div>
+  </body>
+</html>
