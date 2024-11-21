@@ -1,3 +1,5 @@
+import { deleteListItem } from './deleteListItem';
+
 export function blockListMarkup(collection: any) {
   const blockListContainer = document.querySelector('.js-cabinet-block-list') as HTMLUListElement;
 
@@ -32,10 +34,11 @@ export function blockListMarkup(collection: any) {
                   class="cabinet-block__item-img-honors"
                   src="${teamLogo}"
                   alt="honors" />
-
+                
+               <div class="cabinet-block__item-btn-box"> 
                 <button
                   type="button"
-                  class="cabinet-block__item-btn">
+                  class="cabinet-block__item-btn js-btn-dots">
                   <svg
                     class="cabinet-block__item-icon"
                     width="24"
@@ -43,8 +46,23 @@ export function blockListMarkup(collection: any) {
                     <use xlink:href="#icon-dots-vertical"></use>
                   </svg>
                 </button>
+
+                <button
+                  type="button"
+                  class="cabinet-block__item-btn-remove js-item-btn-remove">
+                  <svg
+                    class="cabinet-block__item-icon-remove"
+                    width="24"
+                    height="24">
+                    <use xlink:href="#icon-user-minus"></use>
+                  </svg> 
+                </button>
+               </div> 
               </li>`;
   });
 
   blockListContainer.innerHTML = itemMarkup.join('');
+
+  // delete-List-Item
+  deleteListItem(blockListContainer);
 }

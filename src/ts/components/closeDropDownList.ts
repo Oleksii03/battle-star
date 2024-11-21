@@ -12,9 +12,21 @@ export function closeDropDownList(): void {
     handlerLanguageList(e);
     // handlerCabinetTitleBox
     handlerCabinetTitleBox(e);
+    // closeDeleteButtonsCabinet
+    closeDeleteButtonsCabinet(e);
   });
 
   // ===function-handlers====
+  function closeDeleteButtonsCabinet(e: Event) {
+    const btnsRemove = document.querySelectorAll('.js-item-btn-remove');
+    const targetEl = (e.target as HTMLElement).closest('.js-item-btn-remove');
+    const parentTargetEl = (e.target as HTMLElement).closest('.js-btn-dots');
+
+    if (!targetEl && !parentTargetEl) {
+      btnsRemove.forEach(btn => btn.classList.remove('cabinet-block__item-btn-remove_active'));
+    }
+  }
+
   function handlerCabinetTitleBox(e: Event) {
     const titleBox = document.querySelector('.js-region-item-title-box');
     const regionList = document.querySelector('.js-region-inner-list');

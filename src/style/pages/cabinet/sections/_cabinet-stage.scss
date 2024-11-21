@@ -1847,7 +1847,7 @@
 
       &-game {
         color: $gray-text;
-        font-family: Roboto-Bold;
+        font-family: $font-tertiary;
         font-size: 15px;
         font-weight: 700;
         line-height: normal;
@@ -1875,6 +1875,35 @@
         height: 24px;
         fill: $light-gray-text;
         transition: fill 200ms linear;
+      }
+
+      &-box {
+        position: relative;
+      }
+
+      &-remove {
+        position: absolute;
+        top: 0px;
+        left: 35px;
+        border-radius: 4px;
+        background-color: rgba(248, 248, 248, 0.1);
+        color: $basic-white;
+        padding: 5px;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+
+        &_active {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
+        }
+
+        & > svg {
+          width: 20px;
+          height: 20px;
+          fill: $light-gray-text;
+        }
       }
     }
   }
