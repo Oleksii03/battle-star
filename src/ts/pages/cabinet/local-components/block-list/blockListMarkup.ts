@@ -1,6 +1,7 @@
+import { CabinetBlockList } from '@/ts/types/pages/cabinet';
 import { deleteListItem } from './deleteListItem';
 
-export function blockListMarkup(collection: any) {
+export function blockListMarkup(collection: CabinetBlockList[]) {
   const blockListContainer = document.querySelector('.js-cabinet-block-list') as HTMLUListElement;
 
   const itemMarkup = collection.map(({ id, avatar, name, status, teamLogo }) => {

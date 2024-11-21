@@ -19,4 +19,15 @@ interface CabinetHistoryTransactions {
   title: string;
 }
 
-export { CabinetHistoryMatchesList, CabinetHistoryTransactions };
+interface CabinetBlockList {
+  id: string;
+  name: string;
+  status: string;
+  teamLogo: string;
+  avatar: {
+    png: string;
+    webp: string;
+  };
+}
+
+export { CabinetHistoryMatchesList, CabinetHistoryTransactions, CabinetBlockList };
