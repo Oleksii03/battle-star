@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="uk">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -369,35 +369,153 @@
   </defs>
 </svg>
 
-    <title>sign-in</title>
-    <script type="module" crossorigin src="/battle-star/js/sign-in/sign-in.js"></script>
+    <title>tournaments</title>
+    <script type="module" crossorigin src="/battle-star/js/tournaments/tournaments.js"></script>
     <link rel="modulepreload" crossorigin href="/battle-star/assets/vendor-VoSYOthZ.js">
     <link rel="modulepreload" crossorigin href="/battle-star/assets/cabinet-CSmE6IlC.js">
-    <link rel="modulepreload" crossorigin href="/battle-star/assets/loginOrRegistrationHandler-DpdPt_lK.js">
+    <link rel="modulepreload" crossorigin href="/battle-star/assets/closeDropDownList-BAtmtC3T.js">
     <link rel="stylesheet" crossorigin href="/battle-star/assets/vendor-970_kJiQ.css">
-    <link rel="stylesheet" crossorigin href="/battle-star/assets/sign-in-BI2139pB.css">
+    <link rel="stylesheet" crossorigin href="/battle-star/assets/tournaments-izGqDKDf.css">
   </head>
+  <body>
+    <div class="main__wrapper wrapper">
+      <!-- sidebar -->
+      <aside class="sidebar">
+  <!-- logo -->
+  <a
+    href="./"
+    class="sidebar__logo">
+    <!-- logo-icon -->
+    <svg
+      class="sidebar__logo-icon"
+      width="65"
+      height="69">
+      <use xlink:href="#icon-logo"></use>
+    </svg>
+  </a>
 
-  <body class="sign-in">
-    <div class="main-body">
-      <!-- header -->
-      <header class="sign-in-header">
-  <div class="sign-in-header__container">
+  <!-- navigation -->
+  <nav class="sidebar__nav">
+    <!-- navigation-list -->
+    <ul class="sidebar__nav-list js-sidebar-nav-list">
+      <li class="sidebar__nav-item">
+        <a
+          href="./"
+          class="sidebar__nav-link js-sidebar-nav-main">
+          <svg
+            width="36"
+            height="36"
+            class="sidebar__nav-link-icon">
+            <use xlink:href="#icon-sidebar-main"></use>
+          </svg>
+
+          <p class="sidebar__nav-link-text">ГОЛОВНА</p>
+        </a>
+      </li>
+
+      <li class="sidebar__nav-item">
+        <a
+          href="#"
+          class="sidebar__nav-link">
+          <svg
+            width="36"
+            height="36"
+            class="sidebar__nav-link-icon">
+            <use xlink:href="#icon-sidebar-controller"></use>
+          </svg>
+
+          <p class="sidebar__nav-link-text">МАТЧІ</p>
+        </a>
+      </li>
+
+      <li class="sidebar__nav-item">
+        <a
+          href="./tournaments.html"
+          class="sidebar__nav-link js-sidebar-nav-tournaments">
+          <svg
+            width="36"
+            height="36"
+            class="sidebar__nav-link-icon">
+            <use xlink:href="#icon-sidebar-tournaments"></use>
+          </svg>
+
+          <p class="sidebar__nav-link-text">ТУРНІРИ</p>
+        </a>
+      </li>
+
+      <li class="sidebar__nav-item">
+        <a
+          href="#"
+          class="sidebar__nav-link">
+          <svg
+            width="36"
+            height="36"
+            class="sidebar__nav-link-icon">
+            <use xlink:href="#icon-sidebar-teams"></use>
+          </svg>
+
+          <p class="sidebar__nav-link-text">КОМАНДЫ</p>
+        </a>
+      </li>
+
+      <li class="sidebar__nav-item">
+        <a
+          href="#"
+          class="sidebar__nav-link">
+          <svg
+            width="36"
+            height="36"
+            class="sidebar__nav-link-icon">
+            <use xlink:href="#icon-sidebar-friends"></use>
+          </svg>
+
+          <p class="sidebar__nav-link-text">ДРУЗІ</p>
+
+          <span class="sidebar__nav-link-count">0</span>
+        </a>
+      </li>
+
+      <li class="sidebar__nav-item js-sidebar-btn-enter">
+        <a
+          href="./sign-in.html"
+          class="sidebar__nav-link">
+          <svg
+            width="36"
+            height="36"
+            class="sidebar__nav-link-icon">
+            <use xlink:href="#icon-enter"></use>
+          </svg>
+
+          <p class="sidebar__nav-link-text">УВІЙТИ</p>
+        </a>
+      </li>
+
+      <li class="sidebar__nav-item sidebar__nav-item_hidden js-sidebar-btn-exit">
+        <a
+          href="#"
+          class="sidebar__nav-link">
+          <svg
+            width="36"
+            height="36"
+            class="sidebar__nav-link-icon">
+            <use xlink:href="#icon-exit"></use>
+          </svg>
+
+          <p class="sidebar__nav-link-text">ВИЙТИ</p>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+
+      <div class="main-body">
+        <!-- header -->
+        <header class="header">
+  <div class="header__container">
     <!-- content-left -->
-    <div class="sign-in-header__content-left">
-      <a
-        href="./index.html"
-        class="sign-in-header__logo">
-        <!-- logo-icon -->
-        <svg
-          class="sign-in-header__logo-icon"
-          width="65"
-          height="69">
-          <use xlink:href="#icon-logo"></use>
-        </svg>
-      </a>
+    <div class="header__content-left">
       <!-- btn-arrow-box -->
-      <div class="sign-in-header__arrow-box">
+      <div class="header__arrow-box">
         <button class="header__arrow-btn header__arrow-btn_left">
           <svg
             width="38"
@@ -416,91 +534,154 @@
           </svg>
         </button>
       </div>
+      <!-- game-dropdown -->
+      <div class="header__game-dropdown">
+        <img
+          loading="lazy"
+          class="header__game-dropdown-img"
+          width="30"
+          height="30"
+          src="/battle-star/assets/header-cs-go-DPIzmvUb.svg"
+          alt="Game dropdown" />
+
+        <ul class="header__game-dropdown-list">
+          <li class="header__game-dropdown-item game-dropdown-item">
+            <div class="game-dropdown-item__box js-game-dropdown-box">
+              <p class="game-dropdown-item__title js-game-dropdown-active-title">CS:GO</p>
+
+              <svg
+                width="24"
+                height="24"
+                class="game-dropdown-item__icon js-game-dropdown-icon">
+                <use xlink:href="#icon-arrow-down"></use>
+              </svg>
+            </div>
+            <!-- inner-list -->
+            <ul class="game-dropdown-item__inner-list js-game-dropdown-item-inner-list">
+              <li class="game-dropdown-item__inner-item">
+                <p class="game-dropdown-item__inner-item-text">CS:GO</p>
+              </li>
+              <li class="game-dropdown-item__inner-item">
+                <p class="game-dropdown-item__inner-item-text">DOTA 2</p>
+              </li>
+              <li class="game-dropdown-item__inner-item">
+                <p class="game-dropdown-item__inner-item-text">Call of Duty</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <!-- content-right -->
-    <div class="header__search-box">
-      <svg
-        class="header__search-icon"
-        width="24"
-        height="24">
-        <use xlink:href="#icon-search"></use>
-      </svg>
+    <div class="header__content-right">
+      <!-- search-box -->
+      <div class="header__search-box">
+        <svg
+          class="header__search-icon"
+          width="24"
+          height="24">
+          <use xlink:href="#icon-search"></use>
+        </svg>
 
-      <input
-        type="text"
-        class="header__search-input"
-        placeholder="Пошук" />
+        <input
+          type="text"
+          class="header__search-input"
+          placeholder="Пошук" />
+      </div>
+
+      <!-- balance-box -->
+      <div class="header__balance-box">
+        <div class="header__balance-box-top">
+          <p class="header__balance-text">Баланс</p>
+          <svg
+            class="header__balance-icon"
+            width="24"
+            height="24">
+            <use xlink:href="#icon-plus-box"></use>
+          </svg>
+        </div>
+        <div class="header__balance-box-bottom">
+          <p class="header__balance-sum">15600</p>
+          <p class="header__balance-currency">BS</p>
+        </div>
+      </div>
+
+      <!-- buttons -->
+      <button
+        type="button"
+        class="header__btn-message">
+        <svg
+          class="header__btn-message-icon"
+          width="24"
+          height="24">
+          <use xlink:href="#icon-message"></use>
+        </svg>
+
+        <span class="header__btn-message-count">0</span>
+      </button>
+      <button
+        type="button"
+        class="header__btn-bell">
+        <svg
+          class="header__btn-bell-icon"
+          width="24"
+          height="24">
+          <use xlink:href="#icon-bell"></use>
+        </svg>
+
+        <span class="header__btn-bell-count">0</span>
+      </button>
+
+      <!-- User -->
+      <ul class="header__user-list js-header-user-list">
+        <li class="header__user-item">
+          <div class="header__user-item-box js-user-item-box">
+            <p class="header__user-item-title js-user-active-title">...</p>
+
+            <svg
+              width="24"
+              height="24"
+              class="header__user-item-icon js-icon-arrow-down">
+              <use xlink:href="#icon-arrow-down"></use>
+            </svg>
+          </div>
+
+          <ul class="header__user-inner-list js-user-inner-list">
+            <li class="header__user-inner-item js-item-cabinet">
+              <a href="cabinet.html">
+                <p class="header__user-inner-item-text">Кабінет</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </div>
 </header>
 
-      <!-- main content -->
-      <main>
-        <!-- stage -->
-        <section class="sign-in-stage">
-  <picture>
-    <source
-      srcset="/battle-star/assets/stage-bg-img-a6uJer6_.webp"
-      type="image/webp" />
+        <!-- main content -->
+        <main>
+          <!-- main-stage -->
+          <section class="tournaments-stage">
+  <div class="tournaments-stage__container container">
+    <div class="tournaments-stage__content">
+      <picture>
+        <source
+          srcset="img/tournaments-stage-img1.jpg"
+          type="image/webp" />
 
-    <img
-      width="3840"
-      height="3840"
-      loading="lazy"
-      class="sign-in-stage__bg-img"
-      src="/battle-star/assets/stage-bg-img-MmGMv1jM.png"
-      alt="sign-in background" />
-  </picture>
-  <!-- form container-->
-  <div class="sign-in-stage__container container">
-    <div class="sign-in__form-box">
-      <!-- logo -->
-      <div class="sign-in__form-logo">
-        <svg class="sign-in__form-logo-icon">
-          <use xlink:href="#icon-logo"></use>
-        </svg>
-      </div>
-      <!-- btns -->
-      <div class="sign-in__form-btns-box">
-        <button
-          class="sign-in__form-btn sign-in__form-btn_enter js-form-btn-enter active-btn"
-          type="button">
-          Увійти
-        </button>
-
-        <button
-          class="sign-in__form-btn sign-in__form-btn_create js-form-btn-create"
-          type="button">
-          СТВОРиТИ АКАУНт
-        </button>
-      </div>
-      <!-- btns-track -->
-      <div class="sign-in__form-btns-track js-form-btns-track">
-        <span class="sign-in__form-btns-tumb js-form-btns-tumb"></span>
-      </div>
-
-      <!-- ===form=== -->
-      <form
-        id="form"
-        class="sign-in__form js-sign-in-form"></form>
-
-      <div class="sign-in__policy">
-        <p class="sign-in__policy-text">
-          Створюючи обліковий запис у “Назву” ви погоджуєтесь з
-          <a
-            href="#"
-            target="_blank">
-            користувальницькою угодою
-          </a>
-        </p>
-      </div>
+        <img
+          src="img/tournaments-stage-img2.jpg"
+          alt="Tournaments stage" />
+      </picture>
     </div>
   </div>
 </section>
 
-      </main>
-    </div>
+        </main>
+      </div>
 
+    </div>
   </body>
 </html>
