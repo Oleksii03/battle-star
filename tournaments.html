@@ -382,7 +382,7 @@
     <link rel="modulepreload" crossorigin href="/battle-star/assets/cabinet-CSmE6IlC.js">
     <link rel="modulepreload" crossorigin href="/battle-star/assets/closeDropDownList-BAtmtC3T.js">
     <link rel="stylesheet" crossorigin href="/battle-star/assets/vendor-970_kJiQ.css">
-    <link rel="stylesheet" crossorigin href="/battle-star/assets/tournaments-toyzL4w4.css">
+    <link rel="stylesheet" crossorigin href="/battle-star/assets/tournaments-BL1CUkCm.css">
   </head>
   <body>
     <div class="tournaments__wrapper wrapper">
@@ -731,15 +731,75 @@
           name="name"
           type="text"
           class="form__text-input"
-          placeholder="
-Введіть назву турніру*"
+          placeholder="Введіть назву турніру*"
           required />
 
         <textarea
           class="form__text-description"
           name="description"
-          placeholder="
-Введіть назву турніру*"></textarea>
+          placeholder="Додати опис"></textarea>
+      </div>
+      <!-- rank -->
+      <div class="form__rank">
+        <h3 class="form__rank-title">Мінімальний ранг:</h3>
+
+        <div class="form__rank-track-box">
+          <ul class="form__rank-track-list">
+            <li class="form__rank-item">
+              <input
+                class="form__rank-item-input"
+                id="rank-1"
+                type="radio"
+                name="rank"
+                value="1300" />
+              <label for="rank-1">1300+</label>
+            </li>
+
+            <li class="form__rank-item">
+              <input
+                class="form__rank-item-input"
+                id="rank-2"
+                type="radio"
+                name="rank"
+                value="1800" />
+              <label for="rank-2">1800+</label>
+            </li>
+
+            <li class="form__rank-item">
+              <input
+                class="form__rank-item-input"
+                id="rank-3"
+                type="radio"
+                name="rank"
+                value="2000" />
+              <label for="rank-3">2000+</label>
+            </li>
+
+            <li class="form__rank-item">
+              <input
+                class="form__rank-item-input"
+                id="rank-4"
+                type="radio"
+                name="rank"
+                value="5000" />
+              <label for="rank-4">5000+</label>
+            </li>
+
+            <li class="form__rank-item">
+              <input
+                class="form__rank-item-input"
+                id="rank-5"
+                type="radio"
+                name="rank"
+                value="8000" />
+              <label for="rank-5">8000+</label>
+            </li>
+          </ul>
+          <!-- rank-track -->
+          <div class="form__rank-track">
+            <div class="form__rank-track-tumb"></div>
+          </div>
+        </div>
       </div>
     </form>
   </div>
