@@ -87,9 +87,18 @@
         margin-bottom: 41px;
       }
 
+      &__content {
+        @include flex-align-row;
+        column-gap: 45px;
+
+        @include media-min-width(md) {
+          column-gap: 60px;
+        }
+      }
+
       &-track-box {
         position: relative;
-        max-width: 773px;
+        width: 773px;
       }
 
       // list
@@ -101,8 +110,8 @@
       &-item {
         @include flex-align-column;
         // flex-basis: calc(100% / 5);
-
         row-gap: 6px;
+
         & > label {
           cursor: pointer;
           text-align: center;
@@ -155,6 +164,10 @@
               border-radius: 50%;
             }
 
+            // &:hover {
+            //   display: none;
+            // }
+
             & ~ label {
               color: $basic-yellow;
             }
@@ -182,6 +195,28 @@
           height: 100%;
           width: 2%;
           background-color: $basic-yellow;
+        }
+      }
+
+      &-line {
+        width: 1px;
+        height: 53px;
+        background: #fac704;
+      }
+
+      &-btn {
+        border-radius: 4px;
+        border: 1px solid #606060;
+        background: rgba(248, 248, 248, 0.1);
+        backdrop-filter: blur(40px);
+        padding: 15px 31px;
+        color: $light-text;
+        font-size: 20px;
+        line-height: normal;
+        transition: all 200ms linear;
+
+        &:hover {
+          border: 1px solid $basic-yellow;
         }
       }
     }
