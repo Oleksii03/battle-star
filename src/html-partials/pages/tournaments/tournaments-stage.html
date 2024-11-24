@@ -2,19 +2,34 @@
   <div class="tournaments-stage__container container">
     <div class="tournaments-stage__content">
       <!-- image -->
-      <picture>
-        <source
-          srcset="./assets/img/pages/tournaments/stage/main-stage-bg.webp"
-          type="image/webp" />
+      <div class="tournaments-stage__img-wrapper">
+        <picture>
+          <source
+            srcset="./assets/img/pages/tournaments/stage/main-stage-bg.webp"
+            type="image/webp" />
 
-        <img
-          width="1168"
-          height="320"
-          loading="lazy"
-          class="tournaments-stage__img"
-          src="./assets/img/pages/tournaments/stage/main-stage-bg.png"
-          alt="Tournaments stage" />
-      </picture>
+          <img
+            width="1168"
+            height="320"
+            loading="lazy"
+            class="tournaments-stage__img"
+            src="./assets/img/pages/tournaments/stage/main-stage-bg.png"
+            alt="Tournaments stage" />
+        </picture>
+
+        <label class="tournaments-stage__img-btn">
+          <svg
+            width="24"
+            height="24"
+            class="tournaments-stage__img-btn-icon">
+            <use xlink:href="#icon-placeholder-img"></use>
+          </svg>
+          <input
+            type="file"
+            class="tournaments-stage__img-input" />
+          Зміниит
+        </label>
+      </div>
 
       <!-- creating-tournament -->
       <div class="tournaments-stage__creating-tournament">

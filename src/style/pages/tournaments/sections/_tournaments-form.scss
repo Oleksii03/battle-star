@@ -1,0 +1,53 @@
+.tournaments__wrapper {
+  background: rgba(248, 248, 248, 0.016);
+  backdrop-filter: blur(10px);
+}
+
+// .tournaments-form {
+// }
+
+.tournaments-form__form {
+  max-width: 1187px;
+
+  & .form {
+    &__text {
+      &-box {
+        display: flex;
+        flex-direction: column;
+        row-gap: 28px;
+      }
+
+      &-input {
+        padding: 20px 31px;
+        border-radius: 2px;
+        background-color: rgba(248, 248, 248, 0.1);
+        backdrop-filter: blur(40px);
+        border: none;
+        color: $light-text;
+        font-size: 18px;
+        outline: none;
+
+        &:focus {
+          border: 1px solid $basic-yellow;
+        }
+      }
+
+      &-description {
+        resize: none;
+        padding: 10px 31px;
+        border-radius: 2px;
+        background-color: rgba(248, 248, 248, 0.1);
+        backdrop-filter: blur(40px);
+        border: none;
+        color: $light-text;
+        font-size: 18px;
+        outline: none;
+        max-height: 62px;
+
+        &:focus {
+          border: 1px solid $basic-yellow;
+        }
+      }
+    }
+  }
+}
