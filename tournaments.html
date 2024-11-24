@@ -17,6 +17,13 @@
   xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <symbol
+      id="icon-placeholder-img"
+      viewBox="0 0 32 32">
+      <path
+        d="M28 25.333v-18.667c0-1.467-1.2-2.667-2.667-2.667h-18.667c-1.467 0-2.667 1.2-2.667 2.667v18.667c0 1.467 1.2 2.667 2.667 2.667h18.667c1.467 0 2.667-1.2 2.667-2.667zM11.333 18l3.333 4.013 4.667-6.013 6 8h-18.667l4.667-6z"></path>
+    </symbol>
+
+    <symbol
       id="icon-bin"
       viewBox="0 0 32 32">
       <path d="M6 32h20l2-22h-24zM20 4v-4h-8v4h-10v6l2-2h24l2 2v-6h-10zM18 4h-4v-2h4v2z"></path>
@@ -375,10 +382,10 @@
     <link rel="modulepreload" crossorigin href="/battle-star/assets/cabinet-CSmE6IlC.js">
     <link rel="modulepreload" crossorigin href="/battle-star/assets/closeDropDownList-BAtmtC3T.js">
     <link rel="stylesheet" crossorigin href="/battle-star/assets/vendor-970_kJiQ.css">
-    <link rel="stylesheet" crossorigin href="/battle-star/assets/tournaments-qZoIs4d3.css">
+    <link rel="stylesheet" crossorigin href="/battle-star/assets/tournaments-toyzL4w4.css">
   </head>
   <body>
-    <div class="main__wrapper wrapper">
+    <div class="tournaments__wrapper wrapper">
       <!-- sidebar -->
       <aside class="sidebar">
   <!-- logo -->
@@ -667,19 +674,34 @@
   <div class="tournaments-stage__container container">
     <div class="tournaments-stage__content">
       <!-- image -->
-      <picture>
-        <source
-          srcset="/battle-star/assets/main-stage-bg-yyt_3DLJ.webp"
-          type="image/webp" />
+      <div class="tournaments-stage__img-wrapper">
+        <picture>
+          <source
+            srcset="/battle-star/assets/main-stage-bg-yyt_3DLJ.webp"
+            type="image/webp" />
 
-        <img
-          width="1168"
-          height="320"
-          loading="lazy"
-          class="tournaments-stage__img"
-          src="/battle-star/assets/main-stage-bg-CmxPpPRY.png"
-          alt="Tournaments stage" />
-      </picture>
+          <img
+            width="1168"
+            height="320"
+            loading="lazy"
+            class="tournaments-stage__img"
+            src="/battle-star/assets/main-stage-bg-CmxPpPRY.png"
+            alt="Tournaments stage" />
+        </picture>
+
+        <label class="tournaments-stage__img-btn">
+          <svg
+            width="24"
+            height="24"
+            class="tournaments-stage__img-btn-icon">
+            <use xlink:href="#icon-placeholder-img"></use>
+          </svg>
+          <input
+            type="file"
+            class="tournaments-stage__img-input" />
+          Зміниит
+        </label>
+      </div>
 
       <!-- creating-tournament -->
       <div class="tournaments-stage__creating-tournament">
@@ -697,6 +719,29 @@
         </a>
       </div>
     </div>
+  </div>
+</section>
+
+          <section class="tournaments-form">
+  <div class="tournaments-form__container container">
+    <form class="tournaments-form__form form">
+      <!-- form__text-box -->
+      <div class="form__text-box">
+        <input
+          name="name"
+          type="text"
+          class="form__text-input"
+          placeholder="
+Введіть назву турніру*"
+          required />
+
+        <textarea
+          class="form__text-description"
+          name="description"
+          placeholder="
+Введіть назву турніру*"></textarea>
+      </div>
+    </form>
   </div>
 </section>
 
