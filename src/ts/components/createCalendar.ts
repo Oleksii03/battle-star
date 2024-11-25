@@ -8,6 +8,7 @@ export function createCalendar() {
     dateFormat: 'Y-m-d',
     mode: 'range',
     monthSelectorType: 'static',
+    showMonths: 1,
     locale: {
       ...Ukrainian,
       months: {
