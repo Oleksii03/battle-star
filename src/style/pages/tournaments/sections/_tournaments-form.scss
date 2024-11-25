@@ -1,11 +1,11 @@
 .tournaments__wrapper {
-  // background: rgba(248, 248, 248, 0.016);
+  // background-color: rgba(248, 248, 248, 0.016);
   // backdrop-filter: blur(10px);
-  // min-height: 100dvh;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
 }
-
-// .tournaments-form {
-// }
 
 .tournaments-form__form {
   max-width: 1187px;
@@ -77,8 +77,10 @@
       }
     }
 
-    // rank-box
+    // rank======
     &__rank {
+      margin-bottom: 32px;
+
       &-title {
         color: $light-gray-text;
         font-size: 20px;
@@ -217,6 +219,163 @@
 
         &:hover {
           border: 1px solid $basic-yellow;
+        }
+      }
+    }
+
+    // number of teams=============
+    &__teams {
+      margin-bottom: 54px;
+
+      &-title {
+        color: $light-gray-text;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 8px;
+      }
+
+      &-description {
+        color: $gray-text;
+        font-size: 15px;
+        line-height: normal;
+        max-width: 580px;
+        margin-bottom: 35px;
+      }
+
+      &-list {
+        @include flex-align-row;
+        column-gap: 18px;
+      }
+
+      &-item {
+        &-input {
+          appearance: none;
+
+          &:checked ~ label {
+            border: 1px solid $basic-yellow;
+            background: rgba(250, 199, 4, 0.1);
+            backdrop-filter: blur(40px);
+            color: $basic-yellow;
+          }
+        }
+
+        &-label {
+          cursor: pointer;
+          color: $gray-text;
+          font-size: 20px;
+          line-height: normal;
+          border-radius: 4px;
+          border: 1px solid #606060;
+          background: rgba(248, 248, 248, 0.1);
+          backdrop-filter: blur(40px);
+          padding: 15px 31px;
+          transition: all 200ms linear;
+
+          &:hover {
+            border: 1px solid $basic-yellow;
+            background: rgba(250, 199, 4, 0.1);
+            backdrop-filter: blur(40px);
+            color: $basic-yellow;
+          }
+        }
+      }
+    }
+
+    // Entry rate
+    &__rate {
+      margin-bottom: 42px;
+      &-title {
+        @extend .form__teams-title;
+      }
+
+      &-description {
+        @extend .form__teams-description;
+        margin-bottom: 19px;
+      }
+
+      &-content {
+        @include flex-align-row;
+        column-gap: 34px;
+      }
+
+      &-line {
+        @extend .form__rank-line;
+      }
+
+      &-input-custom-value {
+        padding: 16px 93px 16px 25px;
+        border-radius: 4px;
+        border: 1px solid $gray-text;
+        background: rgba(248, 248, 248, 0.1);
+        backdrop-filter: blur(40px);
+        outline: none;
+        color: $gray-text;
+        font-size: 18px;
+        line-height: normal;
+      }
+
+      &-list {
+        @include flex-align-row;
+        column-gap: 18px;
+      }
+
+      &-item {
+        &-input {
+          appearance: none;
+
+          &:checked ~ label {
+            border: 1px solid $basic-yellow;
+            background: rgba(250, 199, 4, 0.1);
+            backdrop-filter: blur(40px);
+            color: $basic-yellow;
+          }
+        }
+
+        &-label {
+          @extend .form__teams-item-label;
+          & > span {
+            text-decoration: line-through;
+          }
+        }
+      }
+    }
+
+    // regime
+    &__regime {
+      margin-bottom: 42px;
+
+      &-title {
+        @extend .form__teams-title;
+        margin-bottom: 12px;
+      }
+
+      &-list {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(180px, 1fr));
+        gap: 16px;
+      }
+
+      &-item {
+        @include flex-align-row;
+        justify-content: center;
+
+        &-input {
+          appearance: none;
+
+          &:checked ~ label {
+            border: 1px solid $basic-yellow;
+            background: rgba(250, 199, 4, 0.1);
+            backdrop-filter: blur(40px);
+            color: $basic-yellow;
+          }
+        }
+
+        &-label {
+          width: 100%;
+          text-align: center;
+          @extend .form__teams-item-label;
+          padding: 27px 31px;
         }
       }
     }

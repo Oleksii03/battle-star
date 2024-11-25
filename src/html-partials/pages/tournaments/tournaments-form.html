@@ -15,6 +15,7 @@
           name="description"
           placeholder="Додати опис"></textarea>
       </div>
+
       <!-- rank -->
       <div class="form__rank">
         <h3 class="form__rank-title">Мінімальний ранг:</h3>
@@ -48,6 +49,7 @@
                   id="rank-3"
                   type="radio"
                   name="rank"
+                  checked
                   value="2000" />
                 <label for="rank-3">2000+</label>
               </li>
@@ -86,6 +88,334 @@
             Без обмежень
           </button>
         </div>
+      </div>
+
+      <!-- number of teams -->
+      <div class="form__teams">
+        <h3 class="form__teams-title">Кількість команд</h3>
+
+        <p class="form__teams-description">
+          Так само реалізація намічених планових завдань спричиняє підготовки та реалізації
+          відповідної умов активізації. Не слід, але забувати, що консультація з широким активом
+        </p>
+
+        <ul class="form__teams-list">
+          <li class="form__teams-item">
+            <input
+              class="form__teams-item-input"
+              id="team-1"
+              type="radio"
+              name="teams"
+              value="4" />
+            <label
+              class="form__teams-item-label"
+              for="team-1">
+              4
+            </label>
+          </li>
+
+          <li class="form__teams-item">
+            <input
+              class="form__teams-item-input"
+              id="team-2"
+              type="radio"
+              name="teams"
+              value="8" />
+            <label
+              class="form__teams-item-label"
+              for="team-2">
+              8
+            </label>
+          </li>
+
+          <li class="form__teams-item">
+            <input
+              class="form__teams-item-input"
+              id="team-3"
+              type="radio"
+              name="teams"
+              checked
+              value="16" />
+            <label
+              class="form__teams-item-label"
+              for="team-3">
+              16
+            </label>
+          </li>
+
+          <li class="form__teams-item">
+            <input
+              class="form__teams-item-input"
+              id="team-4"
+              type="radio"
+              name="teams"
+              value="32" />
+
+            <label
+              class="form__teams-item-label"
+              for="team-4">
+              32
+            </label>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Entry rate -->
+      <div class="form__rate">
+        <h3 class="form__rate-title">Ставка входу</h3>
+
+        <p class="form__rate-description">
+          Так само реалізація намічених планових завдань спричиняє підготовки та реалізації
+          відповідної умов активізації. Не слід, але забувати, що консультація з широким активом
+        </p>
+
+        <div class="form__rate-content">
+          <ul class="form__rate-list">
+            <li class="form__rate-item">
+              <input
+                class="form__rate-item-input"
+                id="rate-1"
+                type="radio"
+                name="rate"
+                value="1000" />
+
+              <label
+                class="form__rate-item-label"
+                for="rate-1">
+                1000
+                <span>BS</span>
+              </label>
+            </li>
+
+            <li class="form__rate-item">
+              <input
+                class="form__rate-item-input"
+                id="rate-2"
+                type="radio"
+                name="rate"
+                value="5000" />
+
+              <label
+                class="form__rate-item-label"
+                for="rate-2">
+                5000
+                <span>BS</span>
+              </label>
+            </li>
+
+            <li class="form__rate-item">
+              <input
+                class="form__rate-item-input"
+                id="rate-3"
+                type="radio"
+                name="rate"
+                checked
+                value="10000" />
+
+              <label
+                class="form__rate-item-label"
+                for="rate-3">
+                10000
+                <span>BS</span>
+              </label>
+            </li>
+          </ul>
+
+          <div class="form__rate-line"></div>
+
+          <input
+            class="form__rate-input-custom-value"
+            type="text"
+            name="rate-custom-value"
+            placeholder="Введіть своє значення.." />
+        </div>
+      </div>
+
+      <!-- regime -->
+      <div class="form__regime">
+        <h3 class="form__regime-title">Режим</h3>
+
+        <ul class="form__regime-list">
+          <li class="form__regime-item">
+            <input
+              class="form__regime-item-input"
+              id="regime-1"
+              type="radio"
+              name="regime"
+              value="All Pick" />
+
+            <label
+              class="form__regime-item-label"
+              for="regime-1">
+              All Pick
+            </label>
+          </li>
+
+          <li class="form__regime-item">
+            <input
+              class="form__regime-item-input"
+              id="regime-2"
+              type="radio"
+              name="regime"
+              value="Single Draft" />
+
+            <label
+              class="form__regime-item-label"
+              for="regime-2">
+              Single Draft
+            </label>
+          </li>
+
+          <li class="form__regime-item">
+            <input
+              class="form__regime-item-input"
+              id="regime-3"
+              type="radio"
+              name="regime"
+              value="Captains Draft" />
+
+            <label
+              class="form__regime-item-label"
+              for="regime-3">
+              Captains Draft
+            </label>
+          </li>
+
+          <li class="form__regime-item">
+            <input
+              class="form__regime-item-input"
+              id="regime-4"
+              type="radio"
+              name="regime"
+              value="Captains Draft" />
+
+            <label
+              class="form__regime-item-label"
+              for="regime-4">
+              Captains Draft
+            </label>
+          </li>
+
+          <li class="form__regime-item">
+            <input
+              class="form__regime-item-input"
+              id="regime-5"
+              type="radio"
+              name="regime"
+              value="Random Draft" />
+
+            <label
+              class="form__regime-item-label"
+              for="regime-5">
+              Random Draft
+            </label>
+          </li>
+
+          <li class="form__regime-item">
+            <input
+              class="form__regime-item-input"
+              id="regime-6"
+              type="radio"
+              name="regime"
+              value="Turbo" />
+
+            <label
+              class="form__regime-item-label"
+              for="regime-6">
+              Turbo
+            </label>
+          </li>
+
+          <li class="form__regime-item">
+            <input
+              class="form__regime-item-input"
+              id="regime-7"
+              type="radio"
+              name="regime"
+              value="Least Played" />
+
+            <label
+              class="form__regime-item-label"
+              for="regime-7">
+              Least Played
+            </label>
+          </li>
+
+          <li class="form__regime-item">
+            <input
+              class="form__regime-item-input"
+              id="regime-8"
+              type="radio"
+              name="regime"
+              value="Limited Heroes" />
+
+            <label
+              class="form__regime-item-label"
+              for="regime-8">
+              Limited Heroes
+            </label>
+          </li>
+          <li class="form__regime-item">
+            <input
+              class="form__regime-item-input"
+              id="regime-9"
+              type="radio"
+              name="regime"
+              value="All Random" />
+
+            <label
+              class="form__regime-item-label"
+              for="regime-9">
+              All Random
+            </label>
+          </li>
+
+          <li class="form__regime-item">
+            <input
+              class="form__regime-item-input"
+              id="regime-10"
+              type="radio"
+              name="regime"
+              checked
+              value="Captains Mode" />
+
+            <label
+              class="form__regime-item-label"
+              for="regime-10">
+              Captains Mode
+            </label>
+          </li>
+
+          <li class="form__regime-item">
+            <input
+              class="form__regime-item-input"
+              id="regime-11"
+              type="radio"
+              name="regime"
+              value="Ability Draft" />
+
+            <label
+              class="form__regime-item-label"
+              for="regime-11">
+              Ability Draft
+            </label>
+          </li>
+
+          <li class="form__regime-item">
+            <input
+              class="form__regime-item-input"
+              id="regime-12"
+              type="radio"
+              name="regime"
+              value="Deathmatch" />
+
+            <label
+              class="form__regime-item-label"
+              for="regime-12">
+              Deathmatch
+            </label>
+          </li>
+        </ul>
       </div>
     </form>
   </div>
