@@ -25,6 +25,7 @@
     "@splidejs/splide-extension-grid": "^0.4.1",
     "autoprefixer": "^10.4.19",
     "firebase": "^10.13.1",
+    "flatpickr": "^4.6.13",
     "just-validate": "^4.3.0",
     "modern-normalize": "^2.0.0",
     "prettier": "^3.3.3",

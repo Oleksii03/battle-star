@@ -379,5 +379,16 @@
         }
       }
     }
+
+    //Select the date and time
+    &__datetime {
+      &-title {
+        @extend .form__teams-title;
+      }
+
+      &-description {
+        @extend .form__teams-description;
+      }
+    }
   }
 }
