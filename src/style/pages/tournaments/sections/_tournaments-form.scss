@@ -517,21 +517,60 @@
   color: $light-text;
 }
 
+.inRange {
+  position: relative;
+  background: rgba(250, 201, 4, 0.521) !important;
+  backdrop-filter: blur(40px) !important;
+  border: 0px !important;
+  box-shadow: none !important;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: -5px;
+    width: 2.5px;
+    height: 100%;
+    background: rgba(250, 201, 4, 0.521) !important;
+    backdrop-filter: blur(40px) !important;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: -5px;
+    width: 2.5px;
+    height: 100%;
+    background: rgba(250, 201, 4, 0.521) !important;
+    backdrop-filter: blur(40px) !important;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    width: 0px;
+    height: 100%;
+  }
+
+  &:hover {
+    border: none !important;
+  }
+}
+
 .selected {
   border-radius: 0px !important;
   border: 2px solid $basic-yellow !important;
   background: rgba(250, 201, 4, 0.521) !important;
   backdrop-filter: blur(40px) !important;
 
-  &:hover {
-    background: rgba(250, 201, 4, 0.721) !important;
-    backdrop-filter: blur(60px) !important;
-  }
+  // &:hover {
+  //   background: rgba(250, 201, 4, 0.721) !important;
+  //   backdrop-filter: blur(60px) !important;
+  // }
 }
 
 .flatpickr-day.selected {
   background-color: #b8860b !important;
-  color: white !important;
+  color: $light-text !important;
 }
 
 .endRange,
@@ -540,6 +579,17 @@
   background-color: #b8860b !important;
   border-radius: 0px !important;
   border: 2px solid $basic-yellow !important;
+}
+
+.endRange::before {
+  // content: '';
+  // position: absolute;
+  // top: 0px;
+  // left: -5px;
+  // width: 2.5px;
+  // height: 100%;
+  // background: rgba(250, 201, 4, 0.521) !important;
+  // backdrop-filter: blur(40px) !important;
 }
 
 .rangeMode .flatpickr-day {
@@ -563,7 +613,7 @@
   &:hover {
     background-color: rgba(250, 201, 4, 0.521) !important;
     backdrop-filter: blur(40px);
-    border-radius: 2px !important;
-    border: 2px solid $basic-yellow !important;
+    border-radius: 0px !important;
+    border: 0px solid $basic-yellow !important;
   }
 }
