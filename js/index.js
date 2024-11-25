@@ -1,4 +1,4 @@
-import{h as $,o as w}from"../assets/cabinet-CSmE6IlC.js";import{T as g,d as h,L,M as T,P as y,h as S,c as k,s as M,b as j}from"../assets/closeDropDownList-BAtmtC3T.js";import{g as _}from"../assets/getDataFromFirestore-gmA55qXd.js";import{S as v,G as E}from"../assets/vendor-VoSYOthZ.js";function H(s){const a=document.querySelector(".js-main-slider-news");if(!a)return;const t=s.map(i=>{const{title:e,description:r,views:o,date:l,image:{png:c,webp:n},author:{img:d,name:p}}=i;return`
+import{h as $,o as w}from"../assets/cabinet-Di3V4Rw5.js";import{T as g,d as h,L,M as T,P as y,h as S,c as k,s as M,b as j}from"../assets/closeDropDownList-Biz3LAhE.js";import{g as _}from"../assets/getDataFromFirestore-BIJAjGLa.js";import{S as v,G as E}from"../assets/vendor-DUvJbM2m.js";function H(s){const a=document.querySelector(".js-main-slider-news");if(!a)return;const t=s.map(i=>{const{title:e,description:r,views:o,date:l,image:{png:c,webp:n},author:{img:d,name:p}}=i;return`
       <li class="splide__slide">
             <!-- slide-body -->
 
