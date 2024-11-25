@@ -382,13 +382,188 @@
 
     //Select the date and time
     &__datetime {
+      margin-bottom: 53px;
+
       &-title {
         @extend .form__teams-title;
       }
 
       &-description {
         @extend .form__teams-description;
+        margin-bottom: 15px;
+      }
+
+      &-content {
+        display: grid;
+        grid-template-columns: 388px auto 1fr;
+        align-items: center;
+        gap: 40px;
+      }
+
+      &-line {
+        width: 1px;
+        height: 100%;
+        background-color: $basic-yellow;
+        position: relative;
+      }
+
+      // -list
+
+      &-list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(180px, 1fr));
+        grid-template-rows: repeat(5, 1fr);
+        gap: 16px;
+      }
+
+      &-item {
+        @include flex-align-row;
+        justify-content: center;
+
+        &-input {
+          appearance: none;
+
+          &:checked ~ label {
+            border: 1px solid $basic-yellow;
+            background: rgba(250, 199, 4, 0.1);
+            backdrop-filter: blur(40px);
+            color: $basic-yellow;
+          }
+        }
+
+        &-label {
+          width: 100%;
+          text-align: center;
+          @extend .form__teams-item-label;
+          padding: 11px;
+        }
+      }
+
+      &-calendar {
+        // background: rgba(248, 248, 248, 0.1) !important;
       }
     }
+  }
+}
+
+// -calendar
+.flatpickr-calendar {
+  border-radius: 4px !important;
+  background: rgba(248, 248, 248, 0.1) !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  padding: 22px 0px 0px 0px !important;
+
+  width: 100% !important;
+  height: 304px !important;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.flatpickr-weekdays {
+  display: none !important;
+}
+
+.flatpickr-innerContainer {
+  display: grid !important;
+  place-content: center !important;
+}
+
+.flatpickr-months {
+  position: relative !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.flatpickr-prev-month {
+  top: -7px !important;
+  left: 20% !important;
+  width: 28px;
+  height: 28px;
+
+  & > svg {
+    fill: #606060 !important;
+  }
+}
+
+.flatpickr-next-month {
+  top: -7px !important;
+  right: 20% !important;
+  width: 28px;
+  height: 28px;
+
+  & > svg {
+    fill: #606060 !important;
+  }
+}
+
+.flatpickr-current-month {
+  color: $light-text !important;
+  padding: 0 !important;
+  font-size: 20px !important;
+}
+
+.flatpickr-monthDropdown-months {
+  color: $light-text !important;
+}
+
+.flatpickr-day.inRange {
+  border-radius: 0px !important;
+  background: rgba(250, 201, 4, 0.521) !important;
+  backdrop-filter: blur(40px) !important;
+  color: $light-text;
+}
+
+.selected {
+  border-radius: 0px !important;
+  border: 2px solid $basic-yellow !important;
+  background: rgba(250, 201, 4, 0.521) !important;
+  backdrop-filter: blur(40px) !important;
+
+  &:hover {
+    background: rgba(250, 201, 4, 0.721) !important;
+    backdrop-filter: blur(60px) !important;
+  }
+}
+
+.flatpickr-day.selected {
+  background-color: #b8860b !important;
+  color: white !important;
+}
+
+.endRange,
+.startRange {
+  outline: none !important;
+  background-color: #b8860b !important;
+  border-radius: 0px !important;
+  border: 2px solid $basic-yellow !important;
+}
+
+.rangeMode .flatpickr-day {
+  margin-top: 0px !important;
+  margin-bottom: 8px !important;
+}
+
+.flatpickr-day.today {
+  border-radius: 0px !important;
+  border: 2px solid $basic-yellow !important;
+}
+
+.flatpickr-day {
+  color: $gray-text;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+  &:hover {
+    background-color: rgba(250, 201, 4, 0.521) !important;
+    backdrop-filter: blur(40px);
+    border-radius: 2px !important;
+    border: 2px solid $basic-yellow !important;
   }
 }
