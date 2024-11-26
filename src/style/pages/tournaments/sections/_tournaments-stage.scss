@@ -83,12 +83,19 @@
       justify-content: center;
       padding: 13px 55px;
       border-radius: 4px;
-      background: var(--Main, #fac704);
-
+      background: $basic-yellow;
       color: #18181b;
       font-size: 20px;
       line-height: normal;
       white-space: nowrap;
+      transition: all 200ms linear;
+
+      &:hover {
+        border: 1px solid $basic-yellow;
+        background: rgba(250, 199, 4, 0.1);
+        backdrop-filter: blur(40px);
+        color: $basic-yellow;
+      }
     }
   }
 }

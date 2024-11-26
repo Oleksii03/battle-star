@@ -1,746 +1,779 @@
 <section class="tournaments-form">
   <div class="tournaments-form__container container">
-    <form class="tournaments-form__form form">
-      <!-- form__text-box -->
-      <div class="form__text-box">
-        <input
-          name="name"
-          type="text"
-          class="form__text-input"
-          placeholder="Введіть назву турніру*"
-          required />
+    <form class="tournaments-form__form form js-tournaments-form">
+      <div class="form__content">
+        <!-- form__text-box -->
+        <div class="form__text-box">
+          <input
+            name="name"
+            type="text"
+            class="form__text-input"
+            placeholder="Введіть назву турніру*"
+            required />
 
-        <textarea
-          class="form__text-description"
-          name="description"
-          placeholder="Додати опис"></textarea>
-      </div>
+          <textarea
+            class="form__text-description"
+            name="description"
+            placeholder="Додати опис"></textarea>
+        </div>
 
-      <!-- rank -->
-      <div class="form__rank">
-        <h3 class="form__rank-title">Мінімальний ранг:</h3>
+        <!-- rank -->
+        <div class="form__rank">
+          <h3 class="form__rank-title">Мінімальний ранг:</h3>
 
-        <div class="form__rank__content">
-          <div class="form__rank-track-box">
-            <ul class="form__rank-track-list">
-              <li class="form__rank-item">
+          <div class="form__rank__content">
+            <div class="form__rank-track-box">
+              <ul class="form__rank-track-list">
+                <li class="form__rank-item">
+                  <input
+                    class="form__rank-item-input"
+                    id="rank-1"
+                    type="radio"
+                    name="rank"
+                    value="1300" />
+                  <label for="rank-1">1300+</label>
+                </li>
+
+                <li class="form__rank-item">
+                  <input
+                    class="form__rank-item-input"
+                    id="rank-2"
+                    type="radio"
+                    name="rank"
+                    value="1800" />
+                  <label for="rank-2">1800+</label>
+                </li>
+
+                <li class="form__rank-item">
+                  <input
+                    class="form__rank-item-input"
+                    id="rank-3"
+                    type="radio"
+                    name="rank"
+                    checked
+                    value="2000" />
+                  <label for="rank-3">2000+</label>
+                </li>
+
+                <li class="form__rank-item">
+                  <input
+                    class="form__rank-item-input"
+                    id="rank-4"
+                    type="radio"
+                    name="rank"
+                    value="5000" />
+                  <label for="rank-4">5000+</label>
+                </li>
+
+                <li class="form__rank-item">
+                  <input
+                    class="form__rank-item-input"
+                    id="rank-5"
+                    type="radio"
+                    name="rank"
+                    value="8000" />
+                  <label for="rank-5">8000+</label>
+                </li>
+              </ul>
+              <!-- rank-track -->
+              <div class="form__rank-track">
+                <div class="form__rank-track-tumb"></div>
+              </div>
+            </div>
+
+            <div class="form__rank-line"></div>
+
+            <button
+              class="form__rank-btn"
+              type="button">
+              Без обмежень
+            </button>
+          </div>
+        </div>
+
+        <!-- number of teams -->
+        <div class="form__teams">
+          <h3 class="form__teams-title">Кількість команд</h3>
+
+          <p class="form__teams-description">
+            Так само реалізація намічених планових завдань спричиняє підготовки та реалізації
+            відповідної умов активізації. Не слід, але забувати, що консультація з широким активом
+          </p>
+
+          <ul class="form__teams-list">
+            <li class="form__teams-item">
+              <input
+                class="form__teams-item-input"
+                id="team-1"
+                type="radio"
+                name="teams"
+                value="4" />
+              <label
+                class="form__teams-item-label"
+                for="team-1">
+                4
+              </label>
+            </li>
+
+            <li class="form__teams-item">
+              <input
+                class="form__teams-item-input"
+                id="team-2"
+                type="radio"
+                name="teams"
+                value="8" />
+              <label
+                class="form__teams-item-label"
+                for="team-2">
+                8
+              </label>
+            </li>
+
+            <li class="form__teams-item">
+              <input
+                class="form__teams-item-input"
+                id="team-3"
+                type="radio"
+                name="teams"
+                checked
+                value="16" />
+              <label
+                class="form__teams-item-label"
+                for="team-3">
+                16
+              </label>
+            </li>
+
+            <li class="form__teams-item">
+              <input
+                class="form__teams-item-input"
+                id="team-4"
+                type="radio"
+                name="teams"
+                value="32" />
+
+              <label
+                class="form__teams-item-label"
+                for="team-4">
+                32
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Entry rate -->
+        <div class="form__rate">
+          <h3 class="form__rate-title">Ставка входу</h3>
+
+          <p class="form__rate-description">
+            Так само реалізація намічених планових завдань спричиняє підготовки та реалізації
+            відповідної умов активізації. Не слід, але забувати, що консультація з широким активом
+          </p>
+
+          <div class="form__rate-content">
+            <ul class="form__rate-list">
+              <li class="form__rate-item">
                 <input
-                  class="form__rank-item-input"
-                  id="rank-1"
+                  class="form__rate-item-input"
+                  id="rate-1"
                   type="radio"
-                  name="rank"
-                  value="1300" />
-                <label for="rank-1">1300+</label>
+                  name="rate"
+                  value="1000" />
+
+                <label
+                  class="form__rate-item-label"
+                  for="rate-1">
+                  1000
+                  <span>BS</span>
+                </label>
               </li>
 
-              <li class="form__rank-item">
+              <li class="form__rate-item">
                 <input
-                  class="form__rank-item-input"
-                  id="rank-2"
+                  class="form__rate-item-input"
+                  id="rate-2"
                   type="radio"
-                  name="rank"
-                  value="1800" />
-                <label for="rank-2">1800+</label>
-              </li>
-
-              <li class="form__rank-item">
-                <input
-                  class="form__rank-item-input"
-                  id="rank-3"
-                  type="radio"
-                  name="rank"
-                  checked
-                  value="2000" />
-                <label for="rank-3">2000+</label>
-              </li>
-
-              <li class="form__rank-item">
-                <input
-                  class="form__rank-item-input"
-                  id="rank-4"
-                  type="radio"
-                  name="rank"
+                  name="rate"
                   value="5000" />
-                <label for="rank-4">5000+</label>
+
+                <label
+                  class="form__rate-item-label"
+                  for="rate-2">
+                  5000
+                  <span>BS</span>
+                </label>
               </li>
 
-              <li class="form__rank-item">
+              <li class="form__rate-item">
                 <input
-                  class="form__rank-item-input"
-                  id="rank-5"
+                  class="form__rate-item-input"
+                  id="rate-3"
                   type="radio"
-                  name="rank"
-                  value="8000" />
-                <label for="rank-5">8000+</label>
+                  name="rate"
+                  checked
+                  value="10000" />
+
+                <label
+                  class="form__rate-item-label"
+                  for="rate-3">
+                  10000
+                  <span>BS</span>
+                </label>
               </li>
             </ul>
-            <!-- rank-track -->
-            <div class="form__rank-track">
-              <div class="form__rank-track-tumb"></div>
-            </div>
+
+            <div class="form__rate-line"></div>
+
+            <input
+              class="form__rate-input-custom-value"
+              type="text"
+              name="rate-custom-value"
+              placeholder="Введіть своє значення.." />
           </div>
-
-          <div class="form__rank-line"></div>
-
-          <button
-            class="form__rank-btn"
-            type="button">
-            Без обмежень
-          </button>
         </div>
-      </div>
 
-      <!-- number of teams -->
-      <div class="form__teams">
-        <h3 class="form__teams-title">Кількість команд</h3>
+        <!-- regime -->
+        <div class="form__regime">
+          <h3 class="form__regime-title">Режим</h3>
 
-        <p class="form__teams-description">
-          Так само реалізація намічених планових завдань спричиняє підготовки та реалізації
-          відповідної умов активізації. Не слід, але забувати, що консультація з широким активом
-        </p>
-
-        <ul class="form__teams-list">
-          <li class="form__teams-item">
-            <input
-              class="form__teams-item-input"
-              id="team-1"
-              type="radio"
-              name="teams"
-              value="4" />
-            <label
-              class="form__teams-item-label"
-              for="team-1">
-              4
-            </label>
-          </li>
-
-          <li class="form__teams-item">
-            <input
-              class="form__teams-item-input"
-              id="team-2"
-              type="radio"
-              name="teams"
-              value="8" />
-            <label
-              class="form__teams-item-label"
-              for="team-2">
-              8
-            </label>
-          </li>
-
-          <li class="form__teams-item">
-            <input
-              class="form__teams-item-input"
-              id="team-3"
-              type="radio"
-              name="teams"
-              checked
-              value="16" />
-            <label
-              class="form__teams-item-label"
-              for="team-3">
-              16
-            </label>
-          </li>
-
-          <li class="form__teams-item">
-            <input
-              class="form__teams-item-input"
-              id="team-4"
-              type="radio"
-              name="teams"
-              value="32" />
-
-            <label
-              class="form__teams-item-label"
-              for="team-4">
-              32
-            </label>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Entry rate -->
-      <div class="form__rate">
-        <h3 class="form__rate-title">Ставка входу</h3>
-
-        <p class="form__rate-description">
-          Так само реалізація намічених планових завдань спричиняє підготовки та реалізації
-          відповідної умов активізації. Не слід, але забувати, що консультація з широким активом
-        </p>
-
-        <div class="form__rate-content">
-          <ul class="form__rate-list">
-            <li class="form__rate-item">
+          <ul class="form__regime-list">
+            <li class="form__regime-item">
               <input
-                class="form__rate-item-input"
-                id="rate-1"
+                class="form__regime-item-input"
+                id="regime-1"
                 type="radio"
-                name="rate"
-                value="1000" />
+                name="regime"
+                value="All Pick" />
 
               <label
-                class="form__rate-item-label"
-                for="rate-1">
-                1000
-                <span>BS</span>
+                class="form__regime-item-label"
+                for="regime-1">
+                All Pick
               </label>
             </li>
 
-            <li class="form__rate-item">
+            <li class="form__regime-item">
               <input
-                class="form__rate-item-input"
-                id="rate-2"
+                class="form__regime-item-input"
+                id="regime-2"
                 type="radio"
-                name="rate"
-                value="5000" />
+                name="regime"
+                value="Single Draft" />
 
               <label
-                class="form__rate-item-label"
-                for="rate-2">
-                5000
-                <span>BS</span>
+                class="form__regime-item-label"
+                for="regime-2">
+                Single Draft
               </label>
             </li>
 
-            <li class="form__rate-item">
+            <li class="form__regime-item">
               <input
-                class="form__rate-item-input"
-                id="rate-3"
+                class="form__regime-item-input"
+                id="regime-3"
                 type="radio"
-                name="rate"
+                name="regime"
+                value="Captains Draft" />
+
+              <label
+                class="form__regime-item-label"
+                for="regime-3">
+                Captains Draft
+              </label>
+            </li>
+
+            <li class="form__regime-item">
+              <input
+                class="form__regime-item-input"
+                id="regime-4"
+                type="radio"
+                name="regime"
+                value="Captains Draft" />
+
+              <label
+                class="form__regime-item-label"
+                for="regime-4">
+                Captains Draft
+              </label>
+            </li>
+
+            <li class="form__regime-item">
+              <input
+                class="form__regime-item-input"
+                id="regime-5"
+                type="radio"
+                name="regime"
+                value="Random Draft" />
+
+              <label
+                class="form__regime-item-label"
+                for="regime-5">
+                Random Draft
+              </label>
+            </li>
+
+            <li class="form__regime-item">
+              <input
+                class="form__regime-item-input"
+                id="regime-6"
+                type="radio"
+                name="regime"
+                value="Turbo" />
+
+              <label
+                class="form__regime-item-label"
+                for="regime-6">
+                Turbo
+              </label>
+            </li>
+
+            <li class="form__regime-item">
+              <input
+                class="form__regime-item-input"
+                id="regime-7"
+                type="radio"
+                name="regime"
+                value="Least Played" />
+
+              <label
+                class="form__regime-item-label"
+                for="regime-7">
+                Least Played
+              </label>
+            </li>
+
+            <li class="form__regime-item">
+              <input
+                class="form__regime-item-input"
+                id="regime-8"
+                type="radio"
+                name="regime"
+                value="Limited Heroes" />
+
+              <label
+                class="form__regime-item-label"
+                for="regime-8">
+                Limited Heroes
+              </label>
+            </li>
+            <li class="form__regime-item">
+              <input
+                class="form__regime-item-input"
+                id="regime-9"
+                type="radio"
+                name="regime"
+                value="All Random" />
+
+              <label
+                class="form__regime-item-label"
+                for="regime-9">
+                All Random
+              </label>
+            </li>
+
+            <li class="form__regime-item">
+              <input
+                class="form__regime-item-input"
+                id="regime-10"
+                type="radio"
+                name="regime"
                 checked
-                value="10000" />
+                value="Captains Mode" />
 
               <label
-                class="form__rate-item-label"
-                for="rate-3">
-                10000
-                <span>BS</span>
+                class="form__regime-item-label"
+                for="regime-10">
+                Captains Mode
+              </label>
+            </li>
+
+            <li class="form__regime-item">
+              <input
+                class="form__regime-item-input"
+                id="regime-11"
+                type="radio"
+                name="regime"
+                value="Ability Draft" />
+
+              <label
+                class="form__regime-item-label"
+                for="regime-11">
+                Ability Draft
+              </label>
+            </li>
+
+            <li class="form__regime-item">
+              <input
+                class="form__regime-item-input"
+                id="regime-12"
+                type="radio"
+                name="regime"
+                value="Deathmatch" />
+
+              <label
+                class="form__regime-item-label"
+                for="regime-12">
+                Deathmatch
               </label>
             </li>
           </ul>
-
-          <div class="form__rate-line"></div>
-
-          <input
-            class="form__rate-input-custom-value"
-            type="text"
-            name="rate-custom-value"
-            placeholder="Введіть своє значення.." />
         </div>
-      </div>
 
-      <!-- regime -->
-      <div class="form__regime">
-        <h3 class="form__regime-title">Режим</h3>
+        <!-- form__datetime  -->
+        <div class="form__datetime">
+          <h3 class="form__datetime-title">Виберіть дату та час проведення матчів</h3>
 
-        <ul class="form__regime-list">
-          <li class="form__regime-item">
-            <input
-              class="form__regime-item-input"
-              id="regime-1"
-              type="radio"
-              name="regime"
-              value="All Pick" />
+          <p class="form__datetime-description">
+            Так само реалізація намічених планових завдань спричиняє підготовки та реалізації
+            відповідної умов активізації. Не слід, але забувати, що консультація з широким активом
+          </p>
 
-            <label
-              class="form__regime-item-label"
-              for="regime-1">
-              All Pick
-            </label>
-          </li>
+          <div class="form__datetime-content">
+            <!-- Calendar -->
+            <div class="form__datetime!">
+              <div
+                class="form-datetime-calendar"
+                id="formDatetimeCalendar"></div>
+            </div>
 
-          <li class="form__regime-item">
-            <input
-              class="form__regime-item-input"
-              id="regime-2"
-              type="radio"
-              name="regime"
-              value="Single Draft" />
+            <div class="form__datetime-line"></div>
 
-            <label
-              class="form__regime-item-label"
-              for="regime-2">
-              Single Draft
-            </label>
-          </li>
+            <!-- time-list -->
+            <ul class="form__datetime-list">
+              <li class="form__datetime-item">
+                <input
+                  id="time-1"
+                  class="form__datetime-item-input"
+                  type="radio"
+                  name="time"
+                  value="7:00 AM" />
 
-          <li class="form__regime-item">
-            <input
-              class="form__regime-item-input"
-              id="regime-3"
-              type="radio"
-              name="regime"
-              value="Captains Draft" />
+                <label
+                  class="form__datetime-item-label"
+                  for="time-1">
+                  7:00 AM
+                </label>
+              </li>
 
-            <label
-              class="form__regime-item-label"
-              for="regime-3">
-              Captains Draft
-            </label>
-          </li>
+              <li class="form__datetime-item">
+                <input
+                  id="time-2"
+                  class="form__datetime-item-input"
+                  type="radio"
+                  name="time"
+                  value="12:00 PM" />
 
-          <li class="form__regime-item">
-            <input
-              class="form__regime-item-input"
-              id="regime-4"
-              type="radio"
-              name="regime"
-              value="Captains Draft" />
+                <label
+                  class="form__datetime-item-label"
+                  for="time-2">
+                  12:00 PM
+                </label>
+              </li>
 
-            <label
-              class="form__regime-item-label"
-              for="regime-4">
-              Captains Draft
-            </label>
-          </li>
+              <li class="form__datetime-item">
+                <input
+                  id="time-3"
+                  class="form__datetime-item-input"
+                  type="radio"
+                  name="time"
+                  value="5:00 PM" />
 
-          <li class="form__regime-item">
-            <input
-              class="form__regime-item-input"
-              id="regime-5"
-              type="radio"
-              name="regime"
-              value="Random Draft" />
+                <label
+                  class="form__datetime-item-label"
+                  for="time-3">
+                  5:00 PM
+                </label>
+              </li>
 
-            <label
-              class="form__regime-item-label"
-              for="regime-5">
-              Random Draft
-            </label>
-          </li>
+              <li class="form__datetime-item">
+                <input
+                  id="time-4"
+                  class="form__datetime-item-input"
+                  type="radio"
+                  name="time"
+                  value="10:00 PM" />
 
-          <li class="form__regime-item">
-            <input
-              class="form__regime-item-input"
-              id="regime-6"
-              type="radio"
-              name="regime"
-              value="Turbo" />
+                <label
+                  class="form__datetime-item-label"
+                  for="time-4">
+                  10:00 PM
+                </label>
+              </li>
 
-            <label
-              class="form__regime-item-label"
-              for="regime-6">
-              Turbo
-            </label>
-          </li>
+              <li class="form__datetime-item">
+                <input
+                  id="time-5"
+                  class="form__datetime-item-input"
+                  type="radio"
+                  name="time"
+                  value="8:00 AM" />
 
-          <li class="form__regime-item">
-            <input
-              class="form__regime-item-input"
-              id="regime-7"
-              type="radio"
-              name="regime"
-              value="Least Played" />
+                <label
+                  class="form__datetime-item-label"
+                  for="time-5">
+                  8:00 AM
+                </label>
+              </li>
 
-            <label
-              class="form__regime-item-label"
-              for="regime-7">
-              Least Played
-            </label>
-          </li>
+              <li class="form__datetime-item">
+                <input
+                  id="time-6"
+                  class="form__datetime-item-input"
+                  type="radio"
+                  name="time"
+                  value="1:00 PM"
+                  checked />
 
-          <li class="form__regime-item">
-            <input
-              class="form__regime-item-input"
-              id="regime-8"
-              type="radio"
-              name="regime"
-              value="Limited Heroes" />
+                <label
+                  class="form__datetime-item-label"
+                  for="time-6">
+                  1:00 PM
+                </label>
+              </li>
 
-            <label
-              class="form__regime-item-label"
-              for="regime-8">
-              Limited Heroes
-            </label>
-          </li>
-          <li class="form__regime-item">
-            <input
-              class="form__regime-item-input"
-              id="regime-9"
-              type="radio"
-              name="regime"
-              value="All Random" />
+              <li class="form__datetime-item">
+                <input
+                  id="time-7"
+                  class="form__datetime-item-input"
+                  type="radio"
+                  name="time"
+                  value="6:00 PM" />
 
-            <label
-              class="form__regime-item-label"
-              for="regime-9">
-              All Random
-            </label>
-          </li>
+                <label
+                  class="form__datetime-item-label"
+                  for="time-7">
+                  6:00 PM
+                </label>
+              </li>
 
-          <li class="form__regime-item">
-            <input
-              class="form__regime-item-input"
-              id="regime-10"
-              type="radio"
-              name="regime"
-              checked
-              value="Captains Mode" />
+              <li class="form__datetime-item">
+                <input
+                  id="time-8"
+                  class="form__datetime-item-input"
+                  type="radio"
+                  name="time"
+                  value="10:30 PM" />
 
-            <label
-              class="form__regime-item-label"
-              for="regime-10">
-              Captains Mode
-            </label>
-          </li>
+                <label
+                  class="form__datetime-item-label"
+                  for="time-8">
+                  10:30 PM
+                </label>
+              </li>
 
-          <li class="form__regime-item">
-            <input
-              class="form__regime-item-input"
-              id="regime-11"
-              type="radio"
-              name="regime"
-              value="Ability Draft" />
+              <li class="form__datetime-item">
+                <input
+                  id="time-9"
+                  class="form__datetime-item-input"
+                  type="radio"
+                  name="time"
+                  value="9:00 AM" />
 
-            <label
-              class="form__regime-item-label"
-              for="regime-11">
-              Ability Draft
-            </label>
-          </li>
+                <label
+                  class="form__datetime-item-label"
+                  for="time-9">
+                  9:00 AM
+                </label>
+              </li>
 
-          <li class="form__regime-item">
-            <input
-              class="form__regime-item-input"
-              id="regime-12"
-              type="radio"
-              name="regime"
-              value="Deathmatch" />
+              <li class="form__datetime-item">
+                <input
+                  id="time-10"
+                  class="form__datetime-item-input"
+                  type="radio"
+                  name="time"
+                  value="2:00 PM" />
 
-            <label
-              class="form__regime-item-label"
-              for="regime-12">
-              Deathmatch
-            </label>
-          </li>
-        </ul>
-      </div>
+                <label
+                  class="form__datetime-item-label"
+                  for="time-10">
+                  2:00 PM
+                </label>
+              </li>
 
-      <!-- form__datetime  -->
-      <div class="form__datetime">
-        <h3 class="form__datetime-title">Виберіть дату та час проведення матчів</h3>
+              <li class="form__datetime-item">
+                <input
+                  id="time-11"
+                  class="form__datetime-item-input"
+                  type="radio"
+                  name="time"
+                  value="7:00 PM" />
 
-        <p class="form__datetime-description">
-          Так само реалізація намічених планових завдань спричиняє підготовки та реалізації
-          відповідної умов активізації. Не слід, але забувати, що консультація з широким активом
-        </p>
+                <label
+                  class="form__datetime-item-label"
+                  for="time-11">
+                  7:00 PM
+                </label>
+              </li>
 
-        <div class="form__datetime-content">
-          <!-- Calendar -->
-          <div class="form__datetime!">
-            <div
-              class="form-datetime-calendar"
-              id="formDatetimeCalendar"></div>
+              <li class="form__datetime-item">
+                <input
+                  id="time-12"
+                  class="form__datetime-item-input"
+                  type="radio"
+                  name="time"
+                  value="11:00 PM" />
+
+                <label
+                  class="form__datetime-item-label"
+                  for="time-12">
+                  11:00 PM
+                </label>
+              </li>
+
+              <li class="form__datetime-item">
+                <input
+                  id="time-13"
+                  class="form__datetime-item-input"
+                  type="radio"
+                  name="time"
+                  value="10:00 AM" />
+
+                <label
+                  class="form__datetime-item-label"
+                  for="time-13">
+                  10:00 AM
+                </label>
+              </li>
+
+              <li class="form__datetime-item">
+                <input
+                  id="time-14"
+                  class="form__datetime-item-input"
+                  type="radio"
+                  name="time"
+                  value="3:00 PM" />
+
+                <label
+                  class="form__datetime-item-label"
+                  for="time-14">
+                  3:00 PM
+                </label>
+              </li>
+
+              <li class="form__datetime-item">
+                <input
+                  id="time-15"
+                  class="form__datetime-item-input"
+                  type="radio"
+                  name="time"
+                  value="8:00 PM" />
+
+                <label
+                  class="form__datetime-item-label"
+                  for="time-15">
+                  8:00 PM
+                </label>
+              </li>
+
+              <li class="form__datetime-item">
+                <input
+                  id="time-16"
+                  class="form__datetime-item-input"
+                  type="radio"
+                  name="time"
+                  value="11:30 PM" />
+
+                <label
+                  class="form__datetime-item-label"
+                  for="time-16">
+                  11:30 PM
+                </label>
+              </li>
+
+              <li class="form__datetime-item">
+                <input
+                  id="time-17"
+                  class="form__datetime-item-input"
+                  type="radio"
+                  name="time"
+                  value="11:00 AM" />
+
+                <label
+                  class="form__datetime-item-label"
+                  for="time-17">
+                  11:00 AM
+                </label>
+              </li>
+
+              <li class="form__datetime-item">
+                <input
+                  id="time-18"
+                  class="form__datetime-item-input"
+                  type="radio"
+                  name="time"
+                  value="4:00 PM" />
+
+                <label
+                  class="form__datetime-item-label"
+                  for="time-18">
+                  4:00 PM
+                </label>
+              </li>
+
+              <li class="form__datetime-item">
+                <input
+                  id="time-19"
+                  class="form__datetime-item-input"
+                  type="radio"
+                  name="time"
+                  value="9:00 PM" />
+
+                <label
+                  class="form__datetime-item-label"
+                  for="time-19">
+                  9:00 PM
+                </label>
+              </li>
+
+              <li class="form__datetime-item">
+                <input
+                  id="time-20"
+                  class="form__datetime-item-input"
+                  type="radio"
+                  name="time"
+                  value="12:00 AM" />
+
+                <label
+                  class="form__datetime-item-label"
+                  for="time-20">
+                  12:00 AM
+                </label>
+              </li>
+            </ul>
           </div>
-
-          <div class="form__datetime-line"></div>
-
-          <!-- time-list -->
-          <ul class="form__datetime-list">
-            <li class="form__datetime-item">
-              <input
-                id="time-1"
-                class="form__datetime-item-input"
-                type="radio"
-                name="time"
-                value="7:00 AM" />
-
-              <label
-                class="form__datetime-item-label"
-                for="time-1">
-                7:00 AM
-              </label>
-            </li>
-
-            <li class="form__datetime-item">
-              <input
-                id="time-2"
-                class="form__datetime-item-input"
-                type="radio"
-                name="time"
-                value="12:00 PM" />
-
-              <label
-                class="form__datetime-item-label"
-                for="time-2">
-                12:00 PM
-              </label>
-            </li>
-
-            <li class="form__datetime-item">
-              <input
-                id="time-3"
-                class="form__datetime-item-input"
-                type="radio"
-                name="time"
-                value="5:00 PM" />
-
-              <label
-                class="form__datetime-item-label"
-                for="time-3">
-                5:00 PM
-              </label>
-            </li>
-
-            <li class="form__datetime-item">
-              <input
-                id="time-4"
-                class="form__datetime-item-input"
-                type="radio"
-                name="time"
-                value="10:00 PM" />
-
-              <label
-                class="form__datetime-item-label"
-                for="time-4">
-                10:00 PM
-              </label>
-            </li>
-
-            <li class="form__datetime-item">
-              <input
-                id="time-5"
-                class="form__datetime-item-input"
-                type="radio"
-                name="time"
-                value="8:00 AM" />
-
-              <label
-                class="form__datetime-item-label"
-                for="time-5">
-                8:00 AM
-              </label>
-            </li>
-
-            <li class="form__datetime-item">
-              <input
-                id="time-6"
-                class="form__datetime-item-input"
-                type="radio"
-                name="time"
-                value="1:00 PM"
-                checked />
-
-              <label
-                class="form__datetime-item-label"
-                for="time-6">
-                1:00 PM
-              </label>
-            </li>
-
-            <li class="form__datetime-item">
-              <input
-                id="time-7"
-                class="form__datetime-item-input"
-                type="radio"
-                name="time"
-                value="6:00 PM" />
-
-              <label
-                class="form__datetime-item-label"
-                for="time-7">
-                6:00 PM
-              </label>
-            </li>
-
-            <li class="form__datetime-item">
-              <input
-                id="time-8"
-                class="form__datetime-item-input"
-                type="radio"
-                name="time"
-                value="10:30 PM" />
-
-              <label
-                class="form__datetime-item-label"
-                for="time-8">
-                10:30 PM
-              </label>
-            </li>
-
-            <li class="form__datetime-item">
-              <input
-                id="time-9"
-                class="form__datetime-item-input"
-                type="radio"
-                name="time"
-                value="9:00 AM" />
-
-              <label
-                class="form__datetime-item-label"
-                for="time-9">
-                9:00 AM
-              </label>
-            </li>
-
-            <li class="form__datetime-item">
-              <input
-                id="time-10"
-                class="form__datetime-item-input"
-                type="radio"
-                name="time"
-                value="2:00 PM" />
-
-              <label
-                class="form__datetime-item-label"
-                for="time-10">
-                2:00 PM
-              </label>
-            </li>
-
-            <li class="form__datetime-item">
-              <input
-                id="time-11"
-                class="form__datetime-item-input"
-                type="radio"
-                name="time"
-                value="7:00 PM" />
-
-              <label
-                class="form__datetime-item-label"
-                for="time-11">
-                7:00 PM
-              </label>
-            </li>
-
-            <li class="form__datetime-item">
-              <input
-                id="time-12"
-                class="form__datetime-item-input"
-                type="radio"
-                name="time"
-                value="11:00 PM" />
-
-              <label
-                class="form__datetime-item-label"
-                for="time-12">
-                11:00 PM
-              </label>
-            </li>
-
-            <li class="form__datetime-item">
-              <input
-                id="time-13"
-                class="form__datetime-item-input"
-                type="radio"
-                name="time"
-                value="10:00 AM" />
-
-              <label
-                class="form__datetime-item-label"
-                for="time-13">
-                10:00 AM
-              </label>
-            </li>
-
-            <li class="form__datetime-item">
-              <input
-                id="time-14"
-                class="form__datetime-item-input"
-                type="radio"
-                name="time"
-                value="3:00 PM" />
-
-              <label
-                class="form__datetime-item-label"
-                for="time-14">
-                3:00 PM
-              </label>
-            </li>
-
-            <li class="form__datetime-item">
-              <input
-                id="time-15"
-                class="form__datetime-item-input"
-                type="radio"
-                name="time"
-                value="8:00 PM" />
-
-              <label
-                class="form__datetime-item-label"
-                for="time-15">
-                8:00 PM
-              </label>
-            </li>
-
-            <li class="form__datetime-item">
-              <input
-                id="time-16"
-                class="form__datetime-item-input"
-                type="radio"
-                name="time"
-                value="11:30 PM" />
-
-              <label
-                class="form__datetime-item-label"
-                for="time-16">
-                11:30 PM
-              </label>
-            </li>
-
-            <li class="form__datetime-item">
-              <input
-                id="time-17"
-                class="form__datetime-item-input"
-                type="radio"
-                name="time"
-                value="11:00 AM" />
-
-              <label
-                class="form__datetime-item-label"
-                for="time-17">
-                11:00 AM
-              </label>
-            </li>
-
-            <li class="form__datetime-item">
-              <input
-                id="time-18"
-                class="form__datetime-item-input"
-                type="radio"
-                name="time"
-                value="4:00 PM" />
-
-              <label
-                class="form__datetime-item-label"
-                for="time-18">
-                4:00 PM
-              </label>
-            </li>
-
-            <li class="form__datetime-item">
-              <input
-                id="time-19"
-                class="form__datetime-item-input"
-                type="radio"
-                name="time"
-                value="9:00 PM" />
-
-              <label
-                class="form__datetime-item-label"
-                for="time-19">
-                9:00 PM
-              </label>
-            </li>
-
-            <li class="form__datetime-item">
-              <input
-                id="time-20"
-                class="form__datetime-item-input"
-                type="radio"
-                name="time"
-                value="12:00 AM" />
-
-              <label
-                class="form__datetime-item-label"
-                for="time-20">
-                12:00 AM
-              </label>
-            </li>
-          </ul>
         </div>
+
+        <!-- limit participation to your region -->
+        <div class="form__limit-region">
+          <div class="form__limit-region-title-box">
+            <div class="form__limit-region-switch">
+              <input
+                id="switch"
+                class="form__limit-region-switch-input"
+                type="checkbox"
+                name="limit-region" />
+              <label
+                class="form__limit-region-switch-label"
+                for="switch">
+                <div></div>
+                <span>перемикач</span>
+              </label>
+            </div>
+            <h3 class="form__limit-region-title">Обмежити участь вашим регіоном</h3>
+          </div>
+          <p class="form__limit-region-description">
+            Так само реалізація намічених планових завдань спричиняє підготовки та реалізації
+            відповідної умов активізації. Не слід, але забувати, що консультація з широким активом
+          </p>
+        </div>
+      </div>
+      <div class="form__submit-box">
+        <button
+          type="submit"
+          class="form__submit-btn">
+          Опублікувати
+        </button>
       </div>
     </form>
   </div>
