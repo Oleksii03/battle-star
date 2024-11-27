@@ -167,10 +167,6 @@
               border-radius: 50%;
             }
 
-            // &:hover {
-            //   display: none;
-            // }
-
             & ~ label {
               color: $basic-yellow;
             }
@@ -179,6 +175,9 @@
 
         &:last-child {
           align-items: flex-end;
+          & > label {
+            transform: translateX(50%);
+          }
         }
       }
 
@@ -196,7 +195,7 @@
           top: 0;
           left: 0;
           height: 100%;
-          width: 2%;
+          width: 4%;
           background-color: $basic-yellow;
         }
       }
@@ -205,6 +204,7 @@
         width: 1px;
         height: 53px;
         background: #fac704;
+        margin-left: 20px;
       }
 
       &-btn {
@@ -555,7 +555,7 @@
   }
 }
 
-// -calendar
+// -calendar===========
 .flatpickr-calendar {
   border-radius: 4px !important;
   background: rgba(248, 248, 248, 0.1) !important;
