@@ -1,8 +1,8 @@
-import{a as _,h as k,o as b}from"../../assets/cabinet-CxHD5ZHW.js";import{h as f,c as v,b as h,s as y}from"../../assets/closeDropDownList-CK9utEua.js";import{f as x,h as D,g,i as T,c as L}from"../../assets/vendor-ZgN2xaTy.js";let l="",d="";function j(){const e=new Date,t=new Date;t.setDate(e.getDate()+3);function s(n){if(n.length===2){const a=n[0],c=n[1],r={year:"numeric",month:"2-digit",day:"2-digit"},o=new Intl.DateTimeFormat("uk-UA",r),i=o.format(a),m=o.format(c);S(i,m)}}x("#formDatetimeCalendar",{inline:!0,minDate:e,defaultDate:[e,t],dateFormat:"Y-m-d",mode:"range",monthSelectorType:"static",showMonths:1,locale:{...D.Ukrainian,months:{shorthand:["Січ","Лют","Бер","Кві","Тра","Чер","Лип","Сер","Вер","Жов","Лис","Гру"],longhand:["Січ","Лют","Бер","Кві","Тра","Чер","Лип","Сер","Вер","Жов","Лис","Гру"]}},onChange:function(n){s(n)}}),s([e,t])}function S(e,t){l=e,d=t}async function $(e){const t=g(_);try{const s=await T(L(t,"tournaments"),e);console.log("Документ записано з ID: ",s.id)}catch(s){k(s)}finally{location.reload()}}function w(e){const t=document.querySelector(".js-tournaments-backdrop"),s=document.querySelector(".js-cancel"),n=document.querySelector(".js-confirm");s==null||s.addEventListener("click",()=>{a(),location.reload()}),n==null||n.addEventListener("click",()=>{$(e),a()});function a(){t==null||t.classList.remove("tournaments-backdrop_active"),document.body.classList.remove("to-freeze")}}function E(e){const t=document.querySelector(".js-tournaments-backdrop-content"),{name:s,description:n,rank:a,teams:c,rate:r,regime:o,startTournament:i,endTournament:m,time:p,limitRegion:u}=e;t.innerHTML=`<ul class="tournaments-backdrop__content-list">
+import{a as b,h as f,o as v}from"../../assets/cabinet-CxHD5ZHW.js";import{h,c as x,b as y,s as D}from"../../assets/closeDropDownList-CK9utEua.js";import{f as g,h as L,g as T,i as j,c as S}from"../../assets/vendor-ZgN2xaTy.js";let p="",u="";function $(){const t=new Date,e=new Date;e.setDate(t.getDate()+3);function a(n){if(n.length===2){const o=n[0],c=n[1],r={year:"numeric",month:"2-digit",day:"2-digit"},s=new Intl.DateTimeFormat("uk-UA",r),i=s.format(o),m=s.format(c);w(i,m)}}g("#formDatetimeCalendar",{inline:!0,minDate:t,defaultDate:[t,e],dateFormat:"Y-m-d",mode:"range",monthSelectorType:"static",showMonths:1,locale:{...L.Ukrainian,months:{shorthand:["Січ","Лют","Бер","Кві","Тра","Чер","Лип","Сер","Вер","Жов","Лис","Гру"],longhand:["Січ","Лют","Бер","Кві","Тра","Чер","Лип","Сер","Вер","Жов","Лис","Гру"]}},onChange:function(n){a(n)}}),a([t,e])}function w(t,e){p=t,u=e}async function E(t){const e=T(b);try{const a=await j(S(e,"tournaments"),t);console.log("Документ записано з ID: ",a.id)}catch(a){f(a)}finally{location.reload()}}function q(t){const e=document.querySelector(".js-tournaments-backdrop"),a=document.querySelector(".js-cancel"),n=document.querySelector(".js-confirm");a==null||a.addEventListener("click",()=>{o(),location.reload()}),n==null||n.addEventListener("click",()=>{E(t),o()});function o(){e==null||e.classList.remove("tournaments-backdrop_active"),document.body.classList.remove("to-freeze")}}function F(t){const e=document.querySelector(".js-tournaments-backdrop-content"),{name:a,description:n,rank:o,teams:c,rate:r,regime:s,startTournament:i,endTournament:m,time:_,limitRegion:k}=t;e.innerHTML=`<ul class="tournaments-backdrop__content-list">
       <li class="tournaments-backdrop__content-item">
         <p class="tournaments-backdrop__content-item-text">Ваш турнір:</p>
         <div class="separator"></div>
-        <p class="tournaments-backdrop__content-item-text">${s}</p>
+        <p class="tournaments-backdrop__content-item-text">${a}</p>
       </li>
       <li class="tournaments-backdrop__content-item">
         <p class="tournaments-backdrop__content-item-text">Опис:</p>
@@ -12,7 +12,7 @@ import{a as _,h as k,o as b}from"../../assets/cabinet-CxHD5ZHW.js";import{h as f
       <li class="tournaments-backdrop__content-item">
         <p class="tournaments-backdrop__content-item-text">Ранг:</p>
           <div class="separator"></div>
-        <p class="tournaments-backdrop__content-item-text">${a} <span class="currency">BS</span></p>
+        <p class="tournaments-backdrop__content-item-text">${o} <span class="currency">BS</span></p>
       </li>
       <li class="tournaments-backdrop__content-item">
         <p class="tournaments-backdrop__content-item-text">Кількість команд:</p>
@@ -27,7 +27,7 @@ import{a as _,h as k,o as b}from"../../assets/cabinet-CxHD5ZHW.js";import{h as f
       <li class="tournaments-backdrop__content-item">
         <p class="tournaments-backdrop__content-item-text">Режим:</p>
           <div class="separator"></div>
-        <p class="tournaments-backdrop__content-item-text">${o}</p>
+        <p class="tournaments-backdrop__content-item-text">${s}</p>
       </li>
       <li class="tournaments-backdrop__content-item">
         <p class="tournaments-backdrop__content-item-text">Турнір починається:</p>
@@ -42,12 +42,12 @@ import{a as _,h as k,o as b}from"../../assets/cabinet-CxHD5ZHW.js";import{h as f
       <li class="tournaments-backdrop__content-item">
         <p class="tournaments-backdrop__content-item-text">Час початку:</p>
           <div class="separator"></div>
-        <p class="tournaments-backdrop__content-item-text">${p}</p>
+        <p class="tournaments-backdrop__content-item-text">${_}</p>
       </li>
       <li class="tournaments-backdrop__content-item">
         <p class="tournaments-backdrop__content-item-text">Обмежити участь вашим регіоном:</p>
           <div class="separator"></div>
-       ${u==="on"?'<p class="tournaments-backdrop__content-item-text">так</p>':'<p class="tournaments-backdrop__content-item-text">ні</p>'} 
+       ${k==="on"?'<p class="tournaments-backdrop__content-item-text">так</p>':'<p class="tournaments-backdrop__content-item-text">ні</p>'} 
       </li>
 
       <li class="tournaments-backdrop__content-item tournaments-backdrop__content-item_last">
@@ -63,5 +63,5 @@ import{a as _,h as k,o as b}from"../../assets/cabinet-CxHD5ZHW.js";import{h as f
         Скасувати
        </button>
      </li>
-    </ul>`,w(e)}function q(e){const t=document.querySelector(".js-tournaments-backdrop");t==null||t.classList.add("tournaments-backdrop_active"),document.body.classList.add("to-freeze"),setTimeout(()=>E(e),5e3)}function F(){const e=document.querySelector(".js-tournaments-form");e==null||e.addEventListener("submit",t);function t(s){var c,r;s.preventDefault();const n=s.target.elements,a={name:((c=n.namedItem("name"))==null?void 0:c.value)??"",description:((r=n.namedItem("description"))==null?void 0:r.value)??"",limitRegion:"of",rank:"",rate:"",regime:"",teams:"",time:"",startTournament:l??"",endTournament:d??""};[...n].forEach(o=>{o.checked&&(a[o.name]=o.value)}),q(a),e.reset()}}function C(){F()}function I(){const e=document.querySelector(".js-rank-track-list"),t=document.querySelector(".js-rank-track-tumb");e==null||e.addEventListener("click",s);function s(n){const a=n.target.closest("li");(a==null?void 0:a.tagName)==="LI"&&(a.classList.contains("js-rank-item-1")&&(t.style.width="4%"),a.classList.contains("js-rank-item-2")&&(t.style.width="27%"),a.classList.contains("js-rank-item-3")&&(t.style.width="50%"),a.classList.contains("js-rank-item-4")&&(t.style.width="73%"),a.classList.contains("js-rank-item-5")&&(t.style.width="100%"))}}function R(){C(),I()}document.addEventListener("DOMContentLoaded",()=>{f(),v(),b(),h(),y(),j(),R()});
+    </ul>`,q(t)}function C(t){const e=document.querySelector(".js-tournaments-backdrop");e==null||e.classList.add("tournaments-backdrop_active"),document.body.classList.add("to-freeze"),setTimeout(()=>F(t),5e3)}function I(){const t=document.querySelector(".js-tournaments-form");t==null||t.addEventListener("submit",e);function e(a){var c,r;a.preventDefault();const n=a.target.elements,o={name:((c=n.namedItem("name"))==null?void 0:c.value)??"",description:((r=n.namedItem("description"))==null?void 0:r.value)??"",limitRegion:"of",rank:"",rate:"",regime:"",teams:"",time:"",startTournament:p??"",endTournament:u??""};[...n].forEach(s=>{s.checked&&(o[s.name]=s.value)}),C(o),t.reset()}}function M(){I()}function l(t){const e=document.querySelectorAll(".js-rank-item-input"),a=R(t);A(a,e)}function R(t){return[...d.children].indexOf(t)}function A(t,e){e.forEach(a=>a.classList.remove("form__rank-item-input_active"));for(let a=0;a<t;a++)e[a].classList.add("form__rank-item-input_active")}const d=document.querySelector(".js-rank-track-list");function B(){const t=document.querySelector(".js-rank-track-tumb");d==null||d.addEventListener("click",e);function e(a){const n=a.target.closest("li");(n==null?void 0:n.tagName)==="LI"&&(n.classList.contains("js-rank-item-1")&&(t.style.width="4%"),n.classList.contains("js-rank-item-2")&&(t.style.width="27%",l(n)),n.classList.contains("js-rank-item-3")&&(t.style.width="50%",l(n)),n.classList.contains("js-rank-item-4")&&(t.style.width="73%",l(n)),n.classList.contains("js-rank-item-5")&&(t.style.width="100%",l(n)))}}function H(){M(),B()}document.addEventListener("DOMContentLoaded",()=>{h(),x(),v(),y(),D(),$(),H()});
 //# sourceMappingURL=tournaments.js.map
