@@ -1,7 +1,7 @@
 interface TournamentsForm {
   name: string;
   description: string;
-  'limit-region': string;
+  limitRegion: string;
   rank: string;
   rate: string;
   regime: string;

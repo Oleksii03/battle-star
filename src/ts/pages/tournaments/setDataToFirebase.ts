@@ -10,5 +10,7 @@ export async function setDataToFirebase(formObj: any) {
     console.log('Документ записано з ID: ', docRef.id);
   } catch (e) {
     handleError(e);
+  } finally {
+    location.reload();
   }
 }

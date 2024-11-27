@@ -1,9 +1,9 @@
 import { TournamentsForm } from '@/ts/types/pages/tournaments';
 import { startTournamentDate, endTournamentDate } from '@/ts/components/createCalendar';
-import { setDataToFirebase } from './setDataToFirebase';
+import { openTournamentsBackdrop } from './openTournamentsBackdrop';
 
 export function getFormData() {
-  const form = document.querySelector('.js-tournaments-form');
+  const form = document.querySelector('.js-tournaments-form') as HTMLFormElement;
 
   form?.addEventListener('submit', handleForm);
 
@@ -14,7 +14,7 @@ export function getFormData() {
     const formValues: TournamentsForm = {
       name: (inputs.namedItem('name') as HTMLInputElement)?.value ?? '',
       description: (inputs.namedItem('description') as HTMLInputElement)?.value ?? '',
-      'limit-region': 'of',
+      limitRegion: 'of',
       rank: '',
       rate: '',
       regime: '',
@@ -32,6 +32,7 @@ export function getFormData() {
       }
     });
 
-    setDataToFirebase(formValues);
+    openTournamentsBackdrop(formValues);
+    form.reset();
   }
 }

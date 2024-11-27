@@ -6,6 +6,10 @@ let startTournamentDate = '';
 let endTournamentDate = '';
 
 export function createCalendar() {
+  const today = new Date();
+  const threeDaysLater = new Date();
+  threeDaysLater.setDate(today.getDate() + 3);
+
   flatpickr('#formDatetimeCalendar', {
     inline: true,
     dateFormat: 'Y-m-d',
