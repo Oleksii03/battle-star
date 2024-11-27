@@ -47,8 +47,19 @@
         font-size: 18px;
         outline: none;
 
+        &:-webkit-autofill {
+          -webkit-box-shadow: 0 0 0px 1000px #272626 inset;
+          box-shadow: 0 0 0px 1000px #272626 inset;
+          -webkit-text-fill-color: $light-text;
+          caret-color: $light-text;
+        }
+
         &:focus {
-          border: 1px solid $basic-yellow;
+          border: 1px solid red;
+
+          &:valid {
+            border-color: $basic-yellow;
+          }
         }
       }
 
@@ -113,7 +124,6 @@
 
       &-item {
         @include flex-align-column;
-        row-gap: 6px;
 
         & > label {
           cursor: pointer;
@@ -121,6 +131,7 @@
           font-size: 20px;
           line-height: normal;
           order: 1;
+          padding-bottom: 6px;
         }
 
         &-input {
@@ -136,19 +147,6 @@
           &_active {
             background-color: $basic-yellow;
           }
-
-          // &::before {
-          //   content: '';
-          //   position: absolute;
-          //   top: 50%;
-          //   left: 50%;
-          //   transform: translate(-50%, -50%);
-          //   width: 10px;
-          //   height: 10px;
-          //   background-color: $basic-yellow;
-          //   z-index: 1;
-          //   border-radius: 50%;
-          // }
 
           &:checked {
             position: relative;
@@ -203,7 +201,7 @@
       &-line {
         width: 1px;
         height: 53px;
-        background: #fac704;
+        background: $basic-yellow;
         margin-left: 20px;
       }
 
