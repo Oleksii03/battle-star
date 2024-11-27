@@ -10,8 +10,23 @@ export function createCalendar() {
   const threeDaysLater = new Date();
   threeDaysLater.setDate(today.getDate() + 3);
 
-  flatpickr('#formDatetimeCalendar', {
+  function updateDates(selectedDates: Date[]) {
+    if (selectedDates.length === 2) {
+      const startDate = selectedDates[0];
+      const endDate = selectedDates[1];
+      const options: any = { year: 'numeric', month: '2-digit', day: '2-digit' };
+      const formatter = new Intl.DateTimeFormat('uk-UA', options);
+      const formattedStartDate = formatter.format(startDate);
+      const formattedEndDate = formatter.format(endDate);
+
+      updateFormDates(formattedStartDate, formattedEndDate);
+    }
+  }
+
+  const calendar = flatpickr('#formDatetimeCalendar', {
     inline: true,
+    minDate: today,
+    defaultDate: [today, threeDaysLater],
     dateFormat: 'Y-m-d',
     mode: 'range',
     monthSelectorType: 'static',
@@ -49,20 +64,12 @@ export function createCalendar() {
         ],
       },
     },
-
-    onChange: function (selectedDates, dateStr, instance) {
-      if (selectedDates.length === 2) {
-        const startDate = selectedDates[0];
-        const endDate = selectedDates[1];
-        const options: any = { year: 'numeric', month: '2-digit', day: '2-digit' };
-        const formatter = new Intl.DateTimeFormat('uk-UA', options);
-        const formattedStartDate = formatter.format(startDate);
-        const formattedEndDate = formatter.format(endDate);
-
-        updateFormDates(formattedStartDate, formattedEndDate);
-      }
+    onChange: function (selectedDates) {
+      updateDates(selectedDates);
     },
   });
+
+  updateDates([today, threeDaysLater]);
 }
 
 function updateFormDates(startDate: string, endDate: string) {

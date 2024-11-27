@@ -1,6 +1,7 @@
 import { closeTournamentsBackdrop } from './closeTournamentsBackdrop';
+import { TournamentsForm } from '@/ts/types/pages/tournaments';
 
-export function backdropListMarkup(formObj) {
+export function backdropListMarkup(formObj: TournamentsForm) {
   const content = document.querySelector('.js-tournaments-backdrop-content') as HTMLDivElement;
   const {
     name,
