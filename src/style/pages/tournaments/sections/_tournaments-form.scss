@@ -123,6 +123,7 @@
       }
 
       &-item {
+        position: relative;
         @include flex-align-column;
 
         & > label {
@@ -132,6 +133,27 @@
           line-height: normal;
           order: 1;
           padding-bottom: 6px;
+        }
+
+        & > .toolkit {
+          position: absolute;
+          top: -47px;
+          left: 50%;
+          transform: translateX(-50%);
+          @include flex-align-row;
+          column-gap: 5px;
+          padding: 11px 17px;
+          border-radius: 4px;
+          background: rgba(191, 191, 191, 0.1);
+          backdrop-filter: blur(10px);
+          font-size: 14px;
+          font-family: $font-secondary;
+          font-weight: 400;
+          line-height: normal;
+          transition: all 200ms linear;
+          visibility: hidden;
+          opacity: 0;
+          pointer-events: none;
         }
 
         &-input {
@@ -167,6 +189,14 @@
 
             & ~ label {
               color: $basic-yellow;
+
+              &:hover {
+                & ~ .toolkit {
+                  visibility: visible;
+                  opacity: 1;
+                  pointer-events: auto;
+                }
+              }
             }
           }
         }
