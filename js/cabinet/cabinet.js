@@ -309,7 +309,7 @@ import{h,o as v}from"../../assets/cabinet-CxHD5ZHW.js";import{H as $,a as F,l as
               </div>
             </div>
           </div>
-        </div>`}function O(t,s,i){const c=document.querySelector(".js-cabinet-statistics-thumb"),e=s.querySelector(".js-statistics-btn-csgo"),a=s.querySelector(".js-statistics-btn-dota");switch(t.innerHTML=g(),s.addEventListener("click",l=>{const o=l.target;if(o.tagName==="BUTTON"){if([...s.children].forEach(n=>n.classList.remove("cabinet-statistics__btn_active")),o.classList.contains("js-statistics-btn-csgo")){t.innerHTML=f(),i.dataset.hash="statistics-csgo";const n=i.dataset.hash;n&&(location.hash=n),localStorage.setItem("statistics",n),c==null||c.classList.add("cabinet-statistics__btns-thumb_active"),o.classList.add("cabinet-statistics__btn_active");return}if(o.classList.contains("js-statistics-btn-dota")){t.innerHTML=g(),i.dataset.hash="statistics-dota";const n=i.dataset.hash;n&&(location.hash=n),localStorage.setItem("statistics",n),c==null||c.classList.remove("cabinet-statistics__btns-thumb_active"),o.classList.add("cabinet-statistics__btn_active");return}}}),i.dataset.hash){case"statistics-csgo":t.innerHTML=f(),c==null||c.classList.add("cabinet-statistics__btns-thumb_active"),e==null||e.classList.add("cabinet-statistics__btn_active");break;case"statistics-dota":t.innerHTML=g(),c==null||c.classList.remove("cabinet-statistics__btns-thumb_active"),a==null||a.classList.add("cabinet-statistics__btn_active");break}}function D(t,s){const i=`
+        </div>`}function O(t,s,i){const c=document.querySelector(".js-cabinet-statistics-thumb"),e=s.querySelector(".js-statistics-btn-csgo"),a=s.querySelector(".js-statistics-btn-dota");switch(t.innerHTML=g(),s.addEventListener("click",l=>{const o=l.target;if(o.tagName==="BUTTON"){if([...s.children].forEach(n=>n.classList.remove("cabinet-statistics__btn_active")),o.classList.contains("js-statistics-btn-csgo")){t.innerHTML=f(),i.dataset.hash="statistics-csgo";const n=i.dataset.hash;n&&(location.hash=n),localStorage.setItem("statistics",n),c==null||c.classList.add("cabinet-statistics__btns-thumb_active"),o.classList.add("cabinet-statistics__btn_active");return}if(o.classList.contains("js-statistics-btn-dota")){t.innerHTML=g(),i.dataset.hash="statistics-dota";const n=i.dataset.hash;n&&(location.hash=n),localStorage.setItem("statistics",n),c==null||c.classList.remove("cabinet-statistics__btns-thumb_active"),o.classList.add("cabinet-statistics__btn_active");return}}}),i.dataset.hash){case"statistics-csgo":t.innerHTML=f(),c==null||c.classList.add("cabinet-statistics__btns-thumb_active"),e==null||e.classList.add("cabinet-statistics__btn_active"),a==null||a.classList.remove("cabinet-statistics__btn_active");break;case"statistics-dota":t.innerHTML=g(),c==null||c.classList.remove("cabinet-statistics__btns-thumb_active"),a==null||a.classList.add("cabinet-statistics__btn_active");break}}function D(t,s){const i=`
         <div class="cabinet-statistics">
           <div class="cabinet-statistics__btns">
             <div class="cabinet-statistics__btns-box js-statistics-btns-box">
@@ -337,14 +337,14 @@ import{h,o as v}from"../../assets/cabinet-CxHD5ZHW.js";import{H as $,a as F,l as
           </div>
 
           <div class="cabinet-statistics__content js-cabinet-statistics-content">
-       </div>`;t.innerHTML=i;const c=document.querySelector(".js-cabinet-statistics-content"),e=document.querySelector(".js-statistics-btns-box");O(c,e,s)}function b(t,s){D(t,s);const i=s.dataset.hash;i&&(location.hash=i)}function d(t){const s=document.querySelector(".js-cabinet-history-list"),i=t.map(c=>{const{id:e,isVictory:a,score:l,title:o,objDate:{date:n,time:r},objID:{id:_,title:m},objRegime:{regime:p,title:M}}=c;return`
+       </div>`;t.innerHTML=i;const c=document.querySelector(".js-cabinet-statistics-content"),e=document.querySelector(".js-statistics-btns-box");O(c,e,s)}function b(t,s){D(t,s);const i=s.dataset.hash;i&&(location.hash=i)}function d(t){const s=document.querySelector(".js-cabinet-history-list"),i=t.map(c=>{const{id:e,isVictory:a,score:l,title:o,objDate:{date:n,time:_},objID:{id:r,title:m},objRegime:{regime:p,title:M}}=c;return`
             <li class="cabinet-history__list-item" data-id="${e}">
               <p class="cabinet-history__list-item-title">${o}</p>
 
               <div class="medium-content">
                 <div class="cabinet-history__list-item-date-box">
                   <p class="cabinet-history__list-item-date-title">${n}</p>
-                  <p class="cabinet-history__list-item-time">${r}</p>
+                  <p class="cabinet-history__list-item-time">${_}</p>
                 </div>
 
                 <div class="cabinet-history__list-item-regime-box">
@@ -354,7 +354,7 @@ import{h,o as v}from"../../assets/cabinet-CxHD5ZHW.js";import{H as $,a as F,l as
 
                 <div class="cabinet-history__list-item-id-box">
                   <p class="cabinet-history__list-item-id-title">${m}</p>
-                  <p class="cabinet-history__list-item-id">${_}</p>
+                  <p class="cabinet-history__list-item-id">${r}</p>
                 </div>
               </div>
 
@@ -367,7 +367,7 @@ import{h,o as v}from"../../assets/cabinet-CxHD5ZHW.js";import{H as $,a as F,l as
                   <span class="currency">BS</span>
                 </p>
               </div>
-            </li>`});s.innerHTML=i.join("")}function R(t){const s=document.querySelector(".js-drop-down-item-title-box"),i=document.querySelector(".js-drop-down-inner-list"),c=document.querySelector(".js-drop-down-active-title"),e=document.querySelector(".js-drop-down-icon");s==null||s.addEventListener("click",a);function a(){i==null||i.classList.toggle("cabinet-history__drop-down-inner-list_active"),e==null||e.classList.toggle("cabinet-history__drop-down-item-icon_active")}i==null||i.addEventListener("click",l);function l(n){const _=n.target.textContent;_&&(c.textContent=_,a(),o(_.toLowerCase()))}function o(n){if(n!=null&&n.includes("рейтинг")){const _=t.toSorted((m,p)=>p.sortScore-m.sortScore);d(_);return}const r=t.filter(({title:_})=>_.toLowerCase()===n);if(r.length){d(r);return}d(t)}}function B(t){const s=`
+            </li>`});s.innerHTML=i.join("")}function R(t){const s=document.querySelector(".js-drop-down-item-title-box"),i=document.querySelector(".js-drop-down-inner-list"),c=document.querySelector(".js-drop-down-active-title"),e=document.querySelector(".js-drop-down-icon");s==null||s.addEventListener("click",a);function a(){i==null||i.classList.toggle("cabinet-history__drop-down-inner-list_active"),e==null||e.classList.toggle("cabinet-history__drop-down-item-icon_active")}i==null||i.addEventListener("click",l);function l(n){const r=n.target.textContent;r&&(c.textContent=r,a(),o(r.toLowerCase()))}function o(n){if(n!=null&&n.includes("рейтинг")){const r=t.toSorted((m,p)=>p.sortScore-m.sortScore);d(r);return}const _=t.filter(({title:r})=>r.toLowerCase()===n);if(_.length){d(_);return}d(t)}}function B(t){const s=`
        <div class="cabinet__history cabinet-history">
           <div class="cabinet-history__title-box">
             <h3 class="cabinet-history__title">Історія матчів</h3>
@@ -521,9 +521,9 @@ import{h,o as v}from"../../assets/cabinet-CxHD5ZHW.js";import{H as $,a as F,l as
               </li>
             </ul>
           </div>
-        </div>`}function L(t,s){t.innerHTML=z();const i=s.dataset.hash;i&&(location.hash=i)}function U(t,s){const i=t.map(({id:c,isVictory:e,objDate:a,objID:l,objRegime:o,score:n,title:r})=>`
+        </div>`}function L(t,s){t.innerHTML=z();const i=s.dataset.hash;i&&(location.hash=i)}function U(t,s){const i=t.map(({id:c,isVictory:e,objDate:a,objID:l,objRegime:o,score:n,title:_})=>`
         <li class="cabinet-history__list-item" data-id="${c}">
-        ${r.toLowerCase().includes("переказ")?`
+        ${_.toLowerCase().includes("переказ")?`
                 <div
                   class="cabinet-wallet__list-item-title-box cabinet-wallet__list-item-title-box_translation">
                   <div class="cabinet-wallet__list-item-title-svg-box svg-box-translation">
@@ -543,7 +543,7 @@ import{h,o as v}from"../../assets/cabinet-CxHD5ZHW.js";import{H as $,a as F,l as
                   </div>
 
                   <p class="cabinet-history__list-item-title">Переказ коштів</p>
-              </div>`:r.toLowerCase().includes("виведення")?`
+              </div>`:_.toLowerCase().includes("виведення")?`
                 <div
                   class="cabinet-wallet__list-item-title-box cabinet-wallet__list-item-title-box_withdrawal">
                   <div class="cabinet-wallet__list-item-title-svg-box svg-box-withdrawal">
@@ -563,7 +563,7 @@ import{h,o as v}from"../../assets/cabinet-CxHD5ZHW.js";import{H as $,a as F,l as
                   </div>
                   <p class="cabinet-history__list-item-title">Виведення коштів</p>
                 </div>
-                `:`<p class="cabinet-history__list-item-title">${r}</p>`}
+                `:`<p class="cabinet-history__list-item-title">${_}</p>`}
 
                 <div class="cabinet-wallet__medium-content">
                   <div class="cabinet-history__list-item-date-box">
@@ -578,13 +578,13 @@ import{h,o as v}from"../../assets/cabinet-CxHD5ZHW.js";import{H as $,a as F,l as
 
                   <div class="cabinet-history__list-item-id-box cabinet-wallet__list-item-id-box">
                     <p class="cabinet-history__list-item-id-title">${l.title}</p>
-                    <p class="${r.toLowerCase().includes("переказ")?"cabinet-wallet__list-item-id_transfer":r.toLowerCase().includes("виведення")?"cabinet-wallet__list-item-id_withdrawal":"cabinet-history__list-item-id"}">${l.id}</p>
+                    <p class="${_.toLowerCase().includes("переказ")?"cabinet-wallet__list-item-id_transfer":_.toLowerCase().includes("виведення")?"cabinet-wallet__list-item-id_withdrawal":"cabinet-history__list-item-id"}">${l.id}</p>
                   </div>
                 </div>
 
                  <div class="cabinet-history__list-item-result">
                 
-                ${e?'<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_victory">Перемога</p>':`${r.toLowerCase().includes("коштів")?'<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_loss"></p>':'<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_loss">Програш</p>'}`}
+                ${e?'<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_victory">Перемога</p>':`${_.toLowerCase().includes("коштів")?'<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_loss"></p>':'<p class="cabinet-history__list-item-result-title cabinet-history__list-item-result-title_loss">Програш</p>'}`}
                 <p class="cabinet-history__list-item-result-score js-result-score">
                   <span class="symbol">${e?"+ ":"- "}</span>
                   <span class="amount">${n}</span>
@@ -1042,5 +1042,5 @@ import{h,o as v}from"../../assets/cabinet-CxHD5ZHW.js";import{H as $,a as F,l as
               </div>
             </div>
           </div>
-        </div>`;t.innerHTML=s,u(q).then(J).catch(h)}function T(t,s){Z(t);const i=s.dataset.hash;i&&(location.hash=i)}function Q(t,s){const i=s.querySelector(".js-statistics"),c=localStorage.getItem("statistics");i.dataset.hash=c??"";let e=location.hash.slice(1)?location.hash.slice(1):"statistics-dota";const a=document.querySelector(`[data-hash="${e}"]`);switch(k(a,s),e){case"statistics-dota":b(t,a);break;case"statistics-csgo":b(t,a);break;case"history":x(t,a);break;case"personal-data":L(t,a);break;case"wallet":j(t,a);break;case"setting":S(t,a);break;case"block-list":T(t,a);break;default:b(t,a);break}}function tt(){const t=document.querySelector(".js-cabinet-nav-list"),s=document.querySelector(".js-cabinet-main-body");t==null||t.addEventListener("click",i);function i(c){const e=c.target.closest("li");e&&(k(e,t),e.classList.contains("js-statistics")&&b(s,e),e.classList.contains("js-history")&&x(s,e),e.classList.contains("js-personal-data")&&L(s,e),e.classList.contains("js-wallet")&&j(s,e),e.classList.contains("js-setting")&&S(s,e),e.classList.contains("js-block-list")&&T(s,e))}Q(s,t)}function st(){const t=localStorage.getItem("logged");(t==="false"||t===null)&&(window.location.href="404")}document.addEventListener("DOMContentLoaded",()=>{E(),H(),A(),v(),v(),I(),tt(),st(),C()});
+        </div>`;t.innerHTML=s,u(q).then(J).catch(h)}function T(t,s){Z(t);const i=s.dataset.hash;i&&(location.hash=i)}function Q(t,s){const i=s.querySelector(".js-statistics"),c=localStorage.getItem("statistics")??"statistics-dota";i.dataset.hash=c;let e=location.hash.slice(1)?location.hash.slice(1):c;const a=document.querySelector(`[data-hash="${e}"]`);switch(k(a,s),e){case"statistics-dota":b(t,a);break;case"statistics-csgo":b(t,a);break;case"history":x(t,a);break;case"personal-data":L(t,a);break;case"wallet":j(t,a);break;case"setting":S(t,a);break;case"block-list":T(t,a);break;default:b(t,a);break}}function tt(){const t=document.querySelector(".js-cabinet-nav-list"),s=document.querySelector(".js-cabinet-main-body");t==null||t.addEventListener("click",i);function i(c){const e=c.target.closest("li");e&&(k(e,t),e.classList.contains("js-statistics")&&b(s,e),e.classList.contains("js-history")&&x(s,e),e.classList.contains("js-personal-data")&&L(s,e),e.classList.contains("js-wallet")&&j(s,e),e.classList.contains("js-setting")&&S(s,e),e.classList.contains("js-block-list")&&T(s,e))}Q(s,t)}function st(){const t=localStorage.getItem("logged");(t==="false"||t===null)&&(window.location.href="404")}document.addEventListener("DOMContentLoaded",()=>{E(),H(),A(),v(),v(),I(),tt(),st(),C()});
 //# sourceMappingURL=cabinet.js.map
