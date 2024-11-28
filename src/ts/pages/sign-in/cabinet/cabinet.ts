@@ -9,27 +9,19 @@ export function onStateUserChanged(): void {
   const pageError = document.querySelector('.js-page-error');
   const cabinet = document.querySelector('.js-cabinet');
   const headerUserList = document.querySelector('.js-header-user-list') as HTMLUListElement;
+
   // ---/local refs --------------------------------
 
   onAuthStateChanged(auth, user => {
     if (user) {
+      localStorage.setItem('user', JSON.stringify(user));
       itemCabinet?.classList.add('header__user-inner-item_active');
       btnEnter?.classList.add('sidebar__nav-item_disabled');
       btnExid?.classList.remove('sidebar__nav-item_hidden');
       cabinet?.classList.add('cabinet_visible');
       if (headerUserList) headerUserList.style.display = 'block';
 
-      // Отримання інформації про користувача
-      // const uid = user.uid;
-      // const email = user.email;
-      // document.body.classList.remove('to-freeze');
-
       const displayName = user.displayName;
-      // const displayName = 'Sergio Richterf';
-
-      // console.log('User ID:', uid);
-      // console.log('User Email:', email);
-      // console.log('User Display Name:', displayName);
 
       if (activeUser) {
         if (displayName && displayName.length > 14) {
@@ -41,11 +33,6 @@ export function onStateUserChanged(): void {
       return;
     }
 
-    // if (!user) {
-    //   window.location.href = '/';
-    //   return;
-    // }
-    // console.log('No user is signed in.');
     itemCabinet?.classList.remove('header__user-inner-item_active');
     btnEnter?.classList.remove('sidebar__nav-item_disabled');
     btnExid?.classList.add('sidebar__nav-item_hidden');

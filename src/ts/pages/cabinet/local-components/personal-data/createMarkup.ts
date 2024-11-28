@@ -1,4 +1,6 @@
 export function createMarkup(): string {
+  const { displayName, email } = JSON.parse(localStorage.getItem('user') ?? '');
+  console.log(displayName, email);
   return `
         <div class="cabinet-personal-data">
           <div class="cabinet-personal-data__info">
@@ -26,7 +28,7 @@ export function createMarkup(): string {
                   <p class="cabinet-personal-data__info-body-item-title">Нікнейм</p>
                   <p
                     class="cabinet-personal-data__info-body-item-text cabinet-personal-data__info-body-item-text_nick">
-                    <span class="js-cabinet-personal-data-nick">MAX Richter</span>
+                    <span class="js-cabinet-personal-data-nick">${displayName}</span>
                   </p>
                 </li>
 
@@ -81,7 +83,7 @@ export function createMarkup(): string {
             <div class="cabinet-personal-data__mail-body">
               <p class="cabinet-personal-data__mail-body-title">Електронна пошта</p>
               <p class="cabinet-personal-data__mail-body-text">
-                <span>Example@mail.com</span>
+                <span>${email}</span>
                 <svg
                   width="24"
                   height="24">
