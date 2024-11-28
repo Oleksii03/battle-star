@@ -1,6 +1,6 @@
 import { handlerMainBodyMarkup } from './handlerMainBodyMarkup';
 
-export function createMarkup(container: HTMLElement) {
+export function createMarkup(container: HTMLElement, targetEl: HTMLLIElement) {
   const markup = `
         <div class="cabinet-statistics">
           <div class="cabinet-statistics__btns">
@@ -41,5 +41,5 @@ export function createMarkup(container: HTMLElement) {
   // --/-refs---
 
   // handler-Main-Body-Markup
-  handlerMainBodyMarkup(contentContainer, btnsBox);
+  handlerMainBodyMarkup(contentContainer, btnsBox, targetEl);
 }
