@@ -7,6 +7,8 @@ export function handlerMainBodyMarkup(
   targetEl: HTMLLIElement
 ) {
   const thumb = document.querySelector('.js-cabinet-statistics-thumb');
+  const btnCsgo = btnsBox.querySelector('.js-statistics-btn-csgo');
+  const btnDota = btnsBox.querySelector('.js-statistics-btn-dota');
   // ---/-refs--------
 
   // default-markup-handler
@@ -47,4 +49,18 @@ export function handlerMainBodyMarkup(
       return;
     }
   });
+
+  switch (targetEl.dataset.hash) {
+    case 'statistics-csgo':
+      contentContainer.innerHTML = createMainBodyMarkupCsgo();
+      thumb?.classList.add('cabinet-statistics__btns-thumb_active');
+      btnCsgo?.classList.add('cabinet-statistics__btn_active');
+      break;
+
+    case 'statistics-dota':
+      contentContainer.innerHTML = createMainBodyMarkupDota();
+      thumb?.classList.remove('cabinet-statistics__btns-thumb_active');
+      btnDota?.classList.add('cabinet-statistics__btn_active');
+      break;
+  }
 }

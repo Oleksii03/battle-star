@@ -5,15 +5,12 @@ import { personalData } from '../personal-data/personalData';
 import { handlerWallet } from '../wallet/wallet';
 import { handlerSettings } from '../cabinet-settings/settings';
 import { handlerBlockList } from '../block-list/blockList';
-import { createMainBodyMarkupCsgo } from '../statistics/createMainBodyMarkupCsgo';
+// import { createMainBodyMarkupCsgo } from '../statistics/createMainBodyMarkupCsgo';
 
 export function handlerUniqueUrl(
   cabinetMainContainer: HTMLElement,
   navigationList: HTMLUListElement
 ) {
-  const contentContainer = document.querySelector(
-    '.js-cabinet-statistics-content'
-  ) as HTMLDivElement;
   const statistics = navigationList.querySelector('.js-statistics') as HTMLLIElement;
   const saveHash = localStorage.getItem('statistics');
   statistics.dataset.hash = saveHash ?? '';
@@ -29,9 +26,7 @@ export function handlerUniqueUrl(
       break;
 
     case 'statistics-csgo':
-      // contentContainer.innerHTML = createMainBodyMarkupCsgo();
-      console.log(contentContainer);
-      console.log('csgo');
+      statisticHandler(cabinetMainContainer, targetEl);
       break;
 
     case 'history':
