@@ -14,7 +14,13 @@ export function onStateUserChanged(): void {
 
   onAuthStateChanged(auth, user => {
     if (user) {
-      localStorage.setItem('user', JSON.stringify(user));
+      localStorage.setItem(
+        'user',
+        JSON.stringify({
+          ...user,
+          dateRegistration: user.metadata.creationTime,
+        })
+      );
       itemCabinet?.classList.add('header__user-inner-item_active');
       btnEnter?.classList.add('sidebar__nav-item_disabled');
       btnExid?.classList.remove('sidebar__nav-item_hidden');

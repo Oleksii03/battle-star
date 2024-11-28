@@ -1,6 +1,8 @@
+import { formatDate } from '@/ts/components/formatDate';
+
 export function createMarkup(): string {
-  const { displayName, email } = JSON.parse(localStorage.getItem('user') ?? '');
-  console.log(displayName, email);
+  const user = JSON.parse(localStorage.getItem('user') ?? '');
+  const formattedDate = formatDate(user.dateRegistration);
   return `
         <div class="cabinet-personal-data">
           <div class="cabinet-personal-data__info">
@@ -28,7 +30,7 @@ export function createMarkup(): string {
                   <p class="cabinet-personal-data__info-body-item-title">Нікнейм</p>
                   <p
                     class="cabinet-personal-data__info-body-item-text cabinet-personal-data__info-body-item-text_nick">
-                    <span class="js-cabinet-personal-data-nick">${displayName}</span>
+                    <span class="js-cabinet-personal-data-nick">${user.displayName}</span>
                   </p>
                 </li>
 
@@ -44,7 +46,7 @@ export function createMarkup(): string {
 
                 <li class="cabinet-personal-data__info-body-item">
                   <p class="cabinet-personal-data__info-body-item-title">Дата регистрации</p>
-                  <p class="cabinet-personal-data__info-body-item-text">16.05.2021</p>
+                  <p class="cabinet-personal-data__info-body-item-text">${formattedDate}</p>
                 </li>
               </ul>
 
@@ -83,7 +85,7 @@ export function createMarkup(): string {
             <div class="cabinet-personal-data__mail-body">
               <p class="cabinet-personal-data__mail-body-title">Електронна пошта</p>
               <p class="cabinet-personal-data__mail-body-text">
-                <span>${email}</span>
+                <span>${user.email}</span>
                 <svg
                   width="24"
                   height="24">
