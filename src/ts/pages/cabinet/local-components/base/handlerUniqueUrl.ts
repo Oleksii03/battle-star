@@ -5,17 +5,16 @@ import { personalData } from '../personal-data/personalData';
 import { handlerWallet } from '../wallet/wallet';
 import { handlerSettings } from '../cabinet-settings/settings';
 import { handlerBlockList } from '../block-list/blockList';
-// import { createMainBodyMarkupCsgo } from '../statistics/createMainBodyMarkupCsgo';
 
 export function handlerUniqueUrl(
   cabinetMainContainer: HTMLElement,
   navigationList: HTMLUListElement
 ) {
   const statistics = navigationList.querySelector('.js-statistics') as HTMLLIElement;
-  const saveHash = localStorage.getItem('statistics');
-  statistics.dataset.hash = saveHash ?? '';
+  const saveHash = localStorage.getItem('statistics') ?? 'statistics-dota';
+  statistics.dataset.hash = saveHash;
 
-  let tab = location.hash.slice(1) ? location.hash.slice(1) : 'statistics-dota';
+  let tab = location.hash.slice(1) ? location.hash.slice(1) : saveHash;
   const targetEl = document.querySelector(`[data-hash="${tab}"]`) as HTMLLIElement;
 
   setActiveListItem(targetEl, navigationList);

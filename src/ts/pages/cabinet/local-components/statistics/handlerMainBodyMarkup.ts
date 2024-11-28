@@ -55,6 +55,7 @@ export function handlerMainBodyMarkup(
       contentContainer.innerHTML = createMainBodyMarkupCsgo();
       thumb?.classList.add('cabinet-statistics__btns-thumb_active');
       btnCsgo?.classList.add('cabinet-statistics__btn_active');
+      btnDota?.classList.remove('cabinet-statistics__btn_active');
       break;
 
     case 'statistics-dota':
