@@ -1,4 +1,4 @@
-import{h,o as v}from"../../assets/cabinet-Dwn9lRut.js";import{H as M,a as F,l as y,B as q,s as E,h as H,b as I,c as C}from"../../assets/closeDropDownList-DAy9BuXW.js";import{s as D}from"../../assets/loginOrRegistrationHandler-BludQ0EM.js";import{g as u}from"../../assets/getDataFromFirestore-D3BpnMxQ.js";import{g as R,a as O,r as A,u as U,b as B,d as N,s as z}from"../../assets/vendor-OwqoIaUp.js";function k(t,s){const i=document.querySelector(".js-cabinet-nav-thumb"),c=[...s.children],e=c.indexOf(t);i.style.top=`${16.66*e}%`,c.forEach(l=>{l.classList.remove("cabinet__nav-item_active")}),t.classList.add("cabinet__nav-item_active");const a=16.66*(c.length-1);16.66*e>=a?i.classList.add("dangerous"):i.classList.remove("dangerous")}function g(){return`
+import{h,o as v}from"../../assets/cabinet-Dwn9lRut.js";import{H as M,a as q,l as y,B as I,s as F,h as E,b as H,c as C}from"../../assets/closeDropDownList-DAy9BuXW.js";import{s as D}from"../../assets/loginOrRegistrationHandler-BludQ0EM.js";import{g as u}from"../../assets/getDataFromFirestore-D3BpnMxQ.js";import{g as R,a as O,r as A,u as U,b as B,d as N,s as z}from"../../assets/vendor-OwqoIaUp.js";function k(t,s){const i=document.querySelector(".js-cabinet-nav-thumb"),c=[...s.children],e=c.indexOf(t);i.style.top=`${16.66*e}%`,c.forEach(l=>{l.classList.remove("cabinet__nav-item_active")}),t.classList.add("cabinet__nav-item_active");const a=16.66*(c.length-1);16.66*e>=a?i.classList.add("dangerous"):i.classList.remove("dangerous")}function g(){return`
           <div class="cabinet-statistics__rank">
             <p class="cabinet-statistics__rank-title">
               Ранг:
@@ -411,7 +411,7 @@ import{h,o as v}from"../../assets/cabinet-Dwn9lRut.js";import{H as M,a as F,l as
           </div>
 
           <ul class="cabinet-history__list js-cabinet-history-list"></ul>
-        </div>`;t.innerHTML=s,u(M).then(i=>{b(i),W(i)}).catch(h)}function x(t,s){Y(t);const i=s.dataset.hash;i&&(location.hash=i)}function V(t){const s=new Date(t),i=String(s.getDate()).padStart(2,"0"),c=String(s.getMonth()+1).padStart(2,"0"),e=s.getFullYear();return`${i}.${c}.${e}`}function J(){const t=JSON.parse(localStorage.getItem("user")??""),s=V(t.dateRegistration);return`
+        </div>`;t.innerHTML=s,u(M).then(i=>{b(i),W(i)}).catch(h)}function x(t,s){Y(t);const i=s.dataset.hash;i&&(location.hash=i)}function V(t){const s=new Date(t),i=String(s.getDate()).padStart(2,"0"),c=String(s.getMonth()+1).padStart(2,"0"),e=s.getFullYear();return`${i}.${c}.${e}`}function J(){const t=JSON.parse(localStorage.getItem("user")??""),s=localStorage.getItem("userImg")??"",i=V(t.dateRegistration);return`
         <div class="cabinet-personal-data">
           <div class="cabinet-personal-data__info">
             <div class="cabinet-personal-data__info-title-box">
@@ -454,7 +454,7 @@ import{h,o as v}from"../../assets/cabinet-Dwn9lRut.js";import{H as M,a as F,l as
 
                 <li class="cabinet-personal-data__info-body-item">
                   <p class="cabinet-personal-data__info-body-item-title">Дата регистрации</p>
-                  <p class="cabinet-personal-data__info-body-item-text">${s}</p>
+                  <p class="cabinet-personal-data__info-body-item-text">${i}</p>
                 </li>
               </ul>
 
@@ -463,7 +463,7 @@ import{h,o as v}from"../../assets/cabinet-Dwn9lRut.js";import{H as M,a as F,l as
                   width="140"
                   height="140"
                   loading="lazy"
-                  src="https://firebasestorage.googleapis.com/v0/b/battlestar-514be.appspot.com/o/pages%2Fcabinet%2Fpersonal-data%2Fcabinet-info-body-img.webp?alt=media&token=473d4dee-1983-46c8-853d-3d66b205f369"
+                  ${s?`src="${s}"`:`src="${t.photoURL}"`}
                   alt="Фото користувача"
                   class="cabinet-personal-data__info-body-img js-personal-data-img" />
 
@@ -521,7 +521,7 @@ import{h,o as v}from"../../assets/cabinet-Dwn9lRut.js";import{H as M,a as F,l as
               </li>
             </ul>
           </div>
-        </div>`}const K=R(),X=O();function Z(){const t=document.querySelector(".js-personal-data-input-img");t==null||t.addEventListener("change",async s=>{if(s.target instanceof HTMLInputElement&&s.target.files){const i=s.target.files[0],c=A(K,`profileImages/${i.name}`);await U(c,i);const e=await B(c);console.log(e);const a=N(X,"users","USER_ID");await z(a,{profileImageUrl:e},{merge:!0}),document.querySelector(".js-personal-data-img")&&(document.querySelector(".js-personal-data-img").src=e)}})}function L(t,s){t.innerHTML=J(),Z();const i=s.dataset.hash;i&&(location.hash=i)}function Q(t,s){const i=t.map(({id:c,isVictory:e,objDate:a,objID:l,objRegime:o,score:n,title:r})=>`
+        </div>`}const K=R(),X=O();function Z(){const t=document.querySelector(".js-personal-data-input-img");t==null||t.addEventListener("change",async s=>{if(s.target instanceof HTMLInputElement&&s.target.files){const i=s.target.files[0],c=A(K,`profileImages/${i.name}`);await U(c,i);const e=await B(c),a=N(X,"users","USER_ID");await z(a,{profileImageUrl:e},{merge:!0}),document.querySelector(".js-personal-data-img")&&(document.querySelector(".js-personal-data-img").src=e,localStorage.setItem("userImg",e))}})}function L(t,s){t.innerHTML=J(),Z();const i=s.dataset.hash;i&&(location.hash=i)}function Q(t,s){const i=t.map(({id:c,isVictory:e,objDate:a,objID:l,objRegime:o,score:n,title:r})=>`
         <li class="cabinet-history__list-item" data-id="${c}">
         ${r.toLowerCase().includes("переказ")?`
                 <div
@@ -783,7 +783,7 @@ import{h,o as v}from"../../assets/cabinet-Dwn9lRut.js";import{H as M,a as F,l as
 
             <ul class="cabinet-wallet__history-list js-cabinet-wallet-history-list"></ul>
           </div>
-        </div>`;t.innerHTML=s;const i=document.querySelector(".js-cabinet-wallet-history-list");u(F).then(c=>Q(c,i)).catch(h)}function j(t,s){tt(t);const i=s.dataset.hash;i&&(location.hash=i)}function st(){const t=document.querySelector(".js-message-list");t==null||t.addEventListener("click",s=>{const i=s.target;i.classList.contains("js-item-message-switch")&&i.classList.toggle("cabinet-settings__message-item-switch_active")})}function it(){return`
+        </div>`;t.innerHTML=s;const i=document.querySelector(".js-cabinet-wallet-history-list");u(q).then(c=>Q(c,i)).catch(h)}function j(t,s){tt(t);const i=s.dataset.hash;i&&(location.hash=i)}function st(){const t=document.querySelector(".js-message-list");t==null||t.addEventListener("click",s=>{const i=s.target;i.classList.contains("js-item-message-switch")&&i.classList.toggle("cabinet-settings__message-item-switch_active")})}function it(){return`
         <div class="cabinet-settings">
           <div class="cabinet-settings__message">
             <h3 class="cabinet-settings__message-title">Повідомлення</h3>
@@ -1042,5 +1042,5 @@ import{h,o as v}from"../../assets/cabinet-Dwn9lRut.js";import{H as M,a as F,l as
               </div>
             </div>
           </div>
-        </div>`;t.innerHTML=s,u(q).then(ot).catch(h)}function $(t,s){rt(t);const i=s.dataset.hash;i&&(location.hash=i)}function _t(t,s){const i=s.querySelector(".js-statistics"),c=localStorage.getItem("statistics")??"statistics-dota";i.dataset.hash=c;let e=location.hash.slice(1)?location.hash.slice(1):c;const a=document.querySelector(`[data-hash="${e}"]`);switch(k(a,s),e){case"statistics-dota":d(t,a);break;case"statistics-csgo":d(t,a);break;case"history":x(t,a);break;case"personal-data":L(t,a);break;case"wallet":j(t,a);break;case"setting":S(t,a);break;case"block-list":$(t,a);break;default:d(t,a);break}}function dt(){const t=document.querySelector(".js-cabinet-nav-list"),s=document.querySelector(".js-cabinet-main-body");t==null||t.addEventListener("click",i);function i(c){const e=c.target.closest("li");e&&(k(e,t),e.classList.contains("js-statistics")&&d(s,e),e.classList.contains("js-history")&&x(s,e),e.classList.contains("js-personal-data")&&L(s,e),e.classList.contains("js-wallet")&&j(s,e),e.classList.contains("js-setting")&&S(s,e),e.classList.contains("js-block-list")&&$(s,e))}_t(s,t)}function bt(){const t=localStorage.getItem("logged");(t==="false"||t===null)&&(window.location.href="404")}document.addEventListener("DOMContentLoaded",()=>{E(),H(),D(),v(),v(),I(),dt(),bt(),C()});
+        </div>`;t.innerHTML=s,u(I).then(ot).catch(h)}function $(t,s){rt(t);const i=s.dataset.hash;i&&(location.hash=i)}function _t(t,s){const i=s.querySelector(".js-statistics"),c=localStorage.getItem("statistics")??"statistics-dota";i.dataset.hash=c;let e=location.hash.slice(1)?location.hash.slice(1):c;const a=document.querySelector(`[data-hash="${e}"]`);switch(k(a,s),e){case"statistics-dota":d(t,a);break;case"statistics-csgo":d(t,a);break;case"history":x(t,a);break;case"personal-data":L(t,a);break;case"wallet":j(t,a);break;case"setting":S(t,a);break;case"block-list":$(t,a);break;default:d(t,a);break}}function dt(){const t=document.querySelector(".js-cabinet-nav-list"),s=document.querySelector(".js-cabinet-main-body");t==null||t.addEventListener("click",i);function i(c){const e=c.target.closest("li");e&&(k(e,t),e.classList.contains("js-statistics")&&d(s,e),e.classList.contains("js-history")&&x(s,e),e.classList.contains("js-personal-data")&&L(s,e),e.classList.contains("js-wallet")&&j(s,e),e.classList.contains("js-setting")&&S(s,e),e.classList.contains("js-block-list")&&$(s,e))}_t(s,t)}function bt(){const t=localStorage.getItem("logged");(t==="false"||t===null)&&(window.location.href="404")}document.addEventListener("DOMContentLoaded",()=>{F(),E(),D(),v(),v(),H(),dt(),bt(),C()});
 //# sourceMappingURL=cabinet.js.map
