@@ -2,7 +2,7 @@ import { formatDate } from '@/ts/components/formatDate';
 
 export function createMarkup(): string {
   const user = JSON.parse(localStorage.getItem('user') ?? '');
-  const userImg = localStorage.getItem('userImg') ?? '';
+  const userImg = localStorage.getItem('userImg') ?? null;
   const formattedDate = formatDate(user.dateRegistration);
   return `
         <div class="cabinet-personal-data">
