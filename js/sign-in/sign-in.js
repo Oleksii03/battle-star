@@ -1,2 +1,2 @@
-import{o as n}from"../../assets/cabinet-6ap2872v.js";import{s as e}from"../../assets/loginOrRegistrationHandler-CxMgT3o5.js";import"../../assets/vendor-ZgN2xaTy.js";document.addEventListener("DOMContentLoaded",()=>{e(),n()});
+import{o as n}from"../../assets/cabinet-Dwn9lRut.js";import{s as e}from"../../assets/loginOrRegistrationHandler-BludQ0EM.js";import"../../assets/vendor-OwqoIaUp.js";document.addEventListener("DOMContentLoaded",()=>{e(),n()});
 //# sourceMappingURL=sign-in.js.map
