@@ -411,7 +411,7 @@ import{h,o as v}from"../../assets/cabinet-Dwn9lRut.js";import{H as M,a as F,l as
           </div>
 
           <ul class="cabinet-history__list js-cabinet-history-list"></ul>
-        </div>`;t.innerHTML=s,u(M).then(i=>{b(i),W(i)}).catch(h)}function x(t,s){Y(t);const i=s.dataset.hash;i&&(location.hash=i)}function V(t){const s=new Date(t),i=String(s.getDate()).padStart(2,"0"),c=String(s.getMonth()+1).padStart(2,"0"),e=s.getFullYear();return`${i}.${c}.${e}`}function J(){const t=JSON.parse(localStorage.getItem("user")??""),s=localStorage.getItem("userImg")??"",i=V(t.dateRegistration);return`
+        </div>`;t.innerHTML=s,u(M).then(i=>{b(i),W(i)}).catch(h)}function x(t,s){Y(t);const i=s.dataset.hash;i&&(location.hash=i)}function V(t){const s=new Date(t),i=String(s.getDate()).padStart(2,"0"),c=String(s.getMonth()+1).padStart(2,"0"),e=s.getFullYear();return`${i}.${c}.${e}`}function J(){const t=JSON.parse(localStorage.getItem("user")??""),s=localStorage.getItem("userImg")??null,i=V(t.dateRegistration);return`
         <div class="cabinet-personal-data">
           <div class="cabinet-personal-data__info">
             <div class="cabinet-personal-data__info-title-box">
