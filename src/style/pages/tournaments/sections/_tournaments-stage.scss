@@ -91,7 +91,7 @@
       transition: all 200ms linear;
 
       &:hover {
-        border: 1px solid $basic-yellow;
+        outline: 1px solid $basic-yellow;
         background: rgba(250, 199, 4, 0.1);
         backdrop-filter: blur(40px);
         color: $basic-yellow;

@@ -57,14 +57,14 @@ export function createMarkup(): string {
                   loading="lazy"
                   src="https://firebasestorage.googleapis.com/v0/b/battlestar-514be.appspot.com/o/pages%2Fcabinet%2Fpersonal-data%2Fcabinet-info-body-img.webp?alt=media&token=473d4dee-1983-46c8-853d-3d66b205f369"
                   alt="Фото користувача"
-                  class="cabinet-personal-data__info-body-img" />
+                  class="cabinet-personal-data__info-body-img js-personal-data-img" />
 
                 <form
                   class="cabinet-personal-data__info-body-form"
                   action="/upload"
                   method="post"
                   enctype="multipart/form-data">
-                  <label class="form-label">
+                  <label class="form-label js-personal-data-input-img">
                     Змінити
                     <input
                       class="form-label-input"
