@@ -56,7 +56,7 @@ export function createMarkup(): string {
                   width="140"
                   height="140"
                   loading="lazy"
-                  ${userImg ? `src="${userImg}"` : 'https://firebasestorage.googleapis.com/v0/b/battlestar-514be.appspot.com/o/pages%2Fcabinet%2Fpersonal-data%2Fimage-placeholder.webp?alt=media&token=4b207291-d90e-4a4a-b014-d2c27f1e4905'}
+                  ${userImg ? `src="${userImg}"` : 'src="https://firebasestorage.googleapis.com/v0/b/battlestar-514be.appspot.com/o/pages%2Fcabinet%2Fpersonal-data%2Fimage-placeholder.webp?alt=media&token=4b207291-d90e-4a4a-b014-d2c27f1e4905"'}
                   alt="Фото користувача"
                   class="cabinet-personal-data__info-body-img js-personal-data-img" />
 
