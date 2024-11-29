@@ -2,6 +2,7 @@ import { formatDate } from '@/ts/components/formatDate';
 
 export function createMarkup(): string {
   const user = JSON.parse(localStorage.getItem('user') ?? '');
+  const userImg = localStorage.getItem('userImg') ?? '';
   const formattedDate = formatDate(user.dateRegistration);
   return `
         <div class="cabinet-personal-data">
@@ -55,7 +56,7 @@ export function createMarkup(): string {
                   width="140"
                   height="140"
                   loading="lazy"
-                  src="https://firebasestorage.googleapis.com/v0/b/battlestar-514be.appspot.com/o/pages%2Fcabinet%2Fpersonal-data%2Fcabinet-info-body-img.webp?alt=media&token=473d4dee-1983-46c8-853d-3d66b205f369"
+                  ${userImg ? `src="${userImg}"` : `src="${user.photoURL}"`}
                   alt="Фото користувача"
                   class="cabinet-personal-data__info-body-img js-personal-data-img" />
 

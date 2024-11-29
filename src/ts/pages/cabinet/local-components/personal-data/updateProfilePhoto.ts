@@ -1,5 +1,7 @@
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { getFirestore, doc, setDoc } from 'firebase/firestore';
+import { onAuthStateChanged, updateProfile } from 'firebase/auth';
+import { auth } from '@/ts/utils/firebaseConfig';
 
 const storage = getStorage();
 const db = getFirestore();
@@ -15,14 +17,19 @@ export function updateProfilePhoto() {
       await uploadBytes(storageRef, file);
 
       const downloadURL = await getDownloadURL(storageRef);
+      // const user = JSON.parse(localStorage.getItem('user') ?? '');
+      // const user = auth.currentUser;
 
-      console.log(downloadURL);
+      // if (user) {
+      //   await updateProfile(user, { photoURL: downloadURL });
+      // }
 
       const userDocRef = doc(db, 'users', 'USER_ID');
       await setDoc(userDocRef, { profileImageUrl: downloadURL }, { merge: true });
 
       if (document.querySelector('.js-personal-data-img')) {
         (document.querySelector('.js-personal-data-img') as HTMLImageElement).src = downloadURL;
+        localStorage.setItem('userImg', downloadURL);
       }
     }
   });

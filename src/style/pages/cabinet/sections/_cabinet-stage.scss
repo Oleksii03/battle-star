@@ -123,8 +123,6 @@
 // ====main=========
 .cabinet-main {
   padding-right: 128px;
-  // background: rgba(248, 248, 248, 0.05);
-  // backdrop-filter: blur(60px);
 
   @media (min-width: 1440px) {
     ::-webkit-scrollbar {
@@ -317,13 +315,10 @@
           position: relative;
           margin-top: 30px;
           max-width: 670px;
-
-          @media (min-width: 1715px) {
-          }
         }
         &-title {
           position: absolute;
-          font-family: Roboto-Regular;
+          font-family: $font-secondary;
           color: #989898;
           text-align: center;
           font-size: 14px;
@@ -515,7 +510,7 @@
   }
 
   &__title {
-    font-family: Roboto-Regular;
+    font-family: $font-secondary;
     font-size: 24px;
     font-weight: 400;
     line-height: normal;
@@ -615,7 +610,7 @@
       }
 
       &-title {
-        font-family: Roboto-Regular;
+        font-family: $font-secondary;
         font-size: 18px;
         font-weight: 400;
         line-height: normal;
@@ -635,7 +630,7 @@
           display: flex;
           justify-content: space-between;
           column-gap: 23px;
-          font-family: Roboto-Regular;
+          font-family: $font-secondary;
           font-weight: 400;
           line-height: normal;
         }
@@ -645,7 +640,7 @@
         &-box {
           @include flex-align-row;
           column-gap: 9px;
-          font-family: Roboto-Regular;
+          font-family: $font-secondary;
           font-weight: 400;
           line-height: normal;
         }
@@ -660,7 +655,7 @@
         &-box {
           @include flex-align-row;
           column-gap: 11px;
-          font-family: Roboto-Regular;
+          font-family: $font-secondary;
           font-weight: 400;
           line-height: normal;
         }
@@ -681,7 +676,7 @@
 
         &-title {
           text-align: right;
-          font-family: Roboto-Regular;
+          font-family: $font-secondary;
           font-weight: 400;
           line-height: normal;
 
@@ -698,7 +693,7 @@
           white-space: nowrap;
           color: $basic-yellow;
           text-align: right;
-          font-family: Roboto-Regular;
+          font-family: $font-secondary;
           font-weight: 400;
           line-height: normal;
           min-width: 73px;
@@ -714,7 +709,7 @@
 
 // personal-data
 .cabinet-personal-data {
-  font-family: Roboto-Regular;
+  font-family: $font-secondary;
   font-weight: 400;
   background: rgba(248, 248, 248, 0.05);
   backdrop-filter: blur(60px);
@@ -796,8 +791,11 @@
 
     // img
     &-img {
+      max-width: 140px;
+      max-height: 140px;
       width: 100%;
-      height: 100%;
+      height: auto;
+      object-fit: contain;
       border-radius: 50%;
       overflow: hidden;
       aspect-ratio: 1/1;
