@@ -17,12 +17,6 @@ export function updateProfilePhoto() {
       await uploadBytes(storageRef, file);
 
       const downloadURL = await getDownloadURL(storageRef);
-      // const user = JSON.parse(localStorage.getItem('user') ?? '');
-      // const user = auth.currentUser;
-
-      // if (user) {
-      //   await updateProfile(user, { photoURL: downloadURL });
-      // }
 
       const userDocRef = doc(db, 'users', 'USER_ID');
       await setDoc(userDocRef, { profileImageUrl: downloadURL }, { merge: true });
