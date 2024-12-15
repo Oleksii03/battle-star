@@ -181,7 +181,7 @@ import{h,o as v}from"../../assets/cabinet-Dwn9lRut.js";import{H as M,a as F,l as
 
         <div class="cabinet-statistics__game-style game-style">
           <div class="game-style__game-box">
-            <p class="game-style__title">Стиль гри</p>
+            <p class="game-style__title">Статистика</p>
 
             <ul class="game-style__list">
               <li class="game-style__list-item">
