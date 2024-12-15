@@ -600,7 +600,7 @@ import{h,o as v}from"../../assets/cabinet-Dwn9lRut.js";import{H as M,a as F,l as
                   width="500"
                   height="500"
                   class="cabinet-wallet__card-img"
-                  src="../../../assets/img/pages/cabinet/wallet/casrd-star-bg.svg"
+                  src="./assets/img/pages/cabinet/wallet/casrd-star-bg.svg"
                   alt="Картка гаманця" />
               </div>
 
