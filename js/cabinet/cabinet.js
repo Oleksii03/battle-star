@@ -1,4 +1,4 @@
-import{h,o as v}from"../../assets/cabinet-Dwn9lRut.js";import{H as M,a as F,l as y,B as q,s as I,h as E,b as H,c as C}from"../../assets/closeDropDownList-DAy9BuXW.js";import{s as D}from"../../assets/loginOrRegistrationHandler-ineD22De.js";import{g as u}from"../../assets/getDataFromFirestore-D3BpnMxQ.js";import{g as R,a as O,r as A,u as U,b as B,d as N,s as z}from"../../assets/vendor-OwqoIaUp.js";function k(t,s){const i=document.querySelector(".js-cabinet-nav-thumb"),c=[...s.children],e=c.indexOf(t);i.style.top=`${16.66*e}%`,c.forEach(l=>{l.classList.remove("cabinet__nav-item_active")}),t.classList.add("cabinet__nav-item_active");const a=16.66*(c.length-1);16.66*e>=a?i.classList.add("dangerous"):i.classList.remove("dangerous")}function g(){return`
+import{h,o as v}from"../../assets/cabinet-Dwn9lRut.js";import{H as F,a as M,l as y,B as q,s as I,h as E,b as H,c as C}from"../../assets/closeDropDownList-DAy9BuXW.js";import{s as D}from"../../assets/loginOrRegistrationHandler-ineD22De.js";import{g as u}from"../../assets/getDataFromFirestore-D3BpnMxQ.js";import{g as R,a as O,r as A,u as U,b as B,d as N,s as z}from"../../assets/vendor-OwqoIaUp.js";function k(t,s){const i=document.querySelector(".js-cabinet-nav-thumb"),c=[...s.children],e=c.indexOf(t);i.style.top=`${16.66*e}%`,c.forEach(l=>{l.classList.remove("cabinet__nav-item_active")}),t.classList.add("cabinet__nav-item_active");const a=16.66*(c.length-1);16.66*e>=a?i.classList.add("dangerous"):i.classList.remove("dangerous")}function g(){return`
           <div class="cabinet-statistics__rank">
             <p class="cabinet-statistics__rank-title">
               Ранг:
@@ -411,7 +411,7 @@ import{h,o as v}from"../../assets/cabinet-Dwn9lRut.js";import{H as M,a as F,l as
           </div>
 
           <ul class="cabinet-history__list js-cabinet-history-list"></ul>
-        </div>`;t.innerHTML=s,u(M).then(i=>{b(i),W(i)}).catch(h)}function x(t,s){Y(t);const i=s.dataset.hash;i&&(location.hash=i)}function V(t){const s=new Date(t),i=String(s.getDate()).padStart(2,"0"),c=String(s.getMonth()+1).padStart(2,"0"),e=s.getFullYear();return`${i}.${c}.${e}`}function J(){const t=JSON.parse(localStorage.getItem("user")??""),s=localStorage.getItem("userImg")??null,i=V(t.dateRegistration);return`
+        </div>`;t.innerHTML=s,u(F).then(i=>{b(i),W(i)}).catch(h)}function x(t,s){Y(t);const i=s.dataset.hash;i&&(location.hash=i)}function V(t){const s=new Date(t),i=String(s.getDate()).padStart(2,"0"),c=String(s.getMonth()+1).padStart(2,"0"),e=s.getFullYear();return`${i}.${c}.${e}`}function J(){const t=JSON.parse(localStorage.getItem("user")??""),s=localStorage.getItem("userImg")??null,i=V(t.dateRegistration);return`
         <div class="cabinet-personal-data">
           <div class="cabinet-personal-data__info">
             <div class="cabinet-personal-data__info-title-box">
@@ -600,7 +600,7 @@ import{h,o as v}from"../../assets/cabinet-Dwn9lRut.js";import{H as M,a as F,l as
                   width="500"
                   height="500"
                   class="cabinet-wallet__card-img"
-                  src="./assets/img/pages/cabinet/wallet/casrd-star-bg.svg"
+                  src="https://firebasestorage.googleapis.com/v0/b/battlestar-514be.appspot.com/o/pages%2Fcabinet%2Fwallet%2Fcasrd-star-bg.svg?alt=media&token=6b6013a1-5aab-45c8-9bba-60d3fd475b7f"
                   alt="Картка гаманця" />
               </div>
 
@@ -783,7 +783,7 @@ import{h,o as v}from"../../assets/cabinet-Dwn9lRut.js";import{H as M,a as F,l as
 
             <ul class="cabinet-wallet__history-list js-cabinet-wallet-history-list"></ul>
           </div>
-        </div>`;t.innerHTML=s;const i=document.querySelector(".js-cabinet-wallet-history-list");u(F).then(c=>Q(c,i)).catch(h)}function j(t,s){tt(t);const i=s.dataset.hash;i&&(location.hash=i)}function st(){const t=document.querySelector(".js-message-list");t==null||t.addEventListener("click",s=>{const i=s.target;i.classList.contains("js-item-message-switch")&&i.classList.toggle("cabinet-settings__message-item-switch_active")})}function it(){return`
+        </div>`;t.innerHTML=s;const i=document.querySelector(".js-cabinet-wallet-history-list");u(M).then(c=>Q(c,i)).catch(h)}function j(t,s){tt(t);const i=s.dataset.hash;i&&(location.hash=i)}function st(){const t=document.querySelector(".js-message-list");t==null||t.addEventListener("click",s=>{const i=s.target;i.classList.contains("js-item-message-switch")&&i.classList.toggle("cabinet-settings__message-item-switch_active")})}function it(){return`
         <div class="cabinet-settings">
           <div class="cabinet-settings__message">
             <h3 class="cabinet-settings__message-title">Повідомлення</h3>
