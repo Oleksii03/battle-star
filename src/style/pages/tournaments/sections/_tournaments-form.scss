@@ -588,10 +588,6 @@
   overflow: hidden;
 }
 
-.flatpickr-day {
-  color: $gray-text !important;
-}
-
 .flatpickr-weekdays {
   display: none !important;
 }
@@ -678,6 +674,11 @@
   border: 2px solid $basic-yellow !important;
 }
 
+.flatpickr-day.selected.endRange {
+  -webkit-box-shadow: -5px 0 0 rgb(117, 103, 48) !important;
+  box-shadow: -5px 0 0 rgb(117, 103, 48);
+}
+
 .rangeMode .flatpickr-day {
   margin-top: 0px !important;
   margin-bottom: 8px !important;
@@ -689,7 +690,7 @@
 }
 
 .flatpickr-day {
-  color: $gray-text;
+  color: $gray-text !important;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;

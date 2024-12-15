@@ -24,6 +24,7 @@
     background: rgba(248, 248, 248, 0.15);
     backdrop-filter: blur(30px);
     max-width: 677px;
+    height: 781px;
   }
 
   &__form-logo {
@@ -51,12 +52,11 @@
     color: rgba(248, 248, 248, 0.6);
     text-align: center;
     font-size: 14px;
-    font-weight: 700;
     line-height: normal;
     background-color: transparent;
     margin-bottom: 9px;
     transition: all 250ms linear;
-    font-family: Roboto-Bold;
+    font-family: $font-tertiary;
     font-weight: 700;
   }
 
@@ -96,12 +96,12 @@
 
     &-input {
       width: 100%;
-      padding: 15px 50px 15px 20px;
+      padding: 15px 50px 11px 20px;
       border: 1px solid $light-gray-text;
       background-color: rgba(248, 248, 248, 0.1);
       color: $light-text;
       font-size: 18px;
-      font-family: Roboto-Bold;
+      font-family: $font-tertiary;
       font-weight: 700;
       line-height: normal;
 
