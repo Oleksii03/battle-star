@@ -21,7 +21,8 @@ export function handlerLogin(form: HTMLFormElement) {
     signInWithEmailAndPassword(auth, email, password)
       .then(userCredential => {
         // const user = userCredential.user;
-        window.location.href = '/cabinet';
+        window.location.href =
+          window.location.hostname === 'localhost' ? '/cabinet' : '/battle-star/cabinet';
         localStorage.setItem('logged', 'true');
         form.reset();
       })
