@@ -61,7 +61,7 @@ export function createMainBodyMarkupCsgo(): string {
 
         <div class="cabinet-statistics__game-style game-style">
           <div class="game-style__game-box">
-            <p class="game-style__title">Стиль гри</p>
+            <p class="game-style__title">Статистика</p>
 
             <ul class="game-style__list">
               <li class="game-style__list-item">
