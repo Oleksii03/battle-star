@@ -41,8 +41,8 @@
   }
 
   &__btn {
-    display: flex;
-    padding: 18px 61px;
+    display: inline-flex;
+    padding: 15px 33px;
     justify-content: center;
     align-items: center;
     line-height: normal;
@@ -50,5 +50,8 @@
     border-radius: 2px;
     border: 2px solid $light-text;
     background: rgba(248, 248, 248, 0.1);
+    font-size: 22px;
+    font-family: $font-tertiary;
+    font-weight: 700;
   }
 }
