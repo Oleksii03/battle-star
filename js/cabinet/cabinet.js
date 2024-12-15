@@ -849,7 +849,7 @@ import{h,o as v}from"../../assets/cabinet-Dwn9lRut.js";import{H as F,a as M,l as
 
                   <ul class="cabinet-settings__language-inner-list js-language-inner-list">
                     <li class="cabinet-settings__language-inner-item">Українська</li>
-                    <li class="cabinet-settings__language-inner-item">Аронглійська</li>
+                    <li class="cabinet-settings__language-inner-item">Англійська</li>
                     <li class="cabinet-settings__language-inner-item">Російська</li>
                   </ul>
                 </li>
