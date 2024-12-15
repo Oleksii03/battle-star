@@ -12,7 +12,8 @@ export async function registerUser(
     const user = userCredential.user;
     await updateProfile(user, { displayName: nickname });
 
-    window.location.href = '/cabinet';
+    window.location.href =
+      window.location.hostname === 'localhost' ? '/cabinet' : '/battle-star/cabinet';
     localStorage.setItem('logged', 'true');
     return user;
   } catch (error) {

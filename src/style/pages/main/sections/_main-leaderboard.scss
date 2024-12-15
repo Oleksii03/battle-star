@@ -141,7 +141,6 @@
   &__cards {
     overflow-y: auto;
     max-height: 653px;
-    // outline: 1px solid rgba(248, 248, 248, 0.05);
 
     &-list {
       display: grid;
@@ -181,7 +180,8 @@
     }
 
     &-stats {
-      @include flex-align-row;
+      display: flex;
+      align-items: flex-end;
       justify-content: space-between;
 
       &-date {
