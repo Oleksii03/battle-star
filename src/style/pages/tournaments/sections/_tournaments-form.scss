@@ -676,7 +676,14 @@
 
 .flatpickr-day.selected.endRange {
   -webkit-box-shadow: -5px 0 0 rgb(117, 103, 48) !important;
-  box-shadow: -5px 0 0 rgb(117, 103, 48);
+  box-shadow: -5px 0 0 rgb(117, 103, 48) !important;
+}
+
+.flatpickr-day.endRange {
+  &:hover {
+    -webkit-box-shadow: -5px 0 0 rgb(117, 103, 48) !important;
+    box-shadow: -5px 0 0 rgb(117, 103, 48) !important;
+  }
 }
 
 .rangeMode .flatpickr-day {
