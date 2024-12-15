@@ -13,7 +13,9 @@ export async function registerUser(
     await updateProfile(user, { displayName: nickname });
 
     window.location.href =
-      window.location.hostname === 'localhost' ? '/cabinet' : '/battle-star/cabinet';
+      window.location.hostname === 'localhost'
+        ? '/cabinet'
+        : '/battle-star/cabinet#statistics-dota';
     localStorage.setItem('logged', 'true');
     return user;
   } catch (error) {

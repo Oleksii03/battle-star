@@ -11,7 +11,9 @@ export function loginThroughGoogle() {
       console.log('User signed in with Google:', user);
 
       window.location.href =
-        window.location.hostname === 'localhost' ? '/cabinet' : '/battle-star/cabinet';
+        window.location.hostname === 'localhost'
+          ? '/cabinet'
+          : '/battle-star/cabinet#statistics-dota';
       localStorage.setItem('logged', 'true');
     })
     .catch(handleError);

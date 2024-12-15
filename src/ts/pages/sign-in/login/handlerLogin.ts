@@ -22,7 +22,9 @@ export function handlerLogin(form: HTMLFormElement) {
       .then(userCredential => {
         // const user = userCredential.user;
         window.location.href =
-          window.location.hostname === 'localhost' ? '/cabinet' : '/battle-star/cabinet';
+          window.location.hostname === 'localhost'
+            ? '/cabinet'
+            : '/battle-star/cabinet#statistics-dota';
         localStorage.setItem('logged', 'true');
         form.reset();
       })
