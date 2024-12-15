@@ -13,7 +13,7 @@ export function createMarkupWallet(container: HTMLElement) {
                   width="500"
                   height="500"
                   class="cabinet-wallet__card-img"
-                  src="./assets/img/pages/cabinet/wallet/casrd-star-bg.svg"
+                  src="https://firebasestorage.googleapis.com/v0/b/battlestar-514be.appspot.com/o/pages%2Fcabinet%2Fwallet%2Fcasrd-star-bg.svg?alt=media&token=6b6013a1-5aab-45c8-9bba-60d3fd475b7f"
                   alt="Картка гаманця" />
               </div>
 
